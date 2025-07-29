@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Razorpay Checkout -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
@@ -109,17 +112,96 @@
                             <div id="online" class="tab-content active">
                                 <h3>Online (Credit/Debit Card, UPI, Net Banking)</h3>
                                 <p>Select an amount or enter your own. Click 'Donate Now' to proceed to our secure payment gateway.</p>
-                                <div class="donation-amounts">
-                                    <button class="amount-btn">₹500</button>
-                                    <button class="amount-btn active">₹1000</button>
-                                    <button class="amount-btn">₹2500</button>
-                                    <button class="amount-btn">₹5000</button>
-                                </div>
-                                <div class="custom-amount">
-                                    <label for="custom-amount">Or Enter a Custom Amount (INR)</label>
-                                    <input type="number" id="custom-amount" placeholder="e.g., 3000">
-                                </div>
-                                <button class="btn btn-primary btn-donate-now">Donate Now</button>
+                                
+                                <!-- Donation Form -->
+                                <form id="donation-form">
+                                    <!-- Cause Selection -->
+                                    <div class="form-group">
+                                        <label for="cause">Choose a Cause:</label>
+                                        <select id="cause" name="cause" required>
+                                            <option value="general">General Fund</option>
+                                            <option value="education">Education</option>
+                                            <option value="health">Health & Sanitation</option>
+                                            <option value="environment">Environmental Action</option>
+                                            <option value="women-empowerment">Women Empowerment</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Donation Type -->
+                                    <div class="form-group">
+                                        <label for="donation-type">Donation Type:</label>
+                                        <select id="donation-type" name="donationType" required>
+                                            <option value="one-time">One-time Donation</option>
+                                            <option value="monthly">Monthly (Recurring)</option>
+                                            <option value="yearly">Yearly (Recurring)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Amount Selection -->
+                                    <div class="donation-amounts">
+                                        <button type="button" class="amount-btn" data-amount="500">₹500</button>
+                                        <button type="button" class="amount-btn active" data-amount="1000">₹1000</button>
+                                        <button type="button" class="amount-btn" data-amount="2500">₹2500</button>
+                                        <button type="button" class="amount-btn" data-amount="5000">₹5000</button>
+                                    </div>
+                                    
+                                    <div class="custom-amount">
+                                        <label for="custom-amount">Or Enter a Custom Amount (INR)</label>
+                                        <input type="number" id="custom-amount" name="amount" min="1" placeholder="e.g., 3000" required>
+                                    </div>
+                                    
+                                    <!-- Donor Information -->
+                                    <div class="donor-info">
+                                        <h4>Donor Information</h4>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="donor-name">Full Name *</label>
+                                                <input type="text" id="donor-name" name="donorName" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="donor-email">Email Address *</label>
+                                                <input type="email" id="donor-email" name="donorEmail" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="donor-phone">Phone Number *</label>
+                                                <input type="tel" id="donor-phone" name="donorPhone" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="donor-pan">PAN Number (for 80G receipt)</label>
+                                                <input type="text" id="donor-pan" name="donorPan" style="text-transform: uppercase;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donor-address">Address</label>
+                                            <textarea id="donor-address" name="donorAddress" rows="3" placeholder="Complete address for receipt"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donation-notes">Special Message (Optional)</label>
+                                            <textarea id="donation-notes" name="notes" rows="2" placeholder="Any special message or dedication"></textarea>
+                                        </div>
+                                        
+                                        <!-- Checkboxes -->
+                                        <div class="form-checkboxes">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="anonymous" name="isAnonymous">
+                                                <span class="checkmark"></span>
+                                                Make this donation anonymous
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="receipt" name="receiptRequested" checked>
+                                                <span class="checkmark"></span>
+                                                I want to receive an 80G tax receipt
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary btn-donate-now" id="donate-btn">
+                                        <span id="btn-text">Donate Now</span>
+                                        <span id="btn-loader" class="btn-loader" style="display: none;">Processing...</span>
+                                    </button>
+                                </form>
                             </div>
 
                             <!-- Option 2: Bank Transfer -->
@@ -209,6 +291,8 @@
 
     <!-- Main JavaScript File -->
     <script src="assets/js/main.js"></script>
+    <!-- Donation JavaScript -->
+    <script src="assets/js/donate.js"></script>
 
 </body>
 </html>
