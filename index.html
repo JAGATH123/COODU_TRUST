@@ -35,21 +35,11 @@
                     <li class="dropdown">
                         <a href="sectors.html" class="nav-link">Sectors &#9662;</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Agriculture & Allied Sectors</a></li>
-                            <li><a href="#">Health</a></li>
-                            <li><a href="#">Rural Development</a></li>
-                            <li><a href="#">Women Development</a></li>
-                            <li><a href="#">Water & Sanitation</a></li>
-                            <li><a href="#">Environment & Ecology</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="projects.html" class="nav-link">Projects &#9662;</a>
-                         <ul class="dropdown-menu">
-                            <li><a href="#">Watershed</a></li>
-                            <li><a href="#">Foreign Funded Projects</a></li>
-                            <li><a href="#">CSR Projects</a></li>
+                            <li><a href="sectors/natural-resources.html">🌱 Natural Resource Management</a></li>
+                            <li><a href="sectors/women-empowerment.html">👥 Women Empowerment</a></li>
+                            <li><a href="sectors/health-sanitation.html">🏥 Health & Sanitation</a></li>
+                            <li><a href="sectors/community-development.html">🏘️ Community Development</a></li>
+                            <li><a href="sectors/environment-climate.html">🌍 Environment & Climate Change</a></li>
                         </ul>
                     </li>
                     
@@ -80,14 +70,36 @@
     </header>
 
     <main>
-        <!-- =========== HERO SECTION =========== -->
-        <section class="hero-section" style="background-image: url('assets/images/hero/hero-background.jpg');">
+        <!-- =========== HERO SECTION WITH SLIDESHOW =========== -->
+        <section class="hero-section">
+            <!-- Hero Background Slideshow -->
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero/style.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero/women-empowerment.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/programs/program-environment.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/programs/health-sanitation.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/programs/program-women-empowerment.jpg');"></div>
+            </div>
+            
+            <!-- Hero Overlay -->
+            <div class="hero-overlay"></div>
+            
+            <!-- Hero Content (keeping all original text) -->
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">Empowering Communities, Transforming Lives</h1>
                     <p class="hero-subtitle">Join us in our mission to create a sustainable and equitable future for rural communities through empowerment, health, and environmental action.</p>
                     <a href="#programs" class="btn btn-secondary">Discover Our Work</a>
                 </div>
+            </div>
+            
+            <!-- Slideshow Navigation Dots -->
+            <div class="hero-dots">
+                <span class="hero-dot active" data-slide="0"></span>
+                <span class="hero-dot" data-slide="1"></span>
+                <span class="hero-dot" data-slide="2"></span>
+                <span class="hero-dot" data-slide="3"></span>
+                <span class="hero-dot" data-slide="4"></span>
             </div>
         </section>
 
@@ -189,18 +201,52 @@
             </div>
         </section>
 
-        <!-- =========== NEWS & UPDATES SECTION =========== -->
-        <section id="news" class="news-section">
+        <!-- =========== TESTIMONIALS SECTION =========== -->
+        <section id="testimonials" class="testimonials-section">
             <div class="container">
-                <h2 class="section-title">Latest News & Updates</h2>
-                <div class="news-grid">
-                    <div class="news-card">
-                        <img src="assets/images/news/news-update-1.jpg" alt="Recent event photo" class="news-image">
-                        <div class="news-content">
-                            <p class="news-date">JULY 27, 2025</p>
-                            <h3 class="news-title">Successful Completion of our Summer Health Camp in Dindigul</h3>
-                            <p class="news-excerpt">We successfully concluded our annual summer health camp, providing free check-ups and medical aid to over 500 residents across three villages...</p>
-                            <a href="#" class="news-link">Read Story</a>
+                <h2 class="section-title">Stories of Transformation</h2>
+                <p class="section-intro-text">Hear from the communities and individuals whose lives have been transformed through our programs</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">Coodu Trust's skill development program changed my life completely. I learned tailoring and now I run my own small business, supporting my family independently. My monthly income has increased from ₹2,000 to ₹8,000.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/testimonials/testimonial-1.jpg" alt="Lakshmi's photo" class="author-photo">
+                            <div class="author-info">
+                                <h4 class="author-name">Lakshmi Devi</h4>
+                                <p class="author-location">Women Empowerment Program, Dindigul</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">Before Coodu Trust came to our village, we had to walk 3 kilometers for clean water. Now with the new water system and sanitation facilities, our children are healthier and our women save 2 hours daily.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/testimonials/testimonial-2.jpg" alt="Murugan's photo" class="author-photo">
+                            <div class="author-info">
+                                <h4 class="author-name">Murugan S.</h4>
+                                <p class="author-location">Village Head, Karur District</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">The organic farming training helped us reduce our costs by 40% and increase crop yield by 25%. We no longer depend on expensive chemical fertilizers and our soil health has improved significantly.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/images/testimonials/testimonial-3.jpg" alt="Raman's photo" class="author-photo">
+                            <div class="author-info">
+                                <h4 class="author-name">Raman Kumar</h4>
+                                <p class="author-location">Farmer, Environmental Program</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -249,7 +295,7 @@
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="sectors.html">Our Sectors</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="donate.html">Donate</a></li>
                     </ul>
