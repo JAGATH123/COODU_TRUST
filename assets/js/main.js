@@ -47,42 +47,111 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // =========== 2. LIVE STATISTICS COUNTER ANIMATION ===========
+    // =========== 2. LIVE STATISTICS REAL-TIME COUNTERS ===========
 
     const statsSection = document.getElementById('stats-banner');
     const counters = document.querySelectorAll('.stat-number');
     
     if (statsSection && counters.length > 0) {
-        const animationSpeed = 200;
+        // Define starting values and increment rates per second (based on real global statistics)
+        const statsConfig = [
+            {
+                element: counters[0], // World population
+                startValue: 8192242010,
+                incrementPerSecond: 2.3, // births - deaths per second globally
+                formatter: (value) => Math.floor(value).toLocaleString()
+            },
+            {
+                element: counters[1], // Tonnes of waste dumped
+                startValue: 1198948812,
+                incrementPerSecond: 64, // ~2.01 billion tonnes per year
+                formatter: (value) => Math.floor(value).toLocaleString()
+            },
+            {
+                element: counters[2], // Tonnes of electronic waste
+                startValue: 28277094,
+                incrementPerSecond: 1.7, // ~54 million tonnes per year
+                formatter: (value) => Math.floor(value).toLocaleString()
+            },
+            {
+                element: counters[3], // Number of Earths humanity uses
+                startValue: 1.72,
+                incrementPerSecond: 0.000000032, // Very slow increase
+                formatter: (value) => value.toFixed(2)
+            }
+        ];
 
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText.replace(/,/g, '');
+        let isVisible = false;
+        let statsInterval;
 
-                    const increment = target / animationSpeed;
+        const startLiveCounters = () => {
+            if (isVisible) return; // Prevent multiple intervals
+            isVisible = true;
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 15);
-                    } else {
-                        if (target % 1 !== 0) {
-                           counter.innerText = target.toFixed(2);
+            // First: Animate from 0 to starting values (initial animation)
+            const animationSpeed = 200;
+            let animationsCompleted = 0;
+
+            statsConfig.forEach((stat, index) => {
+                stat.currentValue = 0;
+                stat.element.textContent = "0";
+
+                const animateToStart = () => {
+                    const increment = stat.startValue / animationSpeed;
+                    
+                    const updateAnimation = () => {
+                        if (stat.currentValue < stat.startValue) {
+                            stat.currentValue += increment;
+                            if (stat.currentValue > stat.startValue) {
+                                stat.currentValue = stat.startValue;
+                            }
+                            stat.element.textContent = stat.formatter(stat.currentValue);
+                            setTimeout(updateAnimation, 15);
                         } else {
-                           counter.innerText = target.toLocaleString();
+                            // Animation completed
+                            stat.currentValue = stat.startValue;
+                            stat.element.textContent = stat.formatter(stat.currentValue);
+                            animationsCompleted++;
+                            
+                            // When all animations are done, start live counters
+                            if (animationsCompleted === statsConfig.length) {
+                                startLiveIncrements();
+                            }
                         }
-                    }
+                    };
+                    updateAnimation();
                 };
-                updateCount();
+                
+                animateToStart();
             });
         };
 
+        const startLiveIncrements = () => {
+            // Now start the live real-time increments
+            statsInterval = setInterval(() => {
+                statsConfig.forEach(stat => {
+                    stat.currentValue += stat.incrementPerSecond;
+                    stat.element.textContent = stat.formatter(stat.currentValue);
+                });
+            }, 1000);
+        };
+
+        const stopLiveCounters = () => {
+            if (statsInterval) {
+                clearInterval(statsInterval);
+                statsInterval = null;
+            }
+        };
+
+        // Use Intersection Observer to start counters when section is visible
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(statsSection);
+                    startLiveCounters();
+                } else {
+                    // Optional: stop counters when not visible to save resources
+                    // stopLiveCounters();
+                    // isVisible = false;
                 }
             });
         }, {
@@ -90,6 +159,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         observer.observe(statsSection);
+
+        // Stop counters when page is hidden (browser tab inactive)
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopLiveCounters();
+            } else if (isVisible) {
+                startLiveCounters();
+            }
+        });
     }
 
     // =========== 3. RESOURCES PAGE FILTERING ===========
@@ -252,6 +330,64 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+    }
+
+    // =========== 6. HERO SLIDESHOW FUNCTIONALITY ===========
+    
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    if (heroSlides.length > 0 && heroDots.length > 0) {
+        
+        // Function to show specific slide
+        const showSlide = (index) => {
+            // Remove active class from all slides and dots
+            heroSlides.forEach(slide => slide.classList.remove('active'));
+            heroDots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            heroSlides[index].classList.add('active');
+            heroDots[index].classList.add('active');
+            
+            currentSlide = index;
+        };
+
+        // Function to go to next slide
+        const nextSlide = () => {
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            showSlide(currentSlide);
+        };
+
+        // Auto slideshow - change every 5 seconds
+        const startSlideshow = () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        };
+
+        // Stop slideshow
+        const stopSlideshow = () => {
+            clearInterval(slideInterval);
+        };
+
+        // Dot click handlers
+        heroDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                stopSlideshow();
+                startSlideshow(); // Restart the timer
+            });
+        });
+
+        // Pause slideshow on hover
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', stopSlideshow);
+            heroSection.addEventListener('mouseleave', startSlideshow);
+        }
+
+        // Start the slideshow
+        startSlideshow();
     }
 
 });
