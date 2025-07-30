@@ -34,21 +34,11 @@
                     <li class="dropdown">
                         <a href="sectors.html" class="nav-link">Sectors &#9662;</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Agriculture & Allied Sectors</a></li>
-                            <li><a href="#">Health</a></li>
-                            <li><a href="#">Rural Development</a></li>
-                            <li><a href="#">Women Development</a></li>
-                            <li><a href="#">Water & Sanitation</a></li>
-                            <li><a href="#">Environment & Ecology</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="projects.html" class="nav-link">Projects &#9662;</a>
-                         <ul class="dropdown-menu">
-                            <li><a href="#">Watershed</a></li>
-                            <li><a href="#">Foreign Funded Projects</a></li>
-                            <li><a href="#">CSR Projects</a></li>
+                            <li><a href="sectors/natural-resources.html">🌱 Natural Resource Management</a></li>
+                            <li><a href="sectors/women-empowerment.html">👥 Women Empowerment</a></li>
+                            <li><a href="sectors/health-sanitation.html">🏥 Health & Sanitation</a></li>
+                            <li><a href="sectors/community-development.html">🏘️ Community Development</a></li>
+                            <li><a href="sectors/environment-climate.html">🌍 Environment & Climate Change</a></li>
                         </ul>
                     </li>
                     
@@ -80,289 +70,174 @@
     <main>
 
         <!-- =========== PAGE HEADER =========== -->
-        <section class="gallery-hero" style="background-image: url('assets/images/heroes/gallery-hero.jpg');">
+        <section class="page-header" style="background-image: url('assets/images/headers/gallery-header.jpg');">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Our Visual Journey</h1>
-                    <p class="hero-subtitle">Capturing moments of transformation across communities and seasons</p>
-                </div>
+                <h1 class="page-title">Gallery</h1>
+                <p class="page-subtitle">Capturing moments of transformation across communities</p>
             </div>
         </section>
 
-        <!-- =========== IMPACT COUNTERS SECTION =========== -->
-        <section class="impact-counters-section">
+        <!-- =========== OUR IMPACT SECTION =========== -->
+        <section id="impact" class="impact-section">
             <div class="container">
-                <div class="counters-grid">
-                    <div class="counter-item">
-                        <div class="counter-icon">🌱</div>
-                        <div class="counter-number" data-target="50000">0</div>
-                        <div class="counter-label">Trees Planted</div>
+                <h2 class="section-title">Our Impact in Pictures</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <img src="assets/images/icons/womens-empwerment.png" alt="Women Empowerment Icon" class="impact-icon">
+                        <h3 class="impact-number">5,000+</h3>
+                        <p class="impact-text">Women Empowered</p>
                     </div>
-                    <div class="counter-item">
-                        <div class="counter-icon">👥</div>
-                        <div class="counter-number" data-target="5000">0</div>
-                        <div class="counter-label">Women Empowered</div>
+                    <div class="impact-card">
+                        <img src="assets/images/icons/village.png" alt="Villages Served Icon" class="impact-icon">
+                        <h3 class="impact-number">20+</h3>
+                        <p class="impact-text">Villages Served</p>
                     </div>
-                    <div class="counter-item">
-                        <div class="counter-icon">🏘️</div>
-                        <div class="counter-number" data-target="25">0</div>
-                        <div class="counter-label">Communities Served</div>
+                    <div class="impact-card">
+                        <img src="assets/images/icons/icon-health.png" alt="Health Initiatives Icon" class="impact-icon">
+                        <h3 class="impact-number">100+</h3>
+                        <p class="impact-text">Health Initiatives</p>
                     </div>
-                    <div class="counter-item">
-                        <div class="counter-icon">📅</div>
-                        <div class="counter-number" data-target="25">0</div>
-                        <div class="counter-label">Years of Service</div>
-                    </div>
-                    <div class="counter-item">
-                        <div class="counter-icon">🎯</div>
-                        <div class="counter-number" data-target="150">0</div>
-                        <div class="counter-label">Projects Completed</div>
-                    </div>
-                    <div class="counter-item">
-                        <div class="counter-icon">🤝</div>
-                        <div class="counter-number" data-target="200">0</div>
-                        <div class="counter-label">Active Volunteers</div>
+                    <div class="impact-card">
+                        <img src="assets/images/icons/icon-tree.png" alt="Trees Planted Icon" class="impact-icon">
+                        <h3 class="impact-number">50,000+</h3>
+                        <p class="impact-text">Trees Planted</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== GALLERY SECTION =========== -->
-        <section class="gallery-section">
+        <section class="gallery-section section-padding">
             <div class="container">
-                <!-- Season Filter Navigation -->
-                <div class="season-filter-nav">
-                    <h2 class="gallery-section-title">Through the Seasons</h2>
-                    <div class="season-tabs">
-                        <button class="season-tab active" data-season="all">
-                            <span class="tab-icon">🗓️</span>
-                            <span class="tab-text">All Seasons</span>
-                        </button>
-                        <button class="season-tab" data-season="spring">
-                            <span class="tab-icon">🌸</span>
-                            <span class="tab-text">Spring</span>
-                            <span class="tab-subtitle">New Beginnings</span>
-                        </button>
-                        <button class="season-tab" data-season="monsoon">
-                            <span class="tab-icon">🌧️</span>
-                            <span class="tab-text">Monsoon</span>
-                            <span class="tab-subtitle">Growth & Renewal</span>
-                        </button>
-                        <button class="season-tab" data-season="winter">
-                            <span class="tab-icon">❄️</span>
-                            <span class="tab-text">Winter</span>
-                            <span class="tab-subtitle">Harvest & Celebration</span>
-                        </button>
-                        <button class="season-tab" data-season="year-round">
-                            <span class="tab-icon">⭐</span>
-                            <span class="tab-text">Year-Round</span>
-                            <span class="tab-subtitle">Ongoing Impact</span>
-                        </button>
-                    </div>
+                <h2 class="section-title">Our Work in Action</h2>
+                
+                <!-- Filter Navigation -->
+                <div class="filter-nav">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="women-empowerment">Women Empowerment</button>
+                    <button class="filter-btn" data-filter="health">Health & Sanitation</button>
+                    <button class="filter-btn" data-filter="environment">Environmental Action</button>
+                    <button class="filter-btn" data-filter="community">Community Programs</button>
                 </div>
 
-                <!-- Masonry Gallery Grid -->
-                <div class="masonry-gallery" id="masonry-container">
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
                     
-                    <!-- Spring Images -->
-                    <div class="gallery-card card-small" data-season="spring" data-year="2024">
-                        <img src="https://picsum.photos/300/400?random=1" alt="Spring training session" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Skill Development Workshop</h3>
-                                <p>March 2024 • Spring</p>
-                            </div>
+                    <!-- Women Empowerment -->
+                    <div class="gallery-item" data-category="women-empowerment">
+                        <img src="assets/images/programs/program-women-empowerment.jpg" alt="Women participating in skill development program" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Skill Development Workshop</h3>
+                            <p class="gallery-description">Women learning new skills for economic empowerment</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-medium" data-season="spring" data-year="2024">
-                        <img src="https://picsum.photos/400/300?random=2" alt="Seed distribution program" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Seed Distribution Program</h3>
-                                <p>April 2024 • Spring</p>
-                            </div>
+                    <div class="gallery-item" data-category="women-empowerment">
+                        <img src="https://picsum.photos/400/300?random=2" alt="Women's cooperative meeting" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Women's Cooperative Formation</h3>
+                            <p class="gallery-description">Building self-help groups for community development</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-large" data-season="spring" data-year="2023">
-                        <img src="https://picsum.photos/400/500?random=3" alt="Women's cooperative meeting" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Women's Cooperative Formation</h3>
-                                <p>May 2023 • Spring</p>
-                            </div>
+                    <div class="gallery-item" data-category="women-empowerment">
+                        <img src="https://picsum.photos/400/300?random=3" alt="Financial literacy training" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Financial Literacy Training</h3>
+                            <p class="gallery-description">Empowering women with financial knowledge</p>
                         </div>
                     </div>
 
-                    <!-- Monsoon Images -->
-                    <div class="gallery-card card-medium" data-season="monsoon" data-year="2024">
-                        <img src="https://picsum.photos/350/450?random=4" alt="Tree plantation drive" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Monsoon Tree Plantation</h3>
-                                <p>July 2024 • Monsoon</p>
-                            </div>
+                    <!-- Health & Sanitation -->
+                    <div class="gallery-item" data-category="health">
+                        <img src="assets/images/programs/health-sanitation.jpg" alt="Community health camp" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Community Health Camp</h3>
+                            <p class="gallery-description">Providing healthcare access to remote communities</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-small" data-season="monsoon" data-year="2024">
-                        <img src="https://picsum.photos/300/350?random=5" alt="Water conservation project" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Watershed Management</h3>
-                                <p>August 2024 • Monsoon</p>
-                            </div>
+                    <div class="gallery-item" data-category="health">
+                        <img src="https://picsum.photos/400/300?random=5" alt="Water sanitation project" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Clean Water Initiative</h3>
+                            <p class="gallery-description">Installing clean water systems in villages</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-video card-medium" data-season="monsoon" data-year="2023">
-                        <img src="https://picsum.photos/400/300?random=6" alt="Community mobilization video" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Community Mobilization</h3>
-                                <p>September 2023 • Monsoon</p>
-                            </div>
-                            <div class="video-play-btn">▶</div>
+                    <div class="gallery-item" data-category="health">
+                        <img src="https://picsum.photos/400/300?random=6" alt="Health awareness session" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Health Awareness Session</h3>
+                            <p class="gallery-description">Educating communities about health and hygiene</p>
                         </div>
                     </div>
 
-                    <!-- Winter Images -->
-                    <div class="gallery-card card-large" data-season="winter" data-year="2024">
-                        <img src="https://picsum.photos/450/400?random=7" alt="Harvest celebration" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Harvest Festival Celebration</h3>
-                                <p>January 2024 • Winter</p>
-                            </div>
+                    <!-- Environmental Action -->
+                    <div class="gallery-item" data-category="environment">
+                        <img src="assets/images/programs/program-environment.jpg" alt="Tree plantation drive" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Tree Plantation Drive</h3>
+                            <p class="gallery-description">Community volunteers planting trees for a greener future</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-small" data-season="winter" data-year="2024">
-                        <img src="https://picsum.photos/300/400?random=8" alt="Cultural program" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Cultural Program</h3>
-                                <p>December 2024 • Winter</p>
-                            </div>
+                    <div class="gallery-item" data-category="environment">
+                        <img src="https://picsum.photos/400/300?random=8" alt="Watershed management" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Watershed Management</h3>
+                            <p class="gallery-description">Sustainable water conservation practices</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-medium" data-season="winter" data-year="2023">
-                        <img src="https://picsum.photos/350/300?random=9" alt="Winter health camp" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Winter Health Camp</h3>
-                                <p>February 2023 • Winter</p>
-                            </div>
+                    <div class="gallery-item" data-category="environment">
+                        <img src="https://picsum.photos/400/300?random=9" alt="Organic farming training" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Organic Farming Training</h3>
+                            <p class="gallery-description">Teaching sustainable agricultural practices</p>
                         </div>
                     </div>
 
-                    <!-- Year-Round Images -->
-                    <div class="gallery-card card-impact" data-season="year-round" data-year="2024">
-                        <div class="impact-card-content">
-                            <div class="impact-number">75%</div>
-                            <div class="impact-text">Increase in household income</div>
-                            <div class="impact-year">2024 Impact</div>
+                    <!-- Community Programs -->
+                    <div class="gallery-item" data-category="community">
+                        <img src="https://picsum.photos/400/300?random=10" alt="Community meeting" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Community Mobilization</h3>
+                            <p class="gallery-description">Bringing communities together for development</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-medium" data-season="year-round" data-year="2024">
-                        <img src="https://picsum.photos/400/350?random=10" alt="Infrastructure development" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Infrastructure Development</h3>
-                                <p>Ongoing • Year-Round</p>
-                            </div>
+                    <div class="gallery-item" data-category="community">
+                        <img src="https://picsum.photos/400/300?random=11" alt="Cultural program" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Cultural Celebration</h3>
+                            <p class="gallery-description">Celebrating local culture and traditions</p>
                         </div>
                     </div>
 
-                    <div class="gallery-card card-small" data-season="year-round" data-year="2024">
-                        <img src="https://picsum.photos/300/380?random=11" alt="Training program" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Continuous Training</h3>
-                                <p>Monthly • Year-Round</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card card-large" data-season="year-round" data-year="2023">
-                        <img src="https://picsum.photos/450/350?random=12" alt="Team building activity" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Team Building Workshop</h3>
-                                <p>Quarterly • Year-Round</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional placeholder cards for variety -->
-                    <div class="gallery-card card-medium" data-season="spring" data-year="2023">
-                        <img src="https://picsum.photos/380/320?random=13" alt="Spring community event" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Community Awareness Drive</h3>
-                                <p>March 2023 • Spring</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card card-small" data-season="monsoon" data-year="2023">
-                        <img src="https://picsum.photos/320/450?random=14" alt="Monsoon preparation" loading="lazy">
-                        <div class="card-overlay">
-                            <div class="card-info">
-                                <h3>Monsoon Preparedness</h3>
-                                <p>June 2023 • Monsoon</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card card-impact" data-season="year-round" data-year="2023">
-                        <div class="impact-card-content">
-                            <div class="impact-number">500+</div>
-                            <div class="impact-text">Families supported this year</div>
-                            <div class="impact-year">2023 Milestone</div>
+                    <div class="gallery-item" data-category="community">
+                        <img src="https://picsum.photos/400/300?random=12" alt="Youth program" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Youth Development Program</h3>
+                            <p class="gallery-description">Engaging youth in community development</p>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Load More Button -->
-                <div class="load-more-section">
-                    <button class="btn btn-primary load-more-btn">Load More Memories</button>
-                </div>
             </div>
         </section>
 
     </main>
     
-    <!-- =========== ZOOM/PAN LIGHTBOX MODAL =========== -->
-    <div id="gallery-lightbox" class="gallery-lightbox">
-        <div class="lightbox-header">
-            <div class="lightbox-title">
-                <h3 id="lightbox-image-title">Image Title</h3>
-                <p id="lightbox-image-meta">Date • Season</p>
-            </div>
-            <button class="lightbox-close" id="lightbox-close">&times;</button>
-        </div>
-        
+    <!-- =========== SIMPLE LIGHTBOX MODAL =========== -->
+    <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
-            <div class="image-container" id="image-container">
-                <img id="lightbox-image" src="" alt="" draggable="false">
-            </div>
-            
-            <div class="lightbox-controls">
-                <button class="control-btn zoom-out" id="zoom-out">−</button>
-                <button class="control-btn zoom-reset" id="zoom-reset">⌂</button>
-                <button class="control-btn zoom-in" id="zoom-in">+</button>
-            </div>
-        </div>
-        
-        <div class="lightbox-navigation">
-            <button class="nav-btn prev-btn" id="prev-btn">‹ Previous</button>
-            <span class="image-counter" id="image-counter">1 / 15</span>
-            <button class="nav-btn next-btn" id="next-btn">Next ›</button>
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption"></div>
+            <button class="lightbox-prev">‹</button>
+            <button class="lightbox-next">›</button>
         </div>
     </div>
 
@@ -378,7 +253,7 @@
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="sectors.html">Our Sectors</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="donate.html">Donate</a></li>
                     </ul>
