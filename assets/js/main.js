@@ -390,4 +390,102 @@ document.addEventListener('DOMContentLoaded', function() {
         startSlideshow();
     }
 
+    // =========== 7. STORIES OF TRANSFORMATION CAROUSEL ===========
+    
+    const storySlides = document.querySelectorAll('.story-slide');
+    const storyDots = document.querySelectorAll('.carousel-dot');
+    const storyPrevBtn = document.querySelector('.carousel-prev');
+    const storyNextBtn = document.querySelector('.carousel-next');
+    let currentStorySlide = 0;
+    let storyInterval;
+
+    if (storySlides.length > 0 && storyDots.length > 0) {
+        
+        // Function to show specific story slide
+        const showStorySlide = (index) => {
+            // Remove active class from all slides and dots
+            storySlides.forEach(slide => slide.classList.remove('active'));
+            storyDots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            storySlides[index].classList.add('active');
+            storyDots[index].classList.add('active');
+            
+            currentStorySlide = index;
+        };
+
+        // Function to go to next story slide
+        const nextStorySlide = () => {
+            currentStorySlide = (currentStorySlide + 1) % storySlides.length;
+            showStorySlide(currentStorySlide);
+        };
+
+        // Function to go to previous story slide
+        const prevStorySlide = () => {
+            currentStorySlide = (currentStorySlide - 1 + storySlides.length) % storySlides.length;
+            showStorySlide(currentStorySlide);
+        };
+
+        // Auto slideshow - change every 6 seconds
+        const startStorySlideshow = () => {
+            storyInterval = setInterval(nextStorySlide, 6000);
+        };
+
+        // Stop slideshow
+        const stopStorySlideshow = () => {
+            clearInterval(storyInterval);
+        };
+
+        // Dot click handlers
+        storyDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showStorySlide(index);
+                stopStorySlideshow();
+                startStorySlideshow(); // Restart the timer
+            });
+        });
+
+        // Arrow button handlers
+        if (storyNextBtn) {
+            storyNextBtn.addEventListener('click', () => {
+                nextStorySlide();
+                stopStorySlideshow();
+                startStorySlideshow(); // Restart the timer
+            });
+        }
+
+        if (storyPrevBtn) {
+            storyPrevBtn.addEventListener('click', () => {
+                prevStorySlide();
+                stopStorySlideshow();
+                startStorySlideshow(); // Restart the timer
+            });
+        }
+
+        // Pause slideshow on hover
+        const storiesCarousel = document.querySelector('.stories-carousel');
+        if (storiesCarousel) {
+            storiesCarousel.addEventListener('mouseenter', stopStorySlideshow);
+            storiesCarousel.addEventListener('mouseleave', startStorySlideshow);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (document.querySelector('.stories-carousel-section:hover')) {
+                if (e.key === 'ArrowRight') {
+                    nextStorySlide();
+                    stopStorySlideshow();
+                    startStorySlideshow();
+                } else if (e.key === 'ArrowLeft') {
+                    prevStorySlide();
+                    stopStorySlideshow();
+                    startStorySlideshow();
+                }
+            }
+        });
+
+        // Start the story slideshow
+        startStorySlideshow();
+    }
+
 });
