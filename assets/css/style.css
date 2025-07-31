@@ -327,84 +327,176 @@ img {
     background: rgba(255, 255, 255, 0.8);
 }
 
-/* --- Testimonials Section Styles --- */
-.testimonials-section {
+/* --- Stories of Transformation Carousel Styles --- */
+.stories-carousel-section {
     padding: var(--section-padding);
     background-color: var(--light-bg);
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.testimonial-card {
-    background: var(--light-text);
-    border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: 0 8px 25px var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.stories-carousel {
     position: relative;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    background: var(--light-text);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.carousel-container {
+    position: relative;
+    height: 600px;
 }
 
-.testimonial-content {
-    margin-bottom: 25px;
+.story-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.story-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.story-image-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.story-slide:hover .story-image {
+    transform: scale(1.05);
+}
+
+.story-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(40, 167, 69, 0.9);
+    color: var(--light-text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: var(--sub-header-font-weight);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-content {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .quote-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--primary-green);
     line-height: 1;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: serif;
 }
 
-.testimonial-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.story-quote {
+    font-size: 1.2rem;
+    line-height: 1.7;
     color: var(--dark-text);
     font-style: italic;
-    margin-bottom: 0;
+    margin-bottom: 25px;
+    font-weight: 300;
 }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-top: 20px;
+.story-author {
     border-top: 2px solid var(--border-color);
-}
-
-.author-photo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--primary-green);
-}
-
-.author-info {
-    flex: 1;
+    padding-top: 20px;
 }
 
 .author-name {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: var(--sub-header-font-weight);
     color: var(--dark-text);
     margin-bottom: 5px;
 }
 
 .author-location {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
     margin: 0;
+}
+
+/* Carousel Navigation Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 25px 0;
+    background: var(--light-text);
+}
+
+.carousel-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-dot:hover,
+.carousel-dot.active {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+    transform: scale(1.2);
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(40, 167, 69, 0.9);
+    color: var(--light-text);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: var(--primary-green);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
 }
 
 /* --- Sectors Page Styles --- */
@@ -595,11 +687,12 @@ img {
     flex: 1;
 }
 
-.impact-number {
+/* Project impact numbers (used in sectors page) */
+.project-impact .impact-number {
     display: block;
     font-size: 1.8rem;
     font-weight: var(--header-font-weight);
-    color: var(--primary-green);
+    color: var(--primary-green) !important;
     line-height: 1;
     margin-bottom: 5px;
 }
@@ -836,7 +929,8 @@ img {
 .impact-card { background-color: var(--light-text); padding: var(--card-padding); border-radius: var(--border-radius); box-shadow: 0 4px 15px var(--shadow-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .impact-card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
 .impact-icon { height: 70px; margin-bottom: 20px; }
-.impact-number { font-size: 3rem; color: var(--primary-green); font-weight: var(--header-font-weight); }
+/* Homepage impact section specific styling */
+.impact-section .impact-number { font-size: 3rem; color: var(--primary-green); font-weight: var(--header-font-weight); }
 .impact-text { font-size: 1.2rem; color: #555; }
 .mission-section { padding: var(--section-padding); background-color: #fff; }
 .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
@@ -880,7 +974,9 @@ img {
 .stats-intro p { font-size: 1rem; opacity: 0.9; text-transform: none; }
 .stats-grid { flex-basis: 70%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
 .stat-item { text-align: left; }
-.stat-number { 
+
+/* Live stats banner specific styling */
+.stats-banner-section .stat-number { 
     font-size: 2.5rem; 
     font-weight: var(--header-font-weight); 
     margin-bottom: 5px; 
@@ -974,6 +1070,163 @@ img {
     .team-photo { 
         width: 180px; 
         height: 180px; 
+    }
+}
+
+/* Stories of Transformation Carousel - Responsive Styles */
+@media (max-width: 1024px) {
+    .stories-carousel {
+        max-width: 90%;
+        margin: 40px auto 0;
+    }
+    
+    .carousel-container {
+        height: 550px;
+    }
+    
+    .story-image-wrapper {
+        height: 300px;
+    }
+    
+    .story-content {
+        padding: 30px;
+    }
+    
+    .story-quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stories-carousel {
+        max-width: 95%;
+        margin: 30px auto 0;
+        border-radius: 10px;
+    }
+    
+    .carousel-container {
+        height: 500px;
+    }
+    
+    .story-image-wrapper {
+        height: 250px;
+    }
+    
+    .story-content {
+        padding: 25px;
+    }
+    
+    .quote-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    
+    .story-quote {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .author-name {
+        font-size: 1.2rem;
+    }
+    
+    .author-location {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .carousel-prev {
+        left: 10px;
+    }
+    
+    .carousel-next {
+        right: 10px;
+    }
+    
+    .carousel-dots {
+        padding: 20px 0;
+        gap: 10px;
+    }
+    
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stories-carousel {
+        margin: 20px auto 0;
+        border-radius: 8px;
+    }
+    
+    .carousel-container {
+        height: 450px;
+    }
+    
+    .story-image-wrapper {
+        height: 200px;
+    }
+    
+    .story-content {
+        padding: 20px;
+    }
+    
+    .quote-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .story-quote {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .author-name {
+        font-size: 1.1rem;
+    }
+    
+    .author-location {
+        font-size: 0.85rem;
+    }
+    
+    .story-overlay {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        border-radius: 15px;
+    }
+    
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .carousel-prev {
+        left: 5px;
+    }
+    
+    .carousel-next {
+        right: 5px;
+    }
+    
+    .carousel-dots {
+        padding: 15px 0;
+        gap: 8px;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
     }
 }
 .partners-section { padding: var(--section-padding); }
@@ -1440,9 +1693,11 @@ img {
     padding: 30px 20px;
 }
 
+/* Impact card content numbers */
 .impact-card-content .impact-number {
     font-size: 3rem;
     font-weight: var(--header-font-weight);
+    color: var(--primary-green) !important;
     margin-bottom: 15px;
     display: block;
 }
@@ -1845,11 +2100,12 @@ img {
     text-align: center;
 }
 
-.impact-number {
+/* Sectors page specific styling */
+.sector-section .impact-number {
     display: block;
     font-size: 1.8rem;
     font-weight: var(--header-font-weight);
-    color: var(--primary-green);
+    color: var(--primary-green) !important;
     margin-bottom: 5px;
 }
 
@@ -2098,7 +2354,7 @@ img {
     display: block;
     font-size: 1.8rem;
     font-weight: var(--header-font-weight);
-    color: var(--light-text);
+    color: var(--primary-green);
     margin-bottom: 5px;
 }
 
