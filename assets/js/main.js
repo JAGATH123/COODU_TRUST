@@ -45,6 +45,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+        // Handle nested dropdown submenus for mobile
+        const submenuLinks = document.querySelectorAll('.dropdown-submenu > a');
+        submenuLinks.forEach(submenuLink => {
+            submenuLink.addEventListener('click', function(e) {
+                // Check if we are in mobile view (hamburger is visible)
+                if (window.innerWidth <= 1200) {
+                    e.preventDefault(); // Prevent link from navigating
+                    const submenuDropdown = this.nextElementSibling;
+                    
+                    if (submenuDropdown && submenuDropdown.classList.contains('dropdown-submenu-menu')) {
+                        // Toggle the submenu display
+                        submenuDropdown.style.display = submenuDropdown.style.display === 'block' ? 'none' : 'block';
+                        
+                        // Toggle arrow direction
+                        this.parentElement.classList.toggle('open');
+                    }
+                }
+            });
+        });
     }
 
     // =========== 2. LIVE STATISTICS REAL-TIME COUNTERS ===========
@@ -170,22 +190,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // =========== 3. RESOURCES PAGE FILTERING ===========
+    // =========== 3. DOCUMENTS PAGE FILTERING ===========
 
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const sidebarSublinks = document.querySelectorAll('.sidebar-sublink');
     const resourceCards = document.querySelectorAll('.resource-card');
 
-    if (sidebarLinks.length > 0 && resourceCards.length > 0) {
+    if ((sidebarLinks.length > 0 || sidebarSublinks.length > 0) && resourceCards.length > 0) {
         
+        // Handle main sidebar links
         sidebarLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
 
                 const filter = this.getAttribute('data-filter');
 
+                // Remove active class from all links and sublinks
                 sidebarLinks.forEach(s_link => s_link.classList.remove('active'));
+                sidebarSublinks.forEach(s_link => s_link.classList.remove('active'));
                 this.classList.add('active');
 
+                // Filter cards
+                resourceCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Handle sidebar sublinks
+        sidebarSublinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const filter = this.getAttribute('data-filter');
+
+                // Remove active class from all links and sublinks
+                sidebarLinks.forEach(s_link => s_link.classList.remove('active'));
+                sidebarSublinks.forEach(s_link => s_link.classList.remove('active'));
+                this.classList.add('active');
+
+                // Filter cards
                 resourceCards.forEach(card => {
                     const category = card.getAttribute('data-category');
 
