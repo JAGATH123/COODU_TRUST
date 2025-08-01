@@ -93,6 +93,42 @@
         font-size: 1rem;
         border-bottom: 1px solid #e0e0e0;
     }
+
+    /* --- Nested Dropdown Mobile Handling --- */
+    .dropdown-submenu-menu {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        display: none; /* Hide by default, will be toggled by JS */
+    }
+
+    .dropdown-submenu > a::after {
+        content: '▼';
+        right: 20px;
+    }
+
+    .dropdown-submenu.open > a::after {
+        content: '▲';
+    }
+
+    .dropdown-submenu-menu li a {
+        background-color: #f0f0f0;
+        padding-left: 60px; /* More indent for nested items */
+        font-size: 0.9rem;
+        border-bottom: 1px solid #e0e0e0;
+        border-left: none;
+    }
+
+    .dropdown-submenu-menu li a:hover {
+        background-color: var(--primary-green);
+        color: var(--light-text);
+    }
 }
 
 
@@ -131,14 +167,14 @@
     /* --- Contact Us Page --- */
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 
-    /* --- Resources Page --- */
+    /* --- Documents Page --- */
     .resources-layout { grid-template-columns: 1fr; }
     .resources-grid { grid-template-columns: repeat(2, 1fr); }
     
     /* --- Donate Page --- */
     .donation-layout { grid-template-columns: 1fr; }
 
-    /* --- Gallery Page --- */
+    /* --- Media Page --- */
     .gallery-grid { column-count: 2; }
 
     /* --- General --- */
@@ -196,7 +232,7 @@
     .team-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .team-photo { width: 120px; height: 120px; }
 
-    /* --- Resources Page --- */
+    /* --- Documents Page --- */
     .resources-grid { grid-template-columns: 1fr; }
     
     /* --- Donate Page --- */
@@ -206,7 +242,7 @@
     .tab-link { flex-basis: 100%; text-align: center; border-bottom: 2px solid var(--border-color); }
     .tab-link.active { border-bottom-color: var(--primary-green); }
     
-    /* --- Gallery Page --- */
+    /* --- Media Page --- */
     .gallery-filter-bar { flex-direction: column; }
     .filter-btn { width: 100%; }
     .gallery-grid { column-count: 1; }

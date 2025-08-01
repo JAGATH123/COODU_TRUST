@@ -500,19 +500,20 @@ img {
 }
 
 /* --- Sectors Page Styles --- */
-.sectors-overview {
+.programs-overview {
     background-color: var(--light-bg);
 }
 
-.sectors-nav {
+.programs-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
     margin-top: 40px;
+    padding: 0 20px;
 }
 
-.sector-nav-btn {
+.program-nav-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -529,14 +530,14 @@ img {
     text-decoration: none;
 }
 
-.sector-nav-btn:hover {
+.program-nav-btn:hover {
     background-color: var(--primary-green);
     color: var(--light-text);
     border-color: var(--primary-green);
     transform: translateY(-2px);
 }
 
-.sector-nav-btn.active {
+.program-nav-btn.active {
     background-color: var(--primary-green);
     color: var(--light-text);
     border-color: var(--primary-green);
@@ -687,7 +688,7 @@ img {
     flex: 1;
 }
 
-/* Project impact numbers (used in sectors page) */
+/* Project impact numbers (used in programs page) */
 .project-impact .impact-number {
     display: block;
     font-size: 1.8rem;
@@ -705,7 +706,7 @@ img {
     font-weight: var(--sub-header-font-weight);
 }
 
-.sectors-cta {
+.programs-cta {
     text-align: center;
 }
 
@@ -865,6 +866,71 @@ img {
     color: var(--primary-green);
 }
 
+/* === Nested Dropdown Submenu Styles === */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 1001;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.dropdown-submenu > a {
+    position: relative;
+    padding-right: 40px !important;
+}
+
+.dropdown-submenu > a::after {
+    content: '▶';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+
+.dropdown-submenu:hover > a::after {
+    color: var(--primary-green);
+}
+
+.dropdown-submenu-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--dark-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-submenu-menu li a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-green);
+    border-left-color: var(--primary-green);
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -884,7 +950,7 @@ img {
    PAGE-SPECIFIC STYLES
    ============================================= */
 
-/* --- Page Header (Used on About, Contact, Resources pages) --- */
+/* --- Page Header (Used on About, Contact, Documents pages) --- */
 .page-header {
     padding: 100px 0;
     text-align: center;
@@ -1336,7 +1402,7 @@ img {
 .office-card p { margin-top: 10px; }
 .map-section { padding: 0; line-height: 0; }
 
-/* --- Resources Page --- */
+/* --- Documents Page --- */
 .resources-section { padding: var(--section-padding); }
 .resources-layout { display: grid; grid-template-columns: 250px 1fr; gap: 40px; }
 .sidebar-title { font-size: 1.8rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); }
@@ -1345,6 +1411,46 @@ img {
 .sidebar-link { display: block; padding: 10px 15px; font-size: 1.1rem; color: var(--dark-text); font-weight: var(--sub-header-font-weight); border-left: 4px solid transparent; transition: all 0.3s ease; }
 .sidebar-link:hover { background-color: var(--light-bg); border-left-color: var(--dark-green); }
 .sidebar-link.active { color: var(--primary-green); font-weight: 700; border-left-color: var(--primary-green); }
+
+.sidebar-subsection {
+    margin-top: 30px;
+}
+
+.sidebar-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.sidebar-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-sublink {
+    display: block;
+    padding: 10px 25px;
+    color: var(--dark-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar-sublink:hover {
+    background-color: var(--light-bg);
+    border-left-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+.sidebar-sublink.active {
+    color: var(--primary-green);
+    font-weight: 700;
+    border-left-color: var(--primary-green);
+}
 .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .resource-card { background: var(--light-text); border-radius: var(--border-radius); box-shadow: 0 4px 15px var(--shadow-color); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .resource-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
@@ -1928,19 +2034,20 @@ img {
    ============================================= */
 
 /* Sectors Overview */
-.sectors-overview {
+.programs-overview {
     padding: var(--section-padding);
 }
 
-.sectors-nav {
+.programs-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
     margin-bottom: 40px;
+    padding: 0 20px;
 }
 
-.sector-nav-btn {
+.program-nav-btn {
     background: var(--light-text);
     border: 2px solid var(--primary-green);
     color: var(--primary-green);
@@ -1956,8 +2063,8 @@ img {
     min-width: 200px;
 }
 
-.sector-nav-btn:hover,
-.sector-nav-btn.active {
+.program-nav-btn:hover,
+.program-nav-btn.active {
     background: var(--primary-green);
     color: var(--light-text);
     transform: translateY(-2px);
@@ -2000,14 +2107,14 @@ img {
     font-weight: var(--body-font-weight);
 }
 
-/* Project Cards in sectors.html */
-.sectors-overview .projects-grid {
+/* Project Cards in programs.html */
+.programs-overview .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
-.sectors-overview .project-card {
+.programs-overview .project-card {
     background: var(--light-text);
     padding: 30px;
     border-radius: var(--border-radius);
@@ -2015,7 +2122,7 @@ img {
     transition: all 0.3s ease;
 }
 
-.sectors-overview .project-card:hover {
+.programs-overview .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
@@ -2116,20 +2223,36 @@ img {
 }
 
 /* Sectors CTA */
-.sectors-cta {
+.programs-cta {
     padding: var(--section-padding);
     text-align: center;
 }
 
-/* Responsive for sectors.html */
-@media (max-width: 768px) {
-    .sectors-nav {
-        flex-direction: column;
-        align-items: center;
+/* Responsive for programs.html */
+@media (max-width: 992px) {
+    .programs-nav {
+        gap: 15px;
+        padding: 0 15px;
     }
     
-    .sector-nav-btn {
-        width: 250px;
+    .program-nav-btn {
+        min-width: 180px;
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .program-nav-btn {
+        width: 280px;
+        margin-bottom: 5px;
     }
     
     .sector-header {
@@ -2146,7 +2269,7 @@ img {
         font-size: 2rem;
     }
     
-    .sectors-overview .projects-grid {
+    .programs-overview .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
