@@ -16,7 +16,9 @@
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+<body style="background-image: url('assets/images/aboutus/background.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
 
     <!-- =========== HEADER (UPDATED) =========== -->
     <header class="header">
@@ -122,7 +124,7 @@
         </section>
 
         <!-- =========== CONTACT INFO & FORM SECTION =========== -->
-        <section class="contact-section section-padding">
+        <section class="contact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <div class="contact-grid">
                     <!-- Left Column: Contact Form -->
@@ -187,7 +189,7 @@
         </section>
 
         <!-- =========== MAP SECTION =========== -->
-        <section class="map-section">
+        <section class="map-section" style="background: transparent !important;">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.795869278211!2d77.9750138147965!3d10.37311199266018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00ab74d5381d61%3A0x28654575354e98f5!2sR.M.%20Colony%2C%20Dindigul%2C%20Tamil%20Nadu%20624001!5e0!3m2!1sen!2sin!4v1658834512345!5m2!1sen!2sin" 
                 width="100%" 

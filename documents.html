@@ -16,7 +16,9 @@
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body>
+<body style="background-image: url('assets/images/aboutus/background.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
 
     <!-- =========== HEADER (UPDATED) =========== -->
     <header class="header">
@@ -114,7 +116,7 @@
     <main>
 
         <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('assets/images/headers/resources-header.jpg');">
+        <section class="page-header" style="background-image: url('assets/images/headers/resources-header.png');">
             <div class="container">
                 <h1 class="page-title">Documents</h1>
                 <p class="page-subtitle">Our comprehensive resource library showcasing research, reports, and publications.</p>
@@ -122,7 +124,7 @@
         </section>
 
         <!-- =========== RESOURCES SECTION =========== -->
-        <section class="resources-section section-padding">
+        <section class="resources-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <div class="resources-layout">
                     <!-- Left Column: Sidebar -->
@@ -145,30 +147,41 @@
                     <!-- Right Column: Resources Grid -->
                     <div class="resources-grid-wrapper">
                         <div class="resources-grid">
-                            <!-- Card 1: Media Mention -->
+                            <!-- Card 1: Latest Report 2023-2024 -->
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annula Report 2022 - 2023.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2022-2023" class="resource-image">
+                                <a href="report-viewer.html?year=2024" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2023-2024.png" alt="Annual Report 2023-2024" class="resource-image">
+                                    <div class="resource-content">
+                                        <span class="resource-meta">Annual Report | March 2024</span>
+                                        <h3 class="resource-title">Annual Report 2023-2024: Scaling Impact & Innovation</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 2: Previous Report 2022-2023 -->
+                            <div class="resource-card" data-category="annual-reports">
+                                <a href="report-viewer.html?year=2023" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2022-2023.png" alt="Annual Report 2022-2023" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2023</span>
-                                        <h3 class="resource-title">Annual Report 2022-2023: Innovation & Digital Transformation</h3>
+                                        <h3 class="resource-title">Annual Report 2022-2023: Integrating Sustainability</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report - 2021 - 2022.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2021-2022" class="resource-image">
+                                <a href="report-viewer.html?year=2022" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2021-2022.png" alt="Annual Report 2021-2022" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2022</span>
-                                        <h3 class="resource-title">Annual Report 2021-2022: Resilience Through Pandemic</h3>
+                                        <h3 class="resource-title">Annual Report 2021-2022: Building Back Stronger</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report 2020 - 2021.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2020-2021" class="resource-image">
+                                <a href="report-viewer.html?year=2021" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2020-2021.png" alt="Annual Report 2020-2021" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2021</span>
                                         <h3 class="resource-title">Annual Report 2020-2021: Adapting to New Challenges</h3>
@@ -177,8 +190,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report 2019-20.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2019-2020" class="resource-image">
+                                <a href="report-viewer.html?year=2020" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2019-2020.png" alt="Annual Report 2019-2020" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2020</span>
                                         <h3 class="resource-title">Annual Report 2019-2020: Two Decades of Service</h3>
@@ -187,8 +200,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report 2018-2019.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2018-2019" class="resource-image">
+                                <a href="report-viewer.html?year=2019" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2018-2019.png" alt="Annual Report 2018-2019" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2019</span>
                                         <h3 class="resource-title">Annual Report 2018-2019: Scaling Impact & Sustainability</h3>
@@ -197,8 +210,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report_2017-2018.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2017-2018" class="resource-image">
+                                <a href="report-viewer.html?year=2018" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2017-2018.png" alt="Annual Report 2017-2018" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2018</span>
                                         <h3 class="resource-title">Annual Report 2017-2018: Technology for Development</h3>
@@ -207,8 +220,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual Report 2016-2017.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2016-2017" class="resource-image">
+                                <a href="report-viewer.html?year=2017" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2016-2017.png" alt="Annual Report 2016-2017" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2017</span>
                                         <h3 class="resource-title">Annual Report 2016-2017: Inclusive Growth & Empowerment</h3>
@@ -217,8 +230,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual report 2015-2016.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2015-2016" class="resource-image">
+                                <a href="report-viewer.html?year=2016" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2015-2016.png" alt="Annual Report 2015-2016" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2016</span>
                                         <h3 class="resource-title">Annual Report 2015-2016: Sustainable Development Goals</h3>
@@ -227,8 +240,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual report 2014-2015.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2014-2015" class="resource-image">
+                                <a href="report-viewer.html?year=2015" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2014-2015.png   " alt="Annual Report 2014-2015" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2015</span>
                                         <h3 class="resource-title">Annual Report 2014-2015: Innovation in Rural Development</h3>
@@ -237,8 +250,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/Annual reopt 2013-2014.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2013-2014" class="resource-image">
+                                <a href="report-viewer.html?year=2014" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2013-2014.png  " alt="Annual Report 2013-2014" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2014</span>
                                         <h3 class="resource-title">Annual Report 2013-2014: Expanding Horizons</h3>
@@ -247,8 +260,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2012-2013.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2012-2013" class="resource-image">
+                                <a href="report-viewer.html?year=2013" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2012-2013.png" alt="Annual Report 2012-2013" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2013</span>
                                         <h3 class="resource-title">Annual Report 2012-2013: Community Development & Growth</h3>
@@ -257,8 +270,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2011-2012.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2011-2012" class="resource-image">
+                                <a href="report-viewer.html?year=2012" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2011-2012.png" alt="Annual Report 2011-2012" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2012</span>
                                         <h3 class="resource-title">Annual Report 2011-2012: Strengthening Rural Communities</h3>
@@ -267,8 +280,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2010-2011.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2010-2011" class="resource-image">
+                                <a href="report-viewer.html?year=2011" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2010-2011.png" alt="Annual Report 2010-2011" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2011</span>
                                         <h3 class="resource-title">Annual Report 2010-2011: A Decade of Service Excellence</h3>
@@ -277,8 +290,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2009-2010.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2009-2010" class="resource-image">
+                                <a href="report-viewer.html?year=2010" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2009-2010.png" alt="Annual Report 2009-2010" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2010</span>
                                         <h3 class="resource-title">Annual Report 2009-2010: Expanding Our Reach</h3>
@@ -287,8 +300,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2008-2009.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2008-2009" class="resource-image">
+                                <a href="report-viewer.html?year=2009" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2008-2009.png" alt="Annual Report 2008-2009" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2009</span>
                                         <h3 class="resource-title">Annual Report 2008-2009: Building Sustainable Futures</h3>
@@ -297,8 +310,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2007-2008.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2007-2008" class="resource-image">
+                                <a href="report-viewer.html?year=2008" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2007-2008.png" alt="Annual Report 2007-2008" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2008</span>
                                         <h3 class="resource-title">Annual Report 2007-2008: Women's Empowerment Focus</h3>
@@ -307,8 +320,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2006-2007.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2006-2007" class="resource-image">
+                                <a href="report-viewer.html?year=2007" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2006-2007.png" alt="Annual Report 2006-2007" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2007</span>
                                         <h3 class="resource-title">Annual Report 2006-2007: Environmental Conservation Initiatives</h3>
@@ -317,8 +330,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2005-2006.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2005-2006" class="resource-image">
+                                <a href="report-viewer.html?year=2006" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2005-2006.png" alt="Annual Report 2005-2006" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2006</span>
                                         <h3 class="resource-title">Annual Report 2005-2006: Health & Sanitation Programs</h3>
@@ -327,8 +340,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2004-2005.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2004-2005" class="resource-image">
+                                <a href="report-viewer.html?year=2005" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2004-2005.png" alt="Annual Report 2004-2005" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2005</span>
                                         <h3 class="resource-title">Annual Report 2004-2005: Watershed Development Success</h3>
@@ -337,8 +350,8 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2003-2004.pdf" target="_blank" class="resource-link">
-                                    <img src="assets/images/resources/publication-1.jpg" alt="Annual Report 2003-2004" class="resource-image">
+                                <a href="report-viewer.html?year=2004" class="resource-link">
+                                    <img src="assets/images/resources/annual-report-2003-2004.png" alt="Annual Report 2003-2004" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2004</span>
                                         <h3 class="resource-title">Annual Report 2003-2004: Community Mobilization</h3>
@@ -347,7 +360,7 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2002-2003.pdf" target="_blank" class="resource-link">
+                                <a href="report-viewer.html?year=2003" class="resource-link">
                                     <img src="assets/images/resources/annual-report-2002-2003.png" alt="Annual Report 2002-2003" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2003</span>
@@ -357,7 +370,7 @@
                             </div>
 
                             <div class="resource-card" data-category="annual-reports">
-                                <a href="assets/Annual reports/annual-report-2001-2002.pdf" target="_blank" class="resource-link">
+                                <a href="report-viewer.html?year=2002" class="resource-link">
                                     <img src="assets/images/resources/annual-report-2001-2002.png" alt="Annual Report 2001-2002" class="resource-image">
                                     <div class="resource-content">
                                         <span class="resource-meta">Annual Report | March 2002</span>
