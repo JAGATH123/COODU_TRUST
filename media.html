@@ -171,7 +171,13 @@
                 <div class="gallery-grid">
                     
                     <!-- Agriculture & Livelihood -->
-                    <div class="gallery-item" data-category="agriculture">
+                    <div class="gallery-item" data-category="agriculture" 
+                         data-title="Watershed Development Project"
+                         data-location="Dindigul District, Tamil Nadu"
+                         data-date="March 2023"
+                         data-impact="500+ families benefited"
+                         data-story="This watershed development project transformed 200 hectares of barren land into fertile agricultural fields. Through innovative water conservation techniques and soil restoration methods, we helped local farmers increase their crop yield by 60% while conserving precious water resources."
+                         data-tags="Water Conservation,Soil Restoration,Sustainable Agriculture,Community Development">
                         <img src="assets/images/programs/watershed-development.jpg" alt="Watershed development project" class="gallery-image">
                         <div class="gallery-overlay">
                             <h3 class="gallery-title">Watershed Development</h3>
@@ -179,7 +185,13 @@
                         </div>
                     </div>
 
-                    <div class="gallery-item" data-category="agriculture">
+                    <div class="gallery-item" data-category="agriculture"
+                         data-title="Organic Farming Training Program"
+                         data-location="Karur District, Tamil Nadu"
+                         data-date="January 2024"
+                         data-impact="300+ farmers trained"
+                         data-story="Our comprehensive organic farming training program equipped local farmers with sustainable agricultural techniques. Participants learned composting, natural pest control, and soil health management, leading to a 40% reduction in farming costs and improved crop quality."
+                         data-tags="Organic Farming,Sustainable Agriculture,Farmer Training,Environmental Protection">
                         <img src="https://picsum.photos/400/300?random=2" alt="Organic farming training" class="gallery-image">
                         <div class="gallery-overlay">
                             <h3 class="gallery-title">Organic Farming Training</h3>
@@ -188,7 +200,13 @@
                     </div>
 
                     <!-- Skilling & Employment -->
-                    <div class="gallery-item" data-category="skilling">
+                    <div class="gallery-item" data-category="skilling"
+                         data-title="Women's Skill Development Program"
+                         data-location="Madurai District, Tamil Nadu"
+                         data-date="November 2023"
+                         data-impact="250+ women empowered"
+                         data-story="This transformative program provided women with valuable skills in tailoring, handicrafts, and digital literacy. Over 90% of participants now run their own small businesses, with average monthly income increasing from ₹2,000 to ₹8,000. The program also included financial literacy and entrepreneurship training."
+                         data-tags="Women Empowerment,Skill Development,Entrepreneurship,Digital Literacy">
                         <img src="assets/images/programs/program-women-empowerment.jpg" alt="Skill development training" class="gallery-image">
                         <div class="gallery-overlay">
                             <h3 class="gallery-title">Skill Development Program</h3>
@@ -205,7 +223,13 @@
                     </div>
 
                     <!-- Health & Sanitation -->
-                    <div class="gallery-item" data-category="health">
+                    <div class="gallery-item" data-category="health"
+                         data-title="Mobile Health Camp Initiative"
+                         data-location="Theni District, Tamil Nadu"
+                         data-date="February 2024"
+                         data-impact="1,500+ people served"
+                         data-story="Our mobile health camps bring essential medical services directly to remote villages. Each camp provides general health checkups, vaccinations, maternal health services, and health education. We've established regular monthly visits to 15 villages, significantly reducing child mortality and improving overall community health."
+                         data-tags="Healthcare Access,Mobile Clinics,Preventive Care,Community Health">
                         <img src="assets/images/programs/health-sanitation.jpg" alt="Community health camp" class="gallery-image">
                         <div class="gallery-overlay">
                             <h3 class="gallery-title">Community Health Camp</h3>
@@ -295,14 +319,56 @@
 
     </main>
     
-    <!-- =========== SIMPLE LIGHTBOX MODAL =========== -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" src="" alt="">
-            <div id="lightbox-caption"></div>
-            <button class="lightbox-prev">‹</button>
-            <button class="lightbox-next">›</button>
+    <!-- =========== iOS GLASSMORPHISM MODAL =========== -->
+    <div id="lightbox" class="glass-modal">
+        <div class="glass-modal-backdrop"></div>
+        <div class="glass-modal-content">
+            <button class="glass-close-btn">&times;</button>
+            
+            <div class="glass-modal-body">
+                <div class="glass-image-section">
+                    <img id="lightbox-img" src="" alt="" class="glass-image">
+                    <div class="glass-image-nav">
+                        <button class="glass-nav-btn glass-prev">‹</button>
+                        <button class="glass-nav-btn glass-next">›</button>
+                    </div>
+                </div>
+                
+                <div class="glass-content-section">
+                    <div class="glass-header">
+                        <span class="glass-category" id="glass-category"></span>
+                        <h3 class="glass-title" id="glass-title"></h3>
+                    </div>
+                    
+                    <div class="glass-details">
+                        <p class="glass-description" id="glass-description"></p>
+                        
+                        <div class="glass-info-grid">
+                            <div class="glass-info-item">
+                                <span class="glass-info-label">Location</span>
+                                <span class="glass-info-value" id="glass-location"></span>
+                            </div>
+                            <div class="glass-info-item">
+                                <span class="glass-info-label">Date</span>
+                                <span class="glass-info-value" id="glass-date"></span>
+                            </div>
+                            <div class="glass-info-item">
+                                <span class="glass-info-label">Impact</span>
+                                <span class="glass-info-value" id="glass-impact"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-story">
+                            <h4 class="glass-story-title">The Story Behind</h4>
+                            <p class="glass-story-content" id="glass-story"></p>
+                        </div>
+                        
+                        <div class="glass-tags">
+                            <div class="glass-tag-list" id="glass-tags"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
