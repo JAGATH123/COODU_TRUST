@@ -11,8 +11,11 @@ const contactRoutes = require('./routes/contact');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Connect to Database
-connectDB();
+// Connect to Database (with error handling for testing)
+connectDB().catch(err => {
+  console.log('⚠️  Database connection failed - running in email-only mode for testing');
+  console.log('📧 Contact form will work but data won\'t be saved to database');
+});
 
 // Security Middleware
 app.use(helmet());
@@ -27,7 +30,12 @@ app.use(limiter);
 
 // CORS Configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3001',
+  origin: [
+    process.env.FRONTEND_URL || 'http://localhost:3001',
+    'http://localhost:3000',
+    'http://127.0.0.1:5500', // For Live Server
+    'null' // For file:// protocol
+  ],
   credentials: true
 }));
 

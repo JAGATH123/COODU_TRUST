@@ -103,8 +103,7 @@ const donationSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Indexes for better performance
-donationSchema.index({ razorpayOrderId: 1 });
+// Indexes for better performance (razorpayOrderId already indexed due to unique: true)
 donationSchema.index({ 'donorInfo.email': 1 });
 donationSchema.index({ status: 1 });
 donationSchema.index({ createdAt: -1 });
