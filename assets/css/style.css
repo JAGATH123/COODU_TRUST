@@ -761,7 +761,7 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0px;
 }
 
 .logo-text {
@@ -770,10 +770,21 @@ img {
     color: var(--dark-text);
     text-transform: uppercase;
     line-height: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: -25px !important;
 }
 
 .logo-img {
-    height: 64px; /* As per your last instruction */
+    height: 125px; /* Increased size with transparent background */
+    width: auto;
+    object-fit: contain;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
 }
 
 .nav-menu {
@@ -2819,9 +2830,12 @@ img {
 }
 
 .logo-img {
-    width: 86px;
-    height: 85px;
+    width: auto;
+    height: 125px;
     object-fit: contain;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
 }
 
 .success-title {

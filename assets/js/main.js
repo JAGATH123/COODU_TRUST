@@ -538,4 +538,144 @@ document.addEventListener('DOMContentLoaded', function() {
         startStorySlideshow();
     }
 
+    // =========== CONTACT FORM HANDLING ===========
+    const contactForm = document.querySelector('.contact-form');
+    console.log('Contact form found:', !!contactForm);
+    
+    if (contactForm) {
+        console.log('Attaching contact form handler...');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"], input[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.textContent || submitBtn.value : 'Send Message';
+            
+            try {
+                // Show loading state
+                if (submitBtn) {
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                }
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const contactData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone') || '',
+                    subject: formData.get('subject'),
+                    message: formData.get('message'),
+                    inquiryType: formData.get('inquiryType') || 'general'
+                };
+                
+                console.log('Sending contact data:', contactData);
+                
+                // Submit to API
+                const response = await fetch('http://localhost:3000/api/contact/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(contactData)
+                });
+                
+                const result = await response.json();
+                console.log('API Response Status:', response.status);
+                console.log('API Response Body:', result);
+                
+                if (response.ok) {
+                    // Success
+                    console.log('✅ SUCCESS: Message sent successfully!');
+                    showNotification('success', 'Message sent successfully! We will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    // Error from API
+                    console.log('❌ API Error:', result);
+                    if (result.errors) {
+                        console.log('Validation Errors:', result.errors);
+                        result.errors.forEach(error => {
+                            console.log(`- ${error.path}: ${error.msg} (value: "${error.value}")`);
+                        });
+                    }
+                    throw new Error(result.message || 'Failed to send message');
+                }
+                
+            } catch (error) {
+                console.error('Contact form error:', error);
+                showNotification('error', 'Failed to send message. Please try again or contact us directly.');
+            } finally {
+                // Reset button state
+                if (submitBtn) {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            }
+        });
+    }
+    
+    // Notification helper function
+    function showNotification(type, message) {
+        // Remove any existing notifications
+        const existingNotification = document.querySelector('.notification');
+        if (existingNotification) {
+            existingNotification.remove();
+        }
+        
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span class="notification-message">${message}</span>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+        
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            max-width: 400px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            font-family: var(--font-family);
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+        
+        // Set colors based on type
+        if (type === 'success') {
+            notification.style.backgroundColor = '#28a745';
+        } else {
+            notification.style.backgroundColor = '#dc3545';
+        }
+        
+        // Add to page
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Close button functionality
+        notification.querySelector('.notification-close').addEventListener('click', () => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
+    }
+
 });
