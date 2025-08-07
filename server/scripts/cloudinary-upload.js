@@ -58,10 +58,7 @@ const assetMapping = {
         resource_type: 'image',
         options: {
             quality: 'auto:good',
-            fetch_format: 'auto',
-            width: 1200,
-            height: 400,
-            crop: 'fill'
+            fetch_format: 'auto'
         }
     },
     'images/hero': {
