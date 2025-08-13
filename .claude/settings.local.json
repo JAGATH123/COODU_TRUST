@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(for file in *.html)",
+      "Bash(do echo \"Processing $file\")",
+      "Bash(done)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"Processing $file...\")",
+      "Bash(sed:*)",
+      "mcp__ide__getDiagnostics"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
