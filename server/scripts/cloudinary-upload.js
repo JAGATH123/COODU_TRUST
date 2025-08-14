@@ -42,6 +42,14 @@ const assetMapping = {
             crop: 'fill'
         }
     },
+    'images/programs/Background_prgms': {
+        folder: 'coodu-trust/images/programs/background-prgms',
+        resource_type: 'image',
+        options: {
+            quality: 'auto:best',
+            fetch_format: 'auto'
+        }
+    },
     'images/team': {
         folder: 'coodu-trust/images/team',
         resource_type: 'image',
