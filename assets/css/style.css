@@ -595,10 +595,10 @@ img {
 }
 
 .project-card {
-    background: var(--light-text);
+    background: transparent;
     border-radius: var(--border-radius);
     padding: 30px;
-    box-shadow: 0 8px 25px var(--shadow-color);
+    box-shadow: none;
     transition: all 0.3s ease;
     border-left: 4px solid var(--primary-green);
 }
@@ -3765,6 +3765,731 @@ img {
     .glass-info-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+}
+
+/* =============================================
+   FOCUS AREAS CARD STYLES
+   ============================================= */
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.focus-card {
+    background: transparent;
+    padding: 35px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-green);
+}
+
+.focus-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+    font-weight: var(--sub-header-font-weight);
+}
+
+.focus-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-transform: none;
+}
+
+/* Responsive Design for Focus Cards */
+@media (max-width: 768px) {
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .focus-card {
+        padding: 25px 20px;
+    }
+    
+    .focus-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* =============================================
+   PROJECT PAGE STATISTICS TABLE STYLES
+   ============================================= */
+
+.statistics-table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+    background: var(--light-text);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.statistics-table th,
+.statistics-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.statistics-table th {
+    background-color: var(--primary-green);
+    color: var(--light-text);
+    font-weight: var(--sub-header-font-weight);
+    font-size: 1.1rem;
+}
+
+.statistics-table tr:hover {
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.statistics-table tr:last-child td {
+    border-bottom: none;
+}
+
+.statistics-table td {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Project Highlights Styles */
+.project-highlights {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.highlight-card {
+    background: var(--light-text);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-left: 4px solid var(--primary-green);
+}
+
+.highlight-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+    font-weight: var(--sub-header-font-weight);
+}
+
+.highlight-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.training-list,
+.institution-list {
+    margin: 15px 0 0 20px;
+    color: var(--text-color);
+}
+
+.training-list li,
+.institution-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Project Pages */
+@media (max-width: 768px) {
+    .statistics-table-container {
+        margin: 20px -15px;
+        border-radius: 0;
+    }
+    
+    .statistics-table th,
+    .statistics-table td {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .project-highlights {
+        gap: 20px;
+    }
+    
+    .highlight-card {
+        padding: 20px;
+    }
+    
+    .highlight-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* =============================================
+   HERO PHOTO CAROUSEL STYLES
+   ============================================= */
+
+.story-carousel-hero {
+    padding: 60px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    margin: 30px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.story-carousel-hero .breadcrumb {
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.story-carousel-hero .breadcrumb a {
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+.story-carousel-hero .breadcrumb a:hover {
+    text-decoration: underline;
+    color: var(--primary-green);
+}
+
+.story-carousel-hero .breadcrumb span {
+    color: var(--dark-text);
+}
+
+.project-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+    font-weight: var(--header-font-weight);
+}
+
+.project-hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.hero-photo-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-frame {
+    position: relative;
+    background: var(--light-text);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+}
+
+.photo-slides {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.photo-slide.active {
+    opacity: 1;
+}
+
+.photo-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: var(--light-text);
+    padding: 30px 20px 15px;
+    font-size: 1.1rem;
+    font-weight: var(--sub-header-font-weight);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(76, 175, 80, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary-green);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: var(--primary-green);
+    transform: scale(1.1);
+}
+
+/* Auto-slideshow Animation */
+@keyframes autoSlide {
+    0%, 25% { opacity: 1; }
+    30%, 95% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.photo-slide:nth-child(1) { animation: autoSlide 16s infinite 0s; }
+.photo-slide:nth-child(2) { animation: autoSlide 16s infinite 4s; }
+.photo-slide:nth-child(3) { animation: autoSlide 16s infinite 8s; }
+.photo-slide:nth-child(4) { animation: autoSlide 16s infinite 12s; }
+
+/* Responsive Design for Hero Carousel */
+@media (max-width: 768px) {
+    .project-hero-title {
+        font-size: 2rem;
+    }
+    
+    .project-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-photo-carousel {
+        margin: 0 -15px;
+    }
+    
+    .carousel-frame {
+        border-radius: 0;
+        padding: 15px;
+    }
+    
+    .photo-slides {
+        height: 300px;
+    }
+    
+    .photo-caption {
+        font-size: 1rem;
+        padding: 20px 15px 10px;
+    }
+    
+    .story-carousel-hero {
+        margin: 15px;
+    }
+}
+
+/* =============================================
+   PROJECT PAGE CENTERED OVERVIEW STYLES
+   ============================================= */
+
+.overview-content-centered {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.overview-content-centered .section-title {
+    margin-bottom: 40px;
+    color: var(--dark-text);
+}
+
+.overview-text-balanced {
+    background: var(--light-text);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: left;
+}
+
+.overview-text-balanced .overview-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.overview-text-balanced .overview-description:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design for Project Overview */
+@media (max-width: 768px) {
+    .overview-content-centered {
+        max-width: 100%;
+    }
+    
+    .overview-text-balanced {
+        padding: 25px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+    
+    .overview-text-balanced .overview-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* =============================================
+   NEW SAAHAS-INSPIRED PROJECT PAGE STYLES
+   ============================================= */
+
+/* Project Hero */
+.project-hero-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.project-hero-content .breadcrumb {
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.project-hero-content .breadcrumb a {
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+.project-hero-content .breadcrumb a:hover {
+    text-decoration: underline;
+    color: var(--primary-green);
+}
+
+.project-hero-content .breadcrumb span {
+    color: var(--dark-text);
+}
+
+.project-main-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+    font-weight: var(--header-font-weight);
+}
+
+.project-tagline {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.project-carousel {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.project-carousel .carousel-container {
+    background: var(--light-text);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.project-carousel .photo-slides {
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-carousel .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-carousel .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(76, 175, 80, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-carousel .dot.active {
+    background: var(--primary-green);
+    transform: scale(1.2);
+}
+
+/* Project Metadata Grid */
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.metadata-card {
+    background: var(--light-text);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.metadata-card:hover {
+    transform: translateY(-5px);
+}
+
+.metadata-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.metadata-title {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-weight: var(--sub-header-font-weight);
+}
+
+.metadata-value {
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    font-weight: var(--header-font-weight);
+    margin-bottom: 5px;
+}
+
+.metadata-detail {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Program Overview */
+.overview-layout {
+    text-align: center;
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--light-text);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.overview-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.achievement-card {
+    background: var(--light-text);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.achievement-title {
+    font-size: 1.4rem;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    font-weight: var(--sub-header-font-weight);
+}
+
+.achievement-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.achievement-stats {
+    padding-top: 15px;
+    border-top: 2px solid var(--primary-green);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    font-weight: var(--header-font-weight);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+/* Districts Grid */
+.districts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.district-card {
+    background: var(--light-text);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px var(--shadow-color);
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    font-weight: var(--sub-header-font-weight);
+    transition: all 0.3s ease;
+}
+
+.district-card:hover {
+    background: var(--primary-green);
+    color: var(--light-text);
+    transform: translateY(-3px);
+}
+
+/* Impact Cards */
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.impact-card {
+    background: var(--light-text);
+    padding: 35px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+    border-left: 4px solid var(--primary-green);
+    transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.impact-title {
+    font-size: 1.3rem;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    font-weight: var(--sub-header-font-weight);
+}
+
+.impact-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-hero-content {
+        padding: 25px;
+        margin: 15px;
+    }
+    
+    .project-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .project-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .project-carousel {
+        margin: 0 -15px;
+    }
+    
+    .project-carousel .photo-slides {
+        height: 250px;
+    }
+    
+    .metadata-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .districts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .impact-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .overview-content,
+    .metadata-card,
+    .achievement-card,
+    .impact-card {
+        padding: 25px;
     }
 }
 
