@@ -15,8 +15,112 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Environment Page Specific Styles */
+        .environment-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .environment-page .sustainable-future-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .environment-page .sustainable-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .environment-page .sustainable-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .environment-page .sustainable-image {
+            position: relative;
+        }
+        
+        .environment-page .sustainable-photo {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .environment-page .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .environment-page .stat-item {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .environment-page .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .environment-page .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .environment-page .sustainable-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .environment-page .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .environment-page .container {
+                padding: 0 15px;
+            }
+            
+            .environment-page .sustainable-text {
+                padding: 25px;
+            }
+            
+            .environment-page .impact-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .environment-page .sustainable-photo {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="environment-page" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -122,7 +226,7 @@
     <main>
 
         <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146548/coodu-trust/images/programs/background-prgms/environment-and-resilience.png');">
+        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146548/coodu-trust/images/programs/background-prgms/environment-and-resilience.png'); background-size: cover; background-position: center center;">
             <div class="container">
                 <div class="breadcrumb">
                     <a href="../programs.html">Programs</a> > <span>Environment and Resilience</span>
@@ -132,45 +236,75 @@
             </div>
         </section>
 
-        <!-- =========== SECTOR OVERVIEW =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== CREATING A SUSTAINABLE FUTURE =========== -->
+        <section class="sustainable-future-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Creating a Sustainable Future</h2>
-                        <p class="overview-description">
-                            Climate change and environmental degradation pose unprecedented challenges to rural communities across Tamil Nadu. Our Environment and Resilience program addresses these critical issues through comprehensive initiatives that protect natural ecosystems, build community resilience, and promote sustainable development practices. We focus on watershed management, biodiversity conservation, renewable energy solutions, and climate adaptation strategies that empower communities to thrive in harmony with nature.
-                        </p>
-                        <p class="overview-description">
-                            Through our integrated approach, we combine traditional ecological knowledge with modern environmental science to create lasting solutions. Our programs span across watershed restoration, large-scale plantation drives, water resource management, soil conservation, and climate change mitigation. We believe that environmental protection and community development go hand in hand, creating resilient ecosystems that support both biodiversity and human well-being.
-                        </p>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">50,000+</span>
-                                <span class="highlight-label">Trees Planted</span>
+                <div class="sustainable-content">
+                    <div class="sustainable-text">
+                        <h2 class="section-title" style="color: #28a745; margin-bottom: 30px; font-size: 2.8rem;">Creating a Sustainable Future</h2>
+                        
+                        <div class="intro-content">
+                            <p class="overview-description" style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px; color: #2c3e50;">
+                                For over two decades, <strong>Coodu Trust</strong> has been at the forefront of environmental conservation and climate resilience in Tamil Nadu. Our comprehensive approach addresses the interconnected challenges of climate change, environmental degradation, and sustainable development through science-based solutions and community empowerment.
+                            </p>
+                            
+                            <p class="overview-description" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px; color: #34495e;">
+                                We integrate traditional ecological wisdom with cutting-edge environmental science to create lasting solutions. From watershed restoration and biodiversity conservation to renewable energy adoption and climate adaptation strategies, our programs build resilient ecosystems that support both nature and human communities.
+                            </p>
+                        </div>
+                        
+                        <div class="mission-highlights" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 10px; border-left: 4px solid #28a745;">
+                            <h3 style="color: #28a745; margin-bottom: 15px; font-size: 1.4rem;">Our Environmental Mission</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌱 <strong>Restore degraded ecosystems</strong> through scientific watershed management</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">💧 <strong>Secure water futures</strong> with sustainable resource management</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌳 <strong>Enhance biodiversity</strong> through large-scale afforestation programs</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🏘️ <strong>Build climate resilience</strong> in vulnerable rural communities</li>
+                                <li style="padding-left: 25px; position: relative;">⚡ <strong>Promote clean energy</strong> and sustainable development practices</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Impact Statistics -->
+                        <div class="impact-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">75,000+</span>
+                                <span class="stat-label">Trees Planted & Protected</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">248</span>
-                                <span class="highlight-label">Watersheds Managed</span>
+                            <div class="stat-item">
+                                <span class="stat-number">350+</span>
+                                <span class="stat-label">Watersheds Restored</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">200+ Crore</span>
-                                <span class="highlight-label">Liters Water Conserved</span>
+                            <div class="stat-item">
+                                <span class="stat-number">500+ Crore</span>
+                                <span class="stat-label">Liters Water Conserved</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">15+</span>
-                                <span class="highlight-label">Districts Covered</span>
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Districts Transformed</span>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Environmental conservation and tree plantation activities" class="story-photo">
+                    
+                    <div class="sustainable-image">
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Environmental conservation and watershed management activities" class="sustainable-photo">
+                        
+                        <!-- Image Caption -->
+                        <div style="background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            <p style="margin: 0; font-size: 0.95rem; color: #666; font-style: italic;">Community-led watershed restoration project in Dindigul district, showcasing our integrated approach to environmental conservation</p>
+                        </div>
+                        
+                        <!-- Achievement Badge -->
+                        <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 12px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); text-align: center; font-weight: 600;">
+                            <div style="font-size: 0.8rem; opacity: 0.9;">Since</div>
+                            <div style="font-size: 1.2rem;">2000</div>
+                        </div>
                     </div>
+                </div>
             </div>
         </section>
 
         <!-- =========== PROGRAM FOCUS AREAS =========== -->
-        <section class="focus-areas section-padding light-bg">
+        <section class="focus-areas section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Focus Areas</h2>
                 <div class="focus-grid">
@@ -209,7 +343,7 @@
         </section>
 
         <!-- =========== KEY PROJECTS (PLACEHOLDER) =========== -->
-        <section class="programs-section section-padding light-bg">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Key Projects (2000-2024)</h2>
                 <p class="section-intro">Building environmental resilience through comprehensive conservation and sustainable development initiatives across Tamil Nadu.</p>
@@ -259,7 +393,7 @@
         </section>
 
         <!-- =========== ENVIRONMENTAL IMPACT STORIES CAROUSEL =========== -->
-        <section class="stories-carousel-section section-padding light-bg">
+        <section class="stories-carousel-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Environmental Impact Stories</h2>
                 <p class="section-intro-text">Witness the powerful transformation of communities through our environmental conservation initiatives</p>
