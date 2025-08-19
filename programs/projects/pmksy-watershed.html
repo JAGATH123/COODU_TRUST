@@ -23,18 +23,6 @@
             background: transparent !important;
         }
         
-        .pmksy-page::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
-            z-index: -1;
-            pointer-events: none;
-        }
-        
         .pmksy-page .container {
             max-width: 1400px;
             padding: 0 20px;
@@ -102,6 +90,7 @@
             font-weight: 700;
             display: block;
             margin-bottom: 8px;
+            color: white !important;
         }
         
         .stat-label {
@@ -255,7 +244,9 @@
         }
     </style>
 </head>
-<body class="pmksy-page" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -360,100 +351,288 @@
 
     <main>
 
-        <!-- =========== STORY PHOTO CAROUSEL =========== -->
-        <section class="story-carousel-hero section-padding" style="background: transparent !important;">
+        <!-- =========== MODERN HERO SECTION =========== -->
+        <section class="pmksy-hero">
             <div class="container">
-                <div class="breadcrumb">
-                    <a href="../../programs.html">Programs</a> > <a href="../environment-resilience.html">Environment and Resilience</a> > <a href="../watershed-management.html">Watershed Management</a> > <span>PMKSY Project</span>
+                <div class="breadcrumb" style="margin-bottom: 30px;">
+                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <a href="../environment-resilience.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Environment and Resilience</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <a href="../watershed-management.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Watershed Management</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <span style="color: #2c3e50; font-weight: 600;">PMKSY Project</span>
                 </div>
-                <h1 class="project-hero-title">PMKSY Watershed Development</h1>
-                <p class="project-hero-subtitle">Pradhan Mantri Krishi Sinchayee Yojana (2022-2024)</p>
                 
-                <div class="hero-photo-carousel">
-                    <div class="carousel-frame">
-                        <div class="photo-slides">
-                            <div class="photo-slide active">
-                                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="PMKSY watershed development training session">
-                                <div class="photo-caption">Capacity Building Training Sessions</div>
-                            </div>
-                            <div class="photo-slide">
-                                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Soil and water conservation techniques">
-                                <div class="photo-caption">Soil & Water Conservation</div>
-                            </div>
-                            <div class="photo-slide">
-                                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Community participation in watershed management">
-                                <div class="photo-caption">Community Participation</div>
-                            </div>
-                            <div class="photo-slide">
-                                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Micro-irrigation techniques demonstration">
-                                <div class="photo-caption">Micro-Irrigation Techniques</div>
+                <div class="hero-content-modern">
+                    <div class="hero-text-section">
+                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🏛️ CENTRAL GOVERNMENT SCHEME</div>
+                        
+                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">PMKSY Watershed Development</h1>
+                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Pradhan Mantri Krishi Sinchayee Yojana (2022-2024)</p>
+                        
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
+                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Comprehensive watershed development through integrated management approach, focusing on strengthening community-based institutions and promoting sustainable livelihoods for enhanced agricultural sustainability.</p>
+                        </div>
+                        
+                        <div class="key-highlights" style="margin-bottom: 30px;">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2022-2024 Period</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🏛️</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Central Scheme</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🎓</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Capacity Building</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🤝</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Community Focus</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
+                        
+                        <!-- Quick Stats -->
+                        <div class="quick-stats">
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">2,408</span>
+                                <span class="stat-label" style="color: white;">Beneficiaries Trained</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">7</span>
+                                <span class="stat-label" style="color: white;">Districts Covered</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual-section">
+                        <div class="modern-carousel">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Project Gallery</h3>
+                            
+                            <div class="hero-photo-carousel">
+                                <div class="carousel-frame">
+                                    <div class="photo-slides">
+                                        <div class="photo-slide active">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="PMKSY watershed development training session" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 Capacity Building Training Sessions</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Soil and water conservation techniques" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🌱 Soil & Water Conservation</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Community participation in watershed management" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🤝 Community Participation</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Micro-irrigation techniques demonstration" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">💧 Micro-Irrigation Techniques</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                        <span class="indicator" data-slide="3"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- =========== PROGRAM OVERVIEW =========== -->
-        <section class="sector-overview" style="background: transparent !important; padding: 30px 0;">
+        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
+        <section class="overview-modern">
             <div class="container">
-                <div class="overview-content-centered">
-                    <h2 class="section-title">Program Overview</h2>
-                    <div class="overview-text-balanced">
-                        <p class="overview-description">
-                            The Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) is a centrally sponsored scheme implemented by Coodu Trust in collaboration with the District Watershed Development Agency. The program's primary objective is to improve the productive potential of rainfed and degraded lands through an integrated watershed management approach. It focuses on strengthening community-based institutions, promoting sustainable livelihoods, and ensuring long-term agricultural sustainability for farmers in the project areas.
-                        </p>
-                        <p class="overview-description">
-                            During the 2022–2024 period, the program's implementation was focused on extensive capacity-building initiatives. The geographical scope covered several districts, including Dindigul, Ramanathapuram, Thoothukudi, Virudhunagar, Perambalur, Krishnagiri, and Dharmapuri. The target beneficiaries were a diverse group of local stakeholders, including members of watershed committees, farmers, and Self-Help Group (SHG) members, who are crucial for the sustainable management of local resources.
-                        </p>
+                <div class="overview-grid">
+                    <div class="overview-content-modern">
+                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Program Overview</h2>
+                        
+                        <div style="margin-bottom: 35px;">
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
+                                The <strong>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</strong> is a centrally sponsored scheme implemented by Coodu Trust in collaboration with the District Watershed Development Agency. The program's primary objective is to improve the productive potential of rainfed and degraded lands through an integrated watershed management approach.
+                            </p>
+                            
+                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
+                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Core Objectives</h4>
+                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Strengthening community-based institutions, promoting sustainable livelihoods, and ensuring long-term agricultural sustainability for farmers in project areas through comprehensive capacity building.</p>
+                            </div>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                During the <strong>2022–2024 period</strong>, the program's implementation was focused on extensive capacity-building initiatives. The geographical scope covered <strong>seven districts</strong>, including Dindigul, Ramanathapuram, Thoothukudi, Virudhunagar, Perambalur, Krishnagiri, and Dharmapuri.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
+                                The target beneficiaries were a diverse group of local stakeholders, including members of watershed committees, farmers, and Self-Help Group (SHG) members, who are crucial for the sustainable management of local resources.
+                            </p>
+                        </div>
+                        
+                        <!-- Target Beneficiaries -->
+                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
+                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Target Beneficiaries</h4>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">📋</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Watershed Committee Members</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🌾</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Farmers & Agricultural Workers</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🤝</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Self-Help Group Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-sidebar">
+                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
+                        
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                                <strong>7 Districts:</strong><br>
+                                Dindigul, Ramanathapuram, Thoothukudi, Virudhunagar, Perambalur, Krishnagiri, Dharmapuri
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                <strong>Duration:</strong> 2022-2024<br>
+                                <strong>Phase:</strong> Capacity Building Focus<br>
+                                <strong>Status:</strong> Successfully Completed
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🏛️ Implementing Partners</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                <strong>Lead:</strong> Coodu Trust<br>
+                                <strong>Partner:</strong> District Watershed Development Agency<br>
+                                <strong>Scheme:</strong> Central Government (PMKSY)
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- =========== KEY ACHIEVEMENTS & ACTIVITIES =========== -->
+        <!-- =========== KEY ACHIEVEMENTS & ACTIVITIES (IMPROVED) =========== -->
         <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
-                <h2 class="section-title">Key Achievements & Activities (2022–2024)</h2>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Achievements & Activities (2022–2024)</h2>
                 
-                <div class="project-highlights">
-                    <div class="highlight-card">
-                        <h3 class="highlight-title">Total Beneficiaries Trained</h3>
-                        <p class="highlight-description">A total of 2,408 individuals received training, equipping them with modern agricultural techniques and sustainable practices.</p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
+                    <!-- Card 1: Total Beneficiaries -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎓</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Total Beneficiaries Trained</h3>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: center;">
+                            <span style="font-size: 3rem; font-weight: 700; display: block; line-height: 1; color: white;">2,408</span>
+                            <span style="font-size: 1rem; opacity: 0.9; margin-top: 5px; display: block; color: white;">Community Members Trained</span>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.7; font-size: 1.05rem; margin: 0;">A total of 2,408 individuals received comprehensive training, equipping them with modern agricultural techniques and sustainable practices for enhanced productivity and environmental stewardship.</p>
                     </div>
                     
-                    <div class="highlight-card">
-                        <h3 class="highlight-title">Capacity Building</h3>
-                        <p class="highlight-description">The core of the program involved focused block-level training sessions on critical topics, including:</p>
-                        <ul class="training-list">
-                            <li>Roles and Responsibilities of Watershed Committees for effective governance</li>
-                            <li>Advanced Soil and Water Conservation Techniques</li>
-                            <li>Skill Development for establishing agriculture-related Micro-Enterprises</li>
-                            <li>Sustainable practices like Vermicomposting and Organic Farming</li>
-                            <li>Water conservation through Micro-Irrigation Techniques for field crops</li>
-                        </ul>
+                    <!-- Card 2: Capacity Building -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎯</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Capacity Building Programs</h3>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 1.05rem;">The core of the program involved focused block-level training sessions on critical topics:</p>
+                        
+                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 15px;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
+                                    • Roles and Responsibilities of Watershed Committees for effective governance
+                                </li>
+                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
+                                    • Advanced Soil and Water Conservation Techniques
+                                </li>
+                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
+                                    • Skill Development for establishing agriculture-related Micro-Enterprises
+                                </li>
+                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
+                                    • Sustainable practices like Vermicomposting and Organic Farming
+                                </li>
+                                <li style="padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
+                                    • Water conservation through Micro-Irrigation Techniques for field crops
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                    <!-- Card 3: Exposure Visits -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🏢</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Exposure Visits</h3>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem;">Organized training-cum-exposure visits to renowned agricultural institutions to provide participants with practical knowledge of modern cropping and water management practices.</p>
+                        
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #1565c0; margin-bottom: 20px; font-size: 1.2rem; text-align: center;">🏛️ Partner Institutions</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; text-align: center; color: #2c3e50; font-size: 0.95rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">KVK Gandhigram</div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; text-align: center; color: #2c3e50; font-size: 0.95rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">TNAU Coimbatore</div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; text-align: center; color: #2c3e50; font-size: 0.95rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">TNAU Killikulam</div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; text-align: center; color: #2c3e50; font-size: 0.95rem; font-weight: 500; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">Horticulture College, Periyakulam</div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="highlight-card">
-                        <h3 class="highlight-title">Exposure Visits</h3>
-                        <p class="highlight-description">Organized training-cum-exposure visits to renowned agricultural institutions to provide participants with practical knowledge of modern cropping and water management practices. Institutions visited included:</p>
-                        <ul class="institution-list">
-                            <li>KVK Gandhigram</li>
-                            <li>TNAU Coimbatore</li>
-                            <li>TNAU Killikulam</li>
-                            <li>Horticulture College, Periyakulam</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="highlight-card">
-                        <h3 class="highlight-title">Program Impact</h3>
-                        <p class="highlight-description">The initiative has led to improved awareness and adoption of soil and water conservation techniques, strengthened community-led management of natural resources through empowered watershed committees, and created new economic opportunities through the promotion of micro-enterprises and sustainable farming.</p>
+                    <!-- Card 4: Program Impact -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">📈</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Program Impact</h3>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">🌱</span>
+                                    <strong style="color: #28a745; font-size: 1.1rem;">Improved Conservation Techniques</strong>
+                                </div>
+                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Enhanced awareness and adoption of soil and water conservation practices</p>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">🤝</span>
+                                    <strong style="color: #28a745; font-size: 1.1rem;">Strengthened Communities</strong>
+                                </div>
+                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Empowered watershed committees for community-led resource management</p>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">💼</span>
+                                    <strong style="color: #28a745; font-size: 1.1rem;">Economic Opportunities</strong>
+                                </div>
+                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Created new livelihood opportunities through micro-enterprises and sustainable farming</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -463,7 +642,7 @@
         <section class="statistics-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Verified Statistics</h2>
-                <div class="statistics-table-container">
+                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
                     <table class="statistics-table">
                         <thead>
                             <tr>
