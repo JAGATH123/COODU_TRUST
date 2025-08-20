@@ -15,8 +15,296 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Plantation & Afforestation Page Specific Styles */
+        .plantation-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .plantation-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .plantation-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-plantation-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .plantation-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .plantation-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .plantation-visual-content {
+            position: relative;
+        }
+        
+        .plantation-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .plantation-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .plantation-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .plantation-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .plantation-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .plantation-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .plantation-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .plantation-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .plantation-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .plantation-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .plantation-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .plantation-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .plantation-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .plantation-page .container {
+                padding: 0 15px;
+            }
+            
+            .plantation-text-content {
+                padding: 30px 25px;
+            }
+            
+            .plantation-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .plantation-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .plantation-image-modern {
+                height: 250px;
+            }
+            
+            .plantation-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .plantation-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="plantation-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,55 +420,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS PLANTATION & AFFORESTATION =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING PLANTATION & AFFORESTATION =========== -->
+        <section class="understanding-plantation-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Plantation & Afforestation</h2>
-                        <p class="overview-description">
-                            Plantation and afforestation are critical environmental interventions aimed at increasing forest cover, restoring degraded landscapes, and enhancing biodiversity. Plantation refers to the systematic cultivation of trees on agricultural or non-forested land, while afforestation involves establishing forests on lands that have not been forested in recent history.
-                        </p>
-                        <p class="overview-description">
-                            Our plantation and afforestation programs focus on creating sustainable green cover through scientifically planned tree planting initiatives. We emphasize native species selection, community participation, and long-term maintenance to ensure the survival and growth of planted trees. These efforts contribute significantly to carbon sequestration, soil conservation, biodiversity enhancement, and climate change mitigation.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Plantation & Afforestation:</h3>
-                        <ul class="component-list">
-                            <li><strong>Nursery Development:</strong> Establishing and managing nurseries for quality seedling production and sustainable supply</li>
-                            <li><strong>Species Selection:</strong> Choosing appropriate native and adaptive tree species for different ecological zones</li>
-                            <li><strong>Site Preparation:</strong> Proper land preparation, soil treatment, and site selection for optimal tree growth</li>
-                            <li><strong>Plantation Techniques:</strong> Implementing scientific planting methods and spacing for maximum survival rates</li>
-                            <li><strong>Maintenance & Protection:</strong> Post-plantation care including watering, pruning, and protection from grazing</li>
-                            <li><strong>Community Engagement:</strong> Training local communities in nursery management and plantation techniques</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">50,000+</span>
-                                <span class="highlight-label">Trees Planted</span>
+                <!-- Hero Content -->
+                <div class="plantation-hero-content">
+                    <div class="plantation-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Plantation & Afforestation</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.3rem;">What is Plantation & Afforestation? 🌳</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Plantation</strong> refers to the systematic cultivation of trees on agricultural or non-forested land, while <strong>afforestation</strong> involves establishing forests on lands that have not been forested in recent history.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Multiple</span>
-                                <span class="highlight-label">Native Species</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">10+ Years</span>
-                                <span class="highlight-label">Experience</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">100+</span>
-                                <span class="highlight-label">Communities Trained</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                <strong>Plantation and afforestation</strong> are our comprehensive environmental interventions aimed at increasing forest cover, restoring degraded landscapes, and enhancing biodiversity. Since 2003, Coodu Trust has pioneered sustainable tree planting initiatives that transform entire ecosystems.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                Our programs focus on creating sustainable green cover through scientifically planned tree planting initiatives. We emphasize <strong>native species selection</strong>, community participation, and long-term maintenance to ensure optimal tree survival rates and lasting environmental impact.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Principles -->
+                        <div class="principles-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Our Core Principles</h3>
+                            <div class="principles-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Native Species Focus</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌍</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Climate Mitigation</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🤝</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Community Engagement</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">📊</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Scientific Approach</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Tree plantation and afforestation activities" class="story-photo">
+                    
+                    <div class="plantation-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="plantation-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Plantation Development Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Nursery Development</h4>
+                                    <p>Establishing quality nurseries and training communities in sustainable seedling production techniques.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Site Selection & Preparation</h4>
+                                    <p>Scientific site assessment, soil preparation, and optimal planting location identification.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Scientific Plantation</h4>
+                                    <p>Implementation of proper planting techniques with native species selection and optimal spacing.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Maintenance & Monitoring</h4>
+                                    <p>Post-plantation care, protection measures, and long-term monitoring for optimal survival rates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Large-scale tree plantation and afforestation activities showing community participation" class="plantation-image-modern">
+                        
+                        <div class="image-caption">
+                            Community-led tree plantation initiative showcasing nursery development, species selection, and sustainable afforestation practices in Dindigul district
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="plantation-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">50K+</span>
+                        <span class="stat-label-modern">Trees Planted</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">100+</span>
+                        <span class="stat-label-modern">Communities Trained</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">20+</span>
+                        <span class="stat-label-modern">Years Excellence</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Multiple</span>
+                        <span class="stat-label-modern">Native Species</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding light-bg">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Plantation & Afforestation Projects (2003-2010)</h2>
                 
@@ -221,36 +578,36 @@
         </section>
 
         <!-- =========== PLANTATION IMPACT =========== -->
-        <section class="impact-section section-padding">
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Plantation & Afforestation Impact</h2>
                 <div class="impact-grid">
                     <div class="impact-card">
                         <div class="impact-icon">🌳</div>
                         <h3 class="impact-title">Forest Cover Enhancement</h3>
-                        <p class="impact-description">Significantly increased green cover through systematic plantation drives and afforestation initiatives across multiple locations.</p>
+                        <p class="impact-description">Significantly increased green cover through systematic plantation drives and afforestation initiatives across multiple districts, creating sustainable forest ecosystems.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">🌱</div>
                         <h3 class="impact-title">Nursery Development</h3>
-                        <p class="impact-description">Established sustainable nursery systems and trained communities in quality seedling production and plantation techniques.</p>
+                        <p class="impact-description">Established sustainable nursery systems and trained over 100 communities in quality seedling production and scientific plantation techniques.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">🎋</div>
                         <h3 class="impact-title">Sustainable Forestry</h3>
-                        <p class="impact-description">Promoted sustainable forestry practices through bamboo cultivation and demonstration of eco-friendly forest management.</p>
+                        <p class="impact-description">Promoted sustainable forestry practices through bamboo cultivation demonstrations and eco-friendly forest management approaches.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">🤝</div>
                         <h3 class="impact-title">Community Capacity</h3>
-                        <p class="impact-description">Built local expertise in plantation and nursery management, creating sustainable livelihoods in forest-based activities.</p>
+                        <p class="impact-description">Built local expertise in plantation and nursery management, creating sustainable livelihoods and environmental stewardship in rural communities.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== PLANTATION BENEFITS =========== -->
-        <section class="benefits-section section-padding light-bg">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Environmental Benefits</h2>
                 <div class="benefits-grid">
