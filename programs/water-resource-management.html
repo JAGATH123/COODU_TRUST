@@ -15,8 +15,296 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Water Resource Management Page Specific Styles */
+        .water-resource-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .water-resource-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .water-resource-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-water-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .water-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .water-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .water-visual-content {
+            position: relative;
+        }
+        
+        .water-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .water-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .water-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .water-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .water-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .water-resource-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .water-resource-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .water-resource-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .water-resource-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .water-resource-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .water-resource-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .water-resource-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .water-resource-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .water-resource-page .container {
+                padding: 0 15px;
+            }
+            
+            .water-text-content {
+                padding: 30px 25px;
+            }
+            
+            .water-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .water-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .water-image-modern {
+                height: 250px;
+            }
+            
+            .water-resource-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .water-resource-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="water-resource-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,103 +420,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS WATER RESOURCE MANAGEMENT =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING WATER RESOURCE MANAGEMENT =========== -->
+        <section class="understanding-water-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Water Resource Management</h2>
-                        <p class="overview-description">
-                            Water Resource Management is the comprehensive planning, development, distribution, and optimization of water resources to meet current and future human and environmental needs. It involves the systematic management of water through various technologies, policies, and practices to ensure sustainable water security for communities and ecosystems.
-                        </p>
-                        <p class="overview-description">
-                            Our water resource management programs focus on sustainable water conservation, rainwater harvesting, groundwater recharge, and community-based water management systems. We emphasize participatory approaches that involve local communities in water resource planning and management, ensuring long-term sustainability and equitable water distribution.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Water Resource Management:</h3>
-                        <ul class="component-list">
-                            <li><strong>Rainwater Harvesting:</strong> Collecting and storing rainwater for various uses including groundwater recharge and irrigation</li>
-                            <li><strong>Water Conservation:</strong> Implementing efficient water use practices and reducing water wastage through technology and awareness</li>
-                            <li><strong>Groundwater Recharge:</strong> Enhancing natural groundwater replenishment through recharge shafts and percolation systems</li>
-                            <li><strong>Tank Desilting:</strong> Restoring water storage capacity of traditional water bodies through desilting and rehabilitation</li>
-                            <li><strong>Participatory Management:</strong> Involving water user associations and communities in sustainable water management practices</li>
-                            <li><strong>Ecosystem Restoration:</strong> Rejuvenating water bodies and surrounding ecosystems for biodiversity conservation</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">200+ Crore</span>
-                                <span class="highlight-label">Liters Water Stored</span>
+                <!-- Hero Content -->
+                <div class="water-hero-content">
+                    <div class="water-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Water Resource Management</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Water Resource Management? 💧</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;">Water Resource Management is the comprehensive planning, development, distribution, and optimization of water resources to meet current and future human and environmental needs through systematic water management practices.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Multiple</span>
-                                <span class="highlight-label">Districts Covered</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">20+ Years</span>
-                                <span class="highlight-label">Experience</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">100+</span>
-                                <span class="highlight-label">Water Bodies Restored</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                Our <strong>water resource management programs</strong> focus on sustainable water conservation, rainwater harvesting, groundwater recharge, and community-based water management systems. Since 2002, Coodu Trust has pioneered innovative water management solutions that transform water security across rural communities.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                We emphasize <strong>participatory approaches</strong> that involve local communities in water resource planning and management, ensuring long-term sustainability and equitable water distribution while building climate resilience.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Principles -->
+                        <div class="principles-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Our Core Principles</h3>
+                            <div class="principles-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">💧</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Water Conservation</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🤝</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Community Participation</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">♻️</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Sustainable Practices</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌍</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Ecosystem Restoration</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Water resource management and rainwater harvesting activities" class="story-photo">
+                    
+                    <div class="water-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="water-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Water Management Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Resource Assessment</h4>
+                                    <p>Comprehensive evaluation of water resources, needs assessment, and community consultation for planning.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Rainwater Harvesting</h4>
+                                    <p>Implementation of rainwater collection systems, storage solutions, and groundwater recharge structures.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Water Body Restoration</h4>
+                                    <p>Tank desilting, water body rehabilitation, and ecosystem restoration for enhanced water storage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Community Management</h4>
+                                    <p>Capacity building of water user associations and sustainable water management training.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Water resource management and rainwater harvesting activities" class="water-image-modern">
+                        
+                        <div class="image-caption">
+                            Comprehensive water resource management project showcasing rainwater harvesting, tank restoration, and community participation in Dindigul district
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- =========== ONGOING PROJECTS =========== -->
-        <section class="ongoing-projects section-padding light-bg">
-            <div class="container">
-                <h2 class="section-title">Current Water Resource Projects</h2>
-                <div class="projects-grid">
-                    
-                    <!-- RWH Activities - Ongoing -->
-                    <div class="project-card ongoing">
-                        <div class="project-status">
-                            <span class="status-badge ongoing">Ongoing</span>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="project-title">Rainwater Harvesting (RWH) Activities (CSR Projects)</h3>
-                            <span class="project-period">2018-2023</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Rainwater harvesting activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Multi-component</span>
-                                <span class="impact-label">CSR Initiative</span>
-                            </div>
-                        </div>
-                        <a href="projects/rwh-activities.html" class="project-link">View Details →</a>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="water-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">200+</span>
+                        <span class="stat-label-modern">Crore Liters Stored</span>
                     </div>
-
-                    <!-- MI-Tank Initiative - Recent -->
-                    <div class="project-card recent">
-                        <div class="project-status">
-                            <span class="status-badge recent">Recent</span>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="project-title">MI-Tank Initiative (CSR - United Way Mumbai)</h3>
-                            <span class="project-period">2022-2023</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Tank rejuvenation activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Water Bodies</span>
-                                <span class="impact-label">Restoration</span>
-                            </div>
-                        </div>
-                        <a href="projects/mi-tank-initiative.html" class="project-link">View Details →</a>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Multiple</span>
+                        <span class="stat-label-modern">Districts Covered</span>
                     </div>
-
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">20+</span>
+                        <span class="stat-label-modern">Years Experience</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">100+</span>
+                        <span class="stat-label-modern">Water Bodies Restored</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Water Resource Management Projects (2002-2023)</h2>
                 
@@ -300,70 +609,37 @@
             </div>
         </section>
 
-        <!-- =========== WATER MANAGEMENT IMPACT =========== -->
-        <section class="impact-section section-padding light-bg">
+        <!-- =========== WATER RESOURCE MANAGEMENT IMPACT =========== -->
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Water Resource Management Impact</h2>
                 <div class="impact-grid">
                     <div class="impact-card">
                         <div class="impact-icon">💧</div>
                         <h3 class="impact-title">Water Security</h3>
-                        <p class="impact-description">Enhanced water availability and security through systematic rainwater harvesting and groundwater recharge initiatives.</p>
+                        <p class="impact-description">Enhanced water availability and security through systematic rainwater harvesting and groundwater recharge initiatives across multiple districts.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">🏞️</div>
                         <h3 class="impact-title">Ecosystem Restoration</h3>
-                        <p class="impact-description">Restored water bodies and surrounding ecosystems, improving biodiversity and environmental health.</p>
+                        <p class="impact-description">Restored over 100 water bodies and surrounding ecosystems, improving biodiversity and environmental health for sustainable water management.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">🤝</div>
                         <h3 class="impact-title">Community Participation</h3>
-                        <p class="impact-description">Built local capacity through water user associations and participatory irrigation management systems.</p>
+                        <p class="impact-description">Built local capacity through water user associations and participatory irrigation management systems, ensuring community ownership.</p>
                     </div>
                     <div class="impact-card">
                         <div class="impact-icon">⚡</div>
                         <h3 class="impact-title">Sustainable Management</h3>
-                        <p class="impact-description">Implemented sustainable water management practices ensuring long-term water resource conservation and efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== WATER CONSERVATION BENEFITS =========== -->
-        <section class="benefits-section section-padding">
-            <div class="container">
-                <h2 class="section-title">Water Conservation Benefits</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>💧 Groundwater Recharge</h4>
-                        <p>Systematic recharge of aquifers through rainwater harvesting and percolation systems for long-term water security.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌾 Irrigation Support</h4>
-                        <p>Enhanced irrigation water availability for agricultural communities through sustainable water management practices.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🏠 Household Water Security</h4>
-                        <p>Improved domestic water access and quality through community-based water conservation initiatives.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌍 Climate Resilience</h4>
-                        <p>Built community resilience to climate variability and drought through diversified water resource management.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🐟 Aquatic Ecosystem Health</h4>
-                        <p>Restored and maintained healthy aquatic ecosystems supporting biodiversity and ecological balance.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>💰 Economic Benefits</h4>
-                        <p>Reduced water costs and increased agricultural productivity through efficient water resource utilization.</p>
+                        <p class="impact-description">Implemented sustainable water management practices ensuring long-term water resource conservation and climate resilience for communities.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding light-bg">
+        <section class="sector-cta section-padding">
             <div class="container">
                 <div class="cta-content">
                     <h2 class="cta-title">Support Water Conservation</h2>
