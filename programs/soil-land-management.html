@@ -15,8 +15,403 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Soil & Land Management Page Specific Styles */
+        .soil-land-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .soil-land-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .soil-land-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-soil-land-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .soil-land-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .soil-land-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .soil-land-visual-content {
+            position: relative;
+        }
+        
+        .soil-land-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .soil-land-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .soil-land-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .soil-land-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .soil-land-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .soil-land-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .soil-land-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .soil-land-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .soil-land-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .soil-land-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .soil-land-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .soil-land-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .soil-land-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        /* Benefits Section Styling */
+        .soil-land-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .soil-land-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+        }
+        
+        .soil-land-page .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .soil-land-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .soil-land-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Training Section Styling */
+        .soil-land-page .training-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .soil-land-page .training-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .soil-land-page .training-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .soil-land-page .training-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .soil-land-page .training-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .soil-land-page .training-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .soil-land-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .soil-land-page .training-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .soil-land-page .container {
+                padding: 0 15px;
+            }
+            
+            .soil-land-text-content {
+                padding: 30px 25px;
+            }
+            
+            .soil-land-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .soil-land-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .soil-land-image-modern {
+                height: 250px;
+            }
+            
+            .soil-land-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .soil-land-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .soil-land-page .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .soil-land-page .benefit-item {
+                padding: 25px 20px;
+            }
+            
+            .soil-land-page .training-card {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="soil-land-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -122,7 +517,7 @@
     <main>
 
         <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg');">
+        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146613/coodu-trust/images/programs/background-prgms/soil-land-management.png');">
             <div class="container">
                 <div class="breadcrumb">
                     <a href="../programs.html">Programs</a> > <a href="environment-resilience.html">Environment and Resilience</a> > <span>Soil & Land Management</span>
@@ -132,55 +527,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS SOIL & LAND MANAGEMENT =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING SOIL & LAND MANAGEMENT =========== -->
+        <section class="understanding-soil-land-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Soil & Land Management</h2>
-                        <p class="overview-description">
-                            Soil and Land Management encompasses the sustainable use, conservation, and improvement of soil resources to maintain and enhance agricultural productivity while protecting environmental quality. It involves implementing practices that prevent soil degradation, improve soil health, and optimize land use for long-term sustainability.
-                        </p>
-                        <p class="overview-description">
-                            Our soil and land management programs focus on promoting sustainable agriculture practices, organic farming techniques, and indigenous knowledge systems that enhance soil fertility and maintain ecological balance. We emphasize training farmers in sustainable land management techniques that improve soil health while reducing dependency on chemical inputs.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Soil & Land Management:</h3>
-                        <ul class="component-list">
-                            <li><strong>Sustainable Agriculture:</strong> Promoting eco-friendly farming practices that maintain soil health and productivity</li>
-                            <li><strong>Organic Farming:</strong> Training farmers in chemical-free agriculture using natural inputs and biological pest control</li>
-                            <li><strong>Indigenous Practices:</strong> Reviving traditional farming knowledge and techniques for sustainable land management</li>
-                            <li><strong>Soil Health Improvement:</strong> Implementing practices to enhance soil fertility, structure, and biological activity</li>
-                            <li><strong>Vermi-composting:</strong> Producing organic fertilizers through earthworm composting for soil enrichment</li>
-                            <li><strong>Erosion Control:</strong> Preventing soil loss through appropriate land use and conservation practices</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">2,000+</span>
-                                <span class="highlight-label">Farmers Trained</span>
+                <!-- Hero Content -->
+                <div class="soil-land-hero-content">
+                    <div class="soil-land-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Soil & Land Management</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Soil & Land Management? 🌱</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Soil and Land Management</strong> encompasses the sustainable use, conservation, and improvement of soil resources to maintain and enhance agricultural productivity while protecting environmental quality.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Multiple</span>
-                                <span class="highlight-label">Techniques Taught</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">3+ Years</span>
-                                <span class="highlight-label">Training Period</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">100%</span>
-                                <span class="highlight-label">Sustainable Focus</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                <strong>Our approach</strong> focuses on promoting sustainable agriculture practices, organic farming techniques, and indigenous knowledge systems that enhance soil fertility and maintain ecological balance. We emphasize training farmers in sustainable land management techniques that improve soil health while reducing dependency on chemical inputs.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                Our programs integrate <strong>traditional wisdom</strong> with modern scientific practices to create holistic solutions that benefit both farmers and the environment, ensuring sustainable agricultural productivity for future generations.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Components -->
+                        <div class="components-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
+                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌾</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Sustainable Agriculture</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🍃</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Organic Farming</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">📚</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Indigenous Practices</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🪱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Vermi-composting</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Sustainable soil and land management training activities" class="story-photo">
+                    
+                    <div class="soil-land-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="soil-land-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Soil Management Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Knowledge Transfer</h4>
+                                    <p>Training farmers in indigenous farming practices and sustainable agriculture techniques.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Organic Methods</h4>
+                                    <p>Implementation of chemical-free agriculture using natural inputs and biological pest control.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Soil Enhancement</h4>
+                                    <p>Vermi-composting and organic fertilizer production for soil health improvement.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Sustainable Practices</h4>
+                                    <p>Long-term adoption of eco-friendly farming practices for environmental protection.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Sustainable soil and land management training activities" class="soil-land-image-modern">
+                        
+                        <div class="image-caption">
+                            Farmers learning sustainable soil management techniques including organic farming and vermi-composting in rural Tamil Nadu
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="soil-land-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">2,000+</span>
+                        <span class="stat-label-modern">Farmers Trained</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Multiple</span>
+                        <span class="stat-label-modern">Techniques Taught</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">3+</span>
+                        <span class="stat-label-modern">Years Training</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">100%</span>
+                        <span class="stat-label-modern">Sustainable Focus</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding light-bg">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Soil & Land Management Projects (2002-2005)</h2>
                 
@@ -237,7 +701,7 @@
         </section>
 
         <!-- =========== SOIL MANAGEMENT IMPACT =========== -->
-        <section class="impact-section section-padding">
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Soil & Land Management Impact</h2>
                 <div class="impact-grid">
@@ -266,7 +730,7 @@
         </section>
 
         <!-- =========== SUSTAINABLE PRACTICES =========== -->
-        <section class="benefits-section section-padding light-bg">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Sustainable Land Management Benefits</h2>
                 <div class="benefits-grid">
@@ -299,7 +763,7 @@
         </section>
 
         <!-- =========== TRAINING APPROACHES =========== -->
-        <section class="training-section section-padding">
+        <section class="training-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Training Approach</h2>
                 <div class="training-grid">
@@ -328,7 +792,7 @@
         </section>
 
         <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding light-bg">
+        <section class="sector-cta section-padding">
             <div class="container">
                 <div class="cta-content">
                     <h2 class="cta-title">Support Sustainable Agriculture</h2>
