@@ -15,8 +15,509 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Farmer Collectivization Page Specific Styles */
+        .farmer-collectivization-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .farmer-collectivization-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .farmer-collectivization-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-collectivization-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .collectivization-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .collectivization-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .collectivization-visual-content {
+            position: relative;
+        }
+        
+        .collectivization-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .collectivization-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .collectivization-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .collectivization-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .collectivization-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .farmer-collectivization-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .farmer-collectivization-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .farmer-collectivization-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .farmer-collectivization-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .farmer-collectivization-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .farmer-collectivization-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .farmer-collectivization-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .farmer-collectivization-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        /* Benefits Section Styling */
+        .farmer-collectivization-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .farmer-collectivization-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+        }
+        
+        .farmer-collectivization-page .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .farmer-collectivization-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .farmer-collectivization-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Approaches Section Styling */
+        .farmer-collectivization-page .approaches-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .farmer-collectivization-page .approach-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .farmer-collectivization-page .approach-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .farmer-collectivization-page .approach-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .farmer-collectivization-page .approach-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .farmer-collectivization-page .approach-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .farmer-collectivization-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .farmer-collectivization-page .approaches-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .farmer-collectivization-page .container {
+                padding: 0 15px;
+            }
+            
+            .collectivization-text-content {
+                padding: 30px 25px;
+            }
+            
+            .collectivization-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .collectivization-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .collectivization-image-modern {
+                height: 250px;
+            }
+            
+            .farmer-collectivization-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .farmer-collectivization-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .farmer-collectivization-page .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .farmer-collectivization-page .benefit-item {
+                padding: 25px 20px;
+            }
+            
+            .farmer-collectivization-page .approach-card {
+                padding: 30px 25px;
+            }
+        }
+
+        /* FPC Models Section Styling */
+        .farmer-collectivization-page .models-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .farmer-collectivization-page .model-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .farmer-collectivization-page .model-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .farmer-collectivization-page .model-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .farmer-collectivization-page .model-card:hover::before {
+            left: 100%;
+        }
+        
+        .farmer-collectivization-page .model-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(40, 167, 69, 0.3));
+        }
+        
+        .farmer-collectivization-page .model-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .farmer-collectivization-page .model-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 2px;
+        }
+        
+        .farmer-collectivization-page .model-description {
+            color: #555;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .farmer-collectivization-page .models-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .farmer-collectivization-page .model-card {
+                padding: 30px 25px;
+            }
+            
+            .farmer-collectivization-page .model-icon {
+                font-size: 3rem;
+            }
+            
+            .farmer-collectivization-page .model-title {
+                font-size: 1.2rem;
+            }
+            
+            .farmer-collectivization-page .model-description {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="farmer-collectivization-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,55 +633,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS FARMER COLLECTIVIZATION & AGRIBUSINESS =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING FARMER COLLECTIVIZATION & AGRIBUSINESS =========== -->
+        <section class="understanding-collectivization-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Farmer Collectivization & Agribusiness</h2>
-                        <p class="overview-description">
-                            Farmer Collectivization refers to the process of organizing individual farmers into formal groups, cooperatives, or producer organizations to collectively undertake agricultural activities, share resources, and access markets more effectively. This approach enables small and marginal farmers to overcome individual limitations and achieve economies of scale. Agribusiness encompasses the entire value chain from farm inputs to final consumer products, including production, processing, distribution, and marketing of agricultural goods.
-                        </p>
-                        <p class="overview-description">
-                            Our Farmer Collectivization and Agribusiness programs focus on establishing Farmer Producer Companies (FPCs), Self-Help Groups (SHGs), and agricultural cooperatives that empower farmers through collective bargaining, shared resources, and integrated value chain development. We emphasize building sustainable business models that connect farmers directly to markets while providing access to credit, technology, and quality inputs at competitive prices.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Farmer Collectivization & Agribusiness:</h3>
-                        <ul class="component-list">
-                            <li><strong>Farmer Producer Organizations (FPOs):</strong> Establishing formal collectives that operate as business entities for improved market access and resource pooling</li>
-                            <li><strong>Self-Help Group Formation:</strong> Creating grassroots-level farmer groups for mutual support, savings, and collective decision-making</li>
-                            <li><strong>Value Chain Development:</strong> Building integrated systems from production to marketing including processing and value addition</li>
-                            <li><strong>Market Linkage Development:</strong> Creating direct connections between farmer groups and buyers, eliminating intermediaries</li>
-                            <li><strong>Collective Bargaining:</strong> Enabling farmers to negotiate better prices for both inputs and outputs through group purchasing and selling</li>
-                            <li><strong>Agribusiness Enterprise Development:</strong> Supporting the establishment of farmer-owned processing units and marketing enterprises</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">500+</span>
-                                <span class="highlight-label">Farmer Groups Formed</span>
+                <!-- Hero Content -->
+                <div class="collectivization-hero-content">
+                    <div class="collectivization-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Farmer Collectivization & Agribusiness</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Farmer Collectivization? 👨‍🌾</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Farmer Collectivization</strong> refers to organizing individual farmers into formal groups, cooperatives, or producer organizations to collectively undertake agricultural activities and achieve economies of scale.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">15,000+</span>
-                                <span class="highlight-label">Farmers Organized</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">25+</span>
-                                <span class="highlight-label">FPCs Established</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">20+ Years</span>
-                                <span class="highlight-label">Experience</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                <strong>Our approach</strong> focuses on establishing Farmer Producer Companies (FPCs), Self-Help Groups (SHGs), and agricultural cooperatives that empower farmers through collective bargaining, shared resources, and integrated value chain development.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                We emphasize building <strong>sustainable business models</strong> that connect farmers directly to markets while providing access to credit, technology, and quality inputs at competitive prices for enhanced income and sustainability.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Components -->
+                        <div class="components-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
+                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🏢</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">FPO Development</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🤝</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Collective Bargaining</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🔗</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Value Chain Development</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🏪</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Market Linkages</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Farmer collectivization and agribusiness activities" class="story-photo">
+                    
+                    <div class="collectivization-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="collectivization-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Collectivization Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Group Formation</h4>
+                                    <p>Identifying and organizing farmers into self-help groups and cooperatives.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Capacity Building</h4>
+                                    <p>Training farmers in collective management, financial literacy, and business skills.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Value Addition</h4>
+                                    <p>Setting up processing units and developing integrated value chains.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Market Access</h4>
+                                    <p>Creating direct market linkages and eliminating intermediaries for better prices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Farmer collectivization and agribusiness activities" class="collectivization-image-modern">
+                        
+                        <div class="image-caption">
+                            Empowering farmers through collective action, FPO development and agribusiness initiatives across rural Tamil Nadu
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="collectivization-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">500+</span>
+                        <span class="stat-label-modern">Farmer Groups Formed</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">15,000+</span>
+                        <span class="stat-label-modern">Farmers Organized</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">25+</span>
+                        <span class="stat-label-modern">FPCs Established</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">20+</span>
+                        <span class="stat-label-modern">Years Experience</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding light-bg">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Farmer Collectivization & Agribusiness Projects (2015-2024)</h2>
                 
@@ -237,7 +807,7 @@
         </section>
 
         <!-- =========== COLLECTIVIZATION IMPACT =========== -->
-        <section class="impact-section section-padding">
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Farmer Collectivization & Agribusiness Impact</h2>
                 <div class="impact-grid">
@@ -266,7 +836,7 @@
         </section>
 
         <!-- =========== COLLECTIVIZATION BENEFITS =========== -->
-        <section class="benefits-section section-padding light-bg">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Benefits of Farmer Collectivization</h2>
                 <div class="benefits-grid">
@@ -299,7 +869,7 @@
         </section>
 
         <!-- =========== FPC MODELS =========== -->
-        <section class="fpc-models section-padding">
+        <section class="fpc-models section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Farmer Producer Company Models</h2>
                 <div class="models-grid">
@@ -328,7 +898,7 @@
         </section>
 
         <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding light-bg">
+        <section class="sector-cta section-padding" style="background: transparent !important;">
             <div class="container">
                 <div class="cta-content">
                     <h2 class="cta-title">Support Farmer Empowerment</h2>

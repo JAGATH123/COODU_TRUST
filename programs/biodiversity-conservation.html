@@ -15,8 +15,536 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Biodiversity Conservation Page Specific Styles */
+        .biodiversity-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .biodiversity-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .biodiversity-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-biodiversity-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .biodiversity-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .biodiversity-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .biodiversity-visual-content {
+            position: relative;
+        }
+        
+        .biodiversity-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .biodiversity-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .biodiversity-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .biodiversity-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .biodiversity-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .biodiversity-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .biodiversity-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .biodiversity-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .biodiversity-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .biodiversity-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .biodiversity-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .biodiversity-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .biodiversity-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        /* Benefits Section Styling */
+        .biodiversity-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .biodiversity-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+        }
+        
+        .biodiversity-page .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .biodiversity-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .biodiversity-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Approaches Section Styling */
+        .biodiversity-page .approaches-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .biodiversity-page .approach-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .biodiversity-page .approach-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .biodiversity-page .approach-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .biodiversity-page .approach-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .biodiversity-page .approach-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .biodiversity-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .biodiversity-page .approaches-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .biodiversity-page .container {
+                padding: 0 15px;
+            }
+            
+            .biodiversity-text-content {
+                padding: 30px 25px;
+            }
+            
+            .biodiversity-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .biodiversity-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .biodiversity-image-modern {
+                height: 250px;
+            }
+            
+            .biodiversity-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .biodiversity-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .biodiversity-page .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .biodiversity-page .benefit-item {
+                padding: 25px 20px;
+            }
+            
+            .biodiversity-page .approach-card {
+                padding: 30px 25px;
+            }
+        }
+
+        /* Western Ghats Section Styling */
+        .biodiversity-page .western-ghats-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 40px;
+        }
+        
+        .biodiversity-page .western-ghats-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #28a745;
+        }
+        
+        .biodiversity-page .western-ghats-text p {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .biodiversity-page .western-ghats-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .biodiversity-page .western-ghats-list li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            color: #34495e;
+            font-size: 1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(40, 167, 69, 0.1);
+        }
+        
+        .biodiversity-page .western-ghats-list li:before {
+            content: '🌿';
+            font-size: 1.2rem;
+            margin-right: 15px;
+            background: rgba(40, 167, 69, 0.1);
+            padding: 8px;
+            border-radius: 50%;
+            min-width: 35px;
+            text-align: center;
+        }
+        
+        .biodiversity-page .western-ghats-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .biodiversity-page .western-ghats-highlights {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .biodiversity-page .highlight-box {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .biodiversity-page .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .biodiversity-page .highlight-box:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.4);
+        }
+        
+        .biodiversity-page .highlight-box:hover::before {
+            left: 100%;
+        }
+        
+        .biodiversity-page .highlight-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .biodiversity-page .highlight-box p {
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.95;
+            font-weight: 500;
+            color: white;
+        }
+        
+        @media (max-width: 1024px) {
+            .biodiversity-page .western-ghats-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .biodiversity-page .western-ghats-text {
+                padding: 30px 25px;
+            }
+            
+            .biodiversity-page .western-ghats-list li:before {
+                min-width: 30px;
+                padding: 6px;
+                font-size: 1rem;
+            }
+            
+            .biodiversity-page .highlight-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="biodiversity-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,55 +660,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS BIODIVERSITY CONSERVATION =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING BIODIVERSITY CONSERVATION =========== -->
+        <section class="understanding-biodiversity-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Biodiversity Conservation</h2>
-                        <p class="overview-description">
-                            Biodiversity Conservation refers to the protection, preservation, and sustainable management of biological diversity including ecosystems, species, and genetic resources. It encompasses efforts to maintain the variety of life on Earth and the ecological processes that support it, ensuring the continued existence of plants, animals, and microorganisms for current and future generations.
-                        </p>
-                        <p class="overview-description">
-                            Our biodiversity conservation programs focus on protecting critical ecosystems like the Western Ghats, conserving medicinal plants, and promoting ecological preservation through sustainable development practices. We recognize that biodiversity is essential for ecosystem stability, environmental health, and human well-being, making its conservation a priority in all our environmental initiatives.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Biodiversity Conservation:</h3>
-                        <ul class="component-list">
-                            <li><strong>Ecological Preservation:</strong> Protecting natural ecosystems and their ecological processes from degradation and destruction</li>
-                            <li><strong>Species Conservation:</strong> Safeguarding endangered and threatened plant and animal species from extinction</li>
-                            <li><strong>Habitat Protection:</strong> Maintaining and restoring natural habitats that support diverse biological communities</li>
-                            <li><strong>Medicinal Plant Conservation:</strong> Preserving traditional medicinal plants and their genetic diversity for future generations</li>
-                            <li><strong>Sustainable Development:</strong> Implementing development practices that balance human needs with environmental protection</li>
-                            <li><strong>Community Engagement:</strong> Involving local communities in conservation efforts and traditional knowledge preservation</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">Western Ghats</span>
-                                <span class="highlight-label">Ecosystem Protected</span>
+                <!-- Hero Content -->
+                <div class="biodiversity-hero-content">
+                    <div class="biodiversity-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Biodiversity Conservation</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Biodiversity Conservation? 🌿</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Biodiversity Conservation</strong> refers to the protection, preservation, and sustainable management of biological diversity including ecosystems, species, and genetic resources.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Medicinal Plants</span>
-                                <span class="highlight-label">Species Conserved</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">3+ Years</span>
-                                <span class="highlight-label">Conservation Work</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">100%</span>
-                                <span class="highlight-label">Sustainability Focus</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                <strong>Our approach</strong> focuses on protecting critical ecosystems like the Western Ghats, conserving medicinal plants, and promoting ecological preservation through sustainable development practices. We recognize that biodiversity is essential for ecosystem stability, environmental health, and human well-being.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                Our programs integrate <strong>traditional knowledge</strong> with modern conservation science to create holistic solutions that protect natural habitats, preserve endangered species, and support ecological balance for future generations.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Components -->
+                        <div class="components-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
+                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌳</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Ecosystem Protection</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🦋</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Species Conservation</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Medicinal Plants</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🏞️</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Habitat Preservation</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Biodiversity conservation and ecological preservation activities" class="story-photo">
+                    
+                    <div class="biodiversity-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="biodiversity-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Conservation Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Ecosystem Assessment</h4>
+                                    <p>Identifying critical biodiversity hotspots and assessing conservation priorities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Species Protection</h4>
+                                    <p>Implementing targeted conservation strategies for endangered and endemic species.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Habitat Restoration</h4>
+                                    <p>Restoring degraded habitats and maintaining ecological connectivity.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Community Engagement</h4>
+                                    <p>Involving local communities in conservation efforts and sustainable practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Biodiversity conservation and ecological preservation activities" class="biodiversity-image-modern">
+                        
+                        <div class="image-caption">
+                            Protecting Western Ghats biodiversity through conservation of medicinal plants and ecological preservation in Tamil Nadu
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="biodiversity-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Western Ghats</span>
+                        <span class="stat-label-modern">Ecosystem Protected</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Medicinal Plants</span>
+                        <span class="stat-label-modern">Species Conserved</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">3+</span>
+                        <span class="stat-label-modern">Years Conservation</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">100%</span>
+                        <span class="stat-label-modern">Sustainability Focus</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding light-bg">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Biodiversity Conservation Projects (2001-2003)</h2>
                 
@@ -221,7 +818,7 @@
         </section>
 
         <!-- =========== BIODIVERSITY IMPACT =========== -->
-        <section class="impact-section section-padding">
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Biodiversity Conservation Impact</h2>
                 <div class="impact-grid">
@@ -250,7 +847,7 @@
         </section>
 
         <!-- =========== CONSERVATION BENEFITS =========== -->
-        <section class="benefits-section section-padding light-bg">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Biodiversity Conservation Benefits</h2>
                 <div class="benefits-grid">
@@ -283,7 +880,7 @@
         </section>
 
         <!-- =========== CONSERVATION APPROACHES =========== -->
-        <section class="approaches-section section-padding">
+        <section class="approaches-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Conservation Approach</h2>
                 <div class="approaches-grid">
@@ -312,7 +909,7 @@
         </section>
 
         <!-- =========== WESTERN GHATS FOCUS =========== -->
-        <section class="western-ghats-section section-padding light-bg">
+        <section class="western-ghats-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Western Ghats: A Biodiversity Hotspot</h2>
                 <div class="western-ghats-content">
