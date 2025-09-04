@@ -15,8 +15,654 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Climate Change Adaptation Page Specific Styles */
+        .climate-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .climate-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .climate-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-climate-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .climate-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .climate-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .climate-visual-content {
+            position: relative;
+        }
+        
+        .climate-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .climate-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .climate-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .climate-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .climate-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        /* Project Cards Styling */
+        .climate-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .climate-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .climate-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .climate-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .climate-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .climate-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        @media (max-width: 1200px) {
+            .climate-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .climate-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        /* Benefits Section Styling */
+        .climate-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .climate-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+        }
+        
+        .climate-page .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .climate-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .climate-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Strategies Section Styling */
+        .climate-page .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .climate-page .strategy-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .climate-page .strategy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .climate-page .strategy-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .climate-page .strategy-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .climate-page .strategy-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .climate-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .climate-page .strategies-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .climate-page .container {
+                padding: 0 15px;
+            }
+            
+            .climate-text-content {
+                padding: 30px 25px;
+            }
+            
+            .climate-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .climate-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .climate-image-modern {
+                height: 250px;
+            }
+            
+            .climate-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .climate-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .climate-page .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .climate-page .benefit-item {
+                padding: 25px 20px;
+            }
+            
+            .climate-page .strategy-card {
+                padding: 30px 25px;
+            }
+        }
+
+        /* Climate Action Areas Section Styling */
+        .climate-page .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .climate-page .area-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .climate-page .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .climate-page .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .climate-page .area-card:hover::before {
+            left: 100%;
+        }
+        
+        .climate-page .area-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .climate-page .area-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .climate-page .area-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Strategies Section Styling */
+        .climate-page .strategies-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .climate-page .strategy-column {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .climate-page .strategy-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .climate-page .strategy-type {
+            color: #28a745;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(40, 167, 69, 0.2);
+        }
+        
+        .climate-page .strategy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .climate-page .strategy-list li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            color: #34495e;
+            font-size: 1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(40, 167, 69, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .climate-page .strategy-list li:hover {
+            transform: translateX(10px);
+            color: #28a745;
+        }
+        
+        .climate-page .strategy-list li:before {
+            content: '✓';
+            font-size: 1.2rem;
+            margin-right: 15px;
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            padding: 8px;
+            border-radius: 50%;
+            min-width: 35px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .climate-page .strategy-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Climate Action Opportunities Section Styling */
+        .climate-page .future-content {
+            margin-top: 40px;
+        }
+        
+        .climate-page .future-description {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            color: #2c3e50;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 40px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .climate-page .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .climate-page .opportunity-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .climate-page .opportunity-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .climate-page .opportunity-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .climate-page .opportunity-item:hover::before {
+            left: 100%;
+        }
+        
+        .climate-page .opportunity-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .climate-page .opportunity-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .climate-page .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .climate-page .strategies-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .climate-page .opportunity-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .climate-page .areas-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .climate-page .area-card {
+                padding: 30px 25px;
+            }
+            
+            .climate-page .strategy-column {
+                padding: 30px 25px;
+            }
+            
+            .climate-page .future-description {
+                padding: 25px 20px;
+            }
+            
+            .climate-page .opportunity-item {
+                padding: 30px 25px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="climate-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,55 +778,124 @@
             </div>
         </section>
 
-        <!-- =========== WHAT IS CLIMATE CHANGE ADAPTATION & MITIGATION =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== UNDERSTANDING CLIMATE CHANGE ADAPTATION & MITIGATION =========== -->
+        <section class="understanding-climate-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Climate Change Adaptation & Mitigation</h2>
-                        <p class="overview-description">
-                            Climate Change Adaptation and Mitigation are two complementary approaches to addressing the challenges of climate change. Adaptation involves adjusting natural and human systems to actual or expected climate change effects, while mitigation focuses on reducing greenhouse gas emissions and enhancing carbon sinks to limit the magnitude of climate change.
-                        </p>
-                        <p class="overview-description">
-                            Our climate change programs integrate both adaptation and mitigation strategies to build resilient communities and ecosystems. We focus on implementing nature-based solutions, promoting sustainable practices, and building local capacity to respond to climate variability while reducing carbon footprints through ecosystem restoration and sustainable development initiatives.
-                        </p>
-                        <h3 class="subsection-title">Key Components of Climate Action:</h3>
-                        <ul class="component-list">
-                            <li><strong>Climate Resilience Building:</strong> Enhancing community and ecosystem capacity to cope with climate variability and extreme weather events</li>
-                            <li><strong>Carbon Sequestration:</strong> Implementing reforestation and afforestation programs to capture and store atmospheric carbon dioxide</li>
-                            <li><strong>Sustainable Agriculture:</strong> Promoting climate-smart agricultural practices that adapt to changing conditions while reducing emissions</li>
-                            <li><strong>Water Resource Management:</strong> Developing adaptive water management systems to cope with changing precipitation patterns</li>
-                            <li><strong>Ecosystem Restoration:</strong> Restoring degraded ecosystems to enhance their climate regulation services and adaptive capacity</li>
-                            <li><strong>Community Education:</strong> Building awareness and capacity for climate action at the grassroots level</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">3</span>
-                                <span class="highlight-label">Climate Projects</span>
+                <!-- Hero Content -->
+                <div class="climate-hero-content">
+                    <div class="climate-text-content">
+                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Climate Change Adaptation & Mitigation</h2>
+                        
+                        <div class="definition-section" style="margin-bottom: 35px;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
+                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Climate Action? 🌡️</h3>
+                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Climate Change Adaptation and Mitigation</strong> are two complementary approaches to addressing climate challenges through adaptation strategies and emission reduction measures.</p>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Biofuel</span>
-                                <span class="highlight-label">Development</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Waste</span>
-                                <span class="highlight-label">Management</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">20+ Years</span>
-                                <span class="highlight-label">Climate Action</span>
+                            
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
+                                <strong>Our approach</strong> integrates both adaptation and mitigation strategies to build resilient communities and ecosystems. We focus on implementing nature-based solutions, promoting sustainable practices, and building local capacity to respond to climate variability.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                Our programs emphasize <strong>ecosystem restoration</strong> and sustainable development initiatives that reduce carbon footprints while enhancing community resilience to climate impacts.
+                            </p>
+                        </div>
+                        
+                        <!-- Key Components -->
+                        <div class="components-section">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
+                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🏔️</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Climate Resilience</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Carbon Sequestration</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">💧</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Water Management</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌾</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Smart Agriculture</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Climate change adaptation and mitigation activities" class="story-photo">
+                    
+                    <div class="climate-visual-content">
+                        <!-- Process Flow Visualization -->
+                        <div class="climate-process-flow">
+                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Climate Action Process</h3>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <div class="step-content">
+                                    <h4>Climate Assessment</h4>
+                                    <p>Assessing climate vulnerabilities and identifying adaptation priorities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <div class="step-content">
+                                    <h4>Mitigation Strategies</h4>
+                                    <p>Implementing carbon reduction measures and ecosystem restoration.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <div class="step-content">
+                                    <h4>Adaptation Planning</h4>
+                                    <p>Developing resilience strategies for communities and ecosystems.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <div class="step-content">
+                                    <h4>Capacity Building</h4>
+                                    <p>Training communities in climate adaptation and sustainable practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Climate change adaptation and mitigation activities" class="climate-image-modern">
+                        
+                        <div class="image-caption">
+                            Building climate resilience through adaptation strategies, carbon sequestration and sustainable development in rural Tamil Nadu
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Statistics Section -->
+                <div class="climate-stats-modern">
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">3+</span>
+                        <span class="stat-label-modern">Climate Projects</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Biofuel</span>
+                        <span class="stat-label-modern">Development</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">Waste</span>
+                        <span class="stat-label-modern">Management</span>
+                    </div>
+                    <div class="stat-card-modern">
+                        <span class="stat-number-modern">20+</span>
+                        <span class="stat-label-modern">Years Climate Action</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== CLIMATE ACTION AREAS =========== -->
-        <section class="climate-areas section-padding light-bg">
+        <section class="climate-areas section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Climate Action Focus Areas</h2>
                 <div class="areas-grid">
@@ -219,7 +934,7 @@
         </section>
 
         <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding">
+        <section class="programs-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Climate Change Projects (2004-2023)</h2>
                 
@@ -276,7 +991,7 @@
         </section>
 
         <!-- =========== CLIMATE STRATEGIES =========== -->
-        <section class="strategies-section section-padding">
+        <section class="strategies-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Adaptation & Mitigation Strategies</h2>
                 <div class="strategies-content">
@@ -307,7 +1022,7 @@
         </section>
 
         <!-- =========== CLIMATE IMPACT =========== -->
-        <section class="impact-section section-padding light-bg">
+        <section class="impact-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Climate Action Impact</h2>
                 <div class="impact-grid">
@@ -336,7 +1051,7 @@
         </section>
 
         <!-- =========== CLIMATE BENEFITS =========== -->
-        <section class="benefits-section section-padding">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Climate Action Benefits</h2>
                 <div class="benefits-grid">
@@ -369,7 +1084,7 @@
         </section>
 
         <!-- =========== FUTURE PROJECTS =========== -->
-        <section class="future-projects section-padding light-bg">
+        <section class="future-projects section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Climate Action Opportunities</h2>
                 <div class="future-content">

@@ -15,8 +15,354 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Agriculture Page Specific Styles */
+        .agriculture-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .agriculture-page .sustainable-future-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .agriculture-page .sustainable-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .agriculture-page .sustainable-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .agriculture-page .sustainable-image {
+            position: relative;
+        }
+        
+        .agriculture-page .sustainable-photo {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .agriculture-page .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .agriculture-page .stat-item {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .agriculture-page .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .agriculture-page .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        /* Focus Areas Grid Styling */
+        .agriculture-page .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agriculture-page .focus-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .agriculture-page .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agriculture-page .focus-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .agriculture-page .focus-title {
+            color: #28a745;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .agriculture-page .focus-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            font-size: 0.95rem;
+        }
+        
+        .agriculture-page .focus-link {
+            color: #28a745;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .agriculture-page .focus-link:hover {
+            color: #20c997;
+            transform: translateX(5px);
+        }
+        
+        /* Core Programs Section Styling */
+        .agriculture-page .core-program-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .agriculture-page .program-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .agriculture-page .program-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agriculture-page .program-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .agriculture-page .program-item h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .agriculture-page .program-item p {
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Featured Projects Grid */
+        .agriculture-page .projects-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agriculture-page .project-overview-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .agriculture-page .project-overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agriculture-page .project-overview-card h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .agriculture-page .project-overview-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .agriculture-page .project-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .agriculture-page .project-stat {
+            text-align: center;
+            padding: 10px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 8px;
+        }
+        
+        .agriculture-page .project-stat-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #28a745;
+            display: block;
+        }
+        
+        .agriculture-page .project-stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        /* Benefits Section Styling */
+        .agriculture-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agriculture-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .agriculture-page .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agriculture-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .agriculture-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Sections Background Override */
+        .agriculture-page .section-padding {
+            background: transparent !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .agriculture-page .sustainable-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .agriculture-page .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .agriculture-page .focus-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .agriculture-page .core-program-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .agriculture-page .projects-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .agriculture-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .agriculture-page .container {
+                padding: 0 15px;
+            }
+            
+            .agriculture-page .sustainable-text {
+                padding: 25px;
+            }
+            
+            .agriculture-page .impact-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .agriculture-page .sustainable-photo {
+                height: 250px;
+            }
+            
+            .agriculture-page .focus-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .agriculture-page .core-program-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .agriculture-page .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="agriculture-page" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -132,46 +478,75 @@
             </div>
         </section>
 
-        <!-- =========== SECTOR OVERVIEW =========== -->
-        <section class="sector-overview section-padding">
+        <!-- =========== CREATING SUSTAINABLE AGRICULTURE =========== -->
+        <section class="sustainable-future-section">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">What is Sustainable Agriculture?</h2>
-                        <p class="overview-description">
-                            Sustainable Agriculture is a farming approach that focuses on producing food, fiber, and other agricultural products in ways that protect the environment, public health, human communities, and animal welfare. It emphasizes the use of farming practices that are economically viable, environmentally sound, and socially responsible, ensuring that agricultural systems can meet current needs without compromising the ability of future generations to meet their own needs.
-                        </p>
-                        <p class="overview-description">
-                            Our Sustainable Agriculture program empowers farmers through collective action, modern technology adoption, diversified farming systems, and market linkage support. We focus on building resilient agricultural communities that can adapt to changing market conditions and climate challenges while maintaining environmental sustainability and economic profitability. Our integrated approach combines traditional farming wisdom with innovative agricultural technologies to create sustainable livelihoods.
-                        </p>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">15,000+</span>
-                                <span class="highlight-label">Farmers Trained</span>
+                <div class="sustainable-content">
+                    <div class="sustainable-text">
+                        <h2 class="section-title" style="color: #28a745; margin-bottom: 30px; font-size: 2.8rem;">Creating Sustainable Agriculture</h2>
+                        
+                        <div class="intro-content">
+                            <p class="overview-description" style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px; color: #2c3e50;">
+                                For over two decades, <strong>Coodu Trust</strong> has been empowering farmers and rural communities through sustainable agriculture practices in Tamil Nadu. Our comprehensive approach addresses farming challenges through science-based solutions, collective action, and innovative agricultural technologies that ensure environmental sustainability and economic profitability.
+                            </p>
+                            
+                            <p class="overview-description" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px; color: #34495e;">
+                                We integrate traditional farming wisdom with modern agricultural techniques to create resilient farming systems. From farmer collectivization and organic practices to livestock management and market linkages, our programs build sustainable livelihoods that support both agricultural productivity and rural prosperity.
+                            </p>
+                        </div>
+                        
+                        <div class="mission-highlights" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 10px; border-left: 4px solid #28a745;">
+                            <h3 style="color: #28a745; margin-bottom: 15px; font-size: 1.4rem;">Our Agricultural Mission</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌾 <strong>Empower farming communities</strong> through collective action and modern techniques</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🐄 <strong>Diversify rural livelihoods</strong> through integrated livestock and agriculture systems</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌱 <strong>Promote organic farming</strong> for environmental sustainability and health</li>
+                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🏭 <strong>Strengthen value chains</strong> through agribusiness and market linkages</li>
+                                <li style="padding-left: 25px; position: relative;">👨‍🌾 <strong>Build farmer resilience</strong> through technology and knowledge transfer</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Impact Statistics -->
+                        <div class="impact-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">15,000+</span>
+                                <span class="stat-label">Farmers Trained</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">500+</span>
-                                <span class="highlight-label">Farmer Groups Formed</span>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Farmer Groups Formed</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">25+</span>
-                                <span class="highlight-label">Districts Covered</span>
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Districts Covered</span>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">25+ Years</span>
-                                <span class="highlight-label">Experience</span>
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Years Experience</span>
                             </div>
                         </div>
                     </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Sustainable agriculture and farming activities" class="story-photo">
+                    
+                    <div class="sustainable-image">
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Sustainable agriculture and farming activities" class="sustainable-photo">
+                        
+                        <!-- Image Caption -->
+                        <div style="background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            <p style="margin: 0; font-size: 0.95rem; color: #666; font-style: italic;">Community-led sustainable agriculture project in rural Tamil Nadu, showcasing our integrated approach to farmer empowerment</p>
+                        </div>
+                        
+                        <!-- Achievement Badge -->
+                        <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 12px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); text-align: center; font-weight: 600;">
+                            <div style="font-size: 0.8rem; opacity: 0.9;">Since</div>
+                            <div style="font-size: 1.2rem;">2000</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========== PROGRAM FOCUS AREAS =========== -->
-        <section class="focus-areas section-padding light-bg">
+        <section class="focus-areas section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Our Focus Areas</h2>
                 <div class="focus-grid">
@@ -210,7 +585,7 @@
         </section>
 
         <!-- =========== CORE PROGRAMS =========== -->
-        <section class="core-programs section-padding">
+        <section class="core-programs section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Core Programs</h2>
                 <div class="core-program-grid">
@@ -249,7 +624,7 @@
         </section>
 
         <!-- =========== ONGOING & RECENT PROJECTS =========== -->
-        <section class="featured-projects section-padding light-bg">
+        <section class="featured-projects section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
@@ -292,12 +667,31 @@
                         <a href="projects/horticulture-development.html" class="project-link">View Details →</a>
                     </div>
 
+                    <!-- Historical Project -->
+                    <div class="project-card completed">
+                        <div class="project-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                        <div class="project-header">
+                            <h3 class="project-title">Vermi-composting and Organic Farming Training</h3>
+                            <span class="project-period">2003-2005</span>
+                        </div>
+                        <div class="project-summary">
+                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Vermicomposting training activities" class="project-image">
+                            <div class="project-impact">
+                                <span class="impact-number">450</span>
+                                <span class="impact-label">Farmers Trained</span>
+                            </div>
+                        </div>
+                        <a href="projects/vermicomposting-organic-farming.html" class="project-link">View Details →</a>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- =========== SUSTAINABLE AGRICULTURE BENEFITS =========== -->
-        <section class="benefits-section section-padding">
+        <section class="benefits-section section-padding" style="background: transparent !important;">
             <div class="container">
                 <h2 class="section-title">Benefits of Sustainable Agriculture</h2>
                 <div class="benefits-grid">
@@ -330,7 +724,7 @@
         </section>
 
         <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding light-bg">
+        <section class="sector-cta section-padding" style="background: transparent !important;">
             <div class="container">
                 <div class="cta-content">
                     <h2 class="cta-title">Support Sustainable Agriculture</h2>

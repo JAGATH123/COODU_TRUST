@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vermi-composting and Organic Farming Training | Coodu Trust</title>
+    <meta name="description" content="Vermi-composting and Organic Farming Training (2003-2005) - Promoting sustainable agricultural practices through hands-on training in vermiculture and organic farming techniques.">
+    
+    <!-- Google Fonts (Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Vermicomposting Page Specific Styles */
+        .vermicomposting-page {
+            background: transparent !important;
+        }
+        
+        .vermicomposting-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        /* Modern Hero Section */
+        .vermicomposting-hero {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+        
+        .hero-content-modern {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-visual-section {
+            position: relative;
+        }
+        
+        .modern-carousel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .quick-stat {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            color: white !important;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+        
+        /* Program Overview Modern */
+        .overview-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+        
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .overview-content-modern {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .overview-sidebar {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
+        }
+        
+        /* Achievement Dashboard */
+        .achievements-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+        
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .achievement-card-modern {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 5px solid #28a745;
+        }
+        
+        .achievement-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Statistics Dashboard */
+        .stats-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-header {
+            color: #28a745;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            color: #2c3e50;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Section Spacing Fix */
+        .section-padding {
+            padding: 80px 0 !important;
+        }
+        
+        .statistics-section {
+            padding: 60px 0 !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content-modern {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .quick-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .vermicomposting-page .container {
+                padding: 0 15px;
+            }
+            
+            .hero-text-section,
+            .overview-content-modern,
+            .overview-sidebar {
+                padding: 30px 25px;
+            }
+            
+            .achievement-card-modern {
+                padding: 25px 20px;
+            }
+            
+            .carousel-image {
+                height: 250px;
+            }
+            
+            .section-padding {
+                padding: 60px 0 !important;
+            }
+            
+            .statistics-section {
+                padding: 40px 0 !important;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+
+    <!-- =========== HEADER =========== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../index.html" class="logo">
+                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
+                    <span class="logo-text">Coodu Trust</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../../about.html" class="nav-link">About</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="../../programs.html" class="nav-link active">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="../environment-resilience.html">Environment and Resilience</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
+                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
+                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
+                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
+                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
+                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
+                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
+                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
+                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
+                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../women-empowerment.html">Women Empowerment</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
+                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
+                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
+                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../education-skilling.html">Education and Skilling</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
+                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
+                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
+                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../health-sanitation.html">Health and Sanitation</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
+                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
+                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
+                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
+                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
+                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
+                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../partner.html">Partner with Us</a></li>
+                            <li><a href="../../volunteer.html">Volunteer</a></li>
+                            <li><a href="../../donate.html">Donate</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
+                    <li><a href="../../media.html" class="nav-link">Media</a></li>
+                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========== MODERN HERO SECTION =========== -->
+        <section class="vermicomposting-hero">
+            <div class="container">
+                <div class="breadcrumb" style="margin-bottom: 30px;">
+                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <a href="../sustainable-agriculture.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Sustainable Agriculture</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <a href="../organic-farming.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Organic Farming Practices</a> 
+                    <span style="color: #555; margin: 0 8px;">></span> 
+                    <span style="color: #2c3e50; font-weight: 600;">Vermi-composting and Organic Farming Training</span>
+                </div>
+                
+                <div class="hero-content-modern">
+                    <div class="hero-text-section">
+                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🌱 SUSTAINABLE FARMING INITIATIVE</div>
+                        
+                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">Vermi-composting and Organic Farming Training</h1>
+                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Empowering Farmers & Women's SHGs (2003-2005)</p>
+                        
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
+                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Promoting sustainable agricultural practices through hands-on training in vermiculture and organic farming techniques to enhance soil fertility, reduce chemical dependency, and create income opportunities for rural communities.</p>
+                        </div>
+                        
+                        <div class="key-highlights" style="margin-bottom: 30px;">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Key Highlights</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2003-2005 Period</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🪱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Vermiculture Focus</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">👩‍🌾</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Women's SHGs</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">💰</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Income Generation</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Stats -->
+                        <div class="quick-stats">
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">244+</span>
+                                <span class="stat-label" style="color: white;">Women Trained</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">4</span>
+                                <span class="stat-label" style="color: white;">Districts Covered</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual-section">
+                        <div class="modern-carousel">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Training Activities Gallery</h3>
+                            
+                            <div class="hero-photo-carousel">
+                                <div class="carousel-frame">
+                                    <div class="photo-slides">
+                                        <div class="photo-slide active">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Vermi-composting training workshops" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🪱 Vermi-composting Training Workshops</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Organic farming techniques training" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🌱 Organic Farming Techniques</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Women's SHG skill development" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">👩‍🌾 Women's SHG Skill Development</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Technical skill building sessions" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🔧 Technical Skill Building</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                        <span class="indicator" data-slide="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
+        <section class="overview-modern">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content-modern">
+                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Program Overview</h2>
+                        
+                        <div style="margin-bottom: 35px;">
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
+                                The <strong>Vermi-composting and Organic Farming Training</strong> program was a comprehensive initiative implemented by Coodu Trust from 2003 to 2005, designed to promote sustainable agricultural practices among farmers and women's Self-Help Groups (SHGs) across Tamil Nadu. This targeted program addressed the critical need to move away from chemical fertilizer dependency while enhancing soil fertility and agricultural productivity.
+                            </p>
+                            
+                            <div style="background: linear-gradient(135deg, #e8f5e8, #f0f8e8); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
+                                <h4 style="color: #2d5016; margin-bottom: 12px; font-size: 1.1rem;">🎯 Primary Objectives</h4>
+                                <p style="color: #2d5016; margin: 0; font-size: 1rem; line-height: 1.6;">Enhance soil fertility and increase crop yields through sustainable practices, reduce input costs for farmers, and create new income-generating opportunities for rural women through eco-friendly farming solutions.</p>
+                            </div>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                The program provided <strong>hands-on skill development</strong> in vermiculture and organic farming techniques, focusing on improving the long-term health of agricultural land while creating sustainable livelihoods for rural communities. This initiative was strategically integrated into broader watershed development and women's empowerment programs.
+                            </p>
+                            
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
+                                By targeting both farmers and women's SHGs, the program created a dual impact: agricultural sustainability and economic empowerment, particularly for women who gained valuable skills to start vermi-composting enterprises and strengthen their economic independence.
+                            </p>
+                        </div>
+                        
+                        <!-- Implementation Approach -->
+                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
+                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">📋 Implementation Approach</h4>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                                <div style="display: flex; align-items: flex-start; padding: 15px; background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 0.9rem; flex-shrink: 0;">🎓</div>
+                                    <div style="color: #2c3e50; font-size: 0.95rem; line-height: 1.5;"><strong>Hands-on Training:</strong> Practical training sessions and workshops conducted across multiple districts</div>
+                                </div>
+                                <div style="display: flex; align-items: flex-start; padding: 15px; background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 0.9rem; flex-shrink: 0;">🔧</div>
+                                    <div style="color: #2c3e50; font-size: 0.95rem; line-height: 1.5;"><strong>Technical Skills:</strong> Comprehensive modules covering site selection, waste handling, and compost preparation</div>
+                                </div>
+                                <div style="display: flex; align-items: flex-start; padding: 15px; background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 0.9rem; flex-shrink: 0;">🔗</div>
+                                    <div style="color: #2c3e50; font-size: 0.95rem; line-height: 1.5;"><strong>Integration:</strong> Linked with watershed development and women's empowerment initiatives</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-sidebar">
+                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
+                        
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                                <strong>Duration:</strong> 2003-2005<br>
+                                <strong>Phase 1:</strong> 2003-2004<br>
+                                <strong>Phase 2:</strong> 2004-2005<br>
+                                <strong>Status:</strong> Successfully Completed
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                <strong>Districts:</strong> Karur, Dindigul, Trichy<br>
+                                <strong>Focus Areas:</strong> Watershed project regions<br>
+                                <strong>Target Communities:</strong> Rural farming areas
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">👥 Target Beneficiaries</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                <strong>Farmers:</strong> Small & marginal farmers<br>
+                                <strong>Women's SHGs:</strong> Self-Help Group members<br>
+                                <strong>Agriculturists:</strong> Agricultural practitioners
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== ACTIVITIES CONDUCTED =========== -->
+        <section class="programs-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Activities Conducted (2003–2005)</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 50px;">
+                    <!-- Activity 1: Hands-on Training -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎓</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Hands-on Training</h3>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem;">Comprehensive practical training sessions conducted for agriculturists, farmers, and women SHG members on the scientific process of vermiculture and vermicompost application.</p>
+                        
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #1565c0; margin-bottom: 20px; font-size: 1.2rem; text-align: center;">🎯 Training Focus</h4>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    🪱 Scientific process of vermiculture
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    🌱 Vermicompost application methods
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    👥 Multi-district workshop delivery
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Activity 2: Technical Skill Building -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🔧</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Technical Skill Building</h3>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem;">Comprehensive training modules covering all essential aspects of vermi-composting process, from site preparation to final compost preparation and application.</p>
+                        
+                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem; text-align: center;">🛠️ Technical Modules</h4>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                                <div style="background: rgba(40, 167, 69, 0.05); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    📍 Site selection for vermi-beds
+                                </div>
+                                <div style="background: rgba(40, 167, 69, 0.05); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    ♻️ Farm and organic waste handling
+                                </div>
+                                <div style="background: rgba(40, 167, 69, 0.05); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    🧪 Compost materials preparation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Activity 3: Knowledge Dissemination -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">📚</div>
+                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Knowledge Dissemination</h3>
+                        </div>
+                        
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 25px; font-size: 1.05rem;">Strategic integration of vermi-composting training into broader watershed development and women's empowerment programs, promoting it as both sustainable farming and income generation.</p>
+                        
+                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 25px; border-radius: 15px;">
+                            <h4 style="color: #856404; margin-bottom: 20px; font-size: 1.2rem; text-align: center;">🔗 Integration Benefits</h4>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    🌊 Watershed development synergy
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    💰 Income-generating opportunity
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.9); padding: 12px 15px; border-radius: 8px; color: #2c3e50; font-size: 0.9rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                    🌱 Sustainable farming promotion
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== PROGRAM STATISTICS =========== -->
+        <section class="statistics-section" style="background: transparent !important;">
+            <div class="container">
+                <h2 style="text-align: center; color: #28a745; font-size: 2.5rem; font-weight: 700; margin-bottom: 20px;">Program Statistics</h2>
+                <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 60px;">Verified training statistics from the 2003-2005 Vermi-composting and Organic Farming program implementation</p>
+                
+                <!-- Training Statistics Table -->
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+                    <h3 style="color: #28a745; font-size: 1.8rem; margin-bottom: 30px; text-align: center;">📊 Training Implementation Statistics</h3>
+                    
+                    <div class="table-container" style="overflow-x: auto;">
+                        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 1000px; margin: 0 auto;">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #28a745, #20c997);">
+                                    <th style="color: white; padding: 15px 20px; text-align: left; font-weight: 600; font-size: 1rem; border-bottom: 3px solid #1e7e34;">Training Year</th>
+                                    <th style="color: white; padding: 15px 20px; text-align: left; font-weight: 600; font-size: 1rem; border-bottom: 3px solid #1e7e34;">No. of Farmers/Beneficiaries Trained</th>
+                                    <th style="color: white; padding: 15px 20px; text-align: left; font-weight: 600; font-size: 1rem; border-bottom: 3px solid #1e7e34;">Districts Covered</th>
+                                    <th style="color: white; padding: 15px 20px; text-align: left; font-weight: 600; font-size: 1rem; border-bottom: 3px solid #1e7e34;">Key Outcomes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: rgba(40, 167, 69, 0.05);">
+                                    <td style="padding: 15px 20px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid rgba(40, 167, 69, 0.2); vertical-align: top;">2003–2004</td>
+                                    <td style="padding: 15px 20px; color: #34495e; border-bottom: 1px solid rgba(40, 167, 69, 0.2); vertical-align: top;">Agriculturists and farmers<br><em>(Exact numbers not specified)</em></td>
+                                    <td style="padding: 15px 20px; color: #34495e; border-bottom: 1px solid rgba(40, 167, 69, 0.2); vertical-align: top;">Karur, Dindigul</td>
+                                    <td style="padding: 15px 20px; color: #34495e; border-bottom: 1px solid rgba(40, 167, 69, 0.2); vertical-align: top;">• Provided skills in vermi-composting and organic farming techniques<br>• Aimed to enhance soil fertility and increase crop yields</td>
+                                </tr>
+                                <tr style="background: rgba(255, 255, 255, 0.8);">
+                                    <td style="padding: 15px 20px; font-weight: 600; color: #2c3e50; vertical-align: top;">2004–2005</td>
+                                    <td style="padding: 15px 20px; color: #34495e; vertical-align: top;"><strong>244 women</strong><br><em>(Women's Self-Help Groups)</em></td>
+                                    <td style="padding: 15px 20px; color: #34495e; vertical-align: top;">Trichy, Karur</td>
+                                    <td style="padding: 15px 20px; color: #34495e; vertical-align: top;">• Empowered women with sustainable income-generating skills<br>• Enhanced economic independence through vermi-composting enterprises<br>• Integrated with women's empowerment initiatives</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== BENEFICIARIES & IMPACT =========== -->
+        <section class="section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 style="text-align: center; color: #28a745; font-size: 2.5rem; font-weight: 700; margin-bottom: 20px;">Program Beneficiaries & Impact</h2>
+                <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 60px;">Diverse stakeholders who benefited from the vermi-composting and organic farming training program</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 50px;">
+                    <!-- Beneficiary 1: Farmers -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 45px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-right: 25px;">👨‍🌾</div>
+                            <div>
+                                <h3 style="color: #28a745; font-size: 1.7rem; margin: 0 0 8px 0; font-weight: 600;">Farmers</h3>
+                                <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 8px 15px; border-radius: 12px; display: inline-block;">
+                                    <span style="color: #1565c0; font-size: 0.9rem; font-weight: 500;">🎯 Primary Beneficiaries</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                            <h4 style="color: #28a745; margin-bottom: 15px; font-size: 1.2rem;">🌾 Target Group</h4>
+                            <p style="color: #2c3e50; line-height: 1.7; margin: 0; font-size: 1rem;">Small and marginal farmers in watershed project areas learned to produce their own organic manure, reducing dependency on chemical fertilizers and improving soil health sustainably.</p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                🌱 <strong>Soil Health:</strong> Enhanced fertility through organic manure production
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                💰 <strong>Cost Reduction:</strong> Decreased input costs through self-produced compost
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #28a745;">
+                                🔄 <strong>Sustainability:</strong> Adopted eco-friendly farming practices
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Beneficiary 2: Women's SHGs -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 45px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #e91e63;">
+                        <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                            <div style="background: linear-gradient(135deg, #e91e63, #f06292); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-right: 25px;">👩‍🤝‍👩</div>
+                            <div>
+                                <h3 style="color: #e91e63; font-size: 1.7rem; margin: 0 0 8px 0; font-weight: 600;">Women's Self-Help Groups</h3>
+                                <div style="background: linear-gradient(135deg, #fce4ec, #f3e5f5); padding: 8px 15px; border-radius: 12px; display: inline-block;">
+                                    <span style="color: #ad1457; font-size: 0.9rem; font-weight: 500;">💪 Empowerment Focus</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(240, 98, 146, 0.05)); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                            <h4 style="color: #e91e63; margin-bottom: 15px; font-size: 1.2rem;">👩‍💼 Empowerment Impact</h4>
+                            <p style="color: #2c3e50; line-height: 1.7; margin: 0; font-size: 1rem;">Training was a key component of skill development for women, empowering them to start vermi-composting enterprises and strengthening their economic independence through sustainable income generation.</p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #e91e63;">
+                                🏢 <strong>Enterprise Creation:</strong> Started vermi-composting businesses
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #e91e63;">
+                                💸 <strong>Income Generation:</strong> Created sustainable revenue streams
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #e91e63;">
+                                🎯 <strong>Economic Independence:</strong> Enhanced financial autonomy
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Impact: Sustainable Agriculture -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 45px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #ff9800;">
+                        <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                            <div style="background: linear-gradient(135deg, #ff9800, #ffb74d); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-right: 25px;">🌾</div>
+                            <div>
+                                <h3 style="color: #ff9800; font-size: 1.7rem; margin: 0 0 8px 0; font-weight: 600;">Sustainable Agriculture</h3>
+                                <div style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 8px 15px; border-radius: 12px; display: inline-block;">
+                                    <span style="color: #ef6c00; font-size: 0.9rem; font-weight: 500;">🌱 Long-term Impact</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 183, 77, 0.05)); padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                            <h4 style="color: #ff9800; margin-bottom: 15px; font-size: 1.2rem;">🔄 System Transformation</h4>
+                            <p style="color: #2c3e50; line-height: 1.7; margin: 0; font-size: 1rem;">The program was a foundational step in promoting a broader shift towards sustainable and eco-friendly farming practices within project areas, aligning with watershed development goals.</p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #ff9800;">
+                                🌍 <strong>Eco-friendly Practices:</strong> Promoted sustainable farming methods
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #ff9800;">
+                                🌊 <strong>Watershed Integration:</strong> Aligned with broader development goals
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; color: #2c3e50; font-size: 0.95rem; line-height: 1.4; border-left: 3px solid #ff9800;">
+                                📈 <strong>Community Impact:</strong> Strengthened regional agricultural sustainability
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== CALL TO ACTION =========== -->
+        <section class="sector-cta section-padding">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Support Organic Farming Initiatives</h2>
+                    <p class="cta-text">Join us in promoting sustainable agricultural practices through vermi-composting and organic farming training that empowers rural communities and enhances environmental health.</p>
+                    <div class="cta-buttons">
+                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
+                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
+                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../about.html">About Us</a></li>
+                        <li><a href="../../programs.html">Our Programs</a></li>
+                        <li><a href="../../careers.html">Careers</a></li>
+                        <li><a href="../../donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <address class="footer-contact">
+                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
+                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
+                    </address>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Image carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.photo-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+            }
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+            
+            // Auto slide every 5 seconds
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
