@@ -15,8 +15,542 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Agricultural Technology & Youth Engagement Page Specific Styles */
+        .agricultural-technology-page {
+            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .agricultural-technology-page::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .agricultural-technology-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .understanding-agtech-section {
+            background: transparent !important;
+            padding: 80px 0;
+        }
+        
+        .agtech-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .agtech-text-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .agtech-visual-content {
+            position: relative;
+        }
+        
+        .agtech-process-flow {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .step-content h4 {
+            color: #28a745;
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .agtech-stats-modern {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
+        }
+        
+        .stat-card-modern:hover::before {
+            left: 100%;
+        }
+        
+        .stat-number-modern {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label-modern {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .agtech-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Project Cards Styling */
+        .agricultural-technology-page .project-card {
+            width: 433px;
+            height: 506px;
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .agricultural-technology-page .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .agricultural-technology-page .project-title {
+            font-size: 1.4rem !important;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .agricultural-technology-page .programs-section {
+            background: transparent !important;
+        }
+        
+        .agricultural-technology-page .impact-section {
+            background: transparent !important;
+        }
+        
+        .agricultural-technology-page .benefits-section {
+            background: transparent !important;
+        }
+        
+        .agricultural-technology-page .technology-areas {
+            background: transparent !important;
+        }
+        
+        .agricultural-technology-page .youth-strategies {
+            background: transparent !important;
+        }
+        
+        .agricultural-technology-page .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+        
+        /* Benefits Section Styling */
+        .agricultural-technology-page .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agricultural-technology-page .benefit-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #28a745;
+        }
+        
+        .agricultural-technology-page .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .agricultural-technology-page .benefit-item h4 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .agricultural-technology-page .benefit-item p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Impact Cards Styling */
+        .agricultural-technology-page .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agricultural-technology-page .impact-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .agricultural-technology-page .impact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agricultural-technology-page .impact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .agricultural-technology-page .impact-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .agricultural-technology-page .impact-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Technology Focus Areas Grid */
+        .agricultural-technology-page .tech-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agricultural-technology-page .tech-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .agricultural-technology-page .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .agricultural-technology-page .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agricultural-technology-page .tech-card:hover::before {
+            left: 100%;
+        }
+        
+        .agricultural-technology-page .tech-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(40, 167, 69, 0.3));
+        }
+        
+        .agricultural-technology-page .tech-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .agricultural-technology-page .tech-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Youth Engagement Strategies Grid */
+        .agricultural-technology-page .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .agricultural-technology-page .strategy-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .agricultural-technology-page .strategy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #28a745;
+        }
+        
+        .agricultural-technology-page .strategy-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .agricultural-technology-page .strategy-title {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .agricultural-technology-page .strategy-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Section Titles - Use Default Styling */
+        .agricultural-technology-page .section-title {
+            /* Remove custom styling to use default */
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .agtech-hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .agtech-stats-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .agricultural-technology-page .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .agricultural-technology-page .tech-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .agricultural-technology-page .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .agricultural-technology-page .strategies-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .agricultural-technology-page .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            }
+            
+            .agricultural-technology-page .project-card {
+                width: 380px;
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .agricultural-technology-page .container {
+                padding: 0 15px;
+            }
+            
+            .agtech-text-content {
+                padding: 30px 25px;
+            }
+            
+            .agtech-process-flow {
+                padding: 25px;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            
+            .step-icon {
+                margin: 0 0 15px 0;
+            }
+            
+            .agtech-stats-modern {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .agtech-image-modern {
+                height: 250px;
+            }
+            
+            .agricultural-technology-page .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .agricultural-technology-page .project-card {
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .agricultural-technology-page .benefits-grid,
+            .agricultural-technology-page .tech-areas-grid,
+            .agricultural-technology-page .impact-grid,
+            .agricultural-technology-page .strategies-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .agricultural-technology-page .benefit-item,
+            .agricultural-technology-page .tech-card,
+            .agricultural-technology-page .impact-card,
+            .agricultural-technology-page .strategy-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="agricultural-technology-page">
 
     <!-- =========== HEADER =========== -->
     <header class="header">
@@ -133,47 +667,88 @@
         </section>
 
         <!-- =========== WHAT IS AGRICULTURAL TECHNOLOGY & YOUTH ENGAGEMENT =========== -->
-        <section class="sector-overview section-padding">
+        <section class="understanding-agtech-section section-padding">
             <div class="container">
-                <div class="overview-content">
-                    <div class="overview-text">
-                        <h2 class="section-title">Understanding Agricultural Technology & Youth Engagement</h2>
+                <h2 class="section-title">Understanding Agricultural Technology & Youth Engagement</h2>
+                <div class="agtech-hero-content">
+                    <div class="agtech-text-content">
                         <p class="overview-description">
                             Agricultural Technology refers to the application of modern tools, techniques, equipment, and scientific methods to improve agricultural productivity, efficiency, and sustainability. This includes precision farming, farm mechanization, digital agriculture, biotechnology, and smart farming solutions that optimize resource use and maximize crop yields. Youth engagement in agriculture involves attracting young people to farming through innovative approaches, entrepreneurial opportunities, and modern agricultural practices.
                         </p>
                         <p class="overview-description">
                             Our Agricultural Technology and Youth Engagement programs focus on bridging the gap between traditional farming and modern agricultural practices while making agriculture attractive to the younger generation. We emphasize technology adoption, digital literacy, agri-entrepreneurship development, and creating innovative pathways for youth to enter and succeed in agriculture. Our approach combines hands-on training with exposure to modern technologies, market linkages, and business development support.
                         </p>
-                        <h3 class="subsection-title">Key Components of Agricultural Technology & Youth Engagement:</h3>
-                        <ul class="component-list">
-                            <li><strong>Farm Mechanization:</strong> Introducing modern agricultural machinery and equipment to reduce labor costs and improve efficiency</li>
-                            <li><strong>Precision Agriculture:</strong> Using GPS, sensors, and data analytics for precise application of inputs and resource optimization</li>
-                            <li><strong>Digital Agriculture:</strong> Mobile apps, weather forecasting, market information systems, and online agricultural services</li>
-                            <li><strong>Youth Entrepreneurship:</strong> Supporting young farmers in starting agribusiness ventures and innovative farming enterprises</li>
-                            <li><strong>Modern Farming Techniques:</strong> Protected cultivation, hydroponics, organic farming, and sustainable production methods</li>
-                            <li><strong>Technology Training:</strong> Capacity building in modern agricultural technologies and digital tools for farming</li>
-                        </ul>
-                        <div class="sector-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-number">500+</span>
-                                <span class="highlight-label">Youth Trained</span>
+                    </div>
+                    <div class="agtech-visual-content">
+                        <div class="agtech-process-flow">
+                            <h3>Key Components of Agricultural Technology & Youth Engagement:</h3>
+                            <div class="process-step">
+                                <div class="step-icon">🚜</div>
+                                <div class="step-content">
+                                    <h4>Farm Mechanization</h4>
+                                    <p>Introducing modern agricultural machinery and equipment to reduce labor costs and improve efficiency</p>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Modern</span>
-                                <span class="highlight-label">Technologies</span>
+                            <div class="process-step">
+                                <div class="step-icon">🎯</div>
+                                <div class="step-content">
+                                    <h4>Precision Agriculture</h4>
+                                    <p>Using GPS, sensors, and data analytics for precise application of inputs and resource optimization</p>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">10+ Years</span>
-                                <span class="highlight-label">Experience</span>
+                            <div class="process-step">
+                                <div class="step-icon">📱</div>
+                                <div class="step-content">
+                                    <h4>Digital Agriculture</h4>
+                                    <p>Mobile apps, weather forecasting, market information systems, and online agricultural services</p>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-number">Innovation</span>
-                                <span class="highlight-label">Focus</span>
+                            <div class="process-step">
+                                <div class="step-icon">💼</div>
+                                <div class="step-content">
+                                    <h4>Youth Entrepreneurship</h4>
+                                    <p>Supporting young farmers in starting agribusiness ventures and innovative farming enterprises</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-icon">🌱</div>
+                                <div class="step-content">
+                                    <h4>Modern Farming Techniques</h4>
+                                    <p>Protected cultivation, hydroponics, organic farming, and sustainable production methods</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-icon">🎓</div>
+                                <div class="step-content">
+                                    <h4>Technology Training</h4>
+                                    <p>Capacity building in modern agricultural technologies and digital tools for farming</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="overview-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Agricultural technology and youth engagement activities" class="story-photo">
+                        
+                        <div class="agtech-stats-modern">
+                            <div class="stat-card-modern">
+                                <span class="stat-number-modern">500+</span>
+                                <span class="stat-label-modern">Youth Trained</span>
+                            </div>
+                            <div class="stat-card-modern">
+                                <span class="stat-number-modern">Modern</span>
+                                <span class="stat-label-modern">Technologies</span>
+                            </div>
+                            <div class="stat-card-modern">
+                                <span class="stat-number-modern">10+</span>
+                                <span class="stat-label-modern">Years Experience</span>
+                            </div>
+                            <div class="stat-card-modern">
+                                <span class="stat-number-modern">Innovation</span>
+                                <span class="stat-label-modern">Focus</span>
+                            </div>
+                        </div>
+                        
+                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Agricultural technology and youth engagement activities" class="agtech-image-modern">
+                        <div class="image-caption">
+                            Modern agricultural technology and youth engagement in innovative farming practices
+                        </div>
                     </div>
                 </div>
             </div>
