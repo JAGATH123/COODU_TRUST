@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conservation of Medicinal Plants | Coodu Trust</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        /* Hero Section with Carousel */
+        .project-hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.85) 0%, rgba(27, 94, 32, 0.75) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Carousel Indicators */
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: white;
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f5f5f5;
+            padding: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #2e7d32;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            color: #999;
+        }
+
+        /* Main Content */
+        .project-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* Overview Section */
+        .overview-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .overview-text h2 {
+            color: #1b5e20;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .overview-text p {
+            color: #2c3e50;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .overview-text strong {
+            color: #1b5e20;
+            font-weight: 600;
+        }
+
+        /* Quick Stats Box */
+        .quick-stats {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            border-radius: 12px;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+        }
+
+        .quick-stats h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .quick-stat {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .quick-stat:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Achievement Cards */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .achievement-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
+        }
+
+        .achievement-card h3 {
+            color: #1b5e20;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .achievement-card p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .achievement-card ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .achievement-card li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* Context Section */
+        .context-section {
+            background: linear-gradient(135deg, #f1f8f4 0%, #e8f5e9 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .context-section h2 {
+            color: #1b5e20;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .context-section p {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Stats Table */
+        .stats-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 60px;
+        }
+
+        .stats-table h2 {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 25px 30px;
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .stats-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .stats-table th,
+        .stats-table td {
+            padding: 18px 30px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stats-table th {
+            background: #f5f5f5;
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .stats-table td {
+            color: #2c3e50;
+            font-size: 1.05rem;
+        }
+
+        .stats-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .stats-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .overview-section {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-content {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .project-hero {
+                height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+
+            .breadcrumb-container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1740117827/coodu-trust-logo_lcaqat.png" alt="Coodu Trust Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../../about.html" class="nav-link">About</a>
+                    <div class="dropdown-menu">
+                        <a href="../../about.html#mission" class="dropdown-item">Mission & Vision</a>
+                        <a href="../../about.html#history" class="dropdown-item">Our History</a>
+                        <a href="../../about.html#team" class="dropdown-item">Leadership Team</a>
+                        <a href="../../about.html#partners" class="dropdown-item">Partners</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="../../programs.html" class="nav-link active">Programs</a>
+                    <div class="dropdown-menu">
+                        <a href="../water-resource-management.html" class="dropdown-item">Water Resource Management</a>
+                        <a href="../biodiversity-conservation.html" class="dropdown-item">Biodiversity Conservation</a>
+                        <a href="../plantation-afforestation.html" class="dropdown-item">Plantation & Afforestation</a>
+                        <a href="../soil-land-management.html" class="dropdown-item">Soil & Land Management</a>
+                        <a href="../climate-change-adaptation.html" class="dropdown-item">Climate Change Adaptation</a>
+                        <a href="../livelihood-development.html" class="dropdown-item">Livelihood Development</a>
+                        <a href="../community-empowerment.html" class="dropdown-item">Community Empowerment</a>
+                        <a href="../education-training.html" class="dropdown-item">Education & Training</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../../impact.html" class="nav-link">Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="project-hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1740117941/medicinal-plants-1_c6xwla.jpg" alt="Medicinal Plants Garden">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1740117941/medicinal-plants-2_rlqvzm.jpg" alt="Traditional Medicinal Plants">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1740117941/medicinal-plants-3_ax7kch.jpg" alt="Ethno-botanical Conservation">
+            </div>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Conservation of Medicinal Plants</h1>
+                <p class="subtitle">Preserving Traditional Healing Knowledge Through Ethno-Botanical Gardens</p>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                    <div class="quick-stat">
+                        <span class="stat-number" style="color: white;">3 Acres</span>
+                        <span class="stat-label" style="color: white;">Ethno-botanical Garden</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-number" style="color: white;">Karur</span>
+                        <span class="stat-label" style="color: white;">Mayilampatty Field Office</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Home</a>
+            <span class="breadcrumb-separator">›</span>
+            <a href="../../programs.html">Programs</a>
+            <span class="breadcrumb-separator">›</span>
+            <a href="../biodiversity-conservation.html">Biodiversity Conservation</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>Conservation of Medicinal Plants</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-content">
+        <!-- Overview Section -->
+        <section class="overview-section">
+            <div class="overview-text">
+                <h2>Program Overview</h2>
+                <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
+                    Coodu Trust established a <strong>3-acre ethno-botanical garden</strong> at its <strong>Mayilampatty field office in Karur district</strong> to conserve medicinal plant species traditionally known to ethnic communities and provide education and training to diverse beneficiaries.
+                </p>
+                <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
+                    The garden serves as a <strong>living repository of traditional healing knowledge</strong>, preserving medicinal plants used in <strong>Ayurveda, Unani, and Siddha</strong> systems of medicine. The initiative combines <strong>biodiversity conservation with community education</strong>, offering training programs for farmers, school children, college students, folk healers, and women's self-help groups.
+                </p>
+                <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 0;">
+                    This work addresses the urgent need to document and protect India's rich heritage of medicinal plants, ensuring that traditional knowledge is passed on to future generations while promoting sustainable harvesting practices.
+                </p>
+            </div>
+
+            <div class="quick-stats">
+                <h3>Quick Facts</h3>
+                <div class="quick-stat">
+                    <span class="stat-number">3 Acres</span>
+                    <span class="stat-label">Garden Size</span>
+                </div>
+                <div class="quick-stat">
+                    <span class="stat-number">Karur</span>
+                    <span class="stat-label">District Location</span>
+                </div>
+                <div class="quick-stat">
+                    <span class="stat-number">Multiple</span>
+                    <span class="stat-label">Beneficiary Groups</span>
+                </div>
+                <div class="quick-stat">
+                    <span class="stat-number">Traditional</span>
+                    <span class="stat-label">Knowledge Focus</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Achievements -->
+        <section class="achievements-grid">
+            <div class="achievement-card">
+                <h3>🌿 Garden Establishment</h3>
+                <p>
+                    The <strong>3-acre ethno-botanical garden at Mayilampatty field office</strong> serves as a conservation site for medicinal plants known to ethnic communities. The garden preserves species used in traditional healing practices and provides a controlled environment for their propagation.
+                </p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>🌱 Species Collection</h3>
+                <p>
+                    The garden focuses on medicinal plant species traditionally used by ethnic communities in Tamil Nadu. These plants represent the biodiversity heritage of the region and include species used in <strong>Ayurveda, Unani, and Siddha</strong> systems of medicine.
+                </p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>📚 Education & Training</h3>
+                <p>
+                    Coodu Trust provides comprehensive training programs for diverse beneficiaries:
+                </p>
+                <ul>
+                    <li><strong>Farmers:</strong> Sustainable cultivation of medicinal plants</li>
+                    <li><strong>School & College Students:</strong> Traditional botanical knowledge</li>
+                    <li><strong>Folk Healers:</strong> Conservation and ethical harvesting</li>
+                    <li><strong>Women's SHGs:</strong> Value addition and livelihood opportunities</li>
+                </ul>
+            </div>
+
+            <div class="achievement-card">
+                <h3>🇮🇳 Traditional Medicine Context</h3>
+                <p>
+                    India is home to approximately <strong>2,500 species of medicinal plants</strong> used by traditional healers. About <strong>100 species</strong> serve as regular sources of medicine. The ethno-botanical garden preserves this heritage, ensuring the survival of plants crucial to India's traditional healing systems.
+                </p>
+            </div>
+        </section>
+
+        <!-- Context Section -->
+        <section class="context-section">
+            <h2>India's Medicinal Plant Heritage</h2>
+            <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                India possesses one of the world's richest traditions of using medicinal plants for healthcare. The country is home to approximately <strong>2,500 species of medicinal plants</strong> that have been used by traditional healers for centuries. Of these, around <strong>100 species serve as regular sources of medicine</strong> in the <strong>Ayurveda, Unani, and Siddha</strong> systems of traditional medicine.
+            </p>
+            <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                This rich biodiversity is under threat from habitat loss, over-harvesting, and the erosion of traditional knowledge among younger generations. Ethno-botanical gardens like the one established by Coodu Trust play a critical role in <strong>conserving these species ex-situ</strong> (outside their natural habitats) while simultaneously <strong>educating communities about their sustainable use</strong>.
+            </p>
+            <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0;">
+                By documenting traditional knowledge from ethnic communities and providing training to farmers, students, folk healers, and women's groups, Coodu Trust ensures that this invaluable heritage is preserved for future generations while creating livelihood opportunities through sustainable medicinal plant cultivation.
+            </p>
+        </section>
+
+        <!-- Verified Statistics Table -->
+        <section class="stats-table">
+            <h2>Verified Statistics</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Garden Size</td>
+                        <td>3 acres</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Mayilampatty field office, Karur district</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>Medicinal plants known to ethnic communities</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>Training Beneficiaries</td>
+                        <td>Farmers, school children, college students, folk healers, women's SHGs</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>India's Medicinal Plant Species</td>
+                        <td>~2,500 species used by traditional healers</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>Regular Medicine Sources</td>
+                        <td>~100 species</td>
+                        <td>WordPress site</td>
+                    </tr>
+                    <tr>
+                        <td>Traditional Medicine Systems</td>
+                        <td>Ayurveda, Unani, Siddha</td>
+                        <td>WordPress site</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Coodu Trust</h3>
+                <p>A non-profit organization dedicated to sustainable development, environmental conservation, and community empowerment in rural Tamil Nadu since 1992.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../about.html">About Us</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../impact.html">Impact</a></li>
+                    <li><a href="../../gallery.html">Gallery</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
+                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
+                    <li><a href="../livelihood-development.html">Livelihood Development</a></li>
+                    <li><a href="../community-empowerment.html">Community Empowerment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Karur, Tamil Nadu, India</li>
+                    <li><i class="fas fa-phone"></i> +91-XXXX-XXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@coodutrust.org</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Coodu Trust. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Carousel Functionality
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 seconds
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides
+        let slideTimer = setInterval(nextSlide, slideInterval);
+
+        // Manual slide selection
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+
+                // Reset timer when manually selecting slide
+                clearInterval(slideTimer);
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
+        });
+
+        // Pause carousel on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideTimer);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            slideTimer = setInterval(nextSlide, slideInterval);
+        });
+    </script>
+</body>
+</html>
