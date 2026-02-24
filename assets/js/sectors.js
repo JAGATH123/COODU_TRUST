@@ -5,8 +5,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // =========== SECTOR NAVIGATION FUNCTIONALITY ===========
-    
-    const sectorNavButtons = document.querySelectorAll('.sector-nav-btn');
+    // Supports 6 sectors: Environment, Agriculture, Women Empowerment, Education, Health/Sanitation/Waste, Consultancy
+
+    const sectorNavButtons = document.querySelectorAll('.program-nav-btn, .sector-nav-btn');
     const sectorSections = document.querySelectorAll('.sector-section');
 
     if (sectorNavButtons.length > 0 && sectorSections.length > 0) {
@@ -100,5 +101,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('🏗️ Sectors page functionality initialized');
+    console.log('🏗️ Sectors page functionality initialized (6 sectors including Women Empowerment)');
 });
