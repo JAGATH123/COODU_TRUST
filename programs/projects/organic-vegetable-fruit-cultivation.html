@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Vegetable & Fruit Cultivation Training | Coodu Trust</title>
+    <meta name="description" content="Organic input-based agriculture training programme implemented by Coodu Trust in 2014-2015 through KVK Dindigul, training 750 farmers in residue-free vegetable production at Oddanchatram and organic mango cultivation at Natham — promoting chemical-free farming technologies.">
+
+    <!-- Google Fonts (Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* Organic Farming Project Page Specific Styles */
+        .organic-page {
+            background: transparent !important;
+        }
+
+        .organic-page .container {
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+
+        /* Modern Hero Section */
+        .organic-hero {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+
+        .hero-content-modern {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-visual-section {
+            position: relative;
+        }
+
+        .modern-carousel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .quick-stat {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            color: white !important;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        /* Program Overview Modern */
+        .overview-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .overview-content-modern {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .overview-sidebar {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
+        }
+
+        /* Achievement Dashboard */
+        .achievements-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-card-modern {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-left: 5px solid #28a745;
+        }
+
+        .achievement-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Statistics Dashboard */
+        .stats-modern {
+            background: transparent !important;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-header {
+            color: #28a745;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            color: #2c3e50;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content-modern {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .quick-stats {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .organic-page .container {
+                padding: 0 15px;
+            }
+
+            .hero-text-section,
+            .overview-content-modern,
+            .overview-sidebar {
+                padding: 30px 25px;
+            }
+
+            .achievement-card-modern {
+                padding: 25px 20px;
+            }
+
+            .carousel-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
+    <!-- Global background overlay for the entire page -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+
+    <!-- =========== HEADER =========== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../../index.html" class="logo">
+                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
+                    <span class="logo-text">Coodu Trust</span>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../../about.html" class="nav-link">About</a></li>
+
+                    <li class="dropdown">
+                        <a href="../../programs.html" class="nav-link active">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="../environment-resilience.html">Environment and Resilience</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
+                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
+                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
+                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
+                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
+                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
+                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
+                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
+                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
+                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../women-empowerment.html">Women Empowerment</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
+                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
+                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
+                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../education-skilling.html">Education and Skilling</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
+                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
+                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
+                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../health-sanitation.html">Health, Sanitation & Waste Management</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
+                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
+                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
+                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
+                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
+                                    <li><a href="../solid-waste-management.html">Solid Waste Management</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
+                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
+                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../partner.html">Partner with Us</a></li>
+                            <li><a href="../../volunteer.html">Volunteer</a></li>
+                            <li><a href="../../donate.html">Donate</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
+                    <li><a href="../../media.html" class="nav-link">Media</a></li>
+                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+
+                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========== MODERN HERO SECTION =========== -->
+        <section class="organic-hero">
+            <div class="container">
+                <div class="breadcrumb" style="margin-bottom: 30px;">
+                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a>
+                    <span style="color: #555; margin: 0 8px;">></span>
+                    <a href="../sustainable-agriculture.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Sustainable Agriculture</a>
+                    <span style="color: #555; margin: 0 8px;">></span>
+                    <a href="../horticulture-diversified.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Horticulture & Diversified Farming</a>
+                    <span style="color: #555; margin: 0 8px;">></span>
+                    <span style="color: #2c3e50; font-weight: 600;">Organic Vegetable & Fruit Cultivation</span>
+                </div>
+
+                <div class="hero-content-modern">
+                    <div class="hero-text-section">
+                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🌱 ORGANIC FARMING TECHNOLOGY PROGRAMME</div>
+
+                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">Organic Vegetable & Fruit Cultivation Training</h1>
+                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Residue-Free Vegetable & Mango Production through KVK Dindigul (2014-2015)</p>
+
+                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
+                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Disseminating organic input-based agriculture technologies for the production of nutrient-rich, residue-free vegetables and fruits, replacing high chemical-demanding existing technologies with alternate organic methods — enabling farmers to produce safer food, protect soil health, reduce input costs, and access premium markets for organic produce.</p>
+                        </div>
+
+                        <div class="key-highlights" style="margin-bottom: 30px;">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2014-2015 Period</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🥬</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Vegetable & Mango Focus</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🔬</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">KVK Dindigul Partnership</span>
+                                </div>
+                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
+                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🌱</span>
+                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Chemical-Free Technologies</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="quick-stats">
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">750 Farmers</span>
+                                <span class="stat-label" style="color: white;">Trained in Organic Technologies</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="stat-number" style="color: white;">2 Blocks</span>
+                                <span class="stat-label" style="color: white;">Oddanchatram (Vegetables) & Natham (Mango)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual-section">
+                        <div class="modern-carousel">
+                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Project Gallery</h3>
+
+                            <div class="hero-photo-carousel">
+                                <div class="carousel-frame">
+                                    <div class="photo-slides">
+                                        <div class="photo-slide active">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-sustainable-agriculture.jpg" alt="Organic vegetable cultivation" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🥬 Organic Vegetable Farming</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Mango cultivation training" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🥭 Organic Mango Cultivation</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Bio-fertiliser training" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🔬 Bio-fertiliser Application</div>
+                                        </div>
+                                        <div class="photo-slide">
+                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="KVK technical support" class="carousel-image">
+                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 KVK Technical Training</div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                        <span class="indicator" data-slide="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
+        <section class="overview-modern">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content-modern">
+                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Programme Overview</h2>
+
+                        <div style="margin-bottom: 35px;">
+                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
+                                The Organic Vegetable and Fruit Cultivation Training programme was implemented by Coodu Trust during 2014-2015 in partnership with Krishi Vigyan Kendra (KVK), Dindigul. The programme was designed to disseminate organic input-based agriculture technologies specifically for the production of nutrient-rich and residue-free vegetables and fruits, addressing the growing concern about chemical contamination in food and the degradation of soil health from excessive synthetic input use.
+                            </p>
+
+                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
+                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Core Strategy</h4>
+                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Replace existing high chemical-demanding agricultural technologies with alternate organic input-based methods that are equally productive but environmentally sustainable — demonstrating to farmers that chemical-free farming is not only possible but commercially viable, producing residue-free food that commands premium market prices while restoring soil health and protecting the environment.</p>
+                            </div>
+
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
+                                The programme targeted two distinct crop-specific zones within Dindigul district: Oddanchatram block for intensive vegetable production and Natham block for mango cultivation. This strategic selection ensured that organic technologies were demonstrated in areas where they would have the most immediate relevance and impact — Oddanchatram being one of Tamil Nadu's largest vegetable marketing hubs, and Natham being a significant mango-growing area.
+                            </p>
+
+                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
+                                A total of 750 farmers were trained in organic technologies covering bio-fertilisers, bio-control agents, use of traps, and cultural and mechanical means of pest and disease control. The alternate organic input-based technologies were specifically designed to replace the high chemical-demanding existing technologies that these farmers had been using, providing practical, cost-effective substitutes.
+                            </p>
+                        </div>
+
+                        <!-- Target Beneficiaries -->
+                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
+                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Target Beneficiaries</h4>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🥬</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Vegetable Farmers (Oddanchatram Block)</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🥭</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Mango Growers (Natham Block)</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px;">
+                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👨‍🌾</div>
+                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Farmers Seeking Chemical-Free Methods</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-sidebar">
+                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
+
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                • Oddanchatram Block, Dindigul District — Vegetable production zone<br>
+                                • Natham Block, Dindigul District — Mango cultivation zone
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📋 Implementation Details</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                                <strong>Duration:</strong> 2014-2015<br>
+                                <strong>Technical Partner:</strong> Krishi Vigyan Kendra (KVK), Dindigul<br>
+                                <strong>Total Farmers:</strong> 750<br>
+                                <strong>Status:</strong> Successfully Completed
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🌱 Crop Focus</h4>
+                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
+                                <strong>Vegetables:</strong> Intensive production at Oddanchatram (Tamil Nadu's major vegetable hub)<br><br>
+                                <strong>Fruits:</strong> Mango cultivation at Natham (significant mango-growing area)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== KEY ACTIVITIES & ACHIEVEMENTS =========== -->
+        <section class="programs-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Activities & Achievements</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
+                    <!-- Card 1: Vegetable Production — Oddanchatram Block -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🥬</div>
+                            <div>
+                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Vegetable Production — Oddanchatram Block</h3>
+                                <p style="margin: 0; color: #555; font-weight: 600; font-size: 0.9rem;">Focus: Residue-Free Vegetable Cultivation</p>
+                            </div>
+                        </div>
+
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">Farmers in Oddanchatram block — one of Tamil Nadu's most important vegetable marketing centres — were trained in organic technologies for producing nutrient-rich, residue-free vegetables. The training provided practical alternatives to chemical-intensive vegetable farming, demonstrating that organic methods can produce commercially competitive yields while eliminating pesticide residues from food.</p>
+                    </div>
+
+                    <!-- Card 2: Mango Cultivation — Natham Block -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🥭</div>
+                            <div>
+                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Mango Cultivation — Natham Block</h3>
+                                <p style="margin: 0; color: #555; font-weight: 600; font-size: 0.9rem;">Focus: Organic Mango Production Technologies</p>
+                            </div>
+                        </div>
+
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">Mango growers in Natham block received specialised training in organic input-based mango cultivation technologies. The programme addressed the specific pest and disease management challenges of mango farming, providing organic alternatives to the heavy chemical spray schedules traditionally used in commercial mango production.</p>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                    <!-- Card 3: Organic Input Technologies -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🔬</div>
+                            <div>
+                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Organic Input Technologies</h3>
+                            </div>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                            <h4 style="color: #1b5e20; margin-bottom: 12px; font-size: 1rem;">Technologies Covered:</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.8;">
+                                <li>• Bio-fertiliser application — natural nutrient sources replacing synthetic fertilisers</li>
+                                <li>• Bio-control agents — biological pest management replacing chemical pesticides</li>
+                                <li>• Trap technologies — pheromone and light traps for pest monitoring and control</li>
+                                <li>• Cultural methods — crop rotation, intercropping, companion planting</li>
+                                <li>• Mechanical pest control — physical removal and barrier methods</li>
+                            </ul>
+                        </div>
+
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">The training provided comprehensive exposure to the full spectrum of organic farming technologies, covering biological, cultural, and mechanical methods for both soil fertility management and pest/disease control. Each technology was presented as a direct replacement for specific chemical inputs that farmers were currently using.</p>
+                    </div>
+
+                    <!-- Card 4: KVK Technical Partnership -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎓</div>
+                            <div>
+                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">KVK Technical Partnership</h3>
+                                <p style="margin: 0; color: #555; font-weight: 600; font-size: 0.9rem;">Partner: Krishi Vigyan Kendra (KVK), Dindigul</p>
+                            </div>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                            <h4 style="color: #856404; margin-bottom: 12px; font-size: 1rem;">Collaboration Benefits:</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #721c24; font-size: 0.95rem; line-height: 1.8;">
+                                <li>• Research-backed training content from agricultural scientists</li>
+                                <li>• Demonstration of proven organic technologies</li>
+                                <li>• Location-specific recommendations for Dindigul conditions</li>
+                                <li>• Ongoing technical support for adopting farmers</li>
+                                <li>• Connection to KVK's extension network</li>
+                            </ul>
+                        </div>
+
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">Krishi Vigyan Kendra, Dindigul — the district's agricultural science centre — served as the technical knowledge partner, ensuring that all organic technologies taught were scientifically validated, locally tested, and practically applicable for the specific agro-climatic conditions of Oddanchatram and Natham blocks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== TRAINING CURRICULUM SECTION =========== -->
+        <section class="programs-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Training Curriculum</h2>
+
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px;">
+                        <!-- Organic Soil Fertility Management -->
+                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #1b5e20; margin-bottom: 20px; font-size: 1.3rem;">🌱 Organic Soil Fertility Management</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 1rem; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">✓ Bio-fertiliser types, production, and application methods</li>
+                                <li style="margin-bottom: 10px;">✓ Organic manure preparation and composting</li>
+                                <li style="margin-bottom: 10px;">✓ Green manuring and cover cropping</li>
+                                <li>✓ Soil health assessment and organic amendment</li>
+                            </ul>
+                        </div>
+
+                        <!-- Organic Pest & Disease Control -->
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #1565c0; margin-bottom: 20px; font-size: 1.3rem;">🐛 Organic Pest & Disease Control</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 1rem; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">✓ Bio-control agents — identification and application</li>
+                                <li style="margin-bottom: 10px;">✓ Trap technologies — pheromone, sticky, and light traps</li>
+                                <li style="margin-bottom: 10px;">✓ Cultural control — crop rotation, intercropping, timing</li>
+                                <li style="margin-bottom: 10px;">✓ Mechanical control — physical removal, barriers, netting</li>
+                                <li>✓ Herbal pesticide preparation from locally available plants</li>
+                            </ul>
+                        </div>
+
+                        <!-- Crop-Specific Modules -->
+                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #856404; margin-bottom: 20px; font-size: 1.3rem;">🥬 Crop-Specific Modules</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #721c24; font-size: 1rem; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">✓ Residue-free vegetable production package (Oddanchatram)</li>
+                                <li style="margin-bottom: 10px;">✓ Organic mango cultivation package (Natham)</li>
+                                <li style="margin-bottom: 10px;">✓ Post-harvest handling for organic produce</li>
+                                <li>✓ Market differentiation for chemical-free products</li>
+                            </ul>
+                        </div>
+
+                        <!-- Delivery Method -->
+                        <div style="background: linear-gradient(135deg, #d1ecf1, #d4edda); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
+                            <h3 style="color: #0c5460; margin-bottom: 20px; font-size: 1.3rem;">🎓 Delivery Method</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 1rem; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">✓ Lectures combined with field demonstrations</li>
+                                <li style="margin-bottom: 10px;">✓ Practical preparation and application of organic inputs</li>
+                                <li style="margin-bottom: 10px;">✓ Comparative analysis: organic vs chemical input costs</li>
+                                <li>✓ Farmer-to-farmer experience sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== WHY ODDANCHATRAM & NATHAM SECTION =========== -->
+        <section class="programs-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Why Oddanchatram & Natham Were Strategic Choices</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                    <!-- Oddanchatram -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <h3 style="color: #28a745; font-size: 1.6rem; margin-bottom: 20px; font-weight: 600;">🥬 Oddanchatram — Tamil Nadu's Vegetable Hub</h3>
+                        <p style="color: #555; line-height: 1.7; font-size: 1.05rem; margin: 0;">Oddanchatram in Dindigul district is one of the largest vegetable wholesale markets in Tamil Nadu, with thousands of farmers producing vegetables for this market. The heavy use of chemical pesticides and fertilisers in intensive vegetable farming had made this area a prime candidate for organic conversion — the market infrastructure was already in place, and organic produce commands premium prices.</p>
+                    </div>
+
+                    <!-- Natham -->
+                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
+                        <h3 style="color: #28a745; font-size: 1.6rem; margin-bottom: 20px; font-weight: 600;">🥭 Natham — Mango Country</h3>
+                        <p style="color: #555; line-height: 1.7; font-size: 1.05rem; margin: 0;">Natham block is a significant mango-growing area in Dindigul district. Commercial mango farming relies heavily on chemical sprays for pest and disease management. Converting these farmers to organic methods directly improves the quality and safety of mango production while reducing environmental contamination in a horticulturally important zone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== CONTEXT SECTION =========== -->
+        <section class="programs-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Context — Coodu Trust's Organic Farming Portfolio</h2>
+                <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">This 2014-15 programme was distinctive because it was crop-specific (vegetables and mango), location-specific (Oddanchatram and Natham), and technology-replacement focused (directly substituting chemical inputs with organic alternatives), making it more targeted than the broader organic farming trainings.</p>
+
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Year</th>
+                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Programme</th>
+                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Beneficiaries</th>
+                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e0e0e0;">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2002-2003</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Indigenous Farming Practices</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">~600 farmers</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Bio-fertilisers, herbal pesticides, vermicompost</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0;">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2002-2003</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Sustainable Agriculture Training (Drought Response)</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">Drought-prone districts</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Natural soil fertility, organic vs conventional</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0;">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2003-2005</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Vermi-composting & Organic Farming</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">244 women</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Vermiculture, organic farming techniques</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0;">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2013-2014</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Organic Farming Training (Large-scale)</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">3,801 (2,345 farmers + 1,456 youth)</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">128 trainings, bio-fertilisers, bio-control</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0; background: rgba(40, 167, 69, 0.08);">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2014-2015</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Organic Vegetable & Fruit (KVK)</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">750 farmers</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Oddanchatram vegetables, Natham mango</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e0e0e0;">
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2017-18</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Organic vegetable cultivation training</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">Listed in training portfolio</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Organic methods</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2020-21</td>
+                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">MKSP Organic Agriculture</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem;">2,134 women</td>
+                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">Organic agriculture for Mahila Kisans</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== VERIFIED STATISTICS TABLE (2 COLUMNS ONLY) =========== -->
+        <section class="statistics-section section-padding" style="background: transparent !important;">
+            <div class="container">
+                <h2 class="section-title">Verified Statistics</h2>
+                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
+                    <table class="statistics-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Programme Period</td>
+                                <td>2014-2015</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Partner</td>
+                                <td>Krishi Vigyan Kendra (KVK), Dindigul</td>
+                            </tr>
+                            <tr>
+                                <td>Total Farmers Trained</td>
+                                <td>750</td>
+                            </tr>
+                            <tr>
+                                <td>Vegetable Production Zone</td>
+                                <td>Oddanchatram Block, Dindigul</td>
+                            </tr>
+                            <tr>
+                                <td>Fruit Cultivation Zone</td>
+                                <td>Natham Block (Mango), Dindigul</td>
+                            </tr>
+                            <tr>
+                                <td>Technologies Focus</td>
+                                <td>Organic input-based alternatives to chemical technologies</td>
+                            </tr>
+                            <tr>
+                                <td>Training Content</td>
+                                <td>Bio-fertilisers, bio-control agents, traps, cultural & mechanical pest control</td>
+                            </tr>
+                            <tr>
+                                <td>Programme Objective</td>
+                                <td>Production of nutrient-rich, residue-free vegetables and fruits</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== CALL TO ACTION =========== -->
+        <section class="sector-cta section-padding">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Support Organic Farming Adoption</h2>
+                    <p class="cta-text">Join us in helping farmers transition from chemical-intensive to organic farming methods that produce safer food, protect soil health, and create premium market opportunities. Your support enables training programmes that equip farmers with proven, science-backed organic technologies.</p>
+                    <div class="cta-buttons">
+                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
+                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
+                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../about.html">About Us</a></li>
+                        <li><a href="../../programs.html">Our Programs</a></li>
+                        <li><a href="../../careers.html">Careers</a></li>
+                        <li><a href="../../donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <address class="footer-contact">
+                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
+                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></li>
+                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
+                    </address>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
