@@ -3,7 +3,12 @@
    ============================================= */
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:3000/api'; // Change this to your deployed backend URL
+// Single configurable backend base URL. Honours an explicit window.COODU_API_BASE
+// override; falls back to localhost:3000 during local dev; and defaults to
+// same-origin ("") in production so deployed builds hit their own backend
+// (avoids hardcoded-localhost / mixed-content failures).
+const API_BASE = (window.COODU_API_BASE || (location.hostname === 'localhost' || location.hostname === '127.0.0.1' ? 'http://localhost:3000' : ''));
+const API_BASE_URL = API_BASE + '/api'; // e.g. http://localhost:3000/api locally, /api in production
 
 document.addEventListener('DOMContentLoaded', function() {
     

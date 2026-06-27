@@ -15,6 +15,53 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Programs Hub: sector program-card styling & links (scoped to this page) -->
+    <style>
+        .sector-section .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        .sector-section .project-card {
+            background: #ffffff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            /* Force visibility: sectors.js sets inline opacity:0 and reveals via an
+               IntersectionObserver that never fires for cards in a hidden sector. */
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        .sector-section .project-card:hover {
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+        }
+        .sector-section .project-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .sector-section .project-link {
+            margin-top: auto;
+            padding-top: 24px;
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.25s ease, color 0.25s ease;
+        }
+        .sector-section .project-link::after {
+            content: "\2192";
+        }
+        .sector-section .project-link:hover {
+            color: var(--dark-green);
+            gap: 14px;
+        }
+    </style>
 </head>
 <body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
     <!-- Global background overlay for the entire page -->
@@ -191,6 +238,7 @@
                                     <span class="impact-label">Communities Resilient</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/climate-change-adaptation.html">Learn More</a>
                         </div>
                     </div>
 
@@ -224,6 +272,7 @@
                                     <span class="impact-label">Districts Covered</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/plantation-afforestation.html">Learn More</a>
                         </div>
                     </div>
 
@@ -257,6 +306,7 @@
                                     <span class="impact-label">Energy Cost Reduction</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/environment-resilience.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -305,6 +355,7 @@
                                     <span class="impact-label">Cost Reduction</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/organic-farming.html">Learn More</a>
                         </div>
                     </div>
 
@@ -338,6 +389,7 @@
                                     <span class="impact-label">Districts Covered</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/watershed-management.html">Learn More</a>
                         </div>
                     </div>
 
@@ -371,6 +423,7 @@
                                     <span class="impact-label">Farmers Benefited</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/agricultural-technology.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -419,6 +472,7 @@
                                     <span class="impact-label">SHGs Formed</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/shg-community-mobilization.html">Learn More</a>
                         </div>
                     </div>
 
@@ -452,6 +506,7 @@
                                     <span class="impact-label">Credit Facilitated</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/microfinance-financial-inclusion.html">Learn More</a>
                         </div>
                     </div>
 
@@ -485,6 +540,7 @@
                                     <span class="impact-label">of Experience</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/social-empowerment-leadership.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -535,6 +591,7 @@
                                     <span class="impact-label">Placement Rate</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/vocational-livelihood-training.html">Learn More</a>
                         </div>
                     </div>
 
@@ -568,6 +625,7 @@
                                     <span class="impact-label">Students Benefited</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/school-infrastructure-development.html">Learn More</a>
                         </div>
                     </div>
 
@@ -601,6 +659,7 @@
                                     <span class="impact-label">SHGs Formed</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/entrepreneurship-enterprise-development.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -648,6 +707,7 @@
                                     <span class="impact-label">Community Members Trained</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/water-quality-safety.html">Learn More</a>
                         </div>
                     </div>
 
@@ -682,6 +742,7 @@
                                     <span class="impact-label">Health Camps</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/community-health-services.html">Learn More</a>
                         </div>
                     </div>
 
@@ -716,6 +777,7 @@
                                     <span class="impact-label">Districts (TSC)</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/sanitation-hygiene-infrastructure.html">Learn More</a>
                         </div>
                     </div>
 
@@ -750,6 +812,7 @@
                                     <span class="impact-label">Segregation Rate</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/solid-waste-management.html">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -798,6 +861,7 @@
                                     <span class="impact-label">Partner Organizations</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/strategic-planning-advisory.html">Learn More</a>
                         </div>
                     </div>
 
@@ -831,6 +895,7 @@
                                     <span class="impact-label">Leaders Trained</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/technology-knowledge-dissemination.html">Learn More</a>
                         </div>
                     </div>
 
@@ -864,6 +929,7 @@
                                     <span class="impact-label">Client Satisfaction</span>
                                 </div>
                             </div>
+                            <a class="project-link" href="programs/hr-staffing-solutions.html">Learn More</a>
                         </div>
                     </div>
                 </div>

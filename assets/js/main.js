@@ -3,7 +3,41 @@
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+    // =========== 0a. API BASE CONFIG ===========
+    // Single configurable backend base URL. Honours an explicit
+    // window.COODU_API_BASE override; falls back to localhost:3000 during local
+    // dev; and defaults to same-origin ("") in production so deployed builds hit
+    // their own backend (avoids hardcoded-localhost / mixed-content failures).
+    const API_BASE = (window.COODU_API_BASE || (location.hostname === 'localhost' || location.hostname === '127.0.0.1' ? 'http://localhost:3000' : ''));
+
+    // =========== 0b. GLOBAL BROKEN-IMAGE FALLBACK ===========
+    // Many <img> tags reference assets that 404; without handling, the browser
+    // renders a broken-image glyph and leaks the raw ALT text. Hide any image
+    // that fails to load (site-wide, no HTML edits) and also catch images that
+    // had already failed before this script attached its handler. Small and
+    // dependency-free.
+    (function setupBrokenImageFallback() {
+        // Gracefully hide a single broken image (runs at most once per image).
+        const hideBrokenImage = (img) => {
+            if (img.dataset.fallbackApplied === 'true') return;
+            img.dataset.fallbackApplied = 'true';
+            img.style.display = 'none';
+            // Alternative branded placeholder (kept commented to stay minimal):
+            // img.style.background = 'var(--placeholder-bg, #e8f5ec)';
+        };
+
+        document.querySelectorAll('img').forEach(img => {
+            // Catch future load failures.
+            img.addEventListener('error', () => hideBrokenImage(img));
+            // Catch images that already failed before this handler attached:
+            // complete === true but no intrinsic width means the load errored.
+            if (img.complete && img.naturalWidth === 0) {
+                hideBrokenImage(img);
+            }
+        });
+    })();
+
     // =========== 1. MOBILE NAVIGATION & DROPDOWNS ===========
     
     const hamburger = document.querySelector('.hamburger');
@@ -100,6 +134,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 formatter: (value) => value.toFixed(2)
             }
         ];
+
+        // STATIC FALLBACK: immediately render each counter at its data-target
+        // value so the numbers are never stuck at "0" if the IntersectionObserver
+        // / count-up never fires (section already in view, observer unsupported,
+        // timing, etc.). The live count-up animation below still runs on intersect
+        // and resets each element to 0 before animating, so this does not break it.
+        statsConfig.forEach(stat => {
+            if (!stat.element) return;
+            // Prefer the HTML data-target as the source of truth; fall back to startValue.
+            const target = parseFloat(stat.element.getAttribute('data-target'));
+            const value = isNaN(target) ? stat.startValue : target;
+            stat.element.textContent = stat.formatter(value);
+        });
 
         let isVisible = false;
         let statsInterval;
@@ -570,8 +617,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 console.log('Sending contact data:', contactData);
                 
-                // Submit to API
-                const response = await fetch('http://localhost:3000/api/contact/submit', {
+                // Submit to API (uses configurable API_BASE: localhost in dev, same-origin in prod)
+                const response = await fetch(API_BASE + '/api/contact/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
