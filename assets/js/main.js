@@ -9,59 +9,83 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown > a');
+    const MOBILE_NAV_MAX = 1024; // drawer is active at/below this width
 
     if (hamburger && navMenu) {
-        // Toggles the main hamburger menu open and closed
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+        // --- Build drawer chrome once: green header (Menu + close) + pinned Donate ---
+        const donateBtn = document.querySelector('.donate-button');
+        const donateHref = donateBtn ? (donateBtn.getAttribute('href') || 'donate.html') : 'donate.html';
 
-        // Closes the menu if a non-dropdown link is clicked
-        document.querySelectorAll('.nav-link').forEach(link => {
+        const head = document.createElement('li');
+        head.className = 'drawer-head';
+        head.innerHTML = '<span class="drawer-title">Menu</span>' +
+            '<button type="button" class="drawer-close" aria-label="Close menu">✕</button>';
+        navMenu.insertBefore(head, navMenu.firstChild);
+
+        const foot = document.createElement('li');
+        foot.className = 'drawer-foot';
+        foot.innerHTML = '<a class="btn" href="' + donateHref + '">Donate Now</a>';
+        navMenu.appendChild(foot);
+
+        const backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+
+        // --- a11y: the hamburger is a <div> in markup; make it a real control ---
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('tabindex', '0');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+
+        const openDrawer = () => {
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            backdrop.classList.add('active');
+            document.body.classList.add('nav-open');
+            hamburger.setAttribute('aria-expanded', 'true');
+        };
+        const closeDrawer = () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            backdrop.classList.remove('active');
+            document.body.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        };
+        const toggleDrawer = () => navMenu.classList.contains('active') ? closeDrawer() : openDrawer();
+
+        hamburger.addEventListener('click', toggleDrawer);
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleDrawer(); }
+        });
+        head.querySelector('.drawer-close').addEventListener('click', closeDrawer);
+        backdrop.addEventListener('click', closeDrawer);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+        window.addEventListener('resize', () => { if (window.innerWidth > MOBILE_NAV_MAX) closeDrawer(); });
+
+        // Close the drawer when a real navigation link (non-accordion parent) is tapped
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
             if (!link.parentElement.classList.contains('dropdown')) {
-                link.addEventListener('click', () => {
-                    if (hamburger.classList.contains('active')) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
+                link.addEventListener('click', closeDrawer);
             }
         });
+        foot.querySelector('.btn').addEventListener('click', closeDrawer);
 
-        // Handles the dropdown functionality specifically for mobile view
+        // --- Programs / Get Involved accordion (level 1) ---
         dropdowns.forEach(dropdownLink => {
-            dropdownLink.addEventListener('click', function(e) {
-                // Check if we are in mobile view (hamburger is visible)
-                if (window.innerWidth <= 1200) {
-                    e.preventDefault(); // Prevent link from navigating
-                    const dropdownMenu = this.nextElementSibling;
-                    
-                    // Toggle the 'show' class to display or hide the dropdown
-                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-                    
-                    // Optional: add a class to the parent for styling the arrow
+            dropdownLink.addEventListener('click', function (e) {
+                if (window.innerWidth <= MOBILE_NAV_MAX) {
+                    e.preventDefault();
                     this.parentElement.classList.toggle('open');
                 }
             });
         });
 
-        // Handle nested dropdown submenus for mobile
-        const submenuLinks = document.querySelectorAll('.dropdown-submenu > a');
-        submenuLinks.forEach(submenuLink => {
-            submenuLink.addEventListener('click', function(e) {
-                // Check if we are in mobile view (hamburger is visible)
-                if (window.innerWidth <= 1200) {
-                    e.preventDefault(); // Prevent link from navigating
-                    const submenuDropdown = this.nextElementSibling;
-                    
-                    if (submenuDropdown && submenuDropdown.classList.contains('dropdown-submenu-menu')) {
-                        // Toggle the submenu display
-                        submenuDropdown.style.display = submenuDropdown.style.display === 'block' ? 'none' : 'block';
-                        
-                        // Toggle arrow direction
-                        this.parentElement.classList.toggle('open');
-                    }
+        // --- Category accordion (level 2: sub-links under a category) ---
+        document.querySelectorAll('.dropdown-submenu > a').forEach(submenuLink => {
+            submenuLink.addEventListener('click', function (e) {
+                if (window.innerWidth <= MOBILE_NAV_MAX) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
                 }
             });
         });

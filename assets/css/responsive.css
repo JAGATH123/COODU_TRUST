@@ -1,299 +1,423 @@
-/* =============================================
-   RESPONSIVE.CSS - COODU TRUST WEBSITE (FINAL)
-   ============================================= */
+/* ============================================================================
+   RESPONSIVE.CSS — COODU TRUST
+   Mobile & Tablet layer, ported from the approved Claude design prototype.
+   Strategy: desktop (style.css) is untouched; this file adds the tablet
+   (<=1024px) and mobile (<=600px) experience via max-width overrides, plus the
+   slide-in drawer navigation. Loads AFTER style.css so these rules win.
+   Breakpoints:  tablet = (max-width:1024px)   mobile = (max-width:600px)
+   ========================================================================= */
 
-/* =========== 1. LARGE TABLET / SMALL DESKTOP VIEW =========== */
-/* Hides the full menu and shows the hamburger icon earlier due to more items */
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 30px;
-    }
-
-    /* --- Hamburger Menu Activation --- */
-    .hamburger {
-        display: block;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 100px; /* Matches the new header height */
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        height: calc(100vh - 100px); /* Full height minus header */
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        gap: 0;
-        align-items: stretch;
-        overflow-y: auto; /* Allow scrolling if menu is long */
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .nav-menu li {
-        width: 100%;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 18px;
-        border-bottom: 1px solid var(--border-color);
-        font-size: 1.1rem;
-    }
-    
-    .nav-link::after {
-        display: none;
-    }
-    
-    .donate-link {
-        background-color: transparent;
-        color: var(--primary-green) !important;
-        padding: 18px;
-        border-radius: 0;
-    }
-    
-    .donate-link:hover {
-        background-color: var(--primary-green);
-        color: var(--light-text) !important;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* --- Dropdown Menu Handling for Mobile --- */
-    .dropdown .dropdown-menu {
-        position: static; /* Remove absolute positioning */
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-        margin-top: 0;
-        display: none; /* Hide by default, will be toggled by JS */
-    }
-
-    .dropdown-menu li a {
-        background-color: var(--light-bg);
-        padding-left: 40px; /* Indent dropdown items */
-        font-size: 1rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    /* --- Nested Dropdown Mobile Handling --- */
-    .dropdown-submenu-menu {
-        position: static;
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-        margin: 0;
-        display: none; /* Hide by default, will be toggled by JS */
-    }
-
-    .dropdown-submenu > a::after {
-        content: '▼';
-        right: 20px;
-    }
-
-    .dropdown-submenu.open > a::after {
-        content: '▲';
-    }
-
-    .dropdown-submenu-menu li a {
-        background-color: #f0f0f0;
-        padding-left: 60px; /* More indent for nested items */
-        font-size: 0.9rem;
-        border-bottom: 1px solid #e0e0e0;
-        border-left: none;
-    }
-
-    .dropdown-submenu-menu li a:hover {
-        background-color: var(--primary-green);
-        color: var(--light-text);
-    }
+:root {
+  /* tokens added by the prototype (style.css lacks these) */
+  --ct-green:        #28a745;
+  --ct-green-dark:   #1e7e34;
+  --ct-green-tint:   #e8f5ec;
+  --ct-chip-bg:      #f3f9f5;
+  --ct-chip-border:  #cfe3d6;
+  --ct-soft-border:  #e7ece8;
+  --ct-hair:         #eef1f0;
+  --ct-light:        #f8f9fa;
+  --ct-ink:          #333;
+  --ct-ink-soft:     #555;
+  --ct-rad:          12px;
+  --ct-rad-btn:      8px;
+  --ct-rad-pill:     20px;
+  --ct-shadow:       0 8px 26px rgba(17, 40, 26, .08);
+  --ct-shadow-hd:    0 4px 16px rgba(17, 40, 26, .06);
+  --ct-z-backdrop:   1040;
+  --ct-z-drawer:     1050;
 }
 
+/* injected drawer chrome — hidden on desktop, shown only inside the <=1024 drawer */
+.drawer-head, .drawer-foot, .nav-backdrop { display: none; }
 
-/* =========== 2. STANDARD TABLET VIEW =========== */
-/* Applies to screens 992px wide or less */
-
-@media (max-width: 992px) {
-    :root {
-        --section-padding: 60px 0;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    /* --- Homepage --- */
-    .hero-title { font-size: 3.8rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-    .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .programs-grid { grid-template-columns: 1fr; }
-    .mission-grid { grid-template-columns: 1fr; gap: 40px; }
-    .mission-content { text-align: center; }
-    .mission-title { font-size: 3rem; }
-    .stats-banner-container { flex-direction: column; gap: 30px; text-align: center; }
-    .stats-intro { padding-right: 0; border-right: none; padding-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-    .stats-grid { width: 100%; }
-
-    /* --- About Us Page --- */
-    .page-title { font-size: 3rem; }
-    .timeline::after { left: 30px; }
-    .timeline-item { width: 100%; padding-left: 70px; padding-right: 20px; text-align: left !important; }
-    .timeline-item:nth-child(even) { left: 0; }
-    .timeline-dot { left: 20px; }
-    .vision-mission-grid, .team-grid, .values-grid { grid-template-columns: repeat(2, 1fr); }
-
-    /* --- Contact Us Page --- */
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-
-    /* --- Documents Page --- */
-    .resources-layout { grid-template-columns: 1fr; }
-    .resources-grid { grid-template-columns: repeat(2, 1fr); }
-    
-    /* --- Donate Page --- */
-    .donation-layout { grid-template-columns: 1fr; }
-
-    /* --- Media Page --- */
-    .gallery-grid { column-count: 2; }
-
-    /* --- General --- */
-    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-    .news-card { flex-direction: column; align-items: center; text-align: center; }
-    .news-image { width: 100%; height: 250px; }
+/* Brand alignment: the approved prototype is all-green; recolor the blue hero CTA */
+.hero-content .btn-secondary,
+.hero-buttons .btn-secondary,
+.hero-section .btn-secondary {
+  background: var(--ct-green);
+  color: #fff;
+  border-color: var(--ct-green);
+}
+.hero-content .btn-secondary:hover,
+.hero-buttons .btn-secondary:hover,
+.hero-section .btn-secondary:hover {
+  background: var(--ct-green-dark);
+  border-color: var(--ct-green-dark);
 }
 
+/* ============================================================================
+   1. SHARED CHROME — DRAWER NAVIGATION   (active <= 1024px)
+   ========================================================================= */
+@media (max-width: 1024px) {
 
-/* =========== 3. MOBILE VIEW =========== */
-/* Applies to screens 768px wide or less */
+  /* Prevent the off-canvas drawer (and stray wide content) from causing
+     horizontal scroll. overflow-x:clip clips WITHOUT breaking sticky header. */
+  html, body { overflow-x: clip; }
 
-@media (max-width: 768px) {
-    :root {
-        --section-padding: 50px 0;
-    }
-    
-    body {
-        font-size: 16px;
-    }
+  /* --- Header bar: logo | Donate + hamburger --- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: #fff;
+    border-top: 3px solid var(--ct-green);
+    box-shadow: var(--ct-shadow-hd);
+  }
+  .header .container { padding: 0 16px; }
+  .navbar {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .logo { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .logo-img { height: 38px; width: auto; }
+  .logo-text { font-size: 1.05rem; font-weight: 700; color: var(--ct-green-dark); white-space: nowrap; }
 
-    .section-title {
-        font-size: 2.2rem;
-    }
-    
-    .navbar {
-        height: 80px;
-    }
-    
-    .logo-img {
-        height: 50px; /* Adjusted logo for mobile */
-    }
+  /* Donate button stays in the bar, beside the hamburger */
+  .donate-button {
+    display: inline-flex !important;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    margin-left: auto;
+    background: var(--ct-green);
+    color: #fff !important;
+    border-radius: var(--ct-rad-btn);
+    font-size: .9rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
 
-    .logo-text {
-        font-size: 1.4rem;
-    }
-    
-    .nav-menu {
-        top: 80px;
-        height: calc(100vh - 80px);
-    }
+  /* --- Hamburger (existing .hamburger div) styled as a 44px button --- */
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0 11px;
+    background: #fff;
+    border: 1px solid var(--ct-soft-border);
+    border-radius: var(--ct-rad);
+    cursor: pointer;
+    flex: none;
+  }
+  .hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--ct-green-dark);
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .2s ease;
+  }
+  .hamburger.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* --- Homepage --- */
-    .hero-title { font-size: 3rem; }
-    .hero-subtitle { font-size: 1.1rem; }
-    .impact-grid { grid-template-columns: 1fr; }
-    .mission-title { font-size: 2.5rem; }
-    .stats-grid { grid-template-columns: 1fr; gap: 30px; }
-    .stat-item { text-align: center; }
-    
-    /* --- About Us Page --- */
-    .page-title { font-size: 2.5rem; }
-    .vision-mission-grid { grid-template-columns: 1fr; }
-    .values-grid { grid-template-columns: 1fr; }
-    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .team-photo { width: 120px; height: 120px; }
+  /* --- Backdrop (injected by main.js) --- */
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease;
+    z-index: var(--ct-z-backdrop);
+  }
+  .nav-backdrop.active { opacity: 1; visibility: visible; }
 
-    /* --- Documents Page --- */
-    .resources-grid { grid-template-columns: 1fr; }
-    
-    /* --- Donate Page --- */
-    .donation-amounts { flex-wrap: wrap; }
-    .amount-btn { flex-basis: calc(50% - 10px); }
-    .donation-tabs { flex-wrap: wrap; }
-    .tab-link { flex-basis: 100%; text-align: center; border-bottom: 2px solid var(--border-color); }
-    .tab-link.active { border-bottom-color: var(--primary-green); }
-    
-    /* --- Media Page --- */
-    .gallery-filter-bar { flex-direction: column; }
-    .filter-btn { width: 100%; }
-    .gallery-grid { column-count: 1; }
-    
-    /* --- Stats Banner --- */
-    .stats-banner-container { 
-        flex-direction: column; 
-        text-align: center; 
-        gap: 30px; 
-    }
-    .stats-intro { 
-        flex-basis: auto; 
-        padding-right: 0; 
-        border-right: none; 
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-        padding-bottom: 20px;
-    }
-    .stats-grid { 
-        flex-basis: auto; 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 25px 15px; 
-    }
-    .stat-number { font-size: 2rem; }
-    .stat-label { font-size: 0.9rem; }
+  /* --- Drawer panel (the existing .nav-menu, slides from right) --- */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100vh;
+    width: 86%;
+    max-width: 340px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 0 0 96px;        /* room for pinned Donate */
+    background: #fff;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, .22);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: var(--ct-z-drawer);
+    list-style: none;
+  }
+  .nav-menu.active { transform: translateX(0); }
+  .nav-menu li { width: 100%; }
+  /* drawer labels must wrap (desktop nav sets nowrap) */
+  .nav-menu a { white-space: normal; word-break: break-word; }
 
-    /* --- General --- */
-    .cta-container { flex-direction: column; }
-    .cta-box h3 { font-size: 1.8rem; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-col { text-align: center; }
-    .footer-about { margin: 0 auto; max-width: 350px; }
-    .social-links { justify-content: center; }
+  /* drawer header (injected): green bar with MENU + close */
+  .drawer-head {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 56px;
+    background: var(--ct-green-dark);
+    color: #fff;
+  }
+  .drawer-head .drawer-title { font-size: 1.1rem; font-weight: 700; letter-spacing: .5px; }
+  .drawer-close {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, .16);
+    border: none; border-radius: 8px;
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+  }
+
+  /* top-level links */
+  .nav-menu > li > .nav-link {
+    display: block;
+    padding: 15px 18px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ct-ink);
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .nav-menu > li > .nav-link.active { color: var(--ct-green-dark); }
+  .nav-link::after { display: none !important; }   /* kill desktop underline */
+
+  /* dropdown parents become accordion rows */
+  .dropdown > .nav-link {
+    position: relative;
+  }
+  .dropdown > .nav-link::before {
+    content: '\25BC';
+    position: absolute;
+    right: 18px; top: 50%;
+    transform: translateY(-50%);
+    font-size: .7rem;
+    color: var(--ct-green);
+    transition: transform .2s ease;
+  }
+  .dropdown.open > .nav-link::before { transform: translateY(-50%) rotate(180deg); }
+
+  /* level-1 accordion panel (Programs categories / Get Involved links) */
+  .dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    background: var(--ct-light);
+  }
+  .dropdown.open > .dropdown-menu { display: block; }
+
+  /* category row (has nested submenu) */
+  .dropdown-submenu > a {
+    position: relative;
+    display: block;
+    padding: 13px 18px;
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--ct-green-dark);
+    border-bottom: 1px solid var(--ct-hair);
+  }
+  .dropdown-submenu > a::after {
+    content: '\25BC';
+    position: absolute;
+    right: 18px; top: 50%;
+    transform: translateY(-50%);
+    font-size: .65rem;
+    color: var(--ct-green);
+    transition: transform .2s ease;
+  }
+  .dropdown-submenu.open > a::after { transform: translateY(-50%) rotate(180deg); }
+
+  /* plain dropdown links (Get Involved: Partner / Volunteer / Donate) */
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 12px 18px 12px 30px;
+    font-size: .95rem;
+    color: var(--ct-ink-soft);
+    border-bottom: 1px solid var(--ct-hair);
+    background: var(--ct-light);
+  }
+
+  /* level-2 accordion panel (sub-links under a category) */
+  .dropdown-submenu-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  .dropdown-submenu.open > .dropdown-submenu-menu { display: block; }
+  .dropdown-submenu-menu > li > a {
+    display: block;
+    padding: 11px 18px 11px 34px;
+    font-size: .88rem;
+    font-weight: 300;
+    color: var(--ct-ink-soft);
+    border-bottom: 1px solid var(--ct-hair);
+  }
+
+  /* pinned Donate Now (injected) */
+  .drawer-foot {
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 14px 16px;
+    background: #fff;
+    border-top: 1px solid var(--ct-soft-border);
+  }
+  .drawer-foot .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 13px;
+    background: var(--ct-green);
+    color: #fff;
+    border-radius: var(--ct-rad-btn);
+    font-weight: 500;
+  }
+
+  /* lock page scroll when drawer open */
+  body.nav-open { overflow: hidden; }
 }
 
-/* =========== 3. EXTRA SMALL DEVICES (MOBILE < 480px) =========== */
-@media (max-width: 480px) {
-    /* --- Stats Banner Mobile --- */
-    .stats-grid { 
-        grid-template-columns: 1fr; 
-        gap: 20px; 
-        text-align: center;
-    }
-    .stat-number { 
-        font-size: 1.8rem; 
-        display: block;
-        min-height: 50px;
-        line-height: 1.3;
-    }
-    .stat-label { 
-        font-size: 0.85rem; 
-        display: block;
-    }
-    .stats-intro h4 { font-size: 1.5rem; }
+/* ============================================================================
+   2. GLOBAL COMPONENTS  (tablet <=1024px)
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .container { width: 100%; padding: 0 24px; }
+
+  /* defensive guards: media never overflows; grid children may shrink to fit */
+  img, iframe, video, table, .mission-video-wrapper { max-width: 100%; }
+  [class*="-grid"] > * { min-width: 0; }
+
+  /* touch-friendly buttons everywhere */
+  .btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+
+  /* page header (inner pages) */
+  .page-header {
+    min-height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 24px 28px;
+  }
+  .page-title { font-size: 2.6rem; }
+
+  /* section titles */
+  .section-title { font-size: 1.9rem; }
+
+  /* footer: 4 -> 2 columns */
+  .footer { background: var(--ct-green-dark); color: #fff; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+/* ============================================================================
+   3. PER-TEMPLATE LAYOUTS  (tablet <=1024px)
+   ========================================================================= */
+@media (max-width: 1024px) {
+  /* Home */
+  .impact-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .mission-grid { grid-template-columns: 1.1fr 1fr; gap: 32px; }
+  .programs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  /* About */
+  .vision-mission-grid { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: repeat(3, 1fr); }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Program / sector pages */
+  .focus-grid,
+  .focus-areas-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Get Involved / forms / docs */
+  .get-involved-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .resources-grid { grid-template-columns: repeat(3, 1fr); }
+  .donation-layout { grid-template-columns: 1fr; }
+  .gallery-grid { column-count: 3; }
+}
+
+/* ============================================================================
+   4. MOBILE  (<=600px)
+   ========================================================================= */
+@media (max-width: 600px) {
+  .container { padding: 0 16px; }
+
+  /* type + spacing scale down */
+  .page-header { min-height: 210px; padding: 0 16px 22px; }
+  .page-title { font-size: 1.85rem; }
+  .section-title { font-size: 1.55rem; }
+  body { font-size: 16px; }
+
+  /* CTA bands stack */
+  .cta-container, .cta-buttons, .sector-cta .cta-buttons { flex-direction: column; }
+  .cta-buttons .btn { width: 100%; }
+
+  /* Home */
+  .hero-title { font-size: 2rem; line-height: 1.15; }
+  .hero-subtitle { font-size: 1rem; }
+  .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .impact-card { text-align: center; padding: 16px 8px; }
+  /* big stat numbers must fit the narrow 2-up cards */
+  .impact-number, .stat-number { font-size: 1.5rem; line-height: 1.15; word-break: break-word; }
+  .impact-text, .stat-label { font-size: .82rem; }
+  .mission-grid { grid-template-columns: 1fr; gap: 24px; }
+  .mission-content { text-align: left; }
+  .programs-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  /* About */
+  .vision-mission-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+
+  /* Program / sector */
+  .focus-grid,
+  .focus-areas-grid,
+  .impact-stories .stories-grid { grid-template-columns: 1fr; }
+
+  /* Get Involved / forms / docs / media */
+  .get-involved-grid { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .gallery-grid { column-count: 2; }
+
+  /* Forms: full-width 44px+ fields */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select,
+  form input, form textarea, form select { width: 100%; min-height: 46px; font-size: 16px; }
+  .contact-form textarea, form textarea { min-height: 120px; }
+
+  /* Donate: amount presets 2-up */
+  .donation-amounts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .amount-btn { width: 100%; min-height: 54px; }
+
+  /* Footer: single column, centered */
+  .footer-grid { grid-template-columns: 1fr; gap: 26px; text-align: center; }
+  .footer-col { text-align: center; }
+  .footer-about { margin: 0 auto; max-width: 360px; }
+  .social-links { justify-content: center; }
 }
