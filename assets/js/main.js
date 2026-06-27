@@ -29,7 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const backdrop = document.createElement('div');
         backdrop.className = 'nav-backdrop';
-        document.body.appendChild(backdrop);
+        // Append INTO .header so the backdrop shares the drawer's stacking context
+        // (sticky .header creates one). A body-level backdrop would paint above the
+        // drawer and steal its link taps.
+        (document.querySelector('.header') || document.body).appendChild(backdrop);
 
         // --- a11y: the hamburger is a <div> in markup; make it a real control ---
         hamburger.setAttribute('role', 'button');
@@ -37,19 +40,32 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.setAttribute('aria-label', 'Open menu');
         hamburger.setAttribute('aria-expanded', 'false');
 
+        // Make the rest of the page non-interactive while the drawer is open (a11y).
+        const setInert = (on) => {
+            [...document.body.children].forEach(el => {
+                if (el.classList.contains('header') || el.tagName === 'SCRIPT') return;
+                if (on) el.setAttribute('inert', ''); else el.removeAttribute('inert');
+            });
+        };
         const openDrawer = () => {
             hamburger.classList.add('active');
             navMenu.classList.add('active');
             backdrop.classList.add('active');
             document.body.classList.add('nav-open');
             hamburger.setAttribute('aria-expanded', 'true');
+            setInert(true);
+            const closeBtn = head.querySelector('.drawer-close');
+            if (closeBtn) closeBtn.focus();
         };
         const closeDrawer = () => {
+            const hadFocusInside = document.activeElement && navMenu.contains(document.activeElement);
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
             backdrop.classList.remove('active');
             document.body.classList.remove('nav-open');
             hamburger.setAttribute('aria-expanded', 'false');
+            setInert(false);
+            if (hadFocusInside) hamburger.focus();
         };
         const toggleDrawer = () => navMenu.classList.contains('active') ? closeDrawer() : openDrawer();
 
@@ -61,6 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
         backdrop.addEventListener('click', closeDrawer);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
         window.addEventListener('resize', () => { if (window.innerWidth > MOBILE_NAV_MAX) closeDrawer(); });
+
+        // Trap Tab focus inside the open drawer
+        navMenu.addEventListener('keydown', (e) => {
+            if (e.key !== 'Tab' || !navMenu.classList.contains('active')) return;
+            const focusable = [...navMenu.querySelectorAll('a[href], button:not([disabled])')].filter(el => el.offsetParent !== null);
+            if (!focusable.length) return;
+            const first = focusable[0], last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        });
 
         // Close the drawer when a real navigation link (non-accordion parent) is tapped
         navMenu.querySelectorAll('.nav-link').forEach(link => {

@@ -340,7 +340,8 @@
    ========================================================================= */
 @media (max-width: 1024px) {
   /* Home */
-  .impact-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .impact-card { min-width: 0; }
   .mission-grid { grid-template-columns: 1.1fr 1fr; gap: 32px; }
   .programs-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
@@ -478,4 +479,54 @@
   .statistics-table-container table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .programs-section [style*="grid"] > *, .overview-modern [style*="grid"] > *,
   .statistics-section [style*="grid"] > *, [class*="-hero"] [style*="grid"] > * { min-width: 0; }
+}
+
+/* ============================================================================
+   7. JUDGMENT-REVIEW FIXES (design + code review)
+   ========================================================================= */
+
+/* 7a. Brand: the approved prototype is strictly green. Recolor every blue. */
+:root { --secondary-blue: #1e7e34; }            /* all var(--secondary-blue) buttons -> green */
+.color-blue { color: var(--ct-green-dark) !important; }   /* "Community. Compassion." heading */
+input[type="checkbox"], input[type="radio"] { accent-color: var(--ct-green); }
+
+/* 7b. Mobile nav: use dynamic viewport height so the pinned Donate isn't clipped
+   by mobile browser chrome (code review). */
+@media (max-width: 1024px) {
+  .nav-menu { height: 100vh; height: 100dvh; }
+}
+
+/* 7c. Documents page: collapse the desktop two-pane (sidebar + grid) on mobile/tablet
+   (this rule was lost in the rebuild -> page was broken). */
+@media (max-width: 1024px) {
+  .resources-layout { display: block !important; }
+  .resources-sidebar { width: 100% !important; margin-bottom: 24px; }
+  .resources-grid { grid-template-columns: repeat(3, 1fr); }
+  .resources-grid > * { min-width: 0; }
+}
+@media (max-width: 600px) {
+  .resources-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  /* report cards: long Oswald titles wrap instead of clipping mid-word */
+  .resource-card h3, .resource-card .resource-title, .doc-card__title {
+    overflow-wrap: break-word; word-break: break-word; overflow: visible; min-width: 0;
+  }
+}
+
+/* 7d. Readability: stop legacy text-transform:uppercase from all-capsing long body copy
+   on the inline-styled project pages, the report viewer, and breadcrumbs. */
+@media (max-width: 1024px) {
+  .overview-modern p, .overview-modern li,
+  .programs-section p, .programs-section li, .programs-section td,
+  .statistics-section td, .statistics-section p,
+  [class*="-hero"] p, .breadcrumb, .breadcrumbs, .breadcrumb a {
+    text-transform: none !important;
+  }
+}
+
+/* 7e. Mission headline ("Community. Compassion. Collaboration.") wrap instead of clip */
+@media (max-width: 1024px) {
+  .mission-title { overflow-wrap: break-word; word-break: break-word; line-height: 1.15; }
+}
+@media (max-width: 768px) {
+  .mission-title { font-size: 1.8rem; }
 }
