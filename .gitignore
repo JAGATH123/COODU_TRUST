@@ -1,0 +1,17 @@
+# ── Secrets — never commit (rotate any that were already pushed) ──
+.env
+server/.env
+
+# ── Dependencies ──
+node_modules/
+
+# ── OS / editor junk ──
+.DS_Store
+Thumbs.db
+*.log
+
+# ── Heavy local design artifacts (prototype renders / zips) ──
+design/renders/
+design/renders-site/
+design/**/extracted/
+design/**/*.zip
