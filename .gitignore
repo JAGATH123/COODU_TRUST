@@ -1,0 +1,13 @@
+# OS junk
+.DS_Store
+**/.DS_Store
+
+# Node dependencies
+node_modules/
+
+# Large, regenerable verification screenshots
+design/renders-site/
+design/redesign-renders/
+
+# Logs
+*.log

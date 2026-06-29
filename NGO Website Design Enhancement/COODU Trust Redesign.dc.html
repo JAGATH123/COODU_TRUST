@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<meta name="design_doc_mode" content="canvas">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Source Sans 3',system-ui,sans-serif;color:#3d433d;-webkit-font-smoothing:antialiased}
+  svg.lucide{display:block}
+</style>
+</helmet>
+
+<div style="position:absolute;left:80px;top:44px;width:1180px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px">
+  <div>
+    <div style="font-family:'Oswald';font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:#1a1f1a">Coodu Trust — Pilot Redesign</div>
+    <div style="font-family:'Source Sans 3';font-size:14px;color:#6b726b;margin-top:4px">Home + Women Empowerment · desktop &amp; mobile (incl. nav drawer) · two hero directions to choose from</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:18px;font-family:'Source Sans 3';font-size:12px;color:#6b726b">
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:14px;height:14px;border-radius:4px;background:#1e7e34"></span>Primary</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:14px;height:14px;border-radius:4px;background:#f4a300"></span>Amber</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:14px;height:14px;border-radius:4px;background:#e8590c"></span>Donate</span>
+    <span style="display:flex;align-items:center;gap:7px"><span style="width:14px;height:14px;border-radius:4px;background:#11371b"></span>Deep</span>
+  </div>
+</div>
+
+<!-- ============================ FRAME 1 — HOME DESKTOP ============================ -->
+<div style="position:absolute;left:80px;top:150px;width:1280px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Home — Desktop · 1280</div>
+  <div data-screen-label="Home (Desktop)" style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e7ece7">
+
+    <!-- HEADER -->
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 40px;background:#fff;border-bottom:1px solid #e2e8e2;position:relative;z-index:5">
+      <a style="display:flex;align-items:center;gap:12px;text-decoration:none">
+        <div style="width:42px;height:42px;border-radius:10px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="24" height="24" stroke-width="2"></i></div>
+        <div style="display:flex;flex-direction:column;line-height:1">
+          <span style="font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:.03em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+          <span style="font-family:'Source Sans 3';font-size:10px;letter-spacing:.13em;color:#6b726b;text-transform:uppercase;margin-top:3px">Dindigul · Tamil Nadu</span>
+        </div>
+      </a>
+      <nav style="display:flex;align-items:center;gap:24px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:14px;font-weight:500">
+        <a style="color:#1e7e34;text-decoration:none;padding-bottom:3px;border-bottom:2px solid #f4a300">Home</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">About</a>
+        <a style="color:#3d433d;text-decoration:none;display:flex;align-items:center;gap:4px" style-hover="color:#1e7e34">Programs <i data-lucide="chevron-down" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none;display:flex;align-items:center;gap:4px" style-hover="color:#1e7e34">Get Involved <i data-lucide="chevron-down" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Documents</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Media</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Contact</a>
+      </nav>
+      <a style="display:inline-flex;align-items:center;gap:8px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;padding:12px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(232,89,12,.28)" style-hover="background:#c2410c;transform:translateY(-1px)"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+    </header>
+
+    <!-- HERO A -->
+    <section style="position:relative;min-height:566px;display:flex;align-items:center;background:linear-gradient(135deg,#2c5a3c,#12301e);overflow:hidden">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 16px, rgba(0,0,0,.05) 16px 32px)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,26,15,.9) 0%, rgba(8,26,15,.62) 46%, rgba(8,26,15,.18) 100%)"></div>
+      <div style="position:absolute;right:18px;top:16px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.03em;color:rgba(255,255,255,.6);border:1px dashed rgba(255,255,255,.32);padding:5px 9px;border-radius:6px">PHOTO · farmers / community · warm natural light</div>
+      <div style="position:relative;max-width:1140px;margin:0 auto;padding:0 40px;width:100%">
+        <div style="max-width:616px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px"><span style="width:26px;height:2px;background:#f6c453;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#f6c453">Rural development across Tamil Nadu · since 2000</span></div>
+          <h1 style="font-family:'Oswald';font-weight:600;font-size:53px;line-height:1.08;color:#fff;margin:0">Empowering communities, transforming lives</h1>
+          <p style="font-family:'Source Sans 3';font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);margin:20px 0 0;max-width:540px">Join us in building a sustainable, equitable future for rural communities — through empowerment, health, livelihoods and environmental action.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:30px">
+            <a style="display:inline-flex;align-items:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:15px 28px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#155d27;transform:translateY(-1px)">Discover our work <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+            <a style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:13px 26px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#fff;color:#12301e;border-color:#fff"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;margin-top:30px;font-family:'Source Sans 3';font-size:14px;color:rgba(255,255,255,.78)">
+            <span style="display:flex;align-items:center;gap:7px"><i data-lucide="map-pin" width="15" height="15" stroke-width="2"></i> Dindigul, Tamil Nadu</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4)"></span>
+            <span>20+ years of field work</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:9px;align-items:center">
+        <span style="width:26px;height:6px;border-radius:999px;background:#f4a300"></span>
+        <span style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+        <span style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+        <span style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+        <span style="width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+      </div>
+    </section>
+
+    <!-- IMPACT STATS (floating band) -->
+    <section style="background:#fff;position:relative">
+      <div style="max-width:1140px;margin:0 auto;padding:0 40px">
+        <div style="margin-top:-54px;position:relative;z-index:3;background:#fff;border:1px solid #e2e8e2;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.09);display:grid;grid-template-columns:repeat(4,1fr)">
+          <div style="padding:28px 24px;text-align:center;border-right:1px solid #eef1ee">
+            <div style="width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 12px"><i data-lucide="users" width="24" height="24" stroke-width="1.9"></i></div>
+            <div style="font-family:'Oswald';font-weight:700;font-size:32px;color:#1a1f1a;line-height:1">3,81,609+</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:#6b726b;margin-top:7px">Total beneficiaries</div>
+          </div>
+          <div style="padding:28px 24px;text-align:center;border-right:1px solid #eef1ee">
+            <div style="width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 12px"><i data-lucide="map-pin" width="24" height="24" stroke-width="1.9"></i></div>
+            <div style="font-family:'Oswald';font-weight:700;font-size:32px;color:#1a1f1a;line-height:1">534</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:#6b726b;margin-top:7px">Panchayats served</div>
+          </div>
+          <div style="padding:28px 24px;text-align:center;border-right:1px solid #eef1ee">
+            <div style="width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 12px"><i data-lucide="droplets" width="24" height="24" stroke-width="1.9"></i></div>
+            <div style="font-family:'Oswald';font-weight:700;font-size:32px;color:#1a1f1a;line-height:1">18,523+</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:#6b726b;margin-top:7px">Toilets built</div>
+          </div>
+          <div style="padding:28px 24px;text-align:center">
+            <div style="width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 12px"><i data-lucide="trees" width="24" height="24" stroke-width="1.9"></i></div>
+            <div style="font-family:'Oswald';font-weight:700;font-size:32px;color:#1a1f1a;line-height:1">26,93,250</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:#6b726b;margin-top:7px">Trees planted</div>
+          </div>
+        </div>
+        <p style="text-align:center;font-family:'Source Sans 3';font-size:14px;color:#6b726b;margin:18px 0 0">Cumulative results across 20+ years of field work.</p>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE / MISSION -->
+    <section style="background:#fff">
+      <div style="max-width:1140px;margin:0 auto;padding:78px 40px;display:grid;grid-template-columns:1.04fr 1fr;gap:54px;align-items:center">
+        <div style="position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#1f3b29,#10261a);border:1px solid #e2e8e2">
+          <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 14px, rgba(0,0,0,.05) 14px 28px)"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><div style="width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 8px 24px rgba(0,0,0,.25)"><i data-lucide="play" width="30" height="30" stroke-width="2" fill="#1e7e34"></i></div></div>
+          <div style="position:absolute;left:16px;bottom:14px;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:rgba(255,255,255,.7)">VIDEO · Introduction to Coodu Trust (YouTube)</div>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Who we are</span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.16;color:#1a1f1a;margin:0"><span style="color:#1e7e34">Community.</span> <span style="color:#c47f00">Compassion.</span> <span style="color:#1e7e34">Collaboration.</span></h2>
+          <p style="font-family:'Source Sans 3';font-size:17px;line-height:1.62;color:#3d433d;margin:18px 0 0;max-width:560px">The mission of Coodu Trust is to improve the quality of life for economically disadvantaged individuals — providing the resources to raise their standard of living, foster self-improvement, and maximise self-empowerment.</p>
+          <a style="display:inline-flex;align-items:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 26px;border-radius:8px;text-decoration:none;margin-top:26px;min-height:44px" style-hover="background:#155d27;transform:translateY(-1px)">Learn more about us <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PROGRAMS -->
+    <section style="background:#f6f8f6;border-top:1px solid #eef1ee;border-bottom:1px solid #eef1ee">
+      <div style="max-width:1140px;margin:0 auto;padding:84px 40px">
+        <div style="text-align:center;max-width:640px;margin:0 auto 44px">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">What we do</span><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.15;color:#1a1f1a;margin:0">Our core programs</h2>
+          <p style="font-family:'Source Sans 3';font-size:17px;line-height:1.6;color:#6b726b;margin:14px 0 0">Six interlinked pillars that move families from vulnerability toward lasting self-reliance.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="leaf" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · watershed / plantation</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Environment &amp; Resilience</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Climate-resilient communities through conservation, renewable energy and sustainable development.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="wheat" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · farmer in field</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Sustainable Agriculture</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Organic farming, watershed management and modern techniques that lift food security and incomes.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="hand-heart" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;right:12px;top:14px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:10px;font-weight:600;color:#1a1f1a;background:#f4a300;padding:4px 9px;border-radius:999px">New</div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · women's SHG</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Women Empowerment</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Self-help groups, microfinance and enterprise support so women can lead and earn independently.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="graduation-cap" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · vocational training</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Education &amp; Skilling</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Quality education, vocational training and skill-building for dignified, sustainable employment.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="heart-pulse" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · health camp / sanitation</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Health, Sanitation &amp; Waste</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Healthcare access, sanitation facilities and waste management that keep rural families healthy.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+          <a style="display:flex;flex-direction:column;background:#fff;border:1px solid #e2e8e2;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);text-decoration:none" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)">
+              <div style="position:absolute;left:14px;top:14px;width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="briefcase" width="20" height="20" stroke-width="1.9"></i></div>
+              <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · training workshop</div>
+            </div>
+            <div style="padding:20px 22px 22px">
+              <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Consultancy &amp; HR Management</h3>
+              <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:9px 0 0">Expert consultancy and HR solutions for organisational development and capacity building.</p>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:16px">Learn more <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span>
+            </div>
+          </a>
+
+        </div>
+        <div style="text-align:center;margin-top:40px">
+          <a style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#1e7e34;border:1.5px solid #1e7e34;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:13px 28px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#1e7e34;color:#fff">View all programs <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIES OF TRANSFORMATION -->
+    <section style="background:#fff">
+      <div style="max-width:1140px;margin:0 auto;padding:84px 40px">
+        <div style="text-align:center;max-width:640px;margin:0 auto 40px">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Stories of transformation</span><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.15;color:#1a1f1a;margin:0">Real journeys, real change</h2>
+          <p style="font-family:'Source Sans 3';font-size:17px;line-height:1.6;color:#6b726b;margin:14px 0 0">Witness the powerful journeys of communities and individuals transformed through our programs.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:0.92fr 1.08fr;gap:0;border:1px solid #e2e8e2;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06)">
+          <div style="position:relative;min-height:340px;background:repeating-linear-gradient(135deg,#e8efe8 0 14px,#dfe7df 14px 28px)">
+            <div style="position:absolute;left:16px;top:16px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:11px;font-weight:600;color:#fff;background:#1e7e34;padding:6px 12px;border-radius:999px">Women Empowerment</div>
+            <div style="position:absolute;left:16px;bottom:14px;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a938a">PHOTO · Lakshmi Devi in her tailoring workshop</div>
+          </div>
+          <div style="padding:42px 44px;display:flex;flex-direction:column;justify-content:center">
+            <div style="font-family:'Oswald';font-size:64px;line-height:.6;color:#f4a300;height:30px">&ldquo;</div>
+            <p style="font-family:'Source Sans 3';font-size:21px;line-height:1.5;color:#1a1f1a;margin:14px 0 0;font-weight:500">Coodu Trust's skill program changed my life completely. I learned tailoring and now run my own small business, supporting my family. My monthly income rose from ₹2,000 to ₹8,000.</p>
+            <div style="display:flex;align-items:center;gap:14px;margin-top:24px">
+              <div style="width:48px;height:48px;border-radius:50%;background:#eef5ef;display:flex;align-items:center;justify-content:center;color:#1e7e34;font-family:'Oswald';font-weight:700;font-size:18px">LD</div>
+              <div>
+                <div style="font-family:'Oswald';font-weight:600;font-size:16px;color:#1a1f1a;letter-spacing:.02em">Lakshmi Devi</div>
+                <div style="font-family:'Source Sans 3';font-size:14px;color:#6b726b">Women Empowerment Program · Dindigul</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:28px">
+              <div style="display:flex;gap:8px;align-items:center">
+                <span style="width:22px;height:6px;border-radius:999px;background:#1e7e34"></span>
+                <span style="width:6px;height:6px;border-radius:999px;background:#cdd6cd"></span>
+                <span style="width:6px;height:6px;border-radius:999px;background:#cdd6cd"></span>
+              </div>
+              <div style="display:flex;gap:10px">
+                <span style="width:40px;height:40px;border-radius:50%;border:1px solid #e2e8e2;display:flex;align-items:center;justify-content:center;color:#6b726b"><i data-lucide="chevron-left" width="18" height="18" stroke-width="2"></i></span>
+                <span style="width:40px;height:40px;border-radius:50%;border:1px solid #1e7e34;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="chevron-right" width="18" height="18" stroke-width="2"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAL CTA BAND -->
+    <section style="background:linear-gradient(135deg,#1e7e34,#13311f)">
+      <div style="max-width:1140px;margin:0 auto;padding:74px 40px">
+        <div style="text-align:center;margin-bottom:38px">
+          <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#f6c453;margin-bottom:12px">Get involved</div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:34px;line-height:1.15;color:#fff;margin:0">Whether you need support or want to give it</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div style="background:#fff;border-radius:16px;padding:34px 36px">
+            <div style="width:50px;height:50px;border-radius:13px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i data-lucide="life-buoy" width="26" height="26" stroke-width="1.9"></i></div>
+            <h3 style="font-family:'Oswald';font-weight:600;font-size:23px;color:#1a1f1a;margin:0">Are you looking for support?</h3>
+            <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.6;color:#3d433d;margin:10px 0 22px">Discover the programs and resources we offer to communities across the district.</p>
+            <a style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#1e7e34;border:1.5px solid #1e7e34;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:13px 26px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#1e7e34;color:#fff">Get help <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:34px 36px">
+            <div style="width:50px;height:50px;border-radius:13px;background:#fdebd6;color:#e8590c;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><i data-lucide="heart-handshake" width="26" height="26" stroke-width="1.9"></i></div>
+            <h3 style="font-family:'Oswald';font-weight:600;font-size:23px;color:#1a1f1a;margin:0">Do you want to make a difference?</h3>
+            <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.6;color:#3d433d;margin:10px 0 22px">Join us as a volunteer, partner or donor and help transform lives across Tamil Nadu.</p>
+            <a style="display:inline-flex;align-items:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 26px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#155d27;transform:translateY(-1px)">Get involved <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WE HAVE ONLY ONE PLANET -->
+    <section style="background:#161d18;color:#fff">
+      <div style="max-width:1140px;margin:0 auto;padding:70px 40px">
+        <div style="text-align:center;max-width:600px;margin:0 auto 40px">
+          <div style="width:52px;height:52px;border-radius:14px;background:rgba(244,163,0,.14);color:#f4a300;display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><i data-lucide="globe" width="28" height="28" stroke-width="1.8"></i></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:32px;line-height:1.15;color:#fff;margin:0">We have only one planet</h2>
+          <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.6;color:rgba(255,255,255,.72);margin:12px 0 0">It's time to wake up to the grim reality and get our act together.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+          <div style="text-align:center;padding:22px 14px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)">
+            <div style="font-family:'Oswald';font-weight:700;font-size:27px;color:#f4a300;line-height:1">8,192,242,010</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:rgba(255,255,255,.66);margin-top:8px">World population</div>
+          </div>
+          <div style="text-align:center;padding:22px 14px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)">
+            <div style="font-family:'Oswald';font-weight:700;font-size:27px;color:#f4a300;line-height:1">1,198,948,812</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:rgba(255,255,255,.66);margin-top:8px">Tonnes of waste dumped</div>
+          </div>
+          <div style="text-align:center;padding:22px 14px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)">
+            <div style="font-family:'Oswald';font-weight:700;font-size:27px;color:#f4a300;line-height:1">28,277,094</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:rgba(255,255,255,.66);margin-top:8px">Tonnes of e-waste</div>
+          </div>
+          <div style="text-align:center;padding:22px 14px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03)">
+            <div style="font-family:'Oswald';font-weight:700;font-size:27px;color:#f4a300;line-height:1">1.72</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:rgba(255,255,255,.66);margin-top:8px">Earths humanity uses</div>
+          </div>
+        </div>
+        <p style="text-align:center;font-family:'Source Sans 3';font-size:13px;color:rgba(255,255,255,.5);margin:22px 0 0">Live counters — figures animate upward on the live site.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#11371b;color:#cfe3d4">
+      <div style="max-width:1140px;margin:0 auto;padding:60px 40px 0;display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1fr;gap:40px">
+        <div>
+          <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+            <div style="width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34"><i data-lucide="sprout" width="22" height="22" stroke-width="2"></i></div>
+            <span style="font-family:'Oswald';font-weight:700;font-size:19px;letter-spacing:.03em;color:#fff;text-transform:uppercase">Coodu Trust</span>
+          </div>
+          <p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.6;color:#a8c4af;margin:0;max-width:280px">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Quick Links</h4>
+          <div style="display:flex;flex-direction:column;gap:11px;font-family:'Source Sans 3';font-size:14.5px">
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">About Us</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Our Programs</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Careers</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Donate</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Contact Us</h4>
+          <div style="display:flex;flex-direction:column;gap:12px;font-family:'Source Sans 3';font-size:14.5px;color:#a8c4af">
+            <span style="display:flex;gap:10px"><i data-lucide="map-pin" width="17" height="17" stroke-width="1.9"></i> H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India</span>
+            <span style="display:flex;gap:10px;align-items:center"><i data-lucide="mail" width="17" height="17" stroke-width="1.9"></i> director@coodutrust.org</span>
+            <span style="display:flex;gap:10px;align-items:center"><i data-lucide="phone" width="17" height="17" stroke-width="1.9"></i> +91-451-2461362</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Follow Us</h4>
+          <div style="display:flex;gap:10px">
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153Zm-1.291 19.49h2.039L6.486 3.24H4.298L17.61 20.643Z"></path></svg></a>
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+      <div style="max-width:1140px;margin:0 auto;padding:22px 40px;margin-top:44px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between;font-family:'Source Sans 3';font-size:13px;color:#8fae97">
+        <span>© 2026 Coodu Trust. All rights reserved.</span>
+        <span style="display:flex;gap:20px"><a style="color:#8fae97;text-decoration:none" style-hover="color:#fff">Privacy</a><a style="color:#8fae97;text-decoration:none" style-hover="color:#fff">Terms</a></span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+
+<!-- ============================ FRAME 2 — HERO DIRECTION B + MEGA-MENU ============================ -->
+<div style="position:absolute;left:1440px;top:150px;width:1280px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Home — Hero direction B + Programs menu · 1280</div>
+  <div data-screen-label="Home (Hero B)" style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e7ece7">
+
+    <!-- HEADER (Programs active) -->
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 40px;background:#fff;border-bottom:1px solid #e2e8e2">
+      <a style="display:flex;align-items:center;gap:12px;text-decoration:none">
+        <div style="width:42px;height:42px;border-radius:10px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="24" height="24" stroke-width="2"></i></div>
+        <div style="display:flex;flex-direction:column;line-height:1">
+          <span style="font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:.03em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+          <span style="font-family:'Source Sans 3';font-size:10px;letter-spacing:.13em;color:#6b726b;text-transform:uppercase;margin-top:3px">Dindigul · Tamil Nadu</span>
+        </div>
+      </a>
+      <nav style="display:flex;align-items:center;gap:24px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:14px;font-weight:500">
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Home</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">About</a>
+        <a style="color:#1e7e34;text-decoration:none;display:flex;align-items:center;gap:4px;padding-bottom:3px;border-bottom:2px solid #f4a300">Programs <i data-lucide="chevron-up" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none;display:flex;align-items:center;gap:4px" style-hover="color:#1e7e34">Get Involved <i data-lucide="chevron-down" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Documents</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Media</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Contact</a>
+      </nav>
+      <a style="display:inline-flex;align-items:center;gap:8px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;padding:12px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(232,89,12,.28)" style-hover="background:#c2410c;transform:translateY(-1px)"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+    </header>
+
+    <!-- SPLIT HERO -->
+    <section style="background:#fff;position:relative;overflow:hidden">
+      <div style="max-width:1140px;margin:0 auto;padding:62px 40px 56px;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px"><span style="width:26px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Rural development · since 2000</span></div>
+          <h1 style="font-family:'Oswald';font-weight:600;font-size:50px;line-height:1.08;color:#1a1f1a;margin:0">Empowering communities, transforming lives</h1>
+          <p style="font-family:'Source Sans 3';font-size:18px;line-height:1.6;color:#3d433d;margin:20px 0 0;max-width:500px">A serious rural-development NGO doing real work for over 20 years — in agriculture, livelihoods, health, education and the environment.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:30px">
+            <a style="display:inline-flex;align-items:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:15px 28px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#155d27;transform:translateY(-1px)">Discover our work <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+            <a style="display:inline-flex;align-items:center;gap:9px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:15px 26px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#c2410c;transform:translateY(-1px)"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:30px;flex-wrap:wrap">
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Source Sans 3';font-size:13px;color:#3d433d;border:1px solid #e2e8e2;border-radius:999px;padding:7px 14px"><i data-lucide="calendar-check" width="15" height="15" stroke-width="2" style="color:#1e7e34"></i> Since 2000</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Source Sans 3';font-size:13px;color:#3d433d;border:1px solid #e2e8e2;border-radius:999px;padding:7px 14px"><i data-lucide="map-pin" width="15" height="15" stroke-width="2" style="color:#1e7e34"></i> 534 panchayats</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'Source Sans 3';font-size:13px;color:#3d433d;border:1px solid #e2e8e2;border-radius:999px;padding:7px 14px"><i data-lucide="users" width="15" height="15" stroke-width="2" style="color:#1e7e34"></i> 3.8L+ lives touched</span>
+          </div>
+        </div>
+        <div style="position:relative">
+          <div style="position:absolute;right:-14px;top:-14px;width:120px;height:120px;border-radius:50%;background:rgba(244,163,0,.16)"></div>
+          <div style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(135deg,#e6ede6 0 14px,#dde6dd 14px 28px);border:1px solid #e2e8e2">
+            <div style="position:absolute;left:16px;bottom:14px;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a938a">PHOTO · women's collective / field</div>
+          </div>
+          <div style="position:absolute;left:-18px;bottom:-18px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;box-shadow:0 10px 28px rgba(0,0,0,.1);padding:16px 20px;display:flex;align-items:center;gap:14px">
+            <div style="font-family:'Oswald';font-weight:700;font-size:34px;color:#1e7e34;line-height:1">20+</div>
+            <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.07em;font-size:11px;color:#6b726b;line-height:1.4">Years of<br>field work</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#f6f8f6;border-top:1px solid #eef1ee">
+        <div style="max-width:1140px;margin:0 auto;padding:20px 40px;display:flex;align-items:center;gap:30px">
+          <span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:600;color:#6b726b;white-space:nowrap">In partnership with</span>
+          <div style="display:flex;align-items:center;gap:40px;flex:1;justify-content:space-around;opacity:.6">
+            <div style="width:96px;height:26px;border-radius:5px;background:#dce3dc"></div>
+            <div style="width:96px;height:26px;border-radius:5px;background:#dce3dc"></div>
+            <div style="width:96px;height:26px;border-radius:5px;background:#dce3dc"></div>
+            <div style="width:96px;height:26px;border-radius:5px;background:#dce3dc"></div>
+            <div style="width:96px;height:26px;border-radius:5px;background:#dce3dc"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEGA-MENU SHOWCASE -->
+    <section style="background:#0f2417;padding:30px 40px 14px">
+      <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;color:#9fd3ad">Component</span>
+        <span style="font-family:'Source Sans 3';font-size:13px;color:#7fae8d">Programs — multi-level dropdown (open state)</span>
+      </div>
+      <div style="max-width:1140px;margin:0 auto;background:#fff;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.3);padding:30px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px">
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="leaf" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Environment &amp; Resilience</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Watershed Management</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Plantation &amp; Afforestation</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Water Resource Management</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Biodiversity Conservation</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Climate Change Adaptation</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="wheat" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Sustainable Agriculture</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Farmer Collectivization</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Livestock &amp; Allied Activities</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Horticulture &amp; Diversified Farming</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Agricultural Technology</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Organic Farming Practices</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#fdebd6;color:#e8590c;display:flex;align-items:center;justify-content:center"><i data-lucide="hand-heart" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Women Empowerment</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Social Empowerment &amp; Leadership</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Microfinance &amp; Financial Inclusion</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Entrepreneurship &amp; Enterprise</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">SHG &amp; Community Mobilization</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="graduation-cap" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Education &amp; Skilling</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Vocational &amp; Livelihood Training</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Digital Literacy &amp; IT Training</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Formal &amp; Higher Education Support</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">School Infrastructure Development</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="heart-pulse" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Health &amp; Sanitation</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Community Health Services</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Disease-Specific Interventions</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Water Quality &amp; Safety</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Sanitation &amp; Hygiene Infrastructure</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Solid Waste Management</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px"><span style="width:30px;height:30px;border-radius:8px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="briefcase" width="17" height="17" stroke-width="2"></i></span><span style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Consultancy &amp; HR</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-family:'Source Sans 3';font-size:13.5px;color:#6b726b;padding-left:39px">
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Technology &amp; Knowledge Dissemination</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Strategic Planning &amp; Advisory</a>
+            <a style="color:#6b726b;text-decoration:none" style-hover="color:#1e7e34">Human Resource &amp; Staffing Solutions</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="height:16px"></div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ============================ FRAME 3 — HOME MOBILE ============================ -->
+<div style="position:absolute;left:2800px;top:150px;width:390px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Home — Mobile · 390</div>
+  <div data-screen-label="Home (Mobile)" style="background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 10px 44px rgba(0,0,0,.13);border:1px solid #d9e0d9">
+
+    <!-- status bar -->
+    <div style="height:44px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 26px">
+      <span style="font-family:'Source Sans 3';font-weight:600;font-size:14px;color:#1a1f1a">9:41</span>
+      <span style="display:flex;align-items:center;gap:7px;color:#1a1f1a"><i data-lucide="signal" width="16" height="16" stroke-width="2.2"></i><i data-lucide="wifi" width="16" height="16" stroke-width="2.2"></i><i data-lucide="battery-full" width="20" height="20" stroke-width="2.2"></i></span>
+    </div>
+
+    <!-- HEADER -->
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;background:#fff;border-bottom:1px solid #e2e8e2">
+      <a style="display:flex;align-items:center;gap:9px;text-decoration:none">
+        <div style="width:36px;height:36px;border-radius:9px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="20" height="20" stroke-width="2"></i></div>
+        <span style="font-family:'Oswald';font-weight:700;font-size:17px;letter-spacing:.02em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:9px">
+        <a style="display:inline-flex;align-items:center;gap:6px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:9px 13px;border-radius:7px;text-decoration:none"><i data-lucide="heart" width="14" height="14" stroke-width="2.4"></i> Donate</a>
+        <button style="width:40px;height:40px;border-radius:9px;border:1px solid #e2e8e2;background:#fff;display:flex;align-items:center;justify-content:center;color:#1a1f1a"><i data-lucide="menu" width="22" height="22" stroke-width="2.2"></i></button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section style="position:relative;background:linear-gradient(160deg,#2c5a3c,#10271a);padding:32px 20px 28px;overflow:hidden">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 14px, rgba(0,0,0,.05) 14px 28px)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,26,15,.5), rgba(8,26,15,.82))"></div>
+      <div style="position:relative">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px"><span style="width:22px;height:2px;background:#f6c453;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:600;color:#f6c453">Since 2000 · Tamil Nadu</span></div>
+        <h1 style="font-family:'Oswald';font-weight:600;font-size:32px;line-height:1.1;color:#fff;margin:0">Empowering communities, transforming lives</h1>
+        <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.6;color:rgba(255,255,255,.9);margin:14px 0 0">Building a sustainable, equitable future for rural communities — through empowerment, health and the environment.</p>
+        <div style="display:flex;flex-direction:column;gap:11px;margin-top:22px">
+          <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;min-height:48px">Discover our work <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+          <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;min-height:48px"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+        </div>
+        <div style="display:flex;gap:7px;align-items:center;margin-top:22px">
+          <span style="width:22px;height:5px;border-radius:999px;background:#f4a300"></span>
+          <span style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+          <span style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+          <span style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+          <span style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.5)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT STATS 2x2 -->
+    <section style="background:#fff;padding:34px 20px">
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34">Our impact at a glance</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px 14px;text-align:center"><div style="width:40px;height:40px;border-radius:11px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 10px"><i data-lucide="users" width="21" height="21" stroke-width="1.9"></i></div><div style="font-family:'Oswald';font-weight:700;font-size:24px;color:#1a1f1a;line-height:1">3,81,609+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;color:#6b726b;margin-top:6px">Beneficiaries</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px 14px;text-align:center"><div style="width:40px;height:40px;border-radius:11px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 10px"><i data-lucide="map-pin" width="21" height="21" stroke-width="1.9"></i></div><div style="font-family:'Oswald';font-weight:700;font-size:24px;color:#1a1f1a;line-height:1">534</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;color:#6b726b;margin-top:6px">Panchayats</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px 14px;text-align:center"><div style="width:40px;height:40px;border-radius:11px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 10px"><i data-lucide="droplets" width="21" height="21" stroke-width="1.9"></i></div><div style="font-family:'Oswald';font-weight:700;font-size:24px;color:#1a1f1a;line-height:1">18,523+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;color:#6b726b;margin-top:6px">Toilets built</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px 14px;text-align:center"><div style="width:40px;height:40px;border-radius:11px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin:0 auto 10px"><i data-lucide="trees" width="21" height="21" stroke-width="1.9"></i></div><div style="font-family:'Oswald';font-weight:700;font-size:24px;color:#1a1f1a;line-height:1">26,93,250</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;color:#6b726b;margin-top:6px">Trees planted</div></div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section style="background:#fff;padding:8px 20px 40px">
+      <div style="position:relative;aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:linear-gradient(135deg,#1f3b29,#10261a);border:1px solid #e2e8e2;margin-bottom:22px">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><div style="width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#1e7e34"><i data-lucide="play" width="24" height="24" stroke-width="2" fill="#1e7e34"></i></div></div>
+        <div style="position:absolute;left:13px;bottom:11px;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:rgba(255,255,255,.7)">VIDEO · Intro to Coodu Trust</div>
+      </div>
+      <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:10px">Who we are</div>
+      <h2 style="font-family:'Oswald';font-weight:600;font-size:25px;line-height:1.18;margin:0"><span style="color:#1e7e34">Community.</span> <span style="color:#c47f00">Compassion.</span> <span style="color:#1e7e34">Collaboration.</span></h2>
+      <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.62;color:#3d433d;margin:14px 0 0">The mission of Coodu Trust is to improve quality of life for economically disadvantaged individuals — raising their standard of living, fostering self-improvement, and maximising self-empowerment.</p>
+      <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;margin-top:20px;min-height:48px">Learn more about us <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+    </section>
+
+    <!-- CORE PROGRAMS -->
+    <section style="background:#f6f8f6;border-top:1px solid #eef1ee;padding:40px 20px">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:8px">What we do</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:26px;line-height:1.15;color:#1a1f1a;margin:0">Our core programs</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <a style="display:block;background:#fff;border:1px solid #e2e8e2;border-radius:13px;overflow:hidden;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)">
+          <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)"><div style="position:absolute;left:12px;top:12px;width:34px;height:34px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="leaf" width="18" height="18" stroke-width="1.9"></i></div></div>
+          <div style="padding:16px 18px 18px"><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Environment &amp; Resilience</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:7px 0 0">Climate-resilient communities through conservation and sustainable development.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12.5px;font-weight:600;color:#1e7e34;margin-top:13px">Learn more <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+        <a style="display:block;background:#fff;border:1px solid #e2e8e2;border-radius:13px;overflow:hidden;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)">
+          <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)"><div style="position:absolute;left:12px;top:12px;width:34px;height:34px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="hand-heart" width="18" height="18" stroke-width="1.9"></i></div><div style="position:absolute;right:12px;top:13px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:9.5px;font-weight:600;color:#1a1f1a;background:#f4a300;padding:4px 8px;border-radius:999px">New</div></div>
+          <div style="padding:16px 18px 18px"><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Women Empowerment</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:7px 0 0">SHGs, microfinance and enterprise support so women can lead and earn independently.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12.5px;font-weight:600;color:#1e7e34;margin-top:13px">Learn more <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+        <a style="display:block;background:#fff;border:1px solid #e2e8e2;border-radius:13px;overflow:hidden;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)">
+          <div style="position:relative;aspect-ratio:16/9;background:repeating-linear-gradient(135deg,#e8efe8 0 12px,#e0e8e0 12px 24px)"><div style="position:absolute;left:12px;top:12px;width:34px;height:34px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34;box-shadow:0 2px 8px rgba(0,0,0,.1)"><i data-lucide="heart-pulse" width="18" height="18" stroke-width="1.9"></i></div></div>
+          <div style="padding:16px 18px 18px"><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Health, Sanitation &amp; Waste</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:7px 0 0">Healthcare access, sanitation and waste management that keep rural families healthy.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12.5px;font-weight:600;color:#1e7e34;margin-top:13px">Learn more <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+      </div>
+      <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:transparent;color:#1e7e34;border:1.5px solid #1e7e34;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:13px 20px;border-radius:8px;text-decoration:none;margin-top:18px;min-height:48px">View all 6 programs <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+    </section>
+
+    <!-- STORIES -->
+    <section style="background:#fff;padding:40px 20px">
+      <div style="text-align:center;margin-bottom:22px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:8px">Stories of transformation</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:26px;line-height:1.15;color:#1a1f1a;margin:0">Real journeys, real change</h2>
+      </div>
+      <div style="border:1px solid #e2e8e2;border-radius:15px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.06)">
+        <div style="position:relative;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#e8efe8 0 14px,#dfe7df 14px 28px)"><div style="position:absolute;left:14px;top:14px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;font-weight:600;color:#fff;background:#1e7e34;padding:5px 11px;border-radius:999px">Women Empowerment</div></div>
+        <div style="padding:22px 22px 24px">
+          <div style="font-family:'Oswald';font-size:50px;line-height:.5;color:#f4a300;height:26px">&ldquo;</div>
+          <p style="font-family:'Source Sans 3';font-size:17px;line-height:1.5;color:#1a1f1a;margin:12px 0 0;font-weight:500">Coodu Trust's skill program changed my life. I learned tailoring and now run my own business — my income rose from ₹2,000 to ₹8,000.</p>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:18px">
+            <div style="width:42px;height:42px;border-radius:50%;background:#eef5ef;display:flex;align-items:center;justify-content:center;color:#1e7e34;font-family:'Oswald';font-weight:700;font-size:15px">LD</div>
+            <div><div style="font-family:'Oswald';font-weight:600;font-size:15px;color:#1a1f1a">Lakshmi Devi</div><div style="font-family:'Source Sans 3';font-size:13px;color:#6b726b">Dindigul</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px;align-items:center;margin-top:18px">
+        <span style="width:20px;height:5px;border-radius:999px;background:#1e7e34"></span>
+        <span style="width:5px;height:5px;border-radius:999px;background:#cdd6cd"></span>
+        <span style="width:5px;height:5px;border-radius:999px;background:#cdd6cd"></span>
+      </div>
+    </section>
+
+    <!-- DUAL CTA -->
+    <section style="background:linear-gradient(160deg,#1e7e34,#13311f);padding:40px 20px">
+      <div style="text-align:center;margin-bottom:22px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#f6c453;margin-bottom:8px">Get involved</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:24px;line-height:1.18;color:#fff;margin:0">Need support, or want to give it?</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:#fff;border-radius:15px;padding:24px 22px">
+          <div style="width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:14px"><i data-lucide="life-buoy" width="24" height="24" stroke-width="1.9"></i></div>
+          <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Looking for support?</h3>
+          <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 16px">Discover the programs and resources we offer to communities.</p>
+          <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:transparent;color:#1e7e34;border:1.5px solid #1e7e34;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:12px 18px;border-radius:8px;text-decoration:none;min-height:46px">Get help <i data-lucide="arrow-right" width="16" height="16" stroke-width="2.2"></i></a>
+        </div>
+        <div style="background:#fff;border-radius:15px;padding:24px 22px">
+          <div style="width:46px;height:46px;border-radius:12px;background:#fdebd6;color:#e8590c;display:flex;align-items:center;justify-content:center;margin-bottom:14px"><i data-lucide="heart-handshake" width="24" height="24" stroke-width="1.9"></i></div>
+          <h3 style="font-family:'Oswald';font-weight:600;font-size:20px;color:#1a1f1a;margin:0">Want to make a difference?</h3>
+          <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 16px">Join us as a volunteer, partner or donor to transform lives.</p>
+          <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#1e7e34;color:#fff;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:13px 18px;border-radius:8px;text-decoration:none;min-height:46px">Get involved <i data-lucide="arrow-right" width="16" height="16" stroke-width="2.2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE PLANET -->
+    <section style="background:#161d18;color:#fff;padding:38px 20px">
+      <div style="text-align:center;margin-bottom:22px">
+        <div style="width:46px;height:46px;border-radius:12px;background:rgba(244,163,0,.14);color:#f4a300;display:flex;align-items:center;justify-content:center;margin:0 auto 14px"><i data-lucide="globe" width="24" height="24" stroke-width="1.8"></i></div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:24px;line-height:1.15;color:#fff;margin:0">We have only one planet</h2>
+        <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:rgba(255,255,255,.72);margin:10px 0 0">It's time to wake up to the grim reality and act together.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="text-align:center;padding:18px 10px;border:1px solid rgba(255,255,255,.1);border-radius:12px"><div style="font-family:'Oswald';font-weight:700;font-size:21px;color:#f4a300;line-height:1">8,192,242,010</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;color:rgba(255,255,255,.66);margin-top:7px">World population</div></div>
+        <div style="text-align:center;padding:18px 10px;border:1px solid rgba(255,255,255,.1);border-radius:12px"><div style="font-family:'Oswald';font-weight:700;font-size:21px;color:#f4a300;line-height:1">1,198,948,812</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;color:rgba(255,255,255,.66);margin-top:7px">Waste dumped (t)</div></div>
+        <div style="text-align:center;padding:18px 10px;border:1px solid rgba(255,255,255,.1);border-radius:12px"><div style="font-family:'Oswald';font-weight:700;font-size:21px;color:#f4a300;line-height:1">28,277,094</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;color:rgba(255,255,255,.66);margin-top:7px">E-waste (t)</div></div>
+        <div style="text-align:center;padding:18px 10px;border:1px solid rgba(255,255,255,.1);border-radius:12px"><div style="font-family:'Oswald';font-weight:700;font-size:21px;color:#f4a300;line-height:1">1.72</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;color:rgba(255,255,255,.66);margin-top:7px">Earths used</div></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#11371b;color:#cfe3d4;padding:36px 20px 22px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <div style="width:36px;height:36px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34"><i data-lucide="sprout" width="20" height="20" stroke-width="2"></i></div>
+        <span style="font-family:'Oswald';font-weight:700;font-size:18px;letter-spacing:.02em;color:#fff;text-transform:uppercase">Coodu Trust</span>
+      </div>
+      <p style="font-family:'Source Sans 3';font-size:14px;line-height:1.6;color:#a8c4af;margin:0 0 22px">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+      <div style="display:flex;flex-direction:column;gap:11px;font-family:'Source Sans 3';font-size:14px;color:#a8c4af;border-top:1px solid rgba(255,255,255,.12);padding-top:20px">
+        <span style="display:flex;gap:10px"><i data-lucide="map-pin" width="16" height="16" stroke-width="1.9"></i> H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu</span>
+        <span style="display:flex;gap:10px;align-items:center"><i data-lucide="mail" width="16" height="16" stroke-width="1.9"></i> director@coodutrust.org</span>
+        <span style="display:flex;gap:10px;align-items:center"><i data-lucide="phone" width="16" height="16" stroke-width="1.9"></i> +91-451-2461362</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:20px">
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153Zm-1.291 19.49h2.039L6.486 3.24H4.298L17.61 20.643Z"></path></svg></a>
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:18px;font-family:'Source Sans 3';font-size:12.5px;color:#8fae97;text-align:center">© 2026 Coodu Trust. All rights reserved.</div>
+    </footer>
+
+  </div>
+</div>
+
+<!-- ============================ FRAME 4 — HOME MOBILE · DRAWER OPEN ============================ -->
+<div style="position:absolute;left:3270px;top:150px;width:390px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Home — Mobile · nav drawer open · 390</div>
+  <div data-screen-label="Home (Mobile drawer)" style="position:relative;height:792px;background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 10px 44px rgba(0,0,0,.13);border:1px solid #d9e0d9">
+
+    <!-- background page (dimmed) -->
+    <div style="height:44px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 26px">
+      <span style="font-family:'Source Sans 3';font-weight:600;font-size:14px;color:#1a1f1a">9:41</span>
+      <span style="display:flex;align-items:center;gap:7px;color:#1a1f1a"><i data-lucide="signal" width="16" height="16" stroke-width="2.2"></i><i data-lucide="wifi" width="16" height="16" stroke-width="2.2"></i><i data-lucide="battery-full" width="20" height="20" stroke-width="2.2"></i></span>
+    </div>
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;background:#fff;border-bottom:1px solid #e2e8e2">
+      <a style="display:flex;align-items:center;gap:9px;text-decoration:none">
+        <div style="width:36px;height:36px;border-radius:9px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="20" height="20" stroke-width="2"></i></div>
+        <span style="font-family:'Oswald';font-weight:700;font-size:17px;letter-spacing:.02em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+      </a>
+      <button style="width:40px;height:40px;border-radius:9px;border:1px solid #e2e8e2;background:#fff;display:flex;align-items:center;justify-content:center;color:#1a1f1a"><i data-lucide="x" width="22" height="22" stroke-width="2.2"></i></button>
+    </header>
+    <section style="position:relative;background:linear-gradient(160deg,#2c5a3c,#10271a);height:660px;overflow:hidden">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 14px, rgba(0,0,0,.05) 14px 28px)"></div>
+      <div style="position:relative;padding:32px 20px">
+        <h1 style="font-family:'Oswald';font-weight:600;font-size:32px;line-height:1.1;color:rgba(255,255,255,.5);margin:0">Empowering communities, transforming lives</h1>
+      </div>
+    </section>
+
+    <!-- scrim -->
+    <div style="position:absolute;inset:0;background:rgba(8,18,11,.55)"></div>
+
+    <!-- DRAWER -->
+    <aside style="position:absolute;top:0;right:0;bottom:0;width:328px;background:#fff;box-shadow:-12px 0 40px rgba(0,0,0,.25);display:flex;flex-direction:column">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #e2e8e2">
+        <div style="display:flex;align-items:center;gap:9px">
+          <div style="width:34px;height:34px;border-radius:9px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="19" height="19" stroke-width="2"></i></div>
+          <span style="font-family:'Oswald';font-weight:700;font-size:16px;letter-spacing:.02em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+        </div>
+        <button style="width:36px;height:36px;border-radius:9px;border:1px solid #e2e8e2;background:#fff;display:flex;align-items:center;justify-content:center;color:#1a1f1a"><i data-lucide="x" width="20" height="20" stroke-width="2.2"></i></button>
+      </div>
+      <nav style="flex:1;overflow:hidden;padding:8px 14px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:15px;font-weight:500">
+        <a style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:9px;background:#f0f6f1;color:#1e7e34;text-decoration:none;margin-bottom:2px">Home <span style="width:6px;height:6px;border-radius:50%;background:#f4a300"></span></a>
+        <a style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;color:#3d433d;text-decoration:none">About</a>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;color:#1e7e34">Programs <i data-lucide="chevron-up" width="17" height="17" stroke-width="2.2"></i></div>
+        <div style="display:flex;flex-direction:column;gap:1px;padding:2px 0 8px;margin:0 6px 4px 8px;border-left:2px solid #e2e8e2;font-family:'Source Sans 3';text-transform:none;letter-spacing:normal;font-size:14px;font-weight:400">
+          <a style="padding:8px 14px;color:#6b726b;text-decoration:none">Environment &amp; Resilience</a>
+          <a style="padding:8px 14px;color:#6b726b;text-decoration:none">Sustainable Agriculture</a>
+          <a style="padding:8px 14px;color:#1e7e34;text-decoration:none;font-weight:600">Women Empowerment</a>
+          <a style="padding:8px 14px;color:#6b726b;text-decoration:none">Education &amp; Skilling</a>
+          <a style="padding:8px 14px;color:#6b726b;text-decoration:none">Health &amp; Sanitation</a>
+          <a style="padding:8px 14px;color:#6b726b;text-decoration:none">Consultancy &amp; HR</a>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;color:#3d433d">Get Involved <i data-lucide="chevron-down" width="17" height="17" stroke-width="2.2"></i></div>
+        <a style="display:flex;align-items:center;padding:12px 14px;color:#3d433d;text-decoration:none">Documents</a>
+        <a style="display:flex;align-items:center;padding:12px 14px;color:#3d433d;text-decoration:none">Media</a>
+        <a style="display:flex;align-items:center;padding:12px 14px;color:#3d433d;text-decoration:none">Contact</a>
+      </nav>
+      <div style="padding:14px 18px 18px;border-top:1px solid #e2e8e2">
+        <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;min-height:48px"><i data-lucide="heart" width="17" height="17" stroke-width="2.2"></i> Donate now</a>
+        <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;font-family:'Source Sans 3';font-size:13px;color:#6b726b"><i data-lucide="phone" width="14" height="14" stroke-width="2"></i> +91-451-2461362</div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- ============================ FRAME 5 — WOMEN EMPOWERMENT DESKTOP ============================ -->
+<div style="position:absolute;left:3740px;top:150px;width:1280px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Women Empowerment — Desktop · 1280</div>
+  <div data-screen-label="Women Empowerment (Desktop)" style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e7ece7">
+
+    <!-- HEADER (Programs active) -->
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 40px;background:#fff;border-bottom:1px solid #e2e8e2">
+      <a style="display:flex;align-items:center;gap:12px;text-decoration:none">
+        <div style="width:42px;height:42px;border-radius:10px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="24" height="24" stroke-width="2"></i></div>
+        <div style="display:flex;flex-direction:column;line-height:1">
+          <span style="font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:.03em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+          <span style="font-family:'Source Sans 3';font-size:10px;letter-spacing:.13em;color:#6b726b;text-transform:uppercase;margin-top:3px">Dindigul · Tamil Nadu</span>
+        </div>
+      </a>
+      <nav style="display:flex;align-items:center;gap:24px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-size:14px;font-weight:500">
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Home</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">About</a>
+        <a style="color:#1e7e34;text-decoration:none;display:flex;align-items:center;gap:4px;padding-bottom:3px;border-bottom:2px solid #f4a300">Programs <i data-lucide="chevron-down" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none;display:flex;align-items:center;gap:4px" style-hover="color:#1e7e34">Get Involved <i data-lucide="chevron-down" width="14" height="14" stroke-width="2.2"></i></a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Documents</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Media</a>
+        <a style="color:#3d433d;text-decoration:none" style-hover="color:#1e7e34">Contact</a>
+      </nav>
+      <a style="display:inline-flex;align-items:center;gap:8px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;padding:12px 22px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(232,89,12,.28)" style-hover="background:#c2410c;transform:translateY(-1px)"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Donate</a>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <section style="position:relative;min-height:340px;display:flex;align-items:flex-end;background:linear-gradient(120deg,#2c5a3c,#12301e);overflow:hidden">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 16px, rgba(0,0,0,.05) 16px 32px)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,26,15,.86) 0%, rgba(8,26,15,.55) 55%, rgba(8,26,15,.25) 100%)"></div>
+      <div style="position:absolute;right:18px;top:16px;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.03em;color:rgba(255,255,255,.6);border:1px dashed rgba(255,255,255,.32);padding:5px 9px;border-radius:6px">PHOTO · women leaders / SHG meeting</div>
+      <div style="position:relative;max-width:1140px;margin:0 auto;padding:48px 40px;width:100%">
+        <div style="display:flex;align-items:center;gap:9px;font-family:'Source Sans 3';font-size:13px;color:rgba(255,255,255,.8);margin-bottom:14px">
+          <a style="color:rgba(255,255,255,.8);text-decoration:none" style-hover="color:#fff">Programs</a>
+          <i data-lucide="chevron-right" width="14" height="14" stroke-width="2.2"></i>
+          <span style="color:#f6c453">Women Empowerment</span>
+        </div>
+        <h1 style="font-family:'Oswald';font-weight:600;font-size:46px;line-height:1.08;color:#fff;margin:0">Women Empowerment</h1>
+        <p style="font-family:'Source Sans 3';font-size:18px;line-height:1.55;color:rgba(255,255,255,.9);margin:14px 0 0;max-width:560px">Empowering women as catalysts of social and economic transformation.</p>
+      </div>
+    </section>
+
+    <!-- SECTOR OVERVIEW -->
+    <section style="background:#fff">
+      <div style="max-width:1140px;margin:0 auto;padding:78px 40px;display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Program overview</span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:34px;line-height:1.16;color:#1a1f1a;margin:0">Creating sustainable change through women</h2>
+          <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.62;color:#3d433d;margin:16px 0 0">Women empowerment is at the heart of sustainable development. Our program recognises women as key agents of change — and through social empowerment, financial inclusion, entrepreneurship and community mobilisation, we create pathways to economic independence, recognition and leadership.</p>
+          <p style="font-family:'Source Sans 3';font-size:16px;line-height:1.62;color:#3d433d;margin:14px 0 0">We form and strengthen Self-Help Groups, provide microfinance, build entrepreneurial and leadership skills, and foster women's participation in decision-making — consistently demonstrating that empowered women drive poverty reduction, better education and stronger communities.</p>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px">
+            <div><div style="font-family:'Oswald';font-weight:700;font-size:28px;color:#1e7e34;line-height:1">5,000+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Women empowered</div></div>
+            <div><div style="font-family:'Oswald';font-weight:700;font-size:28px;color:#1e7e34;line-height:1">450+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">SHGs formed</div></div>
+            <div><div style="font-family:'Oswald';font-weight:700;font-size:28px;color:#1e7e34;line-height:1">800+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Enterprises created</div></div>
+            <div><div style="font-family:'Oswald';font-weight:700;font-size:28px;color:#f4a300;line-height:1">300%</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Income increase</div></div>
+          </div>
+        </div>
+        <div style="position:relative">
+          <div style="position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:repeating-linear-gradient(135deg,#e6ede6 0 14px,#dde6dd 14px 28px);border:1px solid #e2e8e2">
+            <div style="position:absolute;left:16px;bottom:14px;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#8a938a">PHOTO · leadership development activity</div>
+          </div>
+          <div style="position:absolute;right:-16px;top:24px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;box-shadow:0 10px 28px rgba(0,0,0,.1);padding:14px 18px;display:flex;align-items:center;gap:12px">
+            <div style="width:42px;height:42px;border-radius:11px;background:#fdebd6;color:#e8590c;display:flex;align-items:center;justify-content:center"><i data-lucide="trending-up" width="22" height="22" stroke-width="2"></i></div>
+            <div><div style="font-family:'Oswald';font-weight:700;font-size:20px;color:#1a1f1a;line-height:1">300%</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:10px;color:#6b726b;margin-top:3px">Avg. income rise</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS AREAS -->
+    <section style="background:#f6f8f6;border-top:1px solid #eef1ee;border-bottom:1px solid #eef1ee">
+      <div style="max-width:1140px;margin:0 auto;padding:80px 40px">
+        <div style="text-align:center;max-width:600px;margin:0 auto 40px">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Our focus areas</span><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:34px;line-height:1.15;color:#1a1f1a;margin:0">Four pathways to empowerment</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+          <a style="display:flex;gap:20px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;padding:28px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="flex-shrink:0;width:54px;height:54px;border-radius:14px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="users" width="27" height="27" stroke-width="1.8"></i></div>
+            <div><h3 style="font-family:'Oswald';font-weight:600;font-size:21px;color:#1a1f1a;margin:0">Social Empowerment &amp; Leadership</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 0">Building women's confidence, leadership skills and social recognition through capacity-building and community participation.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:14px">Explore <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span></div>
+          </a>
+          <a style="display:flex;gap:20px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;padding:28px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="flex-shrink:0;width:54px;height:54px;border-radius:14px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="piggy-bank" width="27" height="27" stroke-width="1.8"></i></div>
+            <div><h3 style="font-family:'Oswald';font-weight:600;font-size:21px;color:#1a1f1a;margin:0">Microfinance &amp; Financial Inclusion</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 0">Access to financial services, credit and savings programs that enable women's economic participation and independence.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:14px">Explore <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span></div>
+          </a>
+          <a style="display:flex;gap:20px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;padding:28px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="flex-shrink:0;width:54px;height:54px;border-radius:14px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="rocket" width="27" height="27" stroke-width="1.8"></i></div>
+            <div><h3 style="font-family:'Oswald';font-weight:600;font-size:21px;color:#1a1f1a;margin:0">Entrepreneurship &amp; Enterprise</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 0">Supporting women entrepreneurs with business training, market linkages and enterprise support for sustainable livelihoods.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:14px">Explore <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span></div>
+          </a>
+          <a style="display:flex;gap:20px;background:#fff;border:1px solid #e2e8e2;border-radius:14px;padding:28px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.05)" style-hover="box-shadow:0 10px 26px rgba(0,0,0,.1);transform:translateY(-3px)">
+            <div style="flex-shrink:0;width:54px;height:54px;border-radius:14px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="handshake" width="27" height="27" stroke-width="1.8"></i></div>
+            <div><h3 style="font-family:'Oswald';font-weight:600;font-size:21px;color:#1a1f1a;margin:0">SHG &amp; Community Mobilization</h3><p style="font-family:'Source Sans 3';font-size:15px;line-height:1.55;color:#3d433d;margin:8px 0 0">Organising women into Self-Help Groups and community organisations for collective action, mutual support and development.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:13px;font-weight:600;color:#1e7e34;margin-top:14px">Explore <i data-lucide="arrow-right" width="15" height="15" stroke-width="2.2"></i></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section style="background:#fff">
+      <div style="max-width:1140px;margin:0 auto;padding:80px 40px">
+        <div style="text-align:center;max-width:600px;margin:0 auto 40px">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px"><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span><span style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#1e7e34">Our impact</span><span style="width:24px;height:2px;background:#1e7e34;display:inline-block"></span></div>
+          <h2 style="font-family:'Oswald';font-weight:600;font-size:34px;line-height:1.15;color:#1a1f1a;margin:0">Women empowerment impact</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="award" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Leadership Development</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0">Over <strong style="color:#1a1f1a">2,000 women</strong> have emerged as community leaders in local governance, SHGs and development committees.</p></div>
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="briefcase" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Economic Independence</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0"><strong style="color:#1a1f1a">800+</strong> women-led micro-enterprises generate sustainable income and create jobs for other women.</p></div>
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="landmark" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Financial Inclusion</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0"><strong style="color:#1a1f1a">450+ SHGs</strong> have mobilised savings exceeding <strong style="color:#1a1f1a">₹50 lakhs</strong>, opening access to credit and financial services.</p></div>
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="sprout" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Social Transformation</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0">Empowered women drive better education, health and quality of life for their families and future generations.</p></div>
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="users-round" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Community Solidarity</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0">Strong women's collectives form support networks that promote gender equality and advocate for women's rights.</p></div>
+          <div style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:14px;padding:28px"><div style="width:48px;height:48px;border-radius:12px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="target" width="24" height="24" stroke-width="1.8"></i></div><h3 style="font-family:'Oswald';font-weight:600;font-size:19px;color:#1a1f1a;margin:0">Sustainable Development</h3><p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.55;color:#3d433d;margin:8px 0 0">Women's participation leads to more inclusive, sustainable outcomes benefiting entire communities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:linear-gradient(135deg,#1e7e34,#13311f)">
+      <div style="max-width:780px;margin:0 auto;padding:74px 40px;text-align:center">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:#f6c453;margin-bottom:12px">Join the mission</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:36px;line-height:1.15;color:#fff;margin:0">Join our women empowerment mission</h2>
+        <p style="font-family:'Source Sans 3';font-size:17px;line-height:1.6;color:rgba(255,255,255,.88);margin:16px 0 0">Partner with us to empower women and create lasting social transformation. Your support helps us reach more women, strengthen communities, and build a society where every woman can thrive and lead.</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px">
+          <a style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:#1e7e34;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:15px 28px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="transform:translateY(-1px)">Partner with us <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+          <a style="display:inline-flex;align-items:center;gap:9px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:15px 26px;border-radius:8px;text-decoration:none;min-height:44px" style-hover="background:#c2410c;transform:translateY(-1px)"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Support our work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#11371b;color:#cfe3d4">
+      <div style="max-width:1140px;margin:0 auto;padding:60px 40px 0;display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1fr;gap:40px">
+        <div>
+          <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+            <div style="width:38px;height:38px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34"><i data-lucide="sprout" width="22" height="22" stroke-width="2"></i></div>
+            <span style="font-family:'Oswald';font-weight:700;font-size:19px;letter-spacing:.03em;color:#fff;text-transform:uppercase">Coodu Trust</span>
+          </div>
+          <p style="font-family:'Source Sans 3';font-size:14.5px;line-height:1.6;color:#a8c4af;margin:0;max-width:280px">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Quick Links</h4>
+          <div style="display:flex;flex-direction:column;gap:11px;font-family:'Source Sans 3';font-size:14.5px">
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">About Us</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Our Programs</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Careers</a>
+            <a style="color:#a8c4af;text-decoration:none" style-hover="color:#fff">Donate</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Contact Us</h4>
+          <div style="display:flex;flex-direction:column;gap:12px;font-family:'Source Sans 3';font-size:14.5px;color:#a8c4af">
+            <span style="display:flex;gap:10px"><i data-lucide="map-pin" width="17" height="17" stroke-width="1.9"></i> H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India</span>
+            <span style="display:flex;gap:10px;align-items:center"><i data-lucide="mail" width="17" height="17" stroke-width="1.9"></i> director@coodutrust.org</span>
+            <span style="display:flex;gap:10px;align-items:center"><i data-lucide="phone" width="17" height="17" stroke-width="1.9"></i> +91-451-2461362</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:#fff;margin:0 0 16px">Follow Us</h4>
+          <div style="display:flex;gap:10px">
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153Zm-1.291 19.49h2.039L6.486 3.24H4.298L17.61 20.643Z"></path></svg></a>
+            <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none" style-hover="background:#1e7e34;color:#fff"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+          </div>
+        </div>
+      </div>
+      <div style="max-width:1140px;margin:0 auto;padding:22px 40px;margin-top:44px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between;font-family:'Source Sans 3';font-size:13px;color:#8fae97">
+        <span>© 2026 Coodu Trust. All rights reserved.</span>
+        <span style="display:flex;gap:20px"><a style="color:#8fae97;text-decoration:none" style-hover="color:#fff">Privacy</a><a style="color:#8fae97;text-decoration:none" style-hover="color:#fff">Terms</a></span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<!-- ============================ FRAME 6 — WOMEN EMPOWERMENT MOBILE ============================ -->
+<div style="position:absolute;left:5100px;top:150px;width:390px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Women Empowerment — Mobile · 390</div>
+  <div data-screen-label="Women Empowerment (Mobile)" style="background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 10px 44px rgba(0,0,0,.13);border:1px solid #d9e0d9">
+
+    <!-- status bar -->
+    <div style="height:44px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px 0 26px">
+      <span style="font-family:'Source Sans 3';font-weight:600;font-size:14px;color:#1a1f1a">9:41</span>
+      <span style="display:flex;align-items:center;gap:7px;color:#1a1f1a"><i data-lucide="signal" width="16" height="16" stroke-width="2.2"></i><i data-lucide="wifi" width="16" height="16" stroke-width="2.2"></i><i data-lucide="battery-full" width="20" height="20" stroke-width="2.2"></i></span>
+    </div>
+
+    <!-- HEADER -->
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;background:#fff;border-bottom:1px solid #e2e8e2">
+      <a style="display:flex;align-items:center;gap:9px;text-decoration:none">
+        <div style="width:36px;height:36px;border-radius:9px;background:#1e7e34;display:flex;align-items:center;justify-content:center;color:#fff"><i data-lucide="sprout" width="20" height="20" stroke-width="2"></i></div>
+        <span style="font-family:'Oswald';font-weight:700;font-size:17px;letter-spacing:.02em;color:#1a1f1a;text-transform:uppercase">Coodu Trust</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:9px">
+        <a style="display:inline-flex;align-items:center;gap:6px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:9px 13px;border-radius:7px;text-decoration:none"><i data-lucide="heart" width="14" height="14" stroke-width="2.4"></i> Donate</a>
+        <button style="width:40px;height:40px;border-radius:9px;border:1px solid #e2e8e2;background:#fff;display:flex;align-items:center;justify-content:center;color:#1a1f1a"><i data-lucide="menu" width="22" height="22" stroke-width="2.2"></i></button>
+      </div>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <section style="position:relative;background:linear-gradient(150deg,#2c5a3c,#12301e);padding:26px 20px 28px;overflow:hidden">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 14px, rgba(0,0,0,.05) 14px 28px)"></div>
+      <div style="position:relative">
+        <div style="display:flex;align-items:center;gap:7px;font-family:'Source Sans 3';font-size:12px;color:rgba(255,255,255,.8);margin-bottom:12px"><span>Programs</span><i data-lucide="chevron-right" width="13" height="13" stroke-width="2.2"></i><span style="color:#f6c453">Women Empowerment</span></div>
+        <h1 style="font-family:'Oswald';font-weight:600;font-size:31px;line-height:1.1;color:#fff;margin:0">Women Empowerment</h1>
+        <p style="font-family:'Source Sans 3';font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.9);margin:12px 0 0">Empowering women as catalysts of social and economic transformation.</p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section style="background:#fff;padding:36px 20px">
+      <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:10px">Program overview</div>
+      <h2 style="font-family:'Oswald';font-weight:600;font-size:25px;line-height:1.18;color:#1a1f1a;margin:0">Creating sustainable change through women</h2>
+      <p style="font-family:'Source Sans 3';font-size:15.5px;line-height:1.6;color:#3d433d;margin:14px 0 0">Women empowerment is at the heart of sustainable development. We recognise women as key agents of change — creating pathways to economic independence, recognition and leadership through social empowerment, finance, entrepreneurship and community mobilisation.</p>
+      <div style="position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:repeating-linear-gradient(135deg,#e6ede6 0 14px,#dde6dd 14px 28px);border:1px solid #e2e8e2;margin:20px 0">
+        <div style="position:absolute;left:14px;bottom:12px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8a938a">PHOTO · leadership development</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:16px"><div style="font-family:'Oswald';font-weight:700;font-size:26px;color:#1e7e34;line-height:1">5,000+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Women empowered</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:16px"><div style="font-family:'Oswald';font-weight:700;font-size:26px;color:#1e7e34;line-height:1">450+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">SHGs formed</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:16px"><div style="font-family:'Oswald';font-weight:700;font-size:26px;color:#1e7e34;line-height:1">800+</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Enterprises</div></div>
+        <div style="border:1px solid #e2e8e2;border-radius:12px;padding:16px"><div style="font-family:'Oswald';font-weight:700;font-size:26px;color:#f4a300;line-height:1">300%</div><div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;font-size:11px;color:#6b726b;margin-top:5px">Income increase</div></div>
+      </div>
+    </section>
+
+    <!-- FOCUS AREAS -->
+    <section style="background:#f6f8f6;border-top:1px solid #eef1ee;padding:38px 20px">
+      <div style="text-align:center;margin-bottom:22px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:8px">Our focus areas</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:25px;line-height:1.15;color:#1a1f1a;margin:0">Four pathways to empowerment</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <a style="display:flex;gap:15px;background:#fff;border:1px solid #e2e8e2;border-radius:13px;padding:20px;text-decoration:none">
+          <div style="flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="users" width="23" height="23" stroke-width="1.8"></i></div>
+          <div><h3 style="font-family:'Oswald';font-weight:600;font-size:18px;color:#1a1f1a;margin:0">Social Empowerment &amp; Leadership</h3><p style="font-family:'Source Sans 3';font-size:14px;line-height:1.5;color:#3d433d;margin:6px 0 0">Confidence, leadership skills and social recognition through capacity-building and participation.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:600;color:#1e7e34;margin-top:11px">Explore <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+        <a style="display:flex;gap:15px;background:#fff;border:1px solid #e2e8e2;border-radius:13px;padding:20px;text-decoration:none">
+          <div style="flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="piggy-bank" width="23" height="23" stroke-width="1.8"></i></div>
+          <div><h3 style="font-family:'Oswald';font-weight:600;font-size:18px;color:#1a1f1a;margin:0">Microfinance &amp; Financial Inclusion</h3><p style="font-family:'Source Sans 3';font-size:14px;line-height:1.5;color:#3d433d;margin:6px 0 0">Financial services, credit and savings that enable economic participation and independence.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:600;color:#1e7e34;margin-top:11px">Explore <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+        <a style="display:flex;gap:15px;background:#fff;border:1px solid #e2e8e2;border-radius:13px;padding:20px;text-decoration:none">
+          <div style="flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="rocket" width="23" height="23" stroke-width="1.8"></i></div>
+          <div><h3 style="font-family:'Oswald';font-weight:600;font-size:18px;color:#1a1f1a;margin:0">Entrepreneurship &amp; Enterprise</h3><p style="font-family:'Source Sans 3';font-size:14px;line-height:1.5;color:#3d433d;margin:6px 0 0">Business training, market linkages and enterprise support for sustainable livelihoods.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:600;color:#1e7e34;margin-top:11px">Explore <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+        <a style="display:flex;gap:15px;background:#fff;border:1px solid #e2e8e2;border-radius:13px;padding:20px;text-decoration:none">
+          <div style="flex-shrink:0;width:46px;height:46px;border-radius:12px;background:#eef5ef;color:#1e7e34;display:flex;align-items:center;justify-content:center"><i data-lucide="handshake" width="23" height="23" stroke-width="1.8"></i></div>
+          <div><h3 style="font-family:'Oswald';font-weight:600;font-size:18px;color:#1a1f1a;margin:0">SHG &amp; Community Mobilization</h3><p style="font-family:'Source Sans 3';font-size:14px;line-height:1.5;color:#3d433d;margin:6px 0 0">Organising women into Self-Help Groups for collective action, support and development.</p><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:600;color:#1e7e34;margin-top:11px">Explore <i data-lucide="arrow-right" width="14" height="14" stroke-width="2.2"></i></span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section style="background:#fff;padding:38px 20px">
+      <div style="text-align:center;margin-bottom:22px">
+        <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin-bottom:8px">Our impact</div>
+        <h2 style="font-family:'Oswald';font-weight:600;font-size:25px;line-height:1.15;color:#1a1f1a;margin:0">Women empowerment impact</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="award" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Leadership Development</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0"><strong style="color:#1a1f1a">2,000+ women</strong> now lead in local governance, SHGs and development committees.</p></div></div>
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="briefcase" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Economic Independence</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0"><strong style="color:#1a1f1a">800+</strong> women-led micro-enterprises generate income and create jobs.</p></div></div>
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="landmark" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Financial Inclusion</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0"><strong style="color:#1a1f1a">450+ SHGs</strong> have mobilised savings exceeding <strong style="color:#1a1f1a">₹50 lakhs</strong>.</p></div></div>
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Social Transformation</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0">Empowered women drive better education, health and quality of life for generations.</p></div></div>
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="users-round" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Community Solidarity</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0">Collectives form support networks that promote gender equality and women's rights.</p></div></div>
+        <div style="display:flex;gap:14px;background:#f6f8f6;border:1px solid #e2e8e2;border-radius:13px;padding:18px"><div style="flex-shrink:0;width:42px;height:42px;border-radius:11px;background:#fff;color:#1e7e34;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.05)"><i data-lucide="target" width="22" height="22" stroke-width="1.8"></i></div><div><h3 style="font-family:'Oswald';font-weight:600;font-size:17px;color:#1a1f1a;margin:0">Sustainable Development</h3><p style="font-family:'Source Sans 3';font-size:13.5px;line-height:1.5;color:#3d433d;margin:5px 0 0">Women's participation yields inclusive, sustainable outcomes for whole communities.</p></div></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:linear-gradient(160deg,#1e7e34,#13311f);padding:40px 22px;text-align:center">
+      <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#f6c453;margin-bottom:10px">Join the mission</div>
+      <h2 style="font-family:'Oswald';font-weight:600;font-size:25px;line-height:1.18;color:#fff;margin:0">Join our women empowerment mission</h2>
+      <p style="font-family:'Source Sans 3';font-size:15px;line-height:1.6;color:rgba(255,255,255,.88);margin:12px 0 0">Partner with us to empower women and create lasting social transformation across Tamil Nadu.</p>
+      <div style="display:flex;flex-direction:column;gap:11px;margin-top:22px">
+        <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#fff;color:#1e7e34;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;min-height:48px">Partner with us <i data-lucide="arrow-right" width="17" height="17" stroke-width="2.2"></i></a>
+        <a style="display:flex;align-items:center;justify-content:center;gap:9px;background:#e8590c;color:#fff;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;border-radius:8px;text-decoration:none;min-height:48px"><i data-lucide="heart" width="16" height="16" stroke-width="2.2"></i> Support our work</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#11371b;color:#cfe3d4;padding:36px 20px 22px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <div style="width:36px;height:36px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;color:#1e7e34"><i data-lucide="sprout" width="20" height="20" stroke-width="2"></i></div>
+        <span style="font-family:'Oswald';font-weight:700;font-size:18px;letter-spacing:.02em;color:#fff;text-transform:uppercase">Coodu Trust</span>
+      </div>
+      <p style="font-family:'Source Sans 3';font-size:14px;line-height:1.6;color:#a8c4af;margin:0 0 22px">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+      <div style="display:flex;flex-direction:column;gap:11px;font-family:'Source Sans 3';font-size:14px;color:#a8c4af;border-top:1px solid rgba(255,255,255,.12);padding-top:20px">
+        <span style="display:flex;gap:10px"><i data-lucide="map-pin" width="16" height="16" stroke-width="1.9"></i> H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu</span>
+        <span style="display:flex;gap:10px;align-items:center"><i data-lucide="mail" width="16" height="16" stroke-width="1.9"></i> director@coodutrust.org</span>
+        <span style="display:flex;gap:10px;align-items:center"><i data-lucide="phone" width="16" height="16" stroke-width="1.9"></i> +91-451-2461362</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:20px">
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153Zm-1.291 19.49h2.039L6.486 3.24H4.298L17.61 20.643Z"></path></svg></a>
+        <a style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe3d4;text-decoration:none"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:18px;font-family:'Source Sans 3';font-size:12.5px;color:#8fae97;text-align:center">© 2026 Coodu Trust. All rights reserved.</div>
+    </footer>
+
+  </div>
+</div>
+
+<!-- ============================ FRAME 7 — DESIGN TOKENS ============================ -->
+<div style="position:absolute;left:5570px;top:150px;width:600px">
+  <div data-drags-parent="1" style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#5b635b;margin:0 0 12px 4px;cursor:grab">Design tokens — for tokens.css</div>
+  <div data-screen-label="Design tokens" style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e7ece7;padding:34px 34px 38px">
+
+    <div style="font-family:'Oswald';font-weight:600;font-size:24px;color:#1a1f1a;text-transform:uppercase;letter-spacing:.02em">Style system</div>
+    <p style="font-family:'Source Sans 3';font-size:14px;color:#6b726b;margin:6px 0 0">Every value below is the Style Gate in code — port straight into <span style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#1e7e34">tokens.css</span>.</p>
+
+    <!-- COLOR -->
+    <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin:28px 0 14px">Color</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 22px">
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#1e7e34;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Primary</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#1e7e34</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#155d27;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Primary-dark</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#155d27</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#11371b;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Deep (footer)</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#11371b</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#161d18;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Dark band</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#161d18</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#f4a300;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Amber (support)</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#f4a300</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#e8590c;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Accent / Donate</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#e8590c</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#f6f8f6;border:1px solid #e2e8e2;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Surface-alt</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#f6f8f6</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#fff;border:1px solid #e2e8e2;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Border</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#e2e8e2</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#1a1f1a;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Text-strong</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#1a1f1a</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#3d433d;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Text-body</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#3d433d</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#6b726b;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Text-muted</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#6b726b</div></div></div>
+      <div style="display:flex;align-items:center;gap:11px"><span style="width:34px;height:34px;border-radius:8px;background:#c47f00;flex-shrink:0"></span><div><div style="font-family:'Source Sans 3';font-size:13px;color:#1a1f1a;font-weight:600">Amber-text</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#6b726b">#c47f00</div></div></div>
+    </div>
+
+    <!-- TYPE -->
+    <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin:30px 0 14px">Typography</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px">
+        <div style="font-family:'Oswald';font-weight:600;font-size:30px;color:#1a1f1a;line-height:1">Oswald</div>
+        <div style="font-family:'Source Sans 3';font-size:13px;color:#6b726b;margin-top:6px">Display &amp; labels · 600/700 · Title-case headings, UPPERCASE labels (+.04–.16em)</div>
+      </div>
+      <div style="border:1px solid #e2e8e2;border-radius:12px;padding:18px">
+        <div style="font-family:'Source Sans 3';font-weight:600;font-size:30px;color:#1a1f1a;line-height:1">Source Sans 3</div>
+        <div style="font-family:'Source Sans 3';font-size:13px;color:#6b726b;margin-top:6px">Body · 400/600 · sentence case · line-height 1.6</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#3d433d">
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">H1 48 / 32</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">H2 34 / 26</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">H3 24 / 20</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">Body 17 / 16</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">Small 14</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px;color:#6b726b">desktop / mobile</span>
+    </div>
+
+    <!-- SPACE + SHAPE -->
+    <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#1e7e34;margin:30px 0 14px">Spacing · shape · motion</div>
+    <div style="display:flex;align-items:flex-end;gap:8px;margin-bottom:16px">
+      <div style="text-align:center"><div style="width:8px;height:8px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">8</div></div>
+      <div style="text-align:center"><div style="width:16px;height:16px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">16</div></div>
+      <div style="text-align:center"><div style="width:24px;height:24px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">24</div></div>
+      <div style="text-align:center"><div style="width:32px;height:32px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">32</div></div>
+      <div style="text-align:center"><div style="width:48px;height:48px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">48</div></div>
+      <div style="text-align:center"><div style="width:64px;height:64px;background:#1e7e34;border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">64</div></div>
+      <div style="text-align:center"><div style="width:96px;height:48px;background:repeating-linear-gradient(90deg,#1e7e34 0 4px,#cfe3d4 4px 8px);border-radius:2px;margin:0 auto"></div><div style="font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#6b726b;margin-top:5px">96 §</div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#3d433d">
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">radius btn 8</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">card 12–14</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:999px;padding:5px 11px">pill 999</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">maxw 1140 · text 720</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">bp 600 / 900 / 1200</span>
+      <span style="background:#f6f8f6;border:1px solid #e2e8e2;border-radius:6px;padding:5px 9px">ease 180ms</span>
+    </div>
+    <div style="display:flex;gap:14px;margin-top:16px">
+      <div style="flex:1;height:56px;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#6b726b">shadow-1 · rest</div>
+      <div style="flex:1;height:56px;border-radius:10px;background:#fff;box-shadow:0 10px 26px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#6b726b">shadow-2 · hover</div>
+    </div>
+
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){ this._icons(0); }
+  componentDidUpdate(){ if (window.lucide) { try { window.lucide.createIcons(); } catch(e){} } }
+  _icons(n){
+    if (window.lucide) { try { window.lucide.createIcons(); } catch(e){} }
+    else if (n < 80) { setTimeout(() => this._icons(n+1), 80); }
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

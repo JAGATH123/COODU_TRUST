@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#ffffff;}
+  ::selection{background:rgba(30,126,52,.18);}
+  @keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.09);}}
+  [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+  [data-reveal][data-in="1"]{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){[data-reveal]{opacity:1 !important;transform:none !important;} *{animation:none !important;}}
+</style>
+</helmet>
+<div ref="{{ setRoot }}" style="--sec-pad:{{ secPad }};--ov-cols:{{ ovCols }};--stats-cols:{{ statsCols }};--focus-cols:{{ focusCols }};--impact-cols:{{ impactCols }};--cta-dir:{{ ctaDir }};--cta-btn-w:{{ ctaBtnW }};width:100%;font-family:'Inter',sans-serif;color:#45524b;line-height:1.6;background:#ffffff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;">
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(300px,38vw,420px);display:flex;align-items:flex-end;overflow:hidden;background:#0f3d1b;">
+    <div style="position:absolute;inset:0;animation:{{ heroAnim }};">
+      <image-slot id="prog-hero" shape="rect" fit="cover" placeholder="Drop hero photo — women's SHG / fieldwork" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(13,46,22,.82) 0%,rgba(15,61,27,.66) 48%,rgba(11,38,20,.5) 100%);"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:clamp(28px,4vw,48px) clamp(20px,5vw,40px);">
+      <div style="display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.78);">
+        <a href="programs.html" style="color:rgba(255,255,255,.82);text-decoration:none;transition:color .2s ease;" style-hover="color:#ffffff;">Programs</a>
+        <span style="opacity:.6;">›</span>
+        <span style="color:#ffffff;">Women Empowerment</span>
+      </div>
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(2rem,4.8vw,3.3rem);line-height:1.07;color:#ffffff;margin:14px 0 0;letter-spacing:.01em;">Women Empowerment</h1>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.7vw,1.18rem);line-height:1.55;color:rgba(255,255,255,.9);margin:12px 0 0;max-width:560px;">Empowering women as catalysts of social and economic transformation</p>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin-top:18px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;color:rgba(255,255,255,.92);">
+        <span style="display:inline-flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:#7ed09a;"></span>5,000+ women</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:#7ed09a;"></span>450+ SHGs</span>
+        <span style="display:inline-flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:#7ed09a;"></span>Since 2000</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Stats" style="background:#f6f8f6;border-bottom:1px solid #e9eee9;padding:clamp(32px,4.2vw,50px) 0;">
+    <div data-reveal style="max-width:1080px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div style="display:grid;grid-template-columns:var(--stats-cols,repeat(4,1fr));gap:clamp(20px,2.4vw,30px);text-align:center;">
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1;color:#1e7e34;"><span data-count-to="5000" data-count-suffix="+">5,000+</span></div>
+          <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6f7d75;margin-top:10px;">Women empowered</div>
+        </div>
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1;color:#1e7e34;"><span data-count-to="450" data-count-suffix="+">450+</span></div>
+          <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6f7d75;margin-top:10px;">SHGs formed</div>
+        </div>
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1;color:#1e7e34;"><span data-count-to="800" data-count-suffix="+">800+</span></div>
+          <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6f7d75;margin-top:10px;">Enterprises created</div>
+        </div>
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1;color:#1e7e34;"><span data-count-to="300" data-count-suffix="%">300%</span></div>
+          <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6f7d75;margin-top:10px;">Income increase</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Overview" style="background:#ffffff;padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div style="max-width:1140px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div style="display:grid;grid-template-columns:var(--ov-cols,1.4fr 1fr);gap:clamp(32px,4vw,56px);align-items:center;">
+        <div data-reveal>
+          <div style="display:inline-flex;align-items:center;gap:10px;">
+            <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+            <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e7e34;">Overview</span>
+          </div>
+          <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.14;color:#18241d;margin:14px 0 0;max-width:18ch;">Creating Sustainable Change Through Women</h2>
+          <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.1vw,16.5px);line-height:1.75;color:#45524b;margin:18px 0 0;max-width:62ch;">Women empowerment is at the heart of sustainable development and social transformation. Our comprehensive Women Empowerment program recognizes women as key agents of change in their families and communities. Through systematic interventions in social empowerment, financial inclusion, entrepreneurship development, and community mobilization, we create pathways for women to achieve economic independence, social recognition, and leadership roles.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.1vw,16.5px);line-height:1.75;color:#45524b;margin:16px 0 0;max-width:62ch;">Our approach encompasses forming and strengthening Self-Help Groups (SHGs), providing microfinance services, developing entrepreneurial skills, and building leadership capacities. We focus on creating sustainable livelihood opportunities, improving access to credit and financial services, and fostering women's participation in decision-making processes at household and community levels. Our programs have consistently demonstrated that empowered women contribute significantly to poverty reduction, education improvements, and overall community development.</p>
+          <div style="margin-top:24px;">
+            <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#15602a;">Our approach</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:14px;">
+              <div style="display:flex;align-items:flex-start;gap:10px;"><span style="flex:0 0 auto;margin-top:2px;color:#1e7e34;"><i data-lucide="check-circle-2"></i></span><span style="font-family:'Inter',sans-serif;font-size:14.5px;color:#45524b;">Forming &amp; strengthening Self-Help Groups</span></div>
+              <div style="display:flex;align-items:flex-start;gap:10px;"><span style="flex:0 0 auto;margin-top:2px;color:#1e7e34;"><i data-lucide="check-circle-2"></i></span><span style="font-family:'Inter',sans-serif;font-size:14.5px;color:#45524b;">Providing microfinance &amp; credit access</span></div>
+              <div style="display:flex;align-items:flex-start;gap:10px;"><span style="flex:0 0 auto;margin-top:2px;color:#1e7e34;"><i data-lucide="check-circle-2"></i></span><span style="font-family:'Inter',sans-serif;font-size:14.5px;color:#45524b;">Developing entrepreneurial skills</span></div>
+              <div style="display:flex;align-items:flex-start;gap:10px;"><span style="flex:0 0 auto;margin-top:2px;color:#1e7e34;"><i data-lucide="check-circle-2"></i></span><span style="font-family:'Inter',sans-serif;font-size:14.5px;color:#45524b;">Building leadership capacities</span></div>
+            </div>
+          </div>
+        </div>
+        <div data-reveal data-stagger="120" style="position:relative;width:100%;aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 18px 44px rgba(16,40,24,.14);background:#eef3ee;">
+          <image-slot id="prog-overview" shape="rect" fit="cover" placeholder="Women empowerment & leadership activities" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Focus Areas" style="background:#f6f8f6;padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div style="max-width:1140px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div data-reveal style="text-align:center;max-width:680px;margin:0 auto;">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+          <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e7e34;">Go deeper</span>
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+        </div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.14;color:#18241d;margin:14px 0 0;">Our Focus Areas</h2>
+      </div>
+      <div style="margin-top:clamp(30px,3.6vw,46px);display:grid;grid-template-columns:var(--focus-cols,repeat(2,1fr));gap:clamp(18px,2vw,26px);">
+        <sc-for list="{{ focus }}" as="f" hint-placeholder-count="4">
+          <a href="{{ f.href }}" data-reveal data-stagger="{{ f.stagger }}" style="display:flex;flex-direction:column;text-decoration:none;background:#ffffff;border:1px solid #e4ebe5;border-radius:16px;padding:clamp(24px,2.6vw,32px);box-shadow:0 2px 12px rgba(16,40,24,.06);transition:transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .28s ease,border-color .28s ease;" style-hover="transform:translateY(-6px);box-shadow:0 24px 52px rgba(16,40,24,.14);border-color:#cfe0d4;" style-focus="outline:3px solid rgba(30,126,52,.4);outline-offset:3px;">
+            <div style="width:54px;height:54px;border-radius:14px;background:rgba(30,126,52,.10);display:flex;align-items:center;justify-content:center;color:#1e7e34;"><i data-lucide="{{ f.icon }}"></i></div>
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.18rem,1.6vw,1.4rem);color:#18241d;margin:16px 0 0;line-height:1.18;">{{ f.title }}</h3>
+            <p style="font-family:'Inter',sans-serif;font-size:14.5px;line-height:1.64;color:#55635b;margin:11px 0 0;">{{ f.desc }}</p>
+            <span style="display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:#1e7e34;transition:gap .25s ease,color .25s ease;" style-hover="gap:12px;color:#155d27;">Explore<span style="font-size:16px;line-height:1;">→</span></span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Impact" style="background:#ffffff;padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div style="max-width:1140px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div data-reveal style="text-align:center;max-width:680px;margin:0 auto;">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+          <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e7e34;">Proof of results</span>
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+        </div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.14;color:#18241d;margin:14px 0 0;">Women Empowerment Impact</h2>
+      </div>
+      <div style="margin-top:clamp(30px,3.6vw,46px);display:grid;grid-template-columns:var(--impact-cols,repeat(3,1fr));gap:clamp(16px,1.8vw,22px);">
+        <sc-for list="{{ impact }}" as="im" hint-placeholder-count="6">
+          <div data-reveal data-stagger="{{ im.stagger }}" style="background:#f6f8f6;border:1px solid #eef2ee;border-radius:14px;padding:clamp(22px,2.2vw,28px);">
+            <div style="display:flex;align-items:center;gap:11px;">
+              <span style="flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:#ffffff;border:1px solid #e4ebe5;display:flex;align-items:center;justify-content:center;color:#1e7e34;"><i data-lucide="{{ im.icon }}"></i></span>
+              <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:1.12rem;color:#18241d;margin:0;line-height:1.15;">{{ im.title }}</h3>
+            </div>
+            <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.62;color:#55635b;margin:13px 0 0;">{{ im.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA" style="background:linear-gradient(135deg,#1e7e34 0%,#155d27 55%,#0f3d1b 100%);padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div data-reveal style="max-width:740px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);text-align:center;">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.12;color:#ffffff;margin:0;">Join Our Women Empowerment Mission</h2>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.3vw,17px);line-height:1.7;color:rgba(255,255,255,.88);margin:16px auto 0;max-width:600px;">Partner with us to empower women and create lasting social transformation. Your support can help us reach more women, strengthen communities, and build a more equitable society where every woman can thrive and lead.</p>
+      <div style="display:flex;flex-direction:var(--cta-dir,row);gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:30px;">
+        <a href="../partner.html" style="width:var(--cta-btn-w,auto);text-align:center;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;color:#155d27;background:#ffffff;padding:15px 32px;border-radius:9px;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.16);transition:transform .2s ease,background .2s ease,box-shadow .2s ease;" style-hover="background:#f0f5f0;transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.22);" style-focus="outline:3px solid rgba(255,255,255,.75);outline-offset:3px;">Partner with Us</a>
+        <a href="../donate.html" style="width:var(--cta-btn-w,auto);text-align:center;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;color:#ffffff;background:#e8590c;padding:15px 32px;border-radius:9px;text-decoration:none;box-shadow:0 8px 22px rgba(232,89,12,.32);transition:transform .2s ease,background .2s ease,box-shadow .2s ease;" style-hover="background:#c4470a;transform:translateY(-2px);box-shadow:0 12px 28px rgba(232,89,12,.42);" style-focus="outline:3px solid rgba(255,255,255,.75);outline-offset:3px;">Support Our Work</a>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.78);">
+        <span style="display:inline-flex;"><i data-lucide="shield-check"></i></span>
+        <span>Registered non-profit · Dindigul · since 2000</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;density&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;comfortable&quot;, &quot;compact&quot;], &quot;default&quot;: &quot;comfortable&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Layout&quot; },
+  &quot;motion&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;on&quot;, &quot;off&quot;], &quot;default&quot;: &quot;on&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Motion&quot; }
+}">
+class Component extends DCLogic {
+  state = { mode: 'web' };
+
+  _focus = [
+    { icon: 'award', title: 'Social Empowerment & Leadership', desc: "Building women's confidence, leadership skills, and social recognition through capacity building programs, leadership training, and community participation initiatives.", href: 'social-empowerment-leadership.html', stagger: '0' },
+    { icon: 'piggy-bank', title: 'Microfinance & Financial Inclusion', desc: "Providing access to financial services, credit facilities, and savings programs to enable women's economic participation and financial independence.", href: 'microfinance-financial-inclusion.html', stagger: '90' },
+    { icon: 'store', title: 'Entrepreneurship & Enterprise Development', desc: 'Supporting women entrepreneurs through business development training, market linkages, and enterprise support for sustainable livelihood creation.', href: 'entrepreneurship-enterprise-development.html', stagger: '180' },
+    { icon: 'users-round', title: 'SHG & Community Mobilization', desc: 'Organizing women into Self-Help Groups and community-based organizations for collective action, mutual support, and community development initiatives.', href: 'shg-community-mobilization.html', stagger: '270' }
+  ];
+
+  _impact = [
+    { icon: 'award', title: 'Leadership Development', desc: 'Over 2,000 women have emerged as community leaders, taking up key positions in local governance, SHGs, and development committees, driving positive change in their communities.', stagger: '0' },
+    { icon: 'coins', title: 'Economic Independence', desc: '800+ women-led micro-enterprises have been established, generating sustainable income and creating employment opportunities for other women in their communities.', stagger: '70' },
+    { icon: 'landmark', title: 'Financial Inclusion', desc: '450+ SHGs have mobilized savings exceeding \u20B950 lakhs, providing women access to credit and financial services for personal and business needs.', stagger: '140' },
+    { icon: 'sparkles', title: 'Social Transformation', desc: 'Empowered women have become change agents in their families and communities, improving education, health, and overall quality of life for future generations.', stagger: '210' },
+    { icon: 'heart-handshake', title: 'Community Solidarity', desc: "Strong women's collectives have been formed, creating support networks that address social issues, promote gender equality, and advocate for women's rights.", stagger: '280' },
+    { icon: 'leaf', title: 'Sustainable Development', desc: "Women's active participation in development programs has led to more inclusive and sustainable outcomes, benefiting entire communities and future generations.", stagger: '350' }
+  ];
+
+  _setRoot = (el) => { if (el) this._rootEl = el; };
+
+  _onResize = () => {
+    const w = window.innerWidth || 1280;
+    const mode = w >= 1025 ? 'web' : (w >= 768 ? 'tablet' : 'mobile');
+    if (mode !== this.state.mode) this.setState({ mode });
+  };
+
+  _drawIcons = () => {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      try { window.lucide.createIcons({ attrs: { 'stroke-width': 1.75, width: 22, height: 22 } }); } catch (e) {}
+    }
+  };
+  _pollIcons = () => {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') { this._drawIcons(); return; }
+    this._it = (this._it || 0) + 1; if (this._it > 60) return; setTimeout(this._pollIcons, 80);
+  };
+
+  _motionOn = () => {
+    if ((this.props.motion || 'on') === 'off') return false;
+    try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false; } catch (e) {}
+    return true;
+  };
+
+  _setupReveal = () => {
+    if (!this._rootEl) return;
+    const els = [].slice.call(this._rootEl.querySelectorAll('[data-reveal]'));
+    if (!this._motionOn() || !('IntersectionObserver' in window)) { els.forEach((e) => e.setAttribute('data-in', '1')); return; }
+    if (this._rev) this._rev.disconnect();
+    this._rev = new IntersectionObserver((entries, obs) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-stagger') || '0', 10);
+          setTimeout(() => e.target.setAttribute('data-in', '1'), d);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    els.forEach((el) => this._rev.observe(el));
+    clearTimeout(this._revSafety);
+    this._revSafety = setTimeout(() => els.forEach((e) => e.setAttribute('data-in', '1')), 2800);
+  };
+
+  _setupCount = () => {
+    if (!this._rootEl || !this._motionOn() || !('IntersectionObserver' in window)) return;
+    const spans = [].slice.call(this._rootEl.querySelectorAll('[data-count-to]'));
+    if (this._cnt) this._cnt.disconnect();
+    this._cnt = new IntersectionObserver((entries, obs) => {
+      entries.forEach((e) => { if (e.isIntersecting) { this._animateCount(e.target); obs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    spans.forEach((s) => this._cnt.observe(s));
+  };
+  _animateCount = (el) => {
+    const to = parseFloat(el.getAttribute('data-count-to')) || 0;
+    const suffix = el.getAttribute('data-count-suffix') || '';
+    const dur = 1400, t0 = performance.now();
+    const ease = (x) => 1 - Math.pow(1 - x, 3);
+    const tick = (now) => { const p = Math.min(1, (now - t0) / dur); el.textContent = Math.round(to * ease(p)).toLocaleString('en-US') + suffix; if (p < 1) requestAnimationFrame(tick); else el.textContent = to.toLocaleString('en-US') + suffix; };
+    requestAnimationFrame(tick);
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this._onResize, { passive: true });
+    this._onResize();
+    this._pollIcons();
+    requestAnimationFrame(() => { this._setupReveal(); this._setupCount(); });
+  }
+  componentDidUpdate() { this._drawIcons(); }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    [this._rev, this._cnt].forEach((o) => { try { if (o) o.disconnect(); } catch (e) {} });
+    clearTimeout(this._revSafety);
+  }
+
+  renderVals() {
+    const mode = this.state.mode;
+    const isWeb = mode === 'web';
+    const density = this.props.density || 'comfortable';
+    const motion = this.props.motion || 'on';
+    return {
+      setRoot: this._setRoot,
+      focus: this._focus,
+      impact: this._impact,
+      heroAnim: motion !== 'off' ? 'heroZoom 22s ease-in-out infinite alternate' : 'none',
+      secPad: density === 'compact' ? 'clamp(40px,5.5vw,68px)' : 'clamp(56px,8vw,96px)',
+      ovCols: mode === 'web' ? '1.4fr 1fr' : '1fr',
+      statsCols: isWeb ? 'repeat(4,1fr)' : 'repeat(2,1fr)',
+      focusCols: mode === 'mobile' ? '1fr' : 'repeat(2,1fr)',
+      impactCols: isWeb ? 'repeat(3,1fr)' : (mode === 'tablet' ? 'repeat(2,1fr)' : '1fr'),
+      ctaDir: mode === 'mobile' ? 'column' : 'row',
+      ctaBtnW: mode === 'mobile' ? '100%' : 'auto'
+    };
+  }
+}
+</script>
+</body>
+</html>

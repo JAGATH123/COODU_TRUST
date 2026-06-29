@@ -1,0 +1,224 @@
+/* ==========================================================================
+   COODU Trust — motion layer
+   Transitions / animations only. Cool but calm: ~180ms, subtle, ease-out.
+
+   Split of concerns:
+     - coodu-components.css  -> structure / surfaces / position / colour
+     - coodu-motion.css (here) -> the moving + open/close visual state + the
+                                  small functional bits the JS relies on.
+
+   Rules:
+     * Every TRANSITION lives inside @media (prefers-reduced-motion: no-preference).
+     * Open/close STATE (visibility, transform-off-screen, opacity) is left
+       ungated so the UI still works instantly under reduced motion / no JS.
+     * The .reveal hidden-state is gated behind .coodu-js so visitors without
+       JS (or if JS errors) always see content.
+   Tokens used (from coodu-tokens.css): --ease (=180ms cubic-bezier),
+     --shadow-1, --shadow-2, --color-primary, --radius-*, etc.
+   ========================================================================== */
+
+:root {
+  /* local motion tuning — token --ease already bundles 180ms + the curve */
+  --mo-ease: cubic-bezier(.2, .6, .2, 1);
+  --mo-rise: 520ms;   /* calm reveal fade-up                 */
+  --mo-zoom: 320ms;   /* card image zoom                     */
+  --mo-slide: 360ms;  /* carousel track / fade               */
+}
+
+/* ==========================================================================
+   A. FUNCTIONAL STATE — ungated (must work with motion OFF and JS present)
+   ========================================================================== */
+
+/* scroll-lock toggled on <html> by the drawer JS */
+.coodu-scroll-lock { overflow: hidden; }
+
+/* clip helpers */
+.is-clip { overflow: hidden; }          /* carousel viewport (track parent)   */
+.card__media { overflow: hidden; }      /* so the hover zoom is masked        */
+
+/* counters: stop digit jitter while the value counts up */
+.counter { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+/* ---- carousel mechanics the JS depends on ---- */
+[data-carousel-track] { display: flex; }
+[data-carousel-track] > * { flex: 0 0 100%; min-width: 0; }
+
+.is-fade { display: grid; }                                   /* no-track mode */
+.is-fade > [data-carousel-slide] { grid-area: 1 / 1; opacity: 0; visibility: hidden; }
+.is-fade > [data-carousel-slide].is-active { opacity: 1; visibility: visible; }
+
+/* ---- drawer open/close visual state (instant under reduced motion) ---- */
+.drawer { pointer-events: none; }
+.drawer.is-open { pointer-events: auto; }
+.drawer__backdrop { opacity: 0; }
+.drawer.is-open .drawer__backdrop { opacity: 1; }
+.drawer__panel { transform: translateX(100%); will-change: transform; }
+.drawer.is-open .drawer__panel { transform: translateX(0); }
+
+/* ---- mega open/close visual state ---- */
+.mega { opacity: 0; visibility: hidden; }
+.has-mega.is-open .mega { opacity: 1; visibility: visible; }
+
+/* no-JS fallback: when coodu.js never runs, let fine-pointer + keyboard users
+   still open the mega via hover / focus-within (disabled once JS is live). */
+@media (hover: hover) and (pointer: fine) {
+  html:not(.coodu-js) .has-mega:hover > .mega,
+  html:not(.coodu-js) .has-mega:focus-within > .mega { opacity: 1; visibility: visible; }
+}
+
+/* ---- accordion: JS animates max-height, CSS just clips ---- */
+.acc__panel { overflow: hidden; }
+
+/* ==========================================================================
+   B. MOTION — only when the user is OK with motion
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ---- reveal: fade + rise on enter, once ---- */
+  .coodu-js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity var(--mo-rise) var(--mo-ease),
+                transform var(--mo-rise) var(--mo-ease);
+    will-change: opacity, transform;
+  }
+  .coodu-js .reveal.is-in { opacity: 1; transform: none; }
+
+  /* ---- cards: hover lift + media zoom ---- */
+  .card {
+    transition: transform var(--ease), box-shadow var(--ease);
+  }
+  .card__media > * {
+    transition: transform var(--mo-zoom) var(--mo-ease);
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-2);
+  }
+  .card:hover .card__media > *,
+  .card:focus-within .card__media > * { transform: scale(1.03); }
+
+  /* ---- buttons + nav links ---- */
+  .btn {
+    transition: transform var(--ease), box-shadow var(--ease),
+                background-color var(--ease), color var(--ease),
+                border-color var(--ease);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+
+  .nav__link,
+  .drawer__link,
+  .card__link { transition: color var(--ease); }
+
+  /* ---- drawer slide + backdrop fade ---- */
+  .drawer__panel  { transition: transform var(--ease); }
+  .drawer__backdrop { transition: opacity var(--ease); }
+
+  /* ---- mega: fade + gentle scale ---- */
+  .mega {
+    transform: translateY(-6px) scale(.985);
+    transform-origin: top center;
+    transition: opacity var(--ease), transform var(--ease), visibility var(--ease);
+  }
+  .has-mega.is-open .mega { transform: none; }
+
+  /* ---- accordion height + chevron flip ---- */
+  .acc__panel { transition: max-height var(--ease); }
+
+  .acc__trigger svg,
+  .has-mega > button svg { transition: transform var(--ease); }
+  .acc.is-open .acc__trigger svg,
+  .has-mega.is-open > button svg { transform: rotate(180deg); }
+
+  /* ---- carousel motion ---- */
+  [data-carousel-track] { transition: transform var(--mo-slide) var(--mo-ease); }
+  .is-fade > [data-carousel-slide] {
+    transition: opacity var(--mo-slide) var(--mo-ease),
+                visibility var(--mo-slide) var(--mo-ease);
+  }
+
+  /* dots / arrows */
+  .dot, .arrow { transition: transform var(--ease), background-color var(--ease),
+                              color var(--ease), border-color var(--ease), opacity var(--ease); }
+}
+
+/* mega scale reset for the no-JS hover/focus fallback (motion-on only) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not(.coodu-js) .has-mega:hover > .mega,
+  html:not(.coodu-js) .has-mega:focus-within > .mega { transform: none; }
+}
+
+/* ==========================================================================
+   C. REDUCED MOTION — neutralise everything; show final states instantly
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+
+  /* reveals are always visible (never hidden) under reduced motion */
+  .coodu-js .reveal { opacity: 1; transform: none; }
+
+  /* belt-and-braces: kill any lingering transitions on the animated elements */
+  .card,
+  .card__media > *,
+  .btn,
+  .nav__link,
+  .drawer__panel,
+  .drawer__backdrop,
+  .mega,
+  .acc__panel,
+  .acc__trigger svg,
+  .has-mega > button svg,
+  [data-carousel-track],
+  .is-fade > [data-carousel-slide],
+  .dot,
+  .arrow { transition: none !important; }
+
+  /* no hover lift / zoom */
+  .card:hover,
+  .card:focus-within,
+  .btn:hover { transform: none !important; box-shadow: var(--shadow-1); }
+  .card:hover .card__media > *,
+  .card:focus-within .card__media > * { transform: none !important; }
+}
+
+/* ==========================================================================
+   CUSTOM DOT CURSOR  (mouse + motion-OK devices only; JS adds .coodu-has-cursor)
+   ========================================================================== */
+.coodu-cursor { display: none; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body.coodu-has-cursor,
+  body.coodu-has-cursor a,
+  body.coodu-has-cursor button,
+  body.coodu-has-cursor [role="button"],
+  body.coodu-has-cursor input,
+  body.coodu-has-cursor textarea,
+  body.coodu-has-cursor select,
+  body.coodu-has-cursor label,
+  body.coodu-has-cursor summary { cursor: none; }
+
+  .coodu-cursor { display: block; transition: opacity .25s ease; }
+  .coodu-cursor__dot,
+  .coodu-cursor__ring {
+    position: fixed;
+    top: 0; left: 0;
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 2147483647;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+  .coodu-cursor__dot { width: 7px; height: 7px; background: var(--color-primary); }
+  .coodu-cursor__ring {
+    width: 34px; height: 34px;
+    border: 2px solid rgba(30, 126, 52, 0.55);
+    transition: width .2s ease, height .2s ease, border-color .2s ease, background-color .2s ease;
+  }
+  .coodu-cursor.is-hover .coodu-cursor__ring {
+    width: 54px; height: 54px;
+    border-color: var(--color-accent);
+    background-color: rgba(232, 89, 12, 0.08);
+  }
+  .coodu-cursor.is-down .coodu-cursor__ring { width: 26px; height: 26px; }
+}

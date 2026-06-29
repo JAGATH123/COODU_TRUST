@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:#ffffff;}
+  ::selection{background:rgba(30,126,52,.18);}
+  @keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.09);}}
+  @keyframes mediaIn{from{opacity:0;transform:translateY(14px) scale(.98);}to{opacity:1;transform:none;}}
+  @keyframes lbFade{from{opacity:0;}to{opacity:1;}}
+  @keyframes lbPop{from{opacity:0;transform:translateY(14px) scale(.985);}to{opacity:1;transform:none;}}
+  [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+  [data-reveal][data-in="1"]{opacity:1;transform:none;}
+  .media-tile .zoomimg{transition:transform .5s cubic-bezier(.22,.61,.36,1);}
+  .media-tile:hover .zoomimg{transform:scale(1.05);}
+  @media (prefers-reduced-motion: reduce){[data-reveal]{opacity:1 !important;transform:none !important;} *{animation:none !important;} .media-tile:hover .zoomimg{transform:none !important;}}
+</style>
+</helmet>
+<div ref="{{ setRoot }}" style="--sec-pad:{{ secPad }};--gal-cols:{{ galCols }};--news-cols:{{ newsCols }};--chips-wrap:{{ chipsWrap }};--chips-justify:{{ chipsJustify }};--lb-dir:{{ lbDir }};--lb-img-w:{{ lbImgW }};width:100%;font-family:'Inter',sans-serif;color:#45524b;line-height:1.6;background:#ffffff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;">
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(260px,34vw,400px);display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0f3d1b;">
+    <div style="position:absolute;inset:0;animation:{{ heroAnim }};">
+      <image-slot id="media-hero" shape="rect" fit="cover" placeholder="Drop hero photo — fieldwork montage" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    </div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(13,46,22,.5) 0%,rgba(11,38,20,.72) 100%);"></div>
+    <div style="position:relative;z-index:2;pointer-events:none;text-align:center;padding:clamp(48px,7vw,84px) clamp(20px,5vw,40px);max-width:760px;">
+      <div style="display:inline-flex;align-items:center;gap:10px;">
+        <span style="width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px;"></span>
+        <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.92);">Gallery</span>
+        <span style="width:22px;height:2px;background:rgba(255,255,255,.7);border-radius:2px;"></span>
+      </div>
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.08;color:#ffffff;margin:14px 0 0;letter-spacing:.01em;">Media</h1>
+      <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.7vw,1.18rem);line-height:1.6;color:rgba(255,255,255,.9);margin:14px auto 0;max-width:520px;">Visual stories of our programs and media coverage of our impact</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Gallery" style="background:#ffffff;padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div style="max-width:1140px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div data-reveal style="text-align:center;max-width:720px;margin:0 auto;">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+          <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e7e34;">In the field</span>
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+        </div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1.14;color:#18241d;margin:14px 0 0;">Our Work in Action</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.2vw,16.5px);line-height:1.7;color:#45524b;margin:16px auto 0;max-width:600px;">Real moments from our five program areas across Dindigul, Madurai, Karur and Theni — tap any photo to read the story behind it.</p>
+      </div>
+
+      <div style="margin-top:clamp(28px,3.4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;gap:9px;flex-wrap:var(--chips-wrap,wrap);justify-content:var(--chips-justify,flex-start);overflow-x:auto;max-width:100%;padding-bottom:2px;-webkit-overflow-scrolling:touch;">
+          <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+            <button type="button" onClick="{{ c.onClick }}" style="flex:0 0 auto;font-family:'Inter',sans-serif;font-weight:{{ c.wt }};font-size:13.5px;color:{{ c.fg }};background:{{ c.bg }};border:1px solid {{ c.bd }};padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .26s ease,color .26s ease,border-color .26s ease;" style-hover="border-color:#1e7e34;" style-focus="outline:2px solid rgba(30,126,52,.45);outline-offset:2px;">{{ c.label }}</button>
+          </sc-for>
+        </div>
+        <div style="font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:#6f7d75;white-space:nowrap;">{{ resultCount }}</div>
+      </div>
+
+      <div style="margin-top:clamp(22px,2.6vw,30px);display:grid;grid-template-columns:var(--gal-cols,repeat(3,1fr));gap:clamp(16px,2vw,24px);">
+        <sc-for list="{{ tiles }}" as="t" hint-placeholder-count="6">
+          <div class="media-tile" id="tile-{{ t.id }}" data-tile data-vis="{{ t.visAttr }}" style="display:{{ t.display }};position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#eef3ee;box-shadow:0 3px 14px rgba(16,40,24,.08);">
+            <div class="zoomimg" style="position:absolute;inset:0;">
+              <image-slot id="{{ t.id }}" shape="rect" fit="cover" placeholder="{{ t.placeholder }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+            </div>
+            <div style="position:absolute;top:11px;left:11px;z-index:3;pointer-events:none;display:inline-flex;align-items:center;font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:#15602a;background:rgba(255,255,255,.92);padding:5px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(16,40,24,.12);">{{ t.catLabel }}</div>
+            <button type="button" title="Open" onClick="{{ t.onOpen }}" style="position:absolute;top:10px;right:10px;z-index:4;width:36px;height:36px;border:0;border-radius:50%;background:rgba(15,40,22,.55);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(4px);transition:background .2s ease,transform .2s ease;" style-hover="background:rgba(15,40,22,.8);transform:scale(1.08);" style-focus="outline:2px solid #ffffff;outline-offset:2px;"><i data-lucide="maximize-2"></i></button>
+            <div style="position:absolute;left:0;right:0;bottom:0;z-index:3;pointer-events:none;padding:34px 14px 13px;background:linear-gradient(to top,rgba(8,26,14,.82) 0%,rgba(8,26,14,.45) 55%,rgba(8,26,14,0) 100%);">
+              <button type="button" onClick="{{ t.onOpen }}" style="pointer-events:auto;display:block;text-align:left;background:transparent;border:0;padding:0;cursor:pointer;font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1rem,1.3vw,1.18rem);color:#ffffff;line-height:1.15;" style-focus="outline:2px solid rgba(255,255,255,.8);outline-offset:2px;border-radius:3px;">{{ t.title }}</button>
+              <p style="font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.86);margin:5px 0 0;">{{ t.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:clamp(40px,6vw,72px) 20px;color:#8a968e;font-family:'Inter',sans-serif;">
+          <div style="display:inline-flex;color:#b8c4bb;"><i data-lucide="image-off"></i></div>
+          <p style="font-size:15px;margin:12px 0 0;">No photos in this category yet.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section data-screen-label="In the News" style="background:#f6f8f6;border-top:1px solid #e9eee9;padding:var(--sec-pad,clamp(56px,8vw,96px)) 0;">
+    <div style="max-width:1140px;margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);">
+      <div data-reveal style="text-align:center;max-width:680px;margin:0 auto;">
+        <div style="display:inline-flex;align-items:center;gap:10px;">
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+          <span style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e7e34;">Press</span>
+          <span style="width:22px;height:2px;background:#1e7e34;border-radius:2px;"></span>
+        </div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.75rem,3.4vw,2.5rem);line-height:1.14;color:#18241d;margin:14px 0 0;">In the News</h2>
+      </div>
+      <div style="margin-top:clamp(28px,3.4vw,42px);display:grid;grid-template-columns:var(--news-cols,repeat(3,1fr));gap:clamp(18px,2vw,26px);">
+        <sc-for list="{{ press }}" as="p" hint-placeholder-count="3">
+          <a href="{{ p.href }}" data-reveal data-stagger="{{ p.stagger }}" style="display:flex;flex-direction:column;text-decoration:none;background:#ffffff;border:1px solid #e4ebe5;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(16,40,24,.06);transition:transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .28s ease,border-color .28s ease;" style-hover="transform:translateY(-6px);box-shadow:0 24px 52px rgba(16,40,24,.14);border-color:#cfe0d4;" style-focus="outline:3px solid rgba(30,126,52,.4);outline-offset:3px;">
+            <div style="position:relative;width:100%;aspect-ratio:16/9;background:#eef3ee;border-bottom:1px solid #eef2ee;">
+              <image-slot id="{{ p.id }}" shape="rect" fit="cover" placeholder="{{ p.placeholder }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;padding:clamp(20px,2.2vw,26px);">
+              <div style="display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#1e7e34;">
+                <span style="display:inline-flex;"><i data-lucide="newspaper"></i></span>{{ p.outlet }}
+              </div>
+              <h3 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1.05rem,1.4vw,1.22rem);color:#18241d;margin:12px 0 0;line-height:1.25;">{{ p.headline }}</h3>
+              <span style="margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:7px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;color:#1e7e34;transition:gap .25s ease,color .25s ease;" style-hover="gap:12px;color:#155d27;">Read article<span style="font-size:16px;line-height:1;">→</span></span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lbClose }}" style="position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);background:rgba(9,24,14,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:lbFade .25s ease;">
+      <div role="dialog" aria-modal="true" onClick="{{ lbStop }}" style="position:relative;display:flex;flex-direction:var(--lb-dir,row);width:min(1100px,94vw);max-height:90vh;background:#ffffff;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.4);animation:lbPop .3s cubic-bezier(.22,.61,.36,1);">
+        <button type="button" title="Close" onClick="{{ lbClose }}" style="position:absolute;top:12px;right:12px;z-index:6;width:40px;height:40px;border:0;border-radius:50%;background:rgba(15,40,22,.55);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(4px);transition:background .2s ease,transform .2s ease;" style-hover="background:rgba(15,40,22,.85);transform:rotate(90deg);" style-focus="outline:2px solid #ffffff;outline-offset:2px;"><i data-lucide="x"></i></button>
+
+        <div style="position:relative;flex:0 0 var(--lb-img-w,58%);background:#0f2916;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          {{ lbImgEl }}
+          <sc-if value="{{ lbNoImg }}" hint-placeholder-val="{{ true }}">
+            <div style="text-align:center;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;padding:30px;">
+              <div style="display:inline-flex;"><i data-lucide="image"></i></div>
+              <p style="font-size:13px;margin:10px 0 0;">Photo coming soon</p>
+            </div>
+          </sc-if>
+          <button type="button" title="Previous" onClick="{{ lbPrev }}" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#18241d;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:background .2s ease,transform .2s ease;" style-hover="background:#ffffff;transform:translateY(-50%) scale(1.08);" style-focus="outline:2px solid #1e7e34;outline-offset:2px;"><i data-lucide="chevron-left"></i></button>
+          <button type="button" title="Next" onClick="{{ lbNext }}" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#18241d;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:background .2s ease,transform .2s ease;" style-hover="background:#ffffff;transform:translateY(-50%) scale(1.08);" style-focus="outline:2px solid #1e7e34;outline-offset:2px;"><i data-lucide="chevron-right"></i></button>
+        </div>
+
+        <div style="flex:1;min-width:0;overflow-y:auto;padding:clamp(24px,3vw,38px);">
+          <div style="display:inline-flex;align-items:center;font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#15602a;background:rgba(30,126,52,.10);padding:5px 11px;border-radius:999px;">{{ lbCat }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);color:#18241d;margin:14px 0 0;line-height:1.14;">{{ lbTitle }}</h3>
+          <p style="font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;color:#45524b;margin:12px 0 0;">{{ lbDesc }}</p>
+
+          <sc-if value="{{ lbRich }}" hint-placeholder-val="{{ false }}">
+            <div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;padding:18px 0;border-top:1px solid #eef2ee;border-bottom:1px solid #eef2ee;">
+                <div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#9aa69e;">Location</div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;color:#18241d;margin-top:6px;line-height:1.35;">{{ lbLoc }}</div>
+                </div>
+                <div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#9aa69e;">Date</div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;color:#18241d;margin-top:6px;line-height:1.35;">{{ lbDate }}</div>
+                </div>
+                <div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#9aa69e;">Impact</div>
+                  <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;color:#1e7e34;margin-top:6px;line-height:1.35;">{{ lbImpact }}</div>
+                </div>
+              </div>
+              <div style="margin-top:22px;">
+                <div style="font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:#15602a;">The Story Behind</div>
+                <p style="font-family:'Inter',sans-serif;font-size:14.5px;line-height:1.72;color:#45524b;margin:12px 0 0;">{{ lbStory }}</p>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;">
+                <sc-for list="{{ lbTags }}" as="tag" hint-placeholder-count="4">
+                  <span style="font-family:'Inter',sans-serif;font-weight:500;font-size:12px;color:#45524b;background:#f1f6f1;border:1px solid #dde9de;padding:6px 12px;border-radius:999px;">{{ tag }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;">
+            <div style="font-family:'Inter',sans-serif;font-size:12.5px;color:#9aa69e;">{{ lbPosLabel }}</div>
+            <div style="display:flex;gap:10px;">
+              <button type="button" onClick="{{ lbPrev }}" style="display:inline-flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;color:#45524b;background:#ffffff;border:1px solid #e4ebe5;padding:9px 15px;border-radius:9px;cursor:pointer;transition:border-color .2s ease,color .2s ease;" style-hover="border-color:#1e7e34;color:#15602a;" style-focus="outline:2px solid rgba(30,126,52,.4);outline-offset:2px;"><i data-lucide="arrow-left"></i>Prev</button>
+              <button type="button" onClick="{{ lbNext }}" style="display:inline-flex;align-items:center;gap:6px;font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;color:#ffffff;background:#1e7e34;border:1px solid #1e7e34;padding:9px 15px;border-radius:9px;cursor:pointer;transition:background .2s ease;" style-hover="background:#155d27;" style-focus="outline:2px solid rgba(30,126,52,.4);outline-offset:2px;">Next<i data-lucide="arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;density&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;comfortable&quot;, &quot;compact&quot;], &quot;default&quot;: &quot;comfortable&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Layout&quot; },
+  &quot;motion&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;on&quot;, &quot;off&quot;], &quot;default&quot;: &quot;on&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Motion&quot; }
+}">
+class Component extends DCLogic {
+  state = { mode: 'web', filter: 'all', lbOpen: false, lbList: [], lbPos: 0, lbImg: '' };
+
+  _chipDefs = [
+    ['all', 'All'],
+    ['agriculture', 'Agriculture & Livelihood'],
+    ['skilling', 'Skilling & Employment'],
+    ['environment', 'Environment & Water'],
+    ['health', 'Health & Sanitation'],
+    ['community', 'Community & Infrastructure']
+  ];
+
+  _tiles = [
+    { id: 'media-watershed', category: 'agriculture', catLabel: 'Agriculture', title: 'Watershed Development', desc: 'Transforming barren lands into productive agricultural areas', placeholder: 'Watershed development', rich: true, lbTitle: 'Watershed Development Project', loc: 'Dindigul District, Tamil Nadu', date: 'March 2023', impact: '500+ families benefited', story: 'This watershed development project transformed 200 hectares of barren land into fertile agricultural fields. Through innovative water conservation techniques and soil restoration methods, we helped local farmers increase their crop yield by 60% while conserving precious water resources.', tags: ['Water Conservation', 'Soil Restoration', 'Sustainable Agriculture', 'Community Development'] },
+    { id: 'media-organic', category: 'agriculture', catLabel: 'Agriculture', title: 'Organic Farming Training', desc: 'Teaching sustainable agricultural practices', placeholder: 'Organic farming training', rich: true, lbTitle: 'Organic Farming Training Program', loc: 'Karur District, Tamil Nadu', date: 'January 2024', impact: '300+ farmers trained', story: 'Our comprehensive organic farming training program equipped local farmers with sustainable agricultural techniques. Participants learned composting, natural pest control, and soil health management, leading to a 40% reduction in farming costs and improved crop quality.', tags: ['Organic Farming', 'Sustainable Agriculture', 'Farmer Training', 'Environmental Protection'] },
+    { id: 'media-skill', category: 'skilling', catLabel: 'Skilling', title: 'Skill Development Program', desc: 'Empowering communities with employable skills', placeholder: 'Skill development', rich: true, lbTitle: "Women's Skill Development Program", loc: 'Madurai District, Tamil Nadu', date: 'November 2023', impact: '250+ women empowered', story: 'This transformative program provided women with valuable skills in tailoring, handicrafts, and digital literacy. Over 90% of participants now run their own small businesses, with average monthly income increasing from \u20B92,000 to \u20B98,000. The program also included financial literacy and entrepreneurship training.', tags: ['Women Empowerment', 'Skill Development', 'Entrepreneurship', 'Digital Literacy'] },
+    { id: 'media-vocational', category: 'skilling', catLabel: 'Skilling', title: 'Vocational Training Center', desc: 'Building skills for better livelihoods', placeholder: 'Vocational training', rich: false },
+    { id: 'media-envrestore', category: 'environment', catLabel: 'Environment', title: 'Environmental Restoration', desc: 'Restoring degraded ecosystems for sustainability', placeholder: 'Environmental restoration', rich: false },
+    { id: 'media-waterconserv', category: 'environment', catLabel: 'Environment', title: 'Water Conservation', desc: 'Implementing sustainable water management systems', placeholder: 'Water conservation', rich: false },
+    { id: 'media-healthcamp', category: 'health', catLabel: 'Health', title: 'Community Health Camp', desc: 'Providing healthcare access to remote communities', placeholder: 'Community health camp', rich: true, lbTitle: 'Mobile Health Camp Initiative', loc: 'Theni District, Tamil Nadu', date: 'February 2024', impact: '1,500+ people served', story: "Our mobile health camps bring essential medical services directly to remote villages. Each camp provides general health checkups, vaccinations, maternal health services, and health education. We've established regular monthly visits to 15 villages, significantly reducing child mortality and improving overall community health.", tags: ['Healthcare Access', 'Mobile Clinics', 'Preventive Care', 'Community Health'] },
+    { id: 'media-cleanwater', category: 'health', catLabel: 'Health', title: 'Clean Water Initiative', desc: 'Installing clean water systems in villages', placeholder: 'Clean water initiative', rich: false },
+    { id: 'media-healthaware', category: 'health', catLabel: 'Health', title: 'Health Awareness Session', desc: 'Educating communities about health and hygiene', placeholder: 'Health awareness session', rich: false },
+    { id: 'media-infra', category: 'community', catLabel: 'Community', title: 'Infrastructure Development', desc: 'Building essential community infrastructure', placeholder: 'Infrastructure development', rich: false },
+    { id: 'media-mobilization', category: 'community', catLabel: 'Community', title: 'Community Mobilization', desc: 'Empowering communities for self-governance', placeholder: 'Community mobilization', rich: false }
+  ];
+
+  _press = [
+    { id: 'press-hindu', outlet: 'The Hindu', headline: 'Reforestation drive transforms barren hills', href: '#', placeholder: 'The Hindu clipping', stagger: '0' },
+    { id: 'press-toi', outlet: 'Times of India', headline: 'Women empowerment through skill development', href: '#', placeholder: 'Times of India clipping', stagger: '90' },
+    { id: 'press-vikatan', outlet: 'Ananda Vikatan', headline: 'From beneficiaries to leaders: Inspiring stories', href: '#', placeholder: 'Ananda Vikatan clipping', stagger: '180' }
+  ];
+
+  _catName = { agriculture: 'Agriculture & Livelihood', skilling: 'Skilling & Employment', environment: 'Environment & Water', health: 'Health & Sanitation', community: 'Community & Infrastructure' };
+
+  _setRoot = (el) => { if (el) this._rootEl = el; };
+
+  _onResize = () => {
+    const w = window.innerWidth || 1280;
+    const mode = w >= 1025 ? 'web' : (w >= 768 ? 'tablet' : 'mobile');
+    if (mode !== this.state.mode) this.setState({ mode });
+  };
+
+  _drawIcons = () => {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      try { window.lucide.createIcons({ attrs: { 'stroke-width': 1.75, width: 20, height: 20 } }); } catch (e) {}
+    }
+  };
+  _pollIcons = () => {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') { this._drawIcons(); return; }
+    this._it = (this._it || 0) + 1; if (this._it > 60) return; setTimeout(this._pollIcons, 80);
+  };
+
+  _motionOn = () => {
+    if ((this.props.motion || 'on') === 'off') return false;
+    try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false; } catch (e) {}
+    return true;
+  };
+
+  _setupReveal = () => {
+    if (!this._rootEl) return;
+    const els = [].slice.call(this._rootEl.querySelectorAll('[data-reveal]'));
+    if (!this._motionOn() || !('IntersectionObserver' in window)) { els.forEach((e) => e.setAttribute('data-in', '1')); return; }
+    if (this._rev) this._rev.disconnect();
+    this._rev = new IntersectionObserver((entries, obs) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-stagger') || '0', 10);
+          setTimeout(() => e.target.setAttribute('data-in', '1'), d);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    els.forEach((el) => this._rev.observe(el));
+    clearTimeout(this._revSafety);
+    this._revSafety = setTimeout(() => els.forEach((e) => e.setAttribute('data-in', '1')), 2800);
+  };
+
+  _animateTiles = () => {
+    if (!this._rootEl || !this._motionOn()) return;
+    const vis = [].slice.call(this._rootEl.querySelectorAll('[data-tile][data-vis="1"]'));
+    vis.forEach((el, i) => {
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = 'mediaIn .45s cubic-bezier(.22,.61,.36,1) both';
+      el.style.animationDelay = (i * 45) + 'ms';
+    });
+  };
+
+  _visible = () => this._tiles.map((t, i) => ({ ...t, gi: i })).filter((t) => this.state.filter === 'all' || t.category === this.state.filter);
+
+  _readSlotImg = (tileId) => {
+    if (!this._rootEl) return '';
+    const host = this._rootEl.querySelector('#tile-' + tileId + ' image-slot');
+    if (!host || !host.shadowRoot) return '';
+    const img = host.shadowRoot.querySelector('.frame img');
+    if (img && img.getAttribute('src') && img.style.display !== 'none') return img.src;
+    return '';
+  };
+
+  _open = (gi) => () => {
+    const list = this._visible().map((t) => t.gi);
+    const pos = Math.max(0, list.indexOf(gi));
+    const img = this._readSlotImg(this._tiles[gi].id);
+    this._lockScroll(true);
+    this.setState({ lbOpen: true, lbList: list, lbPos: pos, lbImg: img });
+  };
+  _close = () => { this._lockScroll(false); this.setState({ lbOpen: false }); };
+  _step = (dir) => () => {
+    const list = this.state.lbList;
+    if (!list.length) return;
+    const pos = (this.state.lbPos + dir + list.length) % list.length;
+    const img = this._readSlotImg(this._tiles[list[pos]].id);
+    this.setState({ lbPos: pos, lbImg: img });
+  };
+  _stop = (e) => { if (e && e.stopPropagation) e.stopPropagation(); };
+
+  _lockScroll = (on) => {
+    try {
+      document.body.style.overflow = on ? 'hidden' : '';
+      document.documentElement.style.overflow = on ? 'hidden' : '';
+    } catch (e) {}
+  };
+
+  _onKey = (e) => {
+    if (!this.state.lbOpen) return;
+    if (e.key === 'Escape') this._close();
+    else if (e.key === 'ArrowRight') this._step(1)();
+    else if (e.key === 'ArrowLeft') this._step(-1)();
+  };
+
+  _setFilter = (key) => () => { if (key !== this.state.filter) this.setState({ filter: key }); };
+
+  componentDidMount() {
+    window.addEventListener('resize', this._onResize, { passive: true });
+    window.addEventListener('keydown', this._onKey);
+    this._onResize();
+    this._pollIcons();
+    requestAnimationFrame(() => { this._setupReveal(); this._animateTiles(); });
+  }
+  componentDidUpdate(prevProps, prevState) {
+    this._drawIcons();
+    if (!prevState) return;
+    if (prevState.filter !== this.state.filter) this._animateTiles();
+    if (prevState.lbOpen !== this.state.lbOpen && this.state.lbOpen) {
+      requestAnimationFrame(() => { try { if (this._rootEl) { const b = this._rootEl.querySelector('[role="dialog"] button[title="Close"]'); if (b) b.focus(); } } catch (e) {} });
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('keydown', this._onKey);
+    this._lockScroll(false);
+    if (this._rev) { try { this._rev.disconnect(); } catch (e) {} }
+    clearTimeout(this._revSafety);
+  }
+
+  renderVals() {
+    const mode = this.state.mode;
+    const isWeb = mode === 'web';
+    const density = this.props.density || 'comfortable';
+    const motion = this.props.motion || 'on';
+    const filter = this.state.filter;
+
+    const chips = this._chipDefs.map((d) => {
+      const on = filter === d[0];
+      return { key: d[0], label: d[1], onClick: this._setFilter(d[0]), bg: on ? '#1e7e34' : '#ffffff', fg: on ? '#ffffff' : '#46544c', bd: on ? '#1e7e34' : '#e4ebe5', wt: on ? '600' : '500' };
+    });
+
+    const tiles = this._tiles.map((t, i) => {
+      const vis = filter === 'all' || t.category === filter;
+      return { id: t.id, catLabel: t.catLabel, title: t.title, desc: t.desc, placeholder: t.placeholder, visAttr: vis ? '1' : '0', display: vis ? 'block' : 'none', onOpen: this._open(i) };
+    });
+
+    const visCount = this._tiles.filter((t) => filter === 'all' || t.category === filter).length;
+    const noun = visCount === 1 ? 'photo' : 'photos';
+    const resultCount = filter === 'all' ? ('Showing ' + visCount + ' ' + noun) : ('Showing ' + visCount + ' in ' + this._catName[filter]);
+
+    const out = {
+      setRoot: this._setRoot,
+      chips: chips,
+      tiles: tiles,
+      press: this._press,
+      resultCount: resultCount,
+      isEmpty: visCount === 0,
+      heroAnim: motion !== 'off' ? 'heroZoom 22s ease-in-out infinite alternate' : 'none',
+      secPad: density === 'compact' ? 'clamp(40px,5.5vw,68px)' : 'clamp(56px,8vw,96px)',
+      galCols: isWeb ? 'repeat(3,1fr)' : (mode === 'tablet' ? 'repeat(2,1fr)' : '1fr'),
+      newsCols: isWeb ? 'repeat(3,1fr)' : (mode === 'tablet' ? 'repeat(2,1fr)' : '1fr'),
+      chipsWrap: mode === 'mobile' ? 'nowrap' : 'wrap',
+      chipsJustify: mode === 'mobile' ? 'flex-start' : 'flex-start',
+      lbDir: mode === 'web' ? 'row' : 'column',
+      lbImgW: mode === 'web' ? '58%' : 'auto',
+      lbOpen: this.state.lbOpen
+    };
+
+    if (this.state.lbOpen && this.state.lbList.length) {
+      const t = this._tiles[this.state.lbList[this.state.lbPos]] || this._tiles[0];
+      out.lbCat = t.catLabel;
+      out.lbTitle = t.rich ? t.lbTitle : t.title;
+      out.lbDesc = t.desc;
+      out.lbRich = !!t.rich;
+      out.lbLoc = t.loc || '';
+      out.lbDate = t.date || '';
+      out.lbImpact = t.impact || '';
+      out.lbStory = t.story || '';
+      out.lbTags = t.tags || [];
+      out.lbImg = this.state.lbImg || '';
+      out.lbHasImg = !!this.state.lbImg;
+      out.lbNoImg = !this.state.lbImg;
+      out.lbImgEl = this.state.lbImg
+        ? React.createElement('img', { src: this.state.lbImg, alt: out.lbTitle, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } })
+        : null;
+      out.lbPosLabel = (this.state.lbPos + 1) + ' / ' + this.state.lbList.length;
+      out.lbClose = this._close;
+      out.lbNext = this._step(1);
+      out.lbPrev = this._step(-1);
+      out.lbStop = this._stop;
+    }
+    return out;
+  }
+}
+</script>
+</body>
+</html>
