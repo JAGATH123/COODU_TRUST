@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="position:absolute;left:0px;top:0px;width:1280px;">
+  <div data-drags-parent="1" style="font-family:'Mukta',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.3px;color:#5b6470;margin:0 0 12px 2px;display:flex;align-items:center;gap:8px;cursor:grab;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#eaf2ff;border:1px solid #b9c9ef;display:inline-block;"></span>
+    Variation A · Aurora — tonal light-on-blue
+  </div>
+  <div data-screen-label="Aurora globe section" style="background:#22429E;border-radius:3px;box-shadow:0 14px 44px rgba(0,0,0,0.20);overflow:hidden;">
+    <div style="height:14px;background:#143A1E;"></div>
+    <div style="display:flex;align-items:center;gap:40px;padding:50px 60px;background:#22429E;">
+      <div style="flex:0 0 460px;height:460px;display:flex;align-items:center;justify-content:center;">
+        <canvas data-globe="A" data-variation="aurora" style="width:460px;height:460px;display:block;"></canvas>
+      </div>
+      <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;">
+        <div style="width:46px;height:4px;background:#F4A623;border-radius:2px;margin-bottom:22px;"></div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:50px;line-height:1.03;letter-spacing:-0.5px;color:#ffffff;margin:0;">We have only one planet</h2>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:18px;line-height:1.5;color:rgba(214,224,255,0.82);margin:14px 0 0;max-width:520px;">It's time to wake up to the grim reality and get our act together.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px;width:100%;max-width:580px;">
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="8192242010" data-decimals="0" data-drift="2.6" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">8,192,242,010</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">World Population</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="1198948812" data-decimals="0" data-drift="1.4" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1,198,948,812</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Tonnes of Waste Dumped</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="28277094" data-decimals="0" data-drift="0.18" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">28,277,094</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Tonnes of E-Waste</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="1.72" data-decimals="2" data-drift="0" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1.72</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Earths Humanity Uses</div>
+          </div>
+        </div>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:13.5px;color:rgba(190,205,245,0.5);margin:22px 0 0;">Live counters — figures climb upward in real time.</p>
+      </div>
+    </div>
+    <div style="height:14px;background:#143A1E;"></div>
+  </div>
+</div>
+
+<div style="position:absolute;left:1360px;top:0px;width:1280px;">
+  <div data-drags-parent="1" style="font-family:'Mukta',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.3px;color:#5b6470;margin:0 0 12px 2px;display:flex;align-items:center;gap:8px;cursor:grab;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#F4A623;display:inline-block;"></span>
+    Variation B · Spotlight — amber-highlighted region
+  </div>
+  <div data-screen-label="Spotlight globe section" style="background:#22429E;border-radius:3px;box-shadow:0 14px 44px rgba(0,0,0,0.20);overflow:hidden;">
+    <div style="height:14px;background:#143A1E;"></div>
+    <div style="display:flex;align-items:center;gap:40px;padding:50px 60px;background:#22429E;">
+      <div style="flex:0 0 460px;height:460px;display:flex;align-items:center;justify-content:center;">
+        <canvas data-globe="B" data-variation="spotlight" style="width:460px;height:460px;display:block;"></canvas>
+      </div>
+      <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;">
+        <div style="width:46px;height:4px;background:#F4A623;border-radius:2px;margin-bottom:22px;"></div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:50px;line-height:1.03;letter-spacing:-0.5px;color:#ffffff;margin:0;">We have only one planet</h2>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:18px;line-height:1.5;color:rgba(214,224,255,0.82);margin:14px 0 0;max-width:520px;">It's time to wake up to the grim reality and get our act together.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px;width:100%;max-width:580px;">
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="8192242010" data-decimals="0" data-drift="2.6" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">8,192,242,010</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">World Population</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="1198948812" data-decimals="0" data-drift="1.4" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1,198,948,812</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Tonnes of Waste Dumped</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="28277094" data-decimals="0" data-drift="0.18" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">28,277,094</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Tonnes of E-Waste</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:18px 20px;">
+            <div data-counter="1" data-target="1.72" data-decimals="2" data-drift="0" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:31px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1.72</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:9px;">Earths Humanity Uses</div>
+          </div>
+        </div>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:13.5px;color:rgba(190,205,245,0.5);margin:22px 0 0;">Live counters — figures climb upward in real time.</p>
+      </div>
+    </div>
+    <div style="height:14px;background:#143A1E;"></div>
+  </div>
+</div>
+
+
+<div style="position:absolute;left:0px;top:730px;width:834px;">
+  <div data-drags-parent="1" style="font-family:'Mukta',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.3px;color:#5b6470;margin:0 0 12px 2px;display:flex;align-items:center;gap:8px;cursor:grab;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#eaf2ff;border:1px solid #b9c9ef;display:inline-block;"></span>
+    Tablet · 834px — globe beside content
+  </div>
+  <div data-screen-label="Tablet globe section" style="background:#22429E;border-radius:3px;box-shadow:0 14px 44px rgba(0,0,0,0.20);overflow:hidden;">
+    <div style="height:12px;background:#143A1E;"></div>
+    <div style="display:flex;align-items:center;gap:28px;padding:38px 40px;background:#22429E;">
+      <div style="flex:0 0 300px;height:360px;display:flex;align-items:center;justify-content:center;">
+        <canvas data-globe="C" data-variation="aurora" style="width:300px;height:360px;display:block;"></canvas>
+      </div>
+      <div style="flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;">
+        <div style="width:42px;height:4px;background:#F4A623;border-radius:2px;margin-bottom:18px;"></div>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:36px;line-height:1.04;letter-spacing:-0.4px;color:#ffffff;margin:0;">We have only one planet</h2>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:16px;line-height:1.5;color:rgba(214,224,255,0.82);margin:12px 0 0;max-width:420px;">It's time to wake up to the grim reality and get our act together.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;width:100%;max-width:430px;">
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:11px;padding:15px 16px;">
+            <div data-counter="1" data-target="8192242010" data-decimals="0" data-drift="2.6" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:25px;line-height:1;color:#F4A623;letter-spacing:0.2px;font-variant-numeric:tabular-nums;">8,192,242,010</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">World Population</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:11px;padding:15px 16px;">
+            <div data-counter="1" data-target="1198948812" data-decimals="0" data-drift="1.4" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:25px;line-height:1;color:#F4A623;letter-spacing:0.2px;font-variant-numeric:tabular-nums;">1,198,948,812</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Tonnes of Waste Dumped</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:11px;padding:15px 16px;">
+            <div data-counter="1" data-target="28277094" data-decimals="0" data-drift="0.18" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:25px;line-height:1;color:#F4A623;letter-spacing:0.2px;font-variant-numeric:tabular-nums;">28,277,094</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Tonnes of E-Waste</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:11px;padding:15px 16px;">
+            <div data-counter="1" data-target="1.72" data-decimals="2" data-drift="0" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:25px;line-height:1;color:#F4A623;letter-spacing:0.2px;font-variant-numeric:tabular-nums;">1.72</div>
+            <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Earths Humanity Uses</div>
+          </div>
+        </div>
+        <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:12.5px;color:rgba(190,205,245,0.5);margin:18px 0 0;">Live counters — figures climb upward in real time.</p>
+      </div>
+    </div>
+    <div style="height:12px;background:#143A1E;"></div>
+  </div>
+</div>
+
+<div style="position:absolute;left:914px;top:730px;width:390px;">
+  <div data-drags-parent="1" style="font-family:'Mukta',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.3px;color:#5b6470;margin:0 0 12px 2px;display:flex;align-items:center;gap:8px;cursor:grab;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#eaf2ff;border:1px solid #b9c9ef;display:inline-block;"></span>
+    Mobile · 390px — stacked
+  </div>
+  <div data-screen-label="Mobile globe section" style="background:#22429E;border-radius:3px;box-shadow:0 14px 44px rgba(0,0,0,0.20);overflow:hidden;">
+    <div style="height:10px;background:#143A1E;"></div>
+    <div style="padding:30px 26px;background:#22429E;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <div style="width:300px;height:300px;display:flex;align-items:center;justify-content:center;">
+        <canvas data-globe="D" data-variation="aurora" style="width:300px;height:300px;display:block;"></canvas>
+      </div>
+      <div style="width:42px;height:4px;background:#F4A623;border-radius:2px;margin:16px 0 16px;"></div>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:30px;line-height:1.05;letter-spacing:-0.3px;color:#ffffff;margin:0;text-align:center;">We have only one planet</h2>
+      <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:16px;line-height:1.5;color:rgba(214,224,255,0.82);margin:12px 0 0;max-width:320px;text-align:center;">It's time to wake up to the grim reality and get our act together.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:22px;width:100%;">
+        <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:16px 18px;text-align:center;">
+          <div data-counter="1" data-target="8192242010" data-decimals="0" data-drift="2.6" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">8,192,242,010</div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">World Population</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:16px 18px;text-align:center;">
+          <div data-counter="1" data-target="1198948812" data-decimals="0" data-drift="1.4" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1,198,948,812</div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Tonnes of Waste Dumped</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:16px 18px;text-align:center;">
+          <div data-counter="1" data-target="28277094" data-decimals="0" data-drift="0.18" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">28,277,094</div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Tonnes of E-Waste</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(176,196,255,0.16);border-radius:12px;padding:16px 18px;text-align:center;">
+          <div data-counter="1" data-target="1.72" data-decimals="2" data-drift="0" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#F4A623;letter-spacing:0.3px;font-variant-numeric:tabular-nums;">1.72</div>
+          <div style="font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(190,205,245,0.72);margin-top:7px;">Earths Humanity Uses</div>
+        </div>
+      </div>
+      <p style="font-family:'Mukta',sans-serif;font-weight:400;font-size:12.5px;color:rgba(190,205,245,0.5);margin:18px 0 0;">Live counters — figures climb upward in real time.</p>
+    </div>
+    <div style="height:10px;background:#143A1E;"></div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:2680,&quot;height&quot;:1780},&quot;rotationSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:72,&quot;min&quot;:30,&quot;max&quot;:140,&quot;step&quot;:2,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Globe&quot;},&quot;showGraticule&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Globe&quot;},&quot;highlightColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#F4A623&quot;,&quot;options&quot;:[&quot;#F4A623&quot;,&quot;#3FB6A8&quot;,&quot;#E4572E&quot;,&quot;#FFFFFF&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Globe&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._mounted = true;
+    this._t0 = performance.now();
+    this.setupCounters();
+    this.globes = [];
+    this.ensureGlobes();
+    this.loop();
+    this.loadLandDots().then((dots) => {
+      if (!dots || !this._mounted) return;
+      this.dots = dots;
+      this._dotsReadyT = (performance.now() - this._t0) / 1000;
+      for (const g of this.globes) g.hl = this.computeHl(g.opts, dots);
+    });
+  }
+
+  componentWillUnmount() {
+    this._mounted = false;
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+
+  componentDidUpdate() {
+    this.ensureGlobes();
+    if (!this.globes) return;
+    for (const g of this.globes) {
+      g.opts = this.variationOpts(g.variation, g.cssW, g.cssH);
+      g.hl = this.computeHl(g.opts, this.dots);
+    }
+  }
+
+  ensureGlobes() {
+    if (!this.globes) this.globes = [];
+    const canvases = Array.prototype.slice.call(document.querySelectorAll('canvas[data-globe]'));
+    for (const cv of canvases) {
+      if (cv.__globeInit) continue;
+      cv.__globeInit = true;
+      this.globes.push(this.initGlobe(cv));
+    }
+  }
+
+  renderVals() { return {}; }
+
+  hexToRgb(hex) {
+    hex = (hex || '').replace('#', '');
+    if (hex.length === 3) hex = hex.split('').map((c) => c + c).join('');
+    const n = parseInt(hex, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+
+  variationOpts(v, W, H) {
+    const P = this.props || {};
+    const cx = W / 2, cy = H / 2;
+    const speed = (2 * Math.PI) / (P.rotationSeconds ?? 72);
+    const showGrat = P.showGraticule ?? true;
+    const hl = this.hexToRgb(P.highlightColor ?? '#F4A623');
+    if (v === 'aurora') {
+      return { variation: 'aurora', cx, cy, R: Math.min(W, H) * 0.44, tilt: 18, speed, showGrat,
+        limb: [96, 132, 205], front: [239, 245, 255], baseAlpha: [0.20, 0.92], dotSize: [0.8, 1.85],
+        grat: 'rgba(157,184,242,0.13)', gratLine: 0.9, rim: 'rgba(196,214,255,0.20)',
+        glow: 'rgba(120,150,235,0.18)', glow2: null, highlight: null, hlColor: null };
+    }
+    return { variation: 'spotlight', cx, cy, R: Math.min(W, H) * 0.42, tilt: 18, speed, showGrat,
+      limb: [120, 150, 212], front: [216, 229, 250], baseAlpha: [0.18, 0.72], dotSize: [0.8, 1.8],
+      grat: 'rgba(173,197,250,0.16)', gratLine: 0.9, rim: 'rgba(' + hl[0] + ',' + hl[1] + ',' + hl[2] + ',0.30)',
+      glow: 'rgba(120,150,235,0.14)', glow2: 'rgba(' + hl[0] + ',' + hl[1] + ',' + hl[2] + ',0.16)',
+      highlight: { lat: 48, lng: 12, radius: 17 }, hlColor: hl };
+  }
+
+  computeHl(opts, dots) {
+    if (!opts || !opts.highlight || !dots) return null;
+    const DEG = Math.PI / 180;
+    const { lat, lng, radius } = opts.highlight;
+    const sH = Math.sin(lat * DEG), cH = Math.cos(lat * DEG), cosR = Math.cos(radius * DEG);
+    return dots.map((p) => {
+      const cd = sH * Math.sin(p.lat * DEG) + cH * Math.cos(p.lat * DEG) * Math.cos((p.lng - lng) * DEG);
+      return cd > cosR;
+    });
+  }
+
+  initGlobe(cv) {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const cssW = parseInt(cv.style.width) || cv.clientWidth || 460;
+    const cssH = parseInt(cv.style.height) || cv.clientHeight || 460;
+    cv.width = Math.round(cssW * dpr);
+    cv.height = Math.round(cssH * dpr);
+    const ctx = cv.getContext('2d');
+    ctx.scale(dpr, dpr);
+    const variation = cv.getAttribute('data-variation') || 'aurora';
+    const g = { cv, ctx, cssW, cssH, variation, opts: this.variationOpts(variation, cssW, cssH), hl: null };
+    if (this.dots) g.hl = this.computeHl(g.opts, this.dots);
+    return g;
+  }
+
+  loadLandDots() {
+    return new Promise((resolve) => {
+      const urls = [
+        'https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-water.png',
+        'https://unpkg.com/three-globe/example/img/earth-water.png'
+      ];
+      let idx = 0;
+      const tryNext = () => {
+        if (idx >= urls.length) { resolve(null); return; }
+        const url = urls[idx++];
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          try {
+            const c = document.createElement('canvas');
+            c.width = img.naturalWidth; c.height = img.naturalHeight;
+            const x = c.getContext('2d', { willReadFrequently: true });
+            x.drawImage(img, 0, 0);
+            const W = c.width, H = c.height;
+            const d = x.getImageData(0, 0, W, H).data;
+            const dots = [];
+            const latStep = 1.8;
+            const DEG = Math.PI / 180;
+            for (let lat = -88; lat <= 88; lat += latStep) {
+              const nLng = Math.max(1, Math.round((360 / latStep) * Math.cos(lat * DEG)));
+              for (let k = 0; k < nLng; k++) {
+                const lng = -180 + (360 * k) / nLng;
+                const px = Math.min(W - 1, Math.max(0, Math.round(((lng + 180) / 360) * W)));
+                const py = Math.min(H - 1, Math.max(0, Math.round(((90 - lat) / 180) * H)));
+                const i = (py * W + px) * 4;
+                const lum = (d[i] + d[i + 1] + d[i + 2]) / 3;
+                if (lum < 100) {
+                  const phi = lat * DEG, lam = lng * DEG, cp = Math.cos(phi);
+                  dots.push({ x: cp * Math.sin(lam), y: Math.sin(phi), z: cp * Math.cos(lam), lat, lng });
+                }
+              }
+            }
+            resolve(dots);
+          } catch (e) { tryNext(); }
+        };
+        img.onerror = tryNext;
+        img.src = url;
+      };
+      tryNext();
+    });
+  }
+
+  loop() {
+    const step = (now) => {
+      if (!this._mounted) return;
+      const t = (now - this._t0) / 1000;
+      this.updateCounters(t);
+      const fade = this.dots ? Math.min(1, Math.max(0, (t - (this._dotsReadyT || t)) / 1.0)) : 0;
+      if (this.globes) { for (const g of this.globes) this.drawGlobe(g, t, fade); }
+      this._raf = requestAnimationFrame(step);
+    };
+    this._raf = requestAnimationFrame(step);
+  }
+
+  setupCounters() {
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-counter]'));
+    this.counters = els.map((el) => ({
+      el,
+      target: parseFloat(el.getAttribute('data-target')),
+      decimals: parseInt(el.getAttribute('data-decimals') || '0', 10),
+      drift: parseFloat(el.getAttribute('data-drift') || '0')
+    }));
+  }
+
+  fmt(v, dec) {
+    if (dec > 0) return v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    return Math.floor(v).toLocaleString('en-US');
+  }
+
+  updateCounters(t) {
+    if (!this.counters) return;
+    const dur = 2.2;
+    const e = Math.min(1, t / dur);
+    const ease = 1 - Math.pow(1 - e, 3);
+    for (const c of this.counters) {
+      let v = c.target * ease;
+      if (e >= 1 && c.drift) v = c.target + c.drift * (t - dur);
+      c.el.textContent = this.fmt(v, c.decimals);
+    }
+  }
+
+  drawGlobe(g, t, fade) {
+    const { ctx, cssW, cssH, opts, hl } = g;
+    const DEG = Math.PI / 180;
+    const { cx, cy, R, tilt, speed } = opts;
+    const theta = t * speed;
+    const cT = Math.cos(theta), sT = Math.sin(theta);
+    const cf = Math.cos(tilt * DEG), sf = Math.sin(tilt * DEG);
+    ctx.clearRect(0, 0, cssW, cssH);
+
+    const proj = (x, y, z) => {
+      const xr = x * cT + z * sT;
+      const zr = -x * sT + z * cT;
+      const y2 = y * cf - zr * sf;
+      const z2 = y * sf + zr * cf;
+      return { sx: cx + R * xr, sy: cy - R * y2, z: z2 };
+    };
+
+    let grd = ctx.createRadialGradient(cx, cy, R * 0.55, cx, cy, R * 1.4);
+    grd.addColorStop(0, opts.glow); grd.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grd; ctx.fillRect(0, 0, cssW, cssH);
+    if (opts.glow2) {
+      let g2 = ctx.createRadialGradient(cx, cy, R * 0.15, cx, cy, R * 1.25);
+      g2.addColorStop(0, opts.glow2); g2.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g2; ctx.fillRect(0, 0, cssW, cssH);
+    }
+    let sph = ctx.createRadialGradient(cx - R * 0.35, cy - R * 0.35, R * 0.05, cx, cy, R);
+    sph.addColorStop(0, 'rgba(255,255,255,0.05)');
+    sph.addColorStop(0.75, 'rgba(255,255,255,0.012)');
+    sph.addColorStop(1, 'rgba(6,16,54,0.16)');
+    ctx.fillStyle = sph; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.fill();
+
+    if (opts.showGrat) {
+      ctx.lineWidth = opts.gratLine; ctx.strokeStyle = opts.grat;
+      for (let lng = -180; lng < 180; lng += 15) {
+        ctx.beginPath(); let pen = false;
+        for (let lat = -90; lat <= 90; lat += 3) {
+          const phi = lat * DEG, lam = lng * DEG, cp = Math.cos(phi);
+          const p = proj(cp * Math.sin(lam), Math.sin(phi), cp * Math.cos(lam));
+          if (p.z > 0) { if (!pen) { ctx.moveTo(p.sx, p.sy); pen = true; } else ctx.lineTo(p.sx, p.sy); } else pen = false;
+        }
+        ctx.stroke();
+      }
+      for (let lat = -75; lat <= 75; lat += 15) {
+        ctx.beginPath(); let pen = false;
+        for (let lng = -180; lng <= 180; lng += 3) {
+          const phi = lat * DEG, lam = lng * DEG, cp = Math.cos(phi);
+          const p = proj(cp * Math.sin(lam), Math.sin(phi), cp * Math.cos(lam));
+          if (p.z > 0) { if (!pen) { ctx.moveTo(p.sx, p.sy); pen = true; } else ctx.lineTo(p.sx, p.sy); } else pen = false;
+        }
+        ctx.stroke();
+      }
+    }
+
+    const dots = this.dots;
+    if (dots && fade > 0) {
+      const a0 = opts.baseAlpha[0], a1 = opts.baseAlpha[1];
+      const s0 = opts.dotSize[0], s1 = opts.dotSize[1];
+      const lr = opts.limb[0], lg = opts.limb[1], lb = opts.limb[2];
+      const fr = opts.front[0], fg = opts.front[1], fb = opts.front[2];
+      for (let i = 0; i < dots.length; i++) {
+        if (hl && hl[i]) continue;
+        const d = dots[i];
+        const p = proj(d.x, d.y, d.z);
+        if (p.z <= 0) continue;
+        const z = p.z;
+        const r = (lr + (fr - lr) * z) | 0, gg = (lg + (fg - lg) * z) | 0, b = (lb + (fb - lb) * z) | 0;
+        const al = (a0 + (a1 - a0) * z) * fade;
+        const sz = s0 + (s1 - s0) * z;
+        ctx.fillStyle = 'rgba(' + r + ',' + gg + ',' + b + ',' + al.toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(p.sx, p.sy, sz, 0, 6.2832); ctx.fill();
+      }
+      if (hl && opts.hlColor) {
+        const hr = opts.hlColor[0], hg = opts.hlColor[1], hb = opts.hlColor[2];
+        ctx.save();
+        ctx.shadowColor = 'rgba(' + hr + ',' + hg + ',' + hb + ',0.9)';
+        ctx.shadowBlur = 6;
+        for (let i = 0; i < dots.length; i++) {
+          if (!hl[i]) continue;
+          const d = dots[i];
+          const p = proj(d.x, d.y, d.z);
+          if (p.z <= 0) continue;
+          const z = p.z;
+          const al = (0.5 + 0.5 * z) * fade;
+          const sz = (s0 + (s1 - s0) * z) + 0.6;
+          ctx.fillStyle = 'rgba(' + hr + ',' + hg + ',' + hb + ',' + al.toFixed(3) + ')';
+          ctx.beginPath(); ctx.arc(p.sx, p.sy, sz, 0, 6.2832); ctx.fill();
+        }
+        ctx.restore();
+      }
+    }
+
+    ctx.lineWidth = 1.2; ctx.strokeStyle = opts.rim;
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.stroke();
+  }
+}
+</script>
+</body>
+</html>

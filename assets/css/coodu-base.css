@@ -1,0 +1,244 @@
+/* ==========================================================================
+   COODU TRUST — Base
+   Modern reset, base typography (Oswald headings / Source Sans 3 body),
+   links, focus-visible rings, layout primitives, image slots, skip-link,
+   and the prefers-reduced-motion baseline.
+   ========================================================================== */
+
+/* ---- Modern reset ------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+html:focus-within { scroll-behavior: smooth; }
+
+body {
+  min-height: 100svh;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-body);
+  /* Restored leaf background (old site) — fixed, softened so content stays readable.
+     Plain .section blocks are transparent, so this shows through behind them; the
+     --alt / --dark / green / hero / footer bands stay opaque for contrast. */
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.8)),
+    url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; }
+
+ul[role="list"],
+ol[role="list"] { list-style: none; }
+
+:where(ul, ol)[class] {
+  list-style: none;
+  padding: 0;
+}
+
+a { color: inherit; }
+
+p,
+li { text-wrap: pretty; }
+
+/* ---- Base typography ---------------------------------------------------- */
+/* Headings: Oswald, sentence/title case (NO global uppercase — caps are
+   applied per-component on .eyebrow / nav / buttons / labels only). */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-strong);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); line-height: 1.08; letter-spacing: -.01em; }
+h2 { font-size: var(--fs-h2); line-height: 1.15; }
+h3 { font-size: var(--fs-h3); line-height: 1.2; }
+h4 { font-size: 1.125rem; line-height: 1.25; }
+
+strong, b { font-weight: 600; }
+
+small { font-size: var(--fs-small); }
+
+address { font-style: normal; }
+
+/* ---- Links -------------------------------------------------------------- */
+a {
+  color: var(--color-primary);
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+  text-underline-offset: 2px;
+}
+
+a:hover { color: var(--color-primary-dark); }
+
+/* ---- Focus visible ------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Keep a ring, never a bare outline:none */
+:focus:not(:focus-visible) { outline: none; }
+
+/* ---- Layout primitives -------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 24px);
+}
+
+.section { padding-block: clamp(48px, 8vw, 96px); }
+
+.section--alt {
+  background: var(--surface-alt);
+  border-block: 1px solid var(--border-soft);
+}
+
+.section--dark {
+  background: var(--color-dark-band);
+  color: var(--on-dark-80);
+}
+
+/* Constrain a text measure */
+.measure { max-width: var(--maxw-text); }
+
+/* ---- Image slots -------------------------------------------------------- */
+/* Clean placeholder block: surface-alt fill, subtle weave, faint Lucide
+   image glyph, and a tiny caption — never a broken <img>/alt leak. */
+.img-slot {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background-color: var(--surface-alt);
+  background-image: var(--texture-weave-light);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  color: var(--text-muted);
+}
+
+.img-slot::before {
+  content: "";
+  width: clamp(26px, 6vw, 44px);
+  aspect-ratio: 1;
+  background: currentColor;
+  opacity: .3;
+  -webkit-mask: var(--icon-image) center / contain no-repeat;
+  mask: var(--icon-image) center / contain no-repeat;
+}
+
+/* Aspect-ratio variants driven by the data-ratio attribute */
+.img-slot[data-ratio="16/9"]  { aspect-ratio: 16 / 9; }
+.img-slot[data-ratio="4/3"]   { aspect-ratio: 4 / 3; }
+.img-slot[data-ratio="3/2"]   { aspect-ratio: 3 / 2; }
+.img-slot[data-ratio="3/4"]   { aspect-ratio: 3 / 4; }
+.img-slot[data-ratio="4/5"]   { aspect-ratio: 4 / 5; }
+.img-slot[data-ratio="16/10"] { aspect-ratio: 16 / 10; }
+.img-slot[data-ratio="1/1"]   { aspect-ratio: 1 / 1; }
+.img-slot[data-ratio="21/9"]  { aspect-ratio: 21 / 9; }
+
+.img-slot__label {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  max-width: calc(100% - 24px);
+  font-family: var(--font-body);
+  font-size: var(--fs-micro);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: .85;
+}
+
+/* When an image slot fills a card media area, drop the rounding */
+.card__media > .img-slot { border-radius: 0; height: 100%; }
+
+/* ---- Skip link ---------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -64px;
+  z-index: var(--z-skip);
+  padding: 10px 16px;
+  background: var(--color-primary);
+  color: var(--color-on-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-nav);
+  text-decoration: none;
+  border-radius: var(--radius-btn);
+}
+
+.skip-link:focus { top: 8px; color: var(--color-on-dark); }
+
+/* ---- Utilities ---------------------------------------------------------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] { display: none !important; }
+
+/* ---- Reduced motion baseline ------------------------------------------- */
+/* Component/motion files gate their animation behind
+   (prefers-reduced-motion: no-preference). This is the safety net. */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms;
+    animation-iteration-count: 1;
+    transition-duration: .01ms;
+    scroll-behavior: auto;
+  }
+}
