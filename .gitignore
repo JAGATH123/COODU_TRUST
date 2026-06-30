@@ -11,3 +11,8 @@ design/redesign-renders/
 
 # Logs
 *.log
+
+# Large design exports / renders (regenerable)
+design/renders/
+design/current-home.png
+**/*.zip
