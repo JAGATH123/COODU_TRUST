@@ -1,343 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate to Coodu Trust | Support Our Mission</title>
-    <meta name="description" content="Support Coodu Trust by making a donation. Choose to donate online, via bank transfer, or by cheque. Your contribution is tax-exempt under Section 80G.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate to Coodu Trust | Support rural Tamil Nadu (80G tax-exempt)</title>
+  <meta name="description" content="Make a secure donation to Coodu Trust and see exactly what your gift does — from planting trees to training women in rural Tamil Nadu. Tax-exempt under Section 80G. Pay by UPI, card or net-banking via Razorpay.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    
-    <!-- Razorpay Checkout -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!-- Google Fonts: Oswald (display) + Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design-system CSS (convention order) -->
+  <link rel="stylesheet" href="assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-components.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-donate.css?v=3">
+
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="donate">
 
-    <!-- =========== HEADER (UPDATED) =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <!-- Navigation Menu (UPDATED) -->
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="programs.html" class="nav-link">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="programs/environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="programs/plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="programs/soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="programs/livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="programs/horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="programs/agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="programs/shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="programs/formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="programs/water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="programs/hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="volunteer.html">Volunteer</a></li>
-                            <li><a href="partner.html">Partner with Us</a></li>
-                            <li><a href="donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="media.html" class="nav-link">Media</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+
+          <li class="has-mega">
+            <button class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-programs" aria-haspopup="true">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega" id="mega-programs" hidden>
+              <div class="container mega__grid">
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/environment-resilience.html">
+                    <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Environment and Resilience</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
+                    <li><a href="programs/plantation-afforestation.html">Plantation &amp; Afforestation</a></li>
+                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
+                    <li><a href="programs/soil-land-management.html">Soil &amp; Land Management</a></li>
+                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
+                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation &amp; Mitigation</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/sustainable-agriculture.html">
+                    <span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Sustainable Agriculture</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization &amp; Agribusiness</a></li>
+                    <li><a href="programs/livestock-allied.html">Livestock &amp; Allied Activities</a></li>
+                    <li><a href="programs/horticulture-diversified.html">Horticulture &amp; Diversified Farming</a></li>
+                    <li><a href="programs/agricultural-technology.html">Agricultural Technology &amp; Youth Engagement</a></li>
+                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/women-empowerment.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Women Empowerment</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment &amp; Leadership</a></li>
+                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance &amp; Financial Inclusion</a></li>
+                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship &amp; Enterprise Development</a></li>
+                    <li><a href="programs/shg-community-mobilization.html">SHG &amp; Community Mobilization</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/education-skilling.html">
+                    <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Education and Skilling</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/vocational-livelihood-training.html">Vocational &amp; Livelihood Training</a></li>
+                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy &amp; IT Training</a></li>
+                    <li><a href="programs/formal-higher-education-support.html">Formal &amp; Higher Education Support</a></li>
+                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/health-sanitation.html">
+                    <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Health, Sanitation &amp; Waste Management</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/health-support-rehabilitation.html">Health Support &amp; Rehabilitation</a></li>
+                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
+                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
+                    <li><a href="programs/water-quality-safety.html">Water Quality &amp; Safety</a></li>
+                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation &amp; Hygiene Infrastructure</a></li>
+                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/consultancy-hr.html">
+                    <span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Consultancy and HR Management</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/technology-knowledge-dissemination.html">Technology &amp; Knowledge Dissemination</a></li>
+                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning &amp; Advisory Services</a></li>
+                    <li><a href="programs/hr-staffing-solutions.html">Human Resource &amp; Staffing Solutions</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <button class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved" aria-haspopup="true">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega mega--small" id="mega-getinvolved" hidden>
+              <div class="container">
+                <ul class="mega__simple">
+                  <li><a href="partner.html">Partner with Us</a></li>
+                  <li><a href="volunteer.html">Volunteer</a></li>
+                  <li><a href="donate.html" aria-current="page">Donate</a></li>
                 </ul>
-                
-                <a href="donate.html" class="btn btn-primary donate-button active">Donate</a>
+              </div>
+            </div>
+          </li>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+          <li><a class="nav__link" href="documents.html">Documents</a></li>
+          <li><a class="nav__link" href="media.html">Media</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="donate.html" aria-current="page"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="index.html">Home</a>
+        <a class="drawer__link" href="about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="programs/environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="programs/sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="programs/women-empowerment.html">Women Empowerment</a>
+            <a href="programs/education-skilling.html">Education &amp; Skilling</a>
+            <a href="programs/health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="programs/consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754551326/coodu-trust/images/headers/Donate_bg.jpg'); background-size: cover; background-position: center center;">
-            <div class="container">
-                <h1 class="page-title">Support Our Mission</h1>
-                <p class="page-subtitle">Your contribution can create lasting change in rural communities.</p>
-            </div>
-        </section>
-
-        <!-- =========== DONATION OPTIONS SECTION (NEW TAB DESIGN) =========== -->
-        <section class="donation-section section-padding">
-            <div class="container">
-                <div class="donation-layout">
-                    <!-- Main Donation Area -->
-                    <div class="donation-main">
-                        <h2 class="donation-title">Choose Your Method of Giving</h2>
-                        
-                        <!-- Tab Navigation -->
-                        <div class="donation-tabs">
-                            <button class="tab-link active" data-tab="online">Donate Online</button>
-                            <button class="tab-link" data-tab="bank">Bank Transfer</button>
-                            <button class="tab-link" data-tab="cheque">By Cheque</button>
-                        </div>
-
-                        <!-- Tab Content -->
-                        <div class="donation-content">
-                            <!-- Option 1: Online Donation (Visible by default) -->
-                            <div id="online" class="tab-content active">
-                                <h3>Online (Credit/Debit Card, UPI, Net Banking)</h3>
-                                <p>Select an amount or enter your own. Click 'Donate Now' to proceed to our secure payment gateway.</p>
-                                
-                                <!-- Donation Form -->
-                                <form id="donation-form">
-                                    <!-- Cause Selection -->
-                                    <div class="form-group">
-                                        <label for="cause">Choose a Cause:</label>
-                                        <select id="cause" name="cause" required>
-                                            <option value="general">General Fund</option>
-                                            <option value="education">Education</option>
-                                            <option value="health">Health & Sanitation</option>
-                                            <option value="environment">Environmental Action</option>
-                                            <option value="women-empowerment">Women Empowerment</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <!-- Donation Type -->
-                                    <div class="form-group">
-                                        <label for="donation-type">Donation Type:</label>
-                                        <select id="donation-type" name="donationType" required>
-                                            <option value="one-time">One-time Donation</option>
-                                            <option value="monthly">Monthly (Recurring)</option>
-                                            <option value="yearly">Yearly (Recurring)</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <!-- Amount Selection -->
-                                    <div class="donation-amounts">
-                                        <button type="button" class="amount-btn" data-amount="500">₹500</button>
-                                        <button type="button" class="amount-btn active" data-amount="1000">₹1000</button>
-                                        <button type="button" class="amount-btn" data-amount="2500">₹2500</button>
-                                        <button type="button" class="amount-btn" data-amount="5000">₹5000</button>
-                                    </div>
-                                    
-                                    <div class="custom-amount">
-                                        <label for="custom-amount">Or Enter a Custom Amount (INR)</label>
-                                        <input type="number" id="custom-amount" name="amount" min="1" placeholder="e.g., 3000" required>
-                                    </div>
-                                    
-                                    <!-- Donor Information -->
-                                    <div class="donor-info">
-                                        <h4>Donor Information</h4>
-                                        <div class="form-row">
-                                            <div class="form-group">
-                                                <label for="donor-name">Full Name *</label>
-                                                <input type="text" id="donor-name" name="donorName" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="donor-email">Email Address *</label>
-                                                <input type="email" id="donor-email" name="donorEmail" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group">
-                                                <label for="donor-phone">Phone Number *</label>
-                                                <input type="tel" id="donor-phone" name="donorPhone" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="donor-pan">PAN Number (for 80G receipt)</label>
-                                                <input type="text" id="donor-pan" name="donorPan" style="text-transform: uppercase;">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="donor-address">Address</label>
-                                            <textarea id="donor-address" name="donorAddress" rows="3" placeholder="Complete address for receipt"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="donation-notes">Special Message (Optional)</label>
-                                            <textarea id="donation-notes" name="notes" rows="2" placeholder="Any special message or dedication"></textarea>
-                                        </div>
-                                        
-                                        <!-- Checkboxes -->
-                                        <div class="form-checkboxes">
-                                            <label class="checkbox-label">
-                                                <input type="checkbox" id="anonymous" name="isAnonymous">
-                                                <span class="checkmark"></span>
-                                                Make this donation anonymous
-                                            </label>
-                                            <label class="checkbox-label">
-                                                <input type="checkbox" id="receipt" name="receiptRequested" checked>
-                                                <span class="checkmark"></span>
-                                                I want to receive an 80G tax receipt
-                                            </label>
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary btn-donate-now" id="donate-btn">
-                                        <span id="btn-text">Donate Now</span>
-                                        <span id="btn-loader" class="btn-loader" style="display: none;">Processing...</span>
-                                    </button>
-                                </form>
-                            </div>
-
-                            <!-- Option 2: Bank Transfer -->
-                            <div id="bank" class="tab-content">
-                                <h3>Direct Bank Transfer (NEFT / IMPS / RTGS)</h3>
-                                <p>You can donate directly to our bank account using the details below.</p>
-                                <ul class="bank-details">
-                                    <li><strong>Account Name:</strong> COODU TRUST</li>
-                                    <li><strong>Account Number:</strong> 123456789012</li>
-                                    <li><strong>Bank Name:</strong> State Bank of India</li>
-                                    <li><strong>Branch:</strong> Dindigul Main Branch</li>
-                                    <li><strong>IFSC Code:</strong> SBIN0000833</li>
-                                    <li><strong>Account Type:</strong> Savings</li>
-                                </ul>
-                            </div>
-
-                            <!-- Option 3: Cheque/DD -->
-                            <div id="cheque" class="tab-content">
-                                <h3>Donate by Cheque / Demand Draft</h3>
-                                <p>Please make your Cheque or Demand Draft payable to "COODU TRUST" and mail it to our head office:</p>
-                                <address>
-                                    <strong>COODU TRUST</strong><br>
-                                    H-83, R.M. Colony,<br>
-                                    Dindigul – 624 001,<br>
-                                    Tamil Nadu, India.
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sidebar -->
-                    <aside class="donation-sidebar">
-                        <div class="sidebar-card">
-                            <h3>Why Your Donation Matters</h3>
-                            <p>Your support helps us continue our vital work in women's empowerment, environmental conservation, health, and sustainable livelihoods. Every contribution, no matter the size, makes a real difference.</p>
-                        </div>
-                        <div class="sidebar-card">
-                            <h3>Tax Exemption</h3>
-                            <p>All donations made to Coodu Trust are eligible for tax exemption under Section 80G of the Income Tax Act, 1961. A receipt will be provided for your records.</p>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer id="contact-footer" class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="programs.html">Our Programs</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="partner.html">Partner with Us</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="donate.html" class="is-active" aria-current="page">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- Main JavaScript File -->
-    <script src="assets/js/main.js"></script>
-    <!-- Donation JavaScript -->
-    <script src="assets/js/donate.js"></script>
+        <a class="drawer__link" href="documents.html">Documents</a>
+        <a class="drawer__link" href="media.html">Media</a>
+        <a class="drawer__link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="donate-hero" aria-labelledby="donate-hero-title">
+      <div class="donate-hero__layers" aria-hidden="true">
+        <span class="donate-hero__scrim"></span>
+      </div>
+      <div class="container">
+        <div class="donate-hero__content reveal">
+          <p class="eyebrow eyebrow--on-dark donate-hero__eyebrow">
+            <i data-lucide="shield-check" aria-hidden="true"></i> Tax-exempt under Section 80G
+          </p>
+          <h1 class="donate-hero__title" id="donate-hero-title">Support our mission</h1>
+          <p class="donate-hero__sub">Your gift creates lasting change across rural Tamil Nadu &mdash; and we&rsquo;ll show you exactly what it does.</p>
+          <ul class="donate-hero__meta">
+            <li><i data-lucide="lock" aria-hidden="true"></i> Secured by Razorpay</li>
+            <li><i data-lucide="map-pin" aria-hidden="true"></i> Serving rural Tamil Nadu since 2000</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- IMPACT PROOF STRIP ---------- -->
+    <section class="donate-proof" aria-label="Our impact so far">
+      <div class="container">
+        <div class="donate-proof__card reveal">
+          <div class="stat">
+            <span class="stat__num counter" data-target="20" data-suffix="+">20+</span>
+            <span class="stat__label">Years of service</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num stat__num--primary counter" data-target="10000" data-suffix="+">10,000+</span>
+            <span class="stat__label">Women empowered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num stat__num--primary counter" data-target="50000" data-suffix="+">50,000+</span>
+            <span class="stat__label">Trees planted</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num counter" data-target="5">5</span>
+            <span class="stat__label">Districts reached</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- GIVE ---------- -->
+    <section class="section give" id="give" aria-labelledby="give-title">
+      <div class="container">
+        <div class="section-head section-head--left reveal">
+          <p class="eyebrow">Make a gift</p>
+          <h2 class="section-head__title" id="give-title">Give once. Change lives.</h2>
+          <p class="section-head__sub">Pick an amount and watch what it becomes on the ground. Every rupee is tax-exempt under 80G.</p>
+        </div>
+
+        <div class="give__layout">
+
+          <!-- ===== FORM CARD ===== -->
+          <form class="give__card reveal" id="donate-form" novalidate>
+
+            <!-- frequency -->
+            <fieldset class="give__group">
+              <legend class="give__legend">How often?</legend>
+              <div class="seg" role="radiogroup" aria-label="Donation frequency">
+                <button type="button" class="seg__opt is-active" data-freq="one-time" role="radio" aria-checked="true">One-time</button>
+                <button type="button" class="seg__opt is-soon" data-freq="monthly" role="radio" aria-checked="false" disabled>Monthly <span class="seg__tag">soon</span></button>
+                <button type="button" class="seg__opt is-soon" data-freq="yearly" role="radio" aria-checked="false" disabled>Yearly <span class="seg__tag">soon</span></button>
+              </div>
+            </fieldset>
+
+            <!-- amount -->
+            <fieldset class="give__group">
+              <legend class="give__legend">Choose an amount <span class="give__cur">(INR)</span></legend>
+              <div class="amounts" role="radiogroup" aria-label="Donation amount">
+                <button type="button" class="amount-chip" data-amount="500" role="radio" aria-checked="false">
+                  <span class="amount-chip__val">&#8377;500</span>
+                  <span class="amount-chip__note">plants ~25 saplings</span>
+                </button>
+                <button type="button" class="amount-chip is-active" data-amount="1000" role="radio" aria-checked="true">
+                  <span class="amount-chip__val">&#8377;1,000</span>
+                  <span class="amount-chip__note">a month of women&rsquo;s skills training</span>
+                </button>
+                <button type="button" class="amount-chip" data-amount="2500" role="radio" aria-checked="false">
+                  <span class="amount-chip__val">&#8377;2,500</span>
+                  <span class="amount-chip__note">a day-long village health camp</span>
+                </button>
+                <button type="button" class="amount-chip" data-amount="5000" role="radio" aria-checked="false">
+                  <span class="amount-chip__val">&#8377;5,000</span>
+                  <span class="amount-chip__note">school kits for ~10 children</span>
+                </button>
+              </div>
+              <div class="give__field amounts__custom">
+                <label for="custom-amount">Or enter your own amount</label>
+                <div class="input-rupee">
+                  <span aria-hidden="true">&#8377;</span>
+                  <input type="number" id="custom-amount" name="amount" min="1" step="1" inputmode="numeric" placeholder="3,000" value="1000" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- cause -->
+            <fieldset class="give__group">
+              <legend class="give__legend">Direct it to <span class="give__opt-label">(optional)</span></legend>
+              <div class="causes" role="radiogroup" aria-label="Choose a cause">
+                <button type="button" class="cause-opt is-active" data-cause="general" role="radio" aria-checked="true"><i data-lucide="heart" aria-hidden="true"></i> Where needed most</button>
+                <button type="button" class="cause-opt" data-cause="women-empowerment" role="radio" aria-checked="false"><i data-lucide="hand-heart" aria-hidden="true"></i> Women</button>
+                <button type="button" class="cause-opt" data-cause="environment" role="radio" aria-checked="false"><i data-lucide="leaf" aria-hidden="true"></i> Environment</button>
+                <button type="button" class="cause-opt" data-cause="education" role="radio" aria-checked="false"><i data-lucide="graduation-cap" aria-hidden="true"></i> Education</button>
+                <button type="button" class="cause-opt" data-cause="health" role="radio" aria-checked="false"><i data-lucide="heart-pulse" aria-hidden="true"></i> Health</button>
+              </div>
+            </fieldset>
+
+            <!-- donor details -->
+            <fieldset class="give__group">
+              <legend class="give__legend">Your details</legend>
+              <div class="give__field">
+                <label for="donor-name">Full name</label>
+                <input type="text" id="donor-name" name="donorName" autocomplete="name" required>
+              </div>
+              <div class="give__field-row">
+                <div class="give__field">
+                  <label for="donor-email">Email</label>
+                  <input type="email" id="donor-email" name="donorEmail" autocomplete="email" inputmode="email" required>
+                </div>
+                <div class="give__field">
+                  <label for="donor-phone">Phone</label>
+                  <input type="tel" id="donor-phone" name="donorPhone" autocomplete="tel" inputmode="numeric" maxlength="10" required>
+                </div>
+              </div>
+
+              <label class="check">
+                <input type="checkbox" id="want-receipt" name="receiptRequested" checked>
+                <span class="check__box" aria-hidden="true"><i data-lucide="check"></i></span>
+                <span>Send me an 80G tax receipt</span>
+              </label>
+
+              <!-- receipt details (revealed when 80G is checked) -->
+              <div class="give__receipt" id="receipt-acc">
+                <div class="give__receipt-inner">
+                  <div class="give__field-row">
+                    <div class="give__field">
+                      <label for="donor-pan">PAN <span class="give__opt-label">(for the receipt)</span></label>
+                      <input type="text" id="donor-pan" name="donorPan" autocomplete="off" maxlength="10" placeholder="ABCDE1234F" class="u-upper">
+                    </div>
+                    <div class="give__field">
+                      <label for="donor-address">Address</label>
+                      <input type="text" id="donor-address" name="donorAddress" autocomplete="street-address" placeholder="For your receipt">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label class="check">
+                <input type="checkbox" id="want-anon" name="isAnonymous">
+                <span class="check__box" aria-hidden="true"><i data-lucide="check"></i></span>
+                <span>Make this gift anonymous</span>
+              </label>
+            </fieldset>
+
+            <!-- trust strip -->
+            <div class="trust">
+              <span class="trust__lock"><i data-lucide="lock" aria-hidden="true"></i> Secured by Razorpay</span>
+              <span class="trust__marks" aria-label="Accepted payment methods">
+                <span class="mark">UPI</span><span class="mark">VISA</span><span class="mark">Mastercard</span><span class="mark">RuPay</span><span class="mark">Net&nbsp;banking</span>
+              </span>
+              <span class="trust__badge">80G tax-exempt</span>
+            </div>
+
+            <!-- CTA -->
+            <button type="submit" class="btn btn--cta btn--block give__cta" id="donate-cta">
+              <span class="give__cta-text">Donate <span id="cta-amount">&#8377;1,000</span></span>
+              <span class="give__cta-load" hidden><i data-lucide="loader-2" aria-hidden="true"></i> Processing&hellip;</span>
+            </button>
+            <p class="give__fineprint">
+              <i data-lucide="info" aria-hidden="true"></i>
+              You&rsquo;ll complete payment securely on Razorpay. Questions? <a href="mailto:director@coodutrust.org">director@coodutrust.org</a>
+            </p>
+          </form>
+
+          <!-- ===== LIVE IMPACT MIRROR (signature moment) ===== -->
+          <aside class="give__mirror" aria-label="What your gift can do" aria-live="polite">
+            <div class="mirror__card reveal">
+              <p class="mirror__eyebrow">Your <span id="mirror-amount">&#8377;1,000</span> gift can</p>
+              <p class="mirror__big">
+                <span class="mirror__num" id="mirror-num" data-value="50">50</span>
+              </p>
+              <p class="mirror__noun" id="mirror-noun">trees planted</p>
+              <p class="mirror__caption" id="mirror-caption">across our Tamil Nadu watersheds</p>
+              <span class="mirror__leaf" aria-hidden="true"><i data-lucide="sprout"></i></span>
+              <p class="mirror__foot"><i data-lucide="badge-check" aria-hidden="true"></i> Illustrative — every gift is pooled where it&rsquo;s needed most.</p>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- ===== OTHER WAYS TO GIVE ===== -->
+        <div class="otherways reveal">
+          <div class="acc otherways__acc">
+            <button class="acc__trigger otherways__trigger" aria-expanded="false" aria-controls="otherways-panel">
+              <span><i data-lucide="building-2" aria-hidden="true"></i> Other ways to give &mdash; bank transfer &amp; cheque</span>
+              <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="acc__panel" id="otherways-panel" hidden>
+              <div class="otherways__grid">
+                <div class="otherways__block">
+                  <h3>Bank transfer (NEFT / IMPS / RTGS)</h3>
+                  <dl class="bankdl">
+                    <div><dt>Account name</dt><dd>COODU TRUST</dd></div>
+                    <div><dt>Account number</dt><dd><span data-copy>123456789012</span><button type="button" class="copybtn" data-copy-btn aria-label="Copy account number"><i data-lucide="copy" aria-hidden="true"></i></button></dd></div>
+                    <div><dt>Bank</dt><dd>State Bank of India, Dindigul Main Branch</dd></div>
+                    <div><dt>IFSC</dt><dd><span data-copy>SBIN0000833</span><button type="button" class="copybtn" data-copy-btn aria-label="Copy IFSC code"><i data-lucide="copy" aria-hidden="true"></i></button></dd></div>
+                    <div><dt>Account type</dt><dd>Savings</dd></div>
+                  </dl>
+                </div>
+                <div class="otherways__block">
+                  <h3>By cheque / DD</h3>
+                  <p>Payable to <strong>&ldquo;COODU TRUST&rdquo;</strong>, posted to:</p>
+                  <address class="otherways__addr">
+                    COODU TRUST<br>
+                    H-83, R.M. Colony,<br>
+                    Dindigul &ndash; 624 001,<br>
+                    Tamil Nadu, India.
+                  </address>
+                  <p class="otherways__note">Email <a href="mailto:director@coodutrust.org">director@coodutrust.org</a> with the details and we&rsquo;ll send your 80G receipt.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== SUCCESS (populated by JS) ===== -->
+        <div class="give__success" id="donate-success" hidden aria-live="polite"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="programs.html">Our Programs</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Coodu Trust on X"><i data-lucide="twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+        <p class="footer__legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, shared behaviour, then donate page (deferred, in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="assets/js/coodu.js?v=5" defer></script>
+  <script src="assets/js/coodu-donate.js?v=1" defer></script>
 
 </body>
 </html>
