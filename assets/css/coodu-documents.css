@@ -1,0 +1,145 @@
+/* ==========================================================================
+   COODU Trust — DOCUMENTS (annual reports listing)
+   Built on the shared design system. Hero · filter/search controls ·
+   period-grouped grid of framed report cards. coodu-documents.js builds cards
+   from window.COODU_REPORTS. Mobile-first; reduced-motion safe.
+   ========================================================================== */
+
+/* --------------------------------------------------------------- HERO --- */
+.docs-hero {
+  position: relative; display: flex; align-items: center;
+  min-height: clamp(260px, 34vw, 380px);
+  padding-block: clamp(44px, 7vw, 84px);
+  background: var(--grad-hero);
+  isolation: isolate; overflow: hidden; color: var(--color-on-dark);
+}
+.docs-hero__layers { position: absolute; inset: 0; z-index: -1; }
+.docs-hero__layers::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: url("https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1754548275/coodu-trust/images/headers/Documents_bg.jpg");
+  background-size: cover; background-position: center;
+}
+.docs-hero__scrim { position: absolute; inset: 0; background: var(--overlay-hero); }
+@media (max-width: 760px) { .docs-hero__scrim { background: var(--overlay-hero-mobile); } }
+.docs-hero__content { max-width: 720px; }
+.docs-hero__title {
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h1);
+  line-height: 1.05; margin: 10px 0 12px; color: var(--color-on-dark);
+}
+.docs-hero__sub { font-size: clamp(1.05rem, 1rem + .4vw, 1.2rem); color: rgba(255,255,255,.9); max-width: 56ch; }
+.docs-hero__stats {
+  display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 22px;
+  font-size: var(--fs-small); color: rgba(255,255,255,.85);
+}
+.docs-hero__stats span { display: inline-flex; align-items: baseline; gap: 6px; }
+.docs-hero__stats strong { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--color-amber-light); }
+
+/* ---------------------------------------------------------- CONTROLS --- */
+.docs__toolbar {
+  display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; justify-content: space-between;
+  padding: clamp(12px, 2vw, 16px);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-frame); box-shadow: var(--shadow-1);
+  position: sticky; top: 78px; z-index: 5;
+}
+.docs__filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  min-height: 40px; padding: 7px 14px; cursor: pointer;
+  background: var(--surface); color: var(--text-body);
+  border: 1.5px solid var(--border); border-radius: var(--radius-pill);
+  font-family: var(--font-display); font-weight: 600; font-size: var(--fs-small);
+  transition: border-color var(--ease), background-color var(--ease), color var(--ease);
+}
+.filter-pill__n {
+  font-size: .72rem; font-weight: 700; line-height: 1;
+  background: var(--surface-alt); color: var(--text-muted);
+  border-radius: var(--radius-pill); padding: 3px 7px; min-width: 20px; text-align: center;
+}
+.filter-pill:hover { border-color: var(--color-primary); }
+.filter-pill.is-active { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+.filter-pill.is-active .filter-pill__n { background: rgba(255,255,255,.22); color: #fff; }
+
+/* results count */
+.docs__count { margin: 14px 2px clamp(22px, 3vw, 30px); font-size: var(--fs-small); color: var(--text-muted); }
+.docs__count strong { color: var(--text-strong); font-weight: 600; }
+.docs__search {
+  position: relative; display: flex; align-items: center;
+  min-width: min(280px, 100%);
+}
+.docs__search i { position: absolute; left: 14px; width: 18px; height: 18px; color: var(--text-muted); pointer-events: none; }
+.docs__search input {
+  width: 100%; min-height: 44px; padding: 10px 14px 10px 42px; font-size: 1rem;
+  background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-pill);
+  color: var(--text-strong); transition: border-color var(--ease), box-shadow var(--ease);
+}
+.docs__search input:focus-visible { outline: 0; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(30,126,52,.15); }
+
+/* ------------------------------------------------------------- GROUPS --- */
+.docs__group { margin-bottom: clamp(32px, 5vw, 52px); }
+.docs__group[hidden] { display: none; }
+.docs__group-head {
+  display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px;
+}
+.docs__group-title { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h3); color: var(--text-strong); margin: 0; white-space: nowrap; }
+.docs__group-count { font-size: var(--fs-small); color: var(--text-muted); }
+.docs__group-rule { flex: 1; height: 1px; background: var(--border); }
+
+.docs__grid {
+  display: grid; gap: clamp(18px, 2.5vw, 26px);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 560px) { .docs__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .docs__grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* --------------------------------------------------------- REPORT CARD --- */
+.report-card {
+  display: flex; flex-direction: column;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-frame); overflow: hidden; box-shadow: var(--shadow-1);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.report-card[hidden] { display: none; }
+.report-card__cover {
+  position: relative; display: block; height: 200px; overflow: hidden;  /* same size as the old cards */
+  background: var(--surface-alt);
+}
+.report-card__cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .4s var(--ease-fn); }
+.report-card__badge {
+  position: absolute; top: 12px; right: 12px;
+  font-family: var(--font-display); font-weight: 700; font-size: var(--fs-micro);
+  text-transform: uppercase; letter-spacing: var(--ls-label);
+  color: #5b4300; background: var(--color-amber); border-radius: var(--radius-pill); padding: 4px 11px;
+}
+.report-card__body { display: flex; flex-direction: column; flex: 1; padding: clamp(16px, 2.5vw, 22px); }
+.report-card__year { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--color-primary-dark); line-height: 1; }
+.report-card__title { font-family: var(--font-body); font-weight: 600; font-size: var(--fs-small); color: var(--text-strong); margin: 6px 0 10px; line-height: 1.4; }
+.report-card__title a { color: inherit; text-decoration: none; }
+.report-card__stat { display: flex; align-items: center; gap: 7px; font-size: var(--fs-small); color: var(--text-muted); margin: 0 0 16px; }
+.report-card__stat strong { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--color-primary); }
+.report-card__actions { margin-top: auto; display: flex; align-items: center; gap: 12px; }
+.report-card__actions .btn { flex: 1; min-height: 42px; }
+.report-card__pdf {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px;
+  font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); text-decoration: none;
+  border: 1px solid var(--border); border-radius: var(--radius-btn);
+  transition: color var(--ease), border-color var(--ease);
+}
+.report-card__pdf:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.report-card__pdf i { width: 15px; height: 15px; }
+.report-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-2); }
+.report-card:hover .report-card__cover img { transform: scale(1.04); }
+
+/* small btn modifier used in cards */
+.btn--sm { padding: 8px 14px; font-size: var(--fs-small); min-height: 42px; }
+
+/* empty state */
+.docs__empty { text-align: center; color: var(--text-muted); padding: 40px 0; }
+.docs__empty[hidden] { display: none; }
+.docs__empty-reset { background: none; border: 0; color: var(--color-primary); font-weight: 600; cursor: pointer; text-decoration: underline; }
+
+/* ---------------------------------------------------------- motion gate --- */
+@media (prefers-reduced-motion: reduce) {
+  .report-card, .report-card__cover img { transition: none; }
+  .report-card:hover .report-card__cover img { transform: none; }
+}
