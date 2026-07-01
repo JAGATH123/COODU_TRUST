@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-components.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-media.css?v=1">
+  <link rel="stylesheet" href="assets/css/coodu-media.css?v=2">
 </head>
 <body data-page="media">
 
@@ -569,8 +569,47 @@
     </div>
   </footer>
 
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="media-lightbox" hidden>
+    <div class="media-lightbox__backdrop" data-lb-close></div>
+    <div class="media-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+      <button class="media-lightbox__close" type="button" data-lb-close aria-label="Close photo story"><i data-lucide="x" aria-hidden="true"></i></button>
+      <div class="media-lightbox__photo">
+        <img class="media-lightbox__img" src="" alt="" hidden>
+        <span class="media-lightbox__fallback" hidden>
+          <i data-lucide="image" aria-hidden="true"></i>
+          <span>Photo coming soon</span>
+        </span>
+        <button class="media-lightbox__navbtn media-lightbox__navbtn--prev" type="button" data-lb-prev aria-label="Previous photo"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+        <button class="media-lightbox__navbtn media-lightbox__navbtn--next" type="button" data-lb-next aria-label="Next photo"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <div class="media-lightbox__content">
+        <p class="media-lightbox__badge"></p>
+        <h3 class="media-lightbox__title" id="lb-title"></h3>
+        <p class="media-lightbox__desc"></p>
+        <div class="media-lightbox__rich" hidden>
+          <dl class="media-lightbox__stats">
+            <div class="media-lightbox__stat"><dt>Location</dt><dd data-lb-location></dd></div>
+            <div class="media-lightbox__stat"><dt>Date</dt><dd data-lb-date></dd></div>
+            <div class="media-lightbox__stat"><dt>Impact</dt><dd data-lb-impact class="is-impact"></dd></div>
+          </dl>
+          <p class="media-lightbox__storyhead">The story behind</p>
+          <p class="media-lightbox__story"></p>
+          <ul class="media-lightbox__tags"></ul>
+        </div>
+        <div class="media-lightbox__footer">
+          <p class="media-lightbox__pos"></p>
+          <div class="media-lightbox__btns">
+            <button class="media-lightbox__btn media-lightbox__btn--prev" type="button" data-lb-prev><i data-lucide="arrow-left" aria-hidden="true"></i><span>Previous</span></button>
+            <button class="media-lightbox__btn media-lightbox__btn--next" type="button" data-lb-next><span>Next</span><i data-lucide="arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="assets/js/coodu.js?v=5" defer></script>
-  <script src="assets/js/coodu-media.js?v=1" defer></script>
+  <script src="assets/js/coodu-media.js?v=2" defer></script>
 </body>
 </html>
