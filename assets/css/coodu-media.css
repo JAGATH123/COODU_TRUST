@@ -143,29 +143,52 @@
 .media-proof__card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(12px, 2.2vw, 18px);
+  gap: var(--s2);
   text-align: center;
 }
 
-/* Frosted-glass stat tiles — the same treatment as the Home impact card,
-   here floating over the golden hero photo's lower edge (the blur picks up
-   the field behind each tile). */
+/* Frosted glass — mirrors the Home impact card EXACTLY. Under 1200 the stats
+   are individual glass tiles; at desktop they fuse into one divided frosted
+   slab lifted over the golden hero (translucent-gold at top → white below). */
 .media-proof .stat {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: clamp(16px, 2.4vw, 22px) 14px;
+  padding: 18px 14px;
   background: rgba(255, 255, 255, 0.62);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-card);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
 }
 .media-proof .icon-chip { margin-bottom: 2px; }
 .media-proof .stat__num { font-size: var(--fs-stat); }
 
 @media (min-width: 900px) {
   .media-proof__card { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .media-proof__card {
+    gap: 0;
+    background: rgba(255, 255, 255, 0.62);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+  }
+  .media-proof .stat {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 0;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+    padding: 28px 24px;
+  }
+  .media-proof .stat:last-child { border-right: 0; }
 }
 
 /* ---- Featured story ------------------------------------------------------- */
