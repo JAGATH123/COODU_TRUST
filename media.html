@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-components.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-media.css?v=3">
+  <link rel="stylesheet" href="assets/css/coodu-media.css?v=4">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto/v1754474804/coodu-trust/images/headers/media-bg.png">
 </head>
 <body data-page="media">
 
@@ -229,15 +230,23 @@
       </div>
       <div class="container">
         <div class="media-hero__content reveal">
-          <p class="eyebrow eyebrow--on-dark media-hero__eyebrow">Gallery</p>
-          <h1 class="media-hero__title" id="media-hero-title">Media</h1>
-          <p class="media-hero__sub">Visual stories of our programs and media coverage of our impact</p>
+          <p class="eyebrow eyebrow--on-dark media-hero__eyebrow"><i data-lucide="camera" aria-hidden="true"></i> Media &mdash; gallery &amp; press</p>
+          <h1 class="media-hero__title" id="media-hero-title">Stories from the field</h1>
+          <p class="media-hero__sub">From golden paddy fields to national headlines &mdash; real moments from our work across rural Tamil Nadu, and the recognition it has earned.</p>
+          <ul class="media-hero__meta">
+            <li><i data-lucide="map-pin" aria-hidden="true"></i> Dindigul &middot; Madurai &middot; Karur &middot; Theni</li>
+            <li><i data-lucide="newspaper" aria-hidden="true"></i> Covered by The Hindu, Times of India &amp; Ananda Vikatan</li>
+          </ul>
+          <div class="media-hero__actions">
+            <a class="btn btn--light" href="#gallery">Browse the gallery <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+            <a class="btn btn--ghost-light" href="#press"><i data-lucide="newspaper" aria-hidden="true"></i> In the news</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ================= GALLERY ================= -->
-    <section class="section media-gallery" aria-labelledby="media-gallery-title">
+    <section class="section media-gallery" id="gallery" aria-labelledby="media-gallery-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">In the field</p>
@@ -481,7 +490,7 @@
     </section>
 
     <!-- ================= IN THE NEWS ================= -->
-    <section class="section section--alt media-press" aria-labelledby="media-press-title">
+    <section class="section section--alt media-press" id="press" aria-labelledby="media-press-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Press</p>
@@ -610,6 +619,6 @@
 
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="assets/js/coodu.js?v=5" defer></script>
-  <script src="assets/js/coodu-media.js?v=3" defer></script>
+  <script src="assets/js/coodu-media.js?v=4" defer></script>
 </body>
 </html>
