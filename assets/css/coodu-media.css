@@ -576,6 +576,31 @@
   color: var(--text-strong);
 }
 
+.media-press__mono {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  height: 30px;
+  padding-inline: 5px;
+  border-radius: var(--radius-btn);
+  background: var(--surface-tint);
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .6875rem;
+  letter-spacing: .02em;
+}
+
+.media-press__headline::before {
+  content: "\201C";
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: .55;
+  color: var(--color-amber-text);
+  margin-bottom: 4px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .media-press__card {
     transition: transform 280ms var(--ease-fn), box-shadow 280ms var(--ease-fn), border-color 280ms var(--ease-fn);
