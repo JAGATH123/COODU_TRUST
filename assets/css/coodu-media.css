@@ -104,7 +104,7 @@
   color: var(--on-dark-80);
   text-shadow: 0 1px 10px rgba(0, 0, 0, .4);
 }
-.media-hero__meta li { display: inline-flex; align-items: flex-start; gap: 7px; }
+.media-hero__meta li { display: inline-flex; align-items: flex-start; gap: 7px; text-align: left; }
 .media-hero__meta svg,
 .media-hero__meta [data-lucide] { width: 16px; height: 16px; margin-top: 2px; color: var(--color-amber); flex: none; }
 
