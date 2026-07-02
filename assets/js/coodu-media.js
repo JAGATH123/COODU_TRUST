@@ -13,7 +13,7 @@
   var emptyEl = document.querySelector('.media-empty');
   if (!chips.length || !tiles.length || !countEl) return;
 
-  var motionOK = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  var motionMQ = window.matchMedia('(prefers-reduced-motion: no-preference)');
   var current = 'all';
 
   function labelFor(filter) {
@@ -30,13 +30,13 @@
   function applyFilter(filter) {
     current = filter;
     var shown = 0;
-    tiles.forEach(function (tile, i) {
+    tiles.forEach(function (tile) {
       var match = filter === 'all' || tile.getAttribute('data-category') === filter;
       tile.hidden = !match;
       tile.classList.remove('media-tile--pop');
       if (match) {
         shown++;
-        if (motionOK) {
+        if (motionMQ.matches) {
           tile.style.animationDelay = (shown * 45) + 'ms';
           // restart the entry animation
           void tile.offsetWidth;
@@ -52,7 +52,7 @@
     });
 
     countEl.textContent = filter === 'all'
-      ? 'Showing ' + shown + ' photos'
+      ? 'Showing ' + shown + (shown === 1 ? ' photo' : ' photos')
       : 'Showing ' + shown + ' in ' + labelFor(filter);
 
     if (emptyEl) emptyEl.hidden = shown !== 0;

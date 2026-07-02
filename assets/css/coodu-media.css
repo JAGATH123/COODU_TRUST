@@ -197,6 +197,10 @@
   border-radius: 0;
 }
 
+.media-tile .img-slot__label {
+  display: none;
+}
+
 .media-tile__badge {
   position: absolute;
   top: 11px;
