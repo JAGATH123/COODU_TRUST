@@ -207,3 +207,22 @@
     el.addEventListener('click', function () { step(1); });
   });
 })();
+
+/* ---- Featured story hook ------------------------------------------------ */
+(function () {
+  'use strict';
+
+  var btn = document.querySelector('[data-featured-open]');
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    var tile = document.querySelector('.media-tile[data-title="' + btn.getAttribute('data-featured-open') + '"]');
+    if (!tile) return;
+    if (tile.hidden) {
+      var allChip = document.querySelector('.media-chip[data-filter="all"]');
+      if (allChip) allChip.click();
+    }
+    var opener = tile.querySelector('.media-tile__title');
+    if (opener) opener.click();
+  });
+})();
