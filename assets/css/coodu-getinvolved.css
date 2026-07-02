@@ -1,0 +1,402 @@
+/* ==========================================================================
+   COODU TRUST — Get Involved page styles (get-involved.html only)
+   Layers: hero (gradient, no photo), intro + trust pill, impact stat band,
+   paths grid (partner / volunteer / donate cards + branded media panels),
+   closing CTA band.
+   Tokens only (hue-free black rgba permitted for scrims/shadows; color-mix()
+   blends existing tokens for the media-panel tints — no new hex/raw colors).
+   Mobile-first min-width media queries drawn from the shared 600/900/1200
+   breakpoint set (this file only needs 600 and 900).
+   ========================================================================== */
+
+/* Anchor targets clear the fixed header */
+#paths,
+#path-partner,
+#path-volunteer,
+#path-donate {
+  scroll-margin-top: calc(var(--header-h-desktop) + 16px);
+}
+
+/* ---- Hero ---------------------------------------------------------------- */
+.gi-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: clamp(340px, 44vh, 440px);
+  color: var(--color-on-dark);
+  background: var(--grad-hero);
+}
+
+.gi-hero__layers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Hue-free black scrim — darkens the bottom edge slightly for text safety
+   without shifting the gradient's green tone. */
+.gi-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .06) 0%, rgba(0, 0, 0, .3) 100%);
+}
+
+.gi-hero .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.gi-hero__content {
+  max-width: var(--maxw-text);
+  margin-inline: auto;
+  padding-block: clamp(var(--s5), 10vw, 96px);
+  text-align: center;
+}
+
+.gi-hero__title {
+  margin: var(--s2) 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h1);
+  line-height: 1.08;
+  color: var(--color-on-dark);
+}
+
+.gi-hero__sub {
+  max-width: 560px;
+  margin: var(--s2) auto 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--on-dark-80);
+}
+
+.gi-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s2);
+  margin: var(--s4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gi-hero__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 22px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .875rem;
+  letter-spacing: var(--ls-nav);
+  text-transform: uppercase;
+  color: var(--color-on-dark);
+  background: var(--border-on-dark-soft);
+  border: 1px solid var(--border-on-dark);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+
+.gi-hero__chip:hover {
+  background: var(--color-on-dark);
+  color: var(--color-primary-dark);
+  border-color: var(--color-on-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gi-hero__chip {
+    transition: background-color var(--ease), color var(--ease), border-color var(--ease), transform var(--ease);
+  }
+  .gi-hero__chip:hover { transform: translateY(-2px); }
+}
+
+/* ---- Intro ------------------------------------------------------------- */
+.gi-trust-row {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(var(--s3), 3vw, var(--s4));
+}
+
+.gi-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 18px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background: var(--surface-tint);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+}
+
+.gi-trust i,
+.gi-trust svg { width: 16px; height: 16px; color: var(--color-primary); flex: none; }
+
+/* ---- Impact stat band — frosted slab overlapping the hero (mirrors Home) --- */
+.gi-impact {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  padding-block: clamp(28px, 7vw, 40px);
+}
+
+.gi-impact__eyebrow {
+  display: block;
+  text-align: center;
+  margin: 0 0 var(--s3);
+}
+
+.gi-impact__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s2);
+}
+
+.gi-impact .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 14px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-card);
+}
+
+.gi-impact__caption {
+  margin: var(--s3) 0 0;
+  text-align: center;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+@media (min-width: 900px) {
+  .gi-impact__card { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .gi-impact { padding-top: 0; }
+  .gi-impact__eyebrow { display: none; }
+  /* four cells fuse into one divided frosted slab, lifted over the green hero */
+  .gi-impact__card {
+    gap: 0;
+    margin-top: -54px;
+    background: rgba(255, 255, 255, 0.62);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+  }
+  .gi-impact .stat {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 0;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+    padding: 28px 24px;
+  }
+  .gi-impact .stat:last-child { border-right: 0; }
+}
+
+/* ---- Paths grid ----------------------------------------------------------- */
+.gi-paths__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(var(--s3), 3vw, var(--s4));
+}
+
+@media (min-width: 600px) {
+  .gi-paths__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .gi-paths__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.gi-path {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+/* ---- Branded media panel (no photos) -------------------------------------- */
+.gi-path__media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  aspect-ratio: 16 / 10;
+}
+
+.gi-path__media .icon-chip { background: var(--surface); box-shadow: var(--shadow-1); }
+.gi-path__media .icon-chip--accent { background: var(--surface); color: var(--color-accent); }
+
+.gi-path__kicker {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.gi-path__media--partner {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 26%, var(--surface)), color-mix(in srgb, var(--color-primary) 10%, var(--surface)));
+}
+.gi-path__media--partner .gi-path__kicker { color: var(--color-primary-dark); }
+
+.gi-path__media--volunteer {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary-dark) 24%, var(--surface)), color-mix(in srgb, var(--color-primary) 12%, var(--surface)));
+}
+.gi-path__media--volunteer .gi-path__kicker { color: var(--color-primary-dark); }
+
+.gi-path__media--donate {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 26%, var(--surface)), color-mix(in srgb, var(--color-amber) 20%, var(--surface)));
+}
+.gi-path__media--donate .gi-path__kicker { color: var(--color-accent-dark); }
+
+/* ---- Card body -------------------------------------------------------- */
+.gi-path__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s2);
+  flex: 1;
+  padding: clamp(var(--s3), 3vw, var(--s4));
+}
+
+.gi-path__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: 1.15;
+  color: var(--text-strong);
+}
+
+.gi-path__text {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.gi-path__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+.gi-path__note i,
+.gi-path__note svg { width: 16px; height: 16px; margin-top: 1px; color: var(--color-primary); flex: none; }
+
+.gi-path__body .btn { width: 100%; margin-top: auto; }
+
+/* ---- Donate accent card ------------------------------------------------ */
+.gi-path--donate {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-donate);
+}
+.gi-path--donate .gi-path__note i,
+.gi-path--donate .gi-path__note svg { color: var(--color-accent); }
+
+.gi-path__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--color-on-dark);
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-1);
+}
+.gi-path__badge i,
+.gi-path__badge svg { width: 13px; height: 13px; }
+
+/* Donate card appears first on mobile (mobile-first default; reset at 600px) */
+.gi-path--donate { order: -1; }
+@media (min-width: 600px) {
+  .gi-path--donate { order: 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gi-path { transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease); }
+  .gi-path:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+  .gi-path--donate:hover { box-shadow: var(--shadow-donate), var(--shadow-2); }
+}
+
+/* ---- CTA band ------------------------------------------------------------ */
+.gi-cta {
+  background: var(--grad-cta);
+  color: var(--surface);
+  text-align: center;
+}
+
+.gi-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s3);
+  max-width: 760px;
+}
+
+.gi-cta .eyebrow { justify-content: center; }
+.gi-cta .eyebrow::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  flex: none;
+}
+
+.gi-cta__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  line-height: 1.15;
+  color: var(--surface);
+}
+
+.gi-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+}
+
+@media (min-width: 600px) {
+  .gi-cta__actions {
+    flex-direction: row;
+    max-width: none;
+    width: auto;
+  }
+  .gi-cta__actions .btn--block { width: auto; }
+}

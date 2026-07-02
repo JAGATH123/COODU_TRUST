@@ -1,223 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved | Coodu Trust</title>
-    <meta name="description" content="Join Coodu Trust in our mission. Learn how you can partner with us, volunteer your time, or make a donation to support our work.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get involved · COODU Trust</title>
+  <meta name="description" content="Partner with COODU Trust on CSR projects, volunteer your time and skills, or donate — three ways to help build a self-reliant Tamil Nadu.">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-components.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-getinvolved.css?v=1">
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="get-involved">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="programs.html" class="nav-link">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="programs/environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="programs/plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="programs/soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="programs/livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="programs/horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="programs/agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="programs/shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="programs/formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="programs/water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="programs/consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="programs/technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="programs/hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="get-involved.html" class="nav-link active">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="volunteer.html">Volunteer</a></li>
-                            <li><a href="partner.html">Partner with Us</a></li>
-                            <li><a href="donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="media.html" class="nav-link">Media</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+
+          <li class="has-mega">
+            <button class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-programs" aria-haspopup="true">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega" id="mega-programs" hidden>
+              <div class="container mega__grid">
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/environment-resilience.html">
+                    <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Environment and Resilience</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
+                    <li><a href="programs/plantation-afforestation.html">Plantation &amp; Afforestation</a></li>
+                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
+                    <li><a href="programs/soil-land-management.html">Soil &amp; Land Management</a></li>
+                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
+                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation &amp; Mitigation</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/sustainable-agriculture.html">
+                    <span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Sustainable Agriculture</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization &amp; Agribusiness</a></li>
+                    <li><a href="programs/livestock-allied.html">Livestock &amp; Allied Activities</a></li>
+                    <li><a href="programs/horticulture-diversified.html">Horticulture &amp; Diversified Farming</a></li>
+                    <li><a href="programs/agricultural-technology.html">Agricultural Technology &amp; Youth Engagement</a></li>
+                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/women-empowerment.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Women Empowerment</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment &amp; Leadership</a></li>
+                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance &amp; Financial Inclusion</a></li>
+                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship &amp; Enterprise Development</a></li>
+                    <li><a href="programs/shg-community-mobilization.html">SHG &amp; Community Mobilization</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/education-skilling.html">
+                    <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Education and Skilling</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/vocational-livelihood-training.html">Vocational &amp; Livelihood Training</a></li>
+                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy &amp; IT Training</a></li>
+                    <li><a href="programs/formal-higher-education-support.html">Formal &amp; Higher Education Support</a></li>
+                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/health-sanitation.html">
+                    <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Health, Sanitation &amp; Waste Management</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/health-support-rehabilitation.html">Health Support &amp; Rehabilitation</a></li>
+                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
+                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
+                    <li><a href="programs/water-quality-safety.html">Water Quality &amp; Safety</a></li>
+                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation &amp; Hygiene Infrastructure</a></li>
+                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
+                  </ul>
+                </div>
+
+                <div class="mega__col">
+                  <a class="mega__cat" href="programs/consultancy-hr.html">
+                    <span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span>
+                    <span class="mega__cat-title">Consultancy and HR Management</span>
+                  </a>
+                  <ul class="mega__sub">
+                    <li><a href="programs/technology-knowledge-dissemination.html">Technology &amp; Knowledge Dissemination</a></li>
+                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning &amp; Advisory Services</a></li>
+                    <li><a href="programs/hr-staffing-solutions.html">Human Resource &amp; Staffing Solutions</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <button class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-getinvolved" aria-haspopup="true" aria-current="page">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega mega--small" id="mega-getinvolved" hidden>
+              <div class="container">
+                <ul class="mega__simple">
+                  <li><a href="partner.html">Partner with Us</a></li>
+                  <li><a href="volunteer.html">Volunteer</a></li>
+                  <li><a href="donate.html">Donate</a></li>
                 </ul>
-                
-                <a href="donate.html" class="btn btn-primary donate-button">Donate</a>
+              </div>
+            </div>
+          </li>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+          <li><a class="nav__link" href="documents.html">Documents</a></li>
+          <li><a class="nav__link" href="media.html">Media</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="index.html">Home</a>
+        <a class="drawer__link" href="about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="programs/environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="programs/sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="programs/women-empowerment.html">Women Empowerment</a>
+            <a href="programs/education-skilling.html">Education &amp; Skilling</a>
+            <a href="programs/health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="programs/consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('assets/images/headers/get-involved-header.jpg');">
-            <div class="container">
-                <h1 class="page-title">Get Involved</h1>
-                <p class="page-subtitle">Together, we can create a world of opportunity and self-reliance.</p>
-            </div>
-        </section>
-
-        <!-- =========== GET INVOLVED SECTION =========== -->
-        <section class="get-involved-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <div class="story-intro">
-                    <h2 class="section-title">Join Us in Our Mission</h2>
-                    <p class="section-intro-text">There are many ways to support the work of Coodu Trust. Whether you are an individual, a corporation, or an institution, your contribution can help us empower communities and build a sustainable future. Explore the options below to find out how you can make a difference.</p>
-                </div>
-
-                <div class="get-involved-grid">
-                    <!-- Card 1: Partner with Us -->
-                    <div class="involve-card">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754480830/coodu-trust/images/get-involved/partner-with-us.png" alt="Partner with Coodu Trust for community impact" class="involve-card-img">
-                        <div class="involve-card-content">
-                            <h3>Partner with Us</h3>
-                            <p>Collaborate with us on CSR initiatives, institutional partnerships, and large-scale development projects. Let's work together to achieve shared goals and create lasting impact.</p>
-                            <a href="partner.html" class="btn btn-primary">Become a Partner</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Volunteer -->
-                    <div class="involve-card">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754480275/coodu-trust/images/get-involved/volunteer.png" alt="Volunteer with Coodu Trust community programs" class="involve-card-img">
-                        <div class="involve-card-content">
-                            <h3>Volunteer</h3>
-                            <p>Lend your time and skills to make a direct impact. We welcome individuals and groups to support our fieldwork, assist with events, or provide professional expertise.</p>
-                            <a href="volunteer.html" class="btn btn-primary">Volunteer With Us</a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Donate -->
-                    <div class="involve-card">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754478670/coodu-trust/images/get-involved/donate.png" alt="Donate to support Coodu Trust programs" class="involve-card-img">
-                        <div class="involve-card-content">
-                            <h3>Donate</h3>
-                            <p>Your financial support fuels our programs and allows us to reach more communities in need. Every contribution, large or small, helps transform lives.</p>
-                            <a href="donate.html" class="btn btn-primary">Make a Donation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456722/coodu-trust/images/logos/logo.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="programs.html">Our Programs</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456746/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger is-active" aria-expanded="false" aria-controls="acc-getinvolved" aria-current="page">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="partner.html">Partner with Us</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- Main JavaScript File -->
-    <script src="assets/js/main.js"></script>
+        <a class="drawer__link" href="documents.html">Documents</a>
+        <a class="drawer__link" href="media.html">Media</a>
+        <a class="drawer__link" href="contact.html">Contact</a>
+      </nav>
 
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="gi-hero" aria-labelledby="gi-hero-title">
+      <div class="gi-hero__layers" aria-hidden="true">
+        <span class="gi-hero__scrim"></span>
+      </div>
+      <div class="container">
+        <div class="gi-hero__content reveal">
+          <p class="eyebrow eyebrow--on-dark">Join us</p>
+          <h1 class="gi-hero__title" id="gi-hero-title">Get involved</h1>
+          <p class="gi-hero__sub">Together, we can create a world of opportunity and self-reliance.</p>
+          <ul class="gi-hero__chips">
+            <li><a class="gi-hero__chip" href="#path-partner">Partner</a></li>
+            <li><a class="gi-hero__chip" href="#path-volunteer">Volunteer</a></li>
+            <li><a class="gi-hero__chip" href="#path-donate">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IMPACT STAT BAND (frosted slab, overlaps hero) ================= -->
+    <section class="gi-impact" aria-labelledby="gi-impact-title">
+      <div class="container">
+        <p class="eyebrow gi-impact__eyebrow" id="gi-impact-title">Our impact at a glance</p>
+        <div class="gi-impact__card reveal">
+          <div class="stat">
+            <span class="icon-chip"><i data-lucide="calendar-days" aria-hidden="true"></i></span>
+            <span class="stat__num counter" data-target="20" data-suffix="+">20+</span>
+            <span class="stat__label">Years of service</span>
+          </div>
+          <div class="stat">
+            <span class="icon-chip"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+            <span class="stat__num counter" data-target="5">5</span>
+            <span class="stat__label">Districts reached</span>
+          </div>
+          <div class="stat">
+            <span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span>
+            <span class="stat__num counter" data-target="381609" data-suffix="+">3,81,609+</span>
+            <span class="stat__label">Lives touched</span>
+          </div>
+          <div class="stat">
+            <span class="icon-chip"><i data-lucide="trees" aria-hidden="true"></i></span>
+            <span class="stat__num counter" data-target="2693250">26,93,250</span>
+            <span class="stat__label">Trees planted</span>
+          </div>
+        </div>
+        <p class="gi-impact__caption">Cumulative results across 20+ years of field work.</p>
+      </div>
+    </section>
+
+    <!-- ================= INTRO ================= -->
+    <section class="section gi-intro" aria-labelledby="gi-intro-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Ways to help</p>
+          <h2 id="gi-intro-title">Join us in our mission</h2>
+          <p class="section-head__sub">There are many ways to support the work of COODU Trust. Whether you are an individual, a corporation, or an institution, your contribution can help us empower communities and build a sustainable future. Explore the options below to find out how you can make a difference.</p>
+        </div>
+        <div class="gi-trust-row reveal">
+          <p class="gi-trust"><i data-lucide="shield-check" aria-hidden="true"></i> A registered non-profit working across Tamil Nadu since 2000.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PATHS ================= -->
+    <section class="section gi-paths" id="paths" aria-labelledby="gi-paths-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="gi-paths-title">Ways to get involved</h2>
+
+        <div class="gi-paths__grid">
+
+          <!-- Partner -->
+          <article class="gi-path reveal" id="path-partner">
+            <div class="gi-path__media gi-path__media--partner" aria-hidden="true">
+              <span class="icon-chip icon-chip--lg"><i data-lucide="handshake" aria-hidden="true"></i></span>
+              <span class="gi-path__kicker">Partner</span>
+            </div>
+            <div class="gi-path__body">
+              <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+              <h3 class="gi-path__title" id="path-partner-title">Partner with us</h3>
+              <p class="gi-path__text">Collaborate with us on CSR initiatives, institutional partnerships, and large-scale development projects. Let&rsquo;s work together to achieve shared goals and create lasting impact.</p>
+              <p class="gi-path__note"><i data-lucide="phone-call" aria-hidden="true"></i> We&rsquo;ll set up a call within 2 working days.</p>
+              <a class="btn btn--outline btn--block" href="partner.html">Become a partner</a>
+            </div>
+          </article>
+
+          <!-- Volunteer -->
+          <article class="gi-path reveal" id="path-volunteer">
+            <div class="gi-path__media gi-path__media--volunteer" aria-hidden="true">
+              <span class="icon-chip icon-chip--lg"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+              <span class="gi-path__kicker">Volunteer</span>
+            </div>
+            <div class="gi-path__body">
+              <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+              <h3 class="gi-path__title" id="path-volunteer-title">Volunteer</h3>
+              <p class="gi-path__text">Lend your time and skills to make a direct impact. We welcome individuals and groups to support our fieldwork, assist with events, or provide professional expertise.</p>
+              <p class="gi-path__note"><i data-lucide="clipboard-list" aria-hidden="true"></i> Fill a short form &mdash; we match you to a program.</p>
+              <a class="btn btn--outline btn--block" href="volunteer.html">Volunteer with us</a>
+            </div>
+          </article>
+
+          <!-- Donate (accent) -->
+          <article class="gi-path gi-path--donate reveal" id="path-donate">
+            <span class="gi-path__badge"><i data-lucide="zap" aria-hidden="true"></i> Easiest way to help</span>
+            <div class="gi-path__media gi-path__media--donate" aria-hidden="true">
+              <span class="icon-chip icon-chip--lg icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+              <span class="gi-path__kicker">Donate</span>
+            </div>
+            <div class="gi-path__body">
+              <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+              <h3 class="gi-path__title" id="path-donate-title">Donate</h3>
+              <p class="gi-path__text">Your financial support fuels our programs and allows us to reach more communities in need. Every contribution, large or small, helps transform lives.</p>
+              <p class="gi-path__note"><i data-lucide="receipt" aria-hidden="true"></i> Secure online payment, instant receipt.</p>
+              <a class="btn btn--cta btn--block" href="donate.html">Make a donation</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BAND ================= -->
+    <section class="section gi-cta" aria-labelledby="gi-cta-title">
+      <div class="container gi-cta__inner reveal">
+        <p class="eyebrow eyebrow--on-dark">Make a difference</p>
+        <h2 class="gi-cta__title" id="gi-cta-title">Together, we can create a world of opportunity and self-reliance.</h2>
+        <div class="gi-cta__actions">
+          <a class="btn btn--cta btn--block" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate</a>
+          <a class="btn btn--ghost-light btn--block" href="contact.html">Talk to us first</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="programs.html">Our Programs</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Coodu Trust on X"><i data-lucide="twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+        <p class="footer__legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="assets/js/coodu.js?v=5" defer></script>
 </body>
 </html>
