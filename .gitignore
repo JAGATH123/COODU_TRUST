@@ -2,8 +2,14 @@
 .DS_Store
 **/.DS_Store
 
-# Node dependencies
+# Secrets — NEVER commit. If any of these were ever pushed, ROTATE the keys.
+.env
+**/.env
+!**/.env.example
+
+# Node dependencies (regenerable via npm install)
 node_modules/
+**/node_modules/
 
 # Large, regenerable verification screenshots
 design/renders-site/
