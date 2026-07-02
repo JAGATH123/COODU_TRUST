@@ -60,6 +60,19 @@
 .media-hero__eyebrow svg,
 .media-hero__eyebrow [data-lucide] { width: 15px; height: 15px; }
 
+/* The hero photo's brightest zone (sun-lit water) sits directly behind this
+   eyebrow at wide widths. Keep the amber token and the photo's exact tone —
+   read legibility in with a tuned shadow stack instead of dimming the image. */
+.media-hero__eyebrow {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, .65),
+    0 1px 14px rgba(0, 0, 0, .55),
+    0 0 22px rgba(0, 0, 0, .35);
+}
+.media-hero__eyebrow::before {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .65));
+}
+
 .media-hero__title {
   margin: var(--s2) 0 0;
   font-family: var(--font-display);
