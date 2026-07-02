@@ -10,7 +10,9 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  min-height: clamp(400px, 52vh, 480px);
+  /* Source banner is 1650×300; matching Donate's sharp 420px cap keeps the
+     vertical up-scale (and softness) down. Taller heroes blur this crop. */
+  min-height: clamp(360px, 44vh, 420px);
   color: var(--color-on-dark);
   background-color: var(--color-dark-menu);
 }
@@ -24,7 +26,9 @@
 .media-hero__photo {
   position: absolute;
   inset: 0;
-  background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto/v1754474804/coodu-trust/images/headers/media-bg.png');
+  /* w_1600 + light sharpen = the crispest this 1650×300 source can render
+     (mirrors the Donate hero transform, which reads sharp). */
+  background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600,e_sharpen:80/v1754474804/coodu-trust/images/headers/media-bg.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -125,15 +129,9 @@
 /* anchor targets clear the fixed header */
 #gallery, #press { scroll-margin-top: calc(var(--header-h-desktop) + 16px); }
 
-@media (prefers-reduced-motion: no-preference) {
-  .media-hero__photo {
-    animation: media-hero-zoom 22s ease-in-out infinite alternate;
-  }
-  @keyframes media-hero-zoom {
-    from { transform: scale(1); }
-    to   { transform: scale(1.09); }
-  }
-}
+/* No Ken Burns zoom here: continuously magnifying a 300px-tall source made the
+   photograph read soft. A static image keeps it as crisp as the source allows
+   (matches the sharp, motionless Donate/Contact heroes). */
 
 /* ---- Proof strip (overlaps hero) ----------------------------------------- */
 .media-proof {
