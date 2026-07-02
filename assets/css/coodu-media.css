@@ -135,6 +135,33 @@
   }
 }
 
+/* ---- Proof strip (overlaps hero) ----------------------------------------- */
+.media-proof {
+  margin-top: clamp(-56px, -5vw, -36px);
+  position: relative;
+  z-index: 2;
+}
+
+.media-proof__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 3vw, 28px) clamp(12px, 3vw, 24px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-band);
+  padding: clamp(20px, 4vw, 30px) clamp(18px, 4vw, 34px);
+  text-align: center;
+}
+
+.media-proof .stat { align-items: center; gap: 6px; }
+.media-proof .icon-chip { margin-bottom: 2px; }
+.media-proof .stat__num { font-size: var(--fs-stat); }
+
+@media (min-width: 900px) {
+  .media-proof__card { grid-template-columns: repeat(4, 1fr); }
+}
+
 /* ---- Filter bar ----------------------------------------------------------- */
 .media-filter {
   display: flex;
