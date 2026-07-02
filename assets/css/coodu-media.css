@@ -143,16 +143,24 @@
 .media-proof__card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(16px, 3vw, 28px) clamp(12px, 3vw, 24px);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-band);
-  padding: clamp(20px, 4vw, 30px) clamp(18px, 4vw, 34px);
+  gap: clamp(12px, 2.2vw, 18px);
   text-align: center;
 }
 
-.media-proof .stat { align-items: center; gap: 6px; }
+/* Frosted-glass stat tiles — the same treatment as the Home impact card,
+   here floating over the golden hero photo's lower edge (the blur picks up
+   the field behind each tile). */
+.media-proof .stat {
+  align-items: center;
+  gap: 6px;
+  padding: clamp(16px, 2.4vw, 22px) 14px;
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
 .media-proof .icon-chip { margin-bottom: 2px; }
 .media-proof .stat__num { font-size: var(--fs-stat); }
 
