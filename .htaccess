@@ -1,0 +1,40 @@
+# ==========================================================================
+# COODU Trust — static site served directly from this Git working tree.
+# Because the repo IS the subdomain document root, this file blocks the parts
+# that must never be web-accessible (git history, backend source, env/config).
+# ==========================================================================
+
+DirectoryIndex index.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Never expose the Git repo (its history still contains rotated-but-old secrets),
+  # the Node backend, or local tooling directories.
+  RewriteRule ^\.git(/|$)          - [F,L]
+  RewriteRule ^server(/|$)         - [F,L]
+  RewriteRule ^\.superpowers(/|$)  - [F,L]
+  RewriteRule ^\.claude(/|$)       - [F,L]
+</IfModule>
+
+# Block sensitive dotfiles, env, and config/doc files from being served.
+<FilesMatch "(^\.env|^\.git|\.(env|gitignore|md|yml|example)$)">
+  Require all denied
+</FilesMatch>
+
+# Deny access to the Apache config file itself.
+<Files ".htaccess">
+  Require all denied
+</Files>
+
+# Long-cache the fingerprinted assets; HTML stays fresh.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

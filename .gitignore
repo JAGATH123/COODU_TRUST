@@ -19,6 +19,15 @@ design/redesign-renders/
 *.log
 
 # Large design exports / renders (regenerable)
-design/renders/
-design/current-home.png
 **/*.zip
+
+# Dev / design artifacts — kept locally + in git history, not part of the shipped site
+/.claude/
+/.superpowers/
+/.superdesign/
+/design/
+/docs/
+/About page content/
+/Adding globe to design/
+/NGO Website Design Enhancement/
+about globle interactive ness /
