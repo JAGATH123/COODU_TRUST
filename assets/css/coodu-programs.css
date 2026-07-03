@@ -1,0 +1,205 @@
+/* ==========================================================================
+   COODU TRUST — Programs page (programs.html only)
+   Hero · frosted stat slab (overlaps hero) · intro · six sector cards · CTA.
+   Tokens only; breakpoints 600 / 900 / 1200; motion gated.
+   ========================================================================== */
+
+/* ---- Hero ---------------------------------------------------------------- */
+.prog-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--grad-hero);
+  color: var(--color-on-dark);
+  text-align: center;
+}
+.prog-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .06), rgba(0, 0, 0, .28));
+  pointer-events: none;
+}
+.prog-hero .container { position: relative; z-index: 1; }
+.prog-hero__content {
+  max-width: var(--maxw-text);
+  margin-inline: auto;
+  padding-block: clamp(64px, 10vw, 110px) clamp(92px, 12vw, 140px);
+}
+.prog-hero__title {
+  margin: var(--s2) 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h1);
+  line-height: 1.08;
+  color: var(--color-on-dark);
+}
+.prog-hero__sub {
+  max-width: 560px;
+  margin: var(--s2) auto 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--on-dark-80);
+}
+
+/* ---- Stat slab (overlaps hero) — mirrors the Home impact card ------------- */
+.prog-stats { position: relative; z-index: 3; margin-top: clamp(-70px, -7vw, -56px); }
+.prog-stats__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s2);
+}
+.prog-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 14px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-card);
+}
+.prog-stats .stat__num { font-size: var(--fs-stat); }
+.prog-stats__cap { margin: var(--s3) 0 0; text-align: center; font-size: var(--fs-small); color: var(--text-muted); }
+
+@media (min-width: 900px) {
+  .prog-stats__card { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1200px) {
+  .prog-stats__card {
+    gap: 0;
+    background: rgba(255, 255, 255, 0.62);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+  }
+  .prog-stats .stat {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 0;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+    padding: 28px 24px;
+  }
+  .prog-stats .stat:last-child { border-right: 0; }
+}
+
+/* ---- Intro --------------------------------------------------------------- */
+.prog-intro { text-align: center; }
+
+/* ---- Six sector cards ---------------------------------------------------- */
+.prog-areas__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(var(--s3), 3vw, var(--s4));
+}
+@media (min-width: 600px) { .prog-areas__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .prog-areas__grid { grid-template-columns: repeat(3, 1fr); } }
+
+.prog-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-frame);
+  padding: clamp(var(--s3), 2.4vw, 30px);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+.prog-area__num {
+  position: absolute;
+  top: clamp(12px, 1.8vw, 20px);
+  right: clamp(16px, 2vw, 24px);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.4vw, 3rem);
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  pointer-events: none;
+}
+.prog-area__top { display: flex; align-items: center; }
+.prog-area__title {
+  margin: var(--s3) 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.7vw, 1.4rem);
+  line-height: 1.15;
+  color: var(--text-strong);
+}
+.prog-area__desc { margin: var(--s2) 0 0; font-size: 14.5px; line-height: 1.6; color: var(--text); }
+.prog-area__label {
+  margin: var(--s3) 0 10px;
+  font-size: var(--fs-micro);
+  font-weight: 700;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.prog-area__chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.prog-area__chips a {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  padding: 6px 11px;
+  border-radius: var(--radius-pill);
+}
+.prog-area__cta { margin-top: auto; padding-top: var(--s3); }
+.prog-area__explore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  padding: 12px 18px;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+}
+.prog-area__explore i { width: 17px; height: 17px; }
+
+/* Accent sector (Women Empowerment) */
+.prog-area--accent .prog-area__num { color: color-mix(in srgb, var(--color-accent) 22%, transparent); }
+.prog-area--accent .prog-area__explore {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--border));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prog-area { transition: transform .28s cubic-bezier(.22,.61,.36,1), box-shadow .28s ease, border-color .28s ease; }
+  .prog-area:hover { transform: translateY(-6px); box-shadow: var(--shadow-2); border-color: #cfe0d4; }
+  .prog-area__chips a { transition: background .2s, color .2s, border-color .2s; }
+  .prog-area__chips a:hover { background: var(--color-primary); color: var(--color-on-dark); border-color: var(--color-primary); }
+  .prog-area__explore { transition: background .2s, color .2s, border-color .2s, transform .2s; }
+  .prog-area__explore:hover { background: var(--color-primary); color: var(--color-on-dark); border-color: var(--color-primary); transform: translateY(-2px); }
+  .prog-area__explore i { transition: transform .2s; }
+  .prog-area__explore:hover i { transform: translateX(3px); }
+  .prog-area--accent .prog-area__explore:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-dark); }
+}
+
+/* ---- Closing CTA band ---------------------------------------------------- */
+.prog-cta { background: var(--grad-cta); color: var(--color-on-dark); text-align: center; }
+.prog-cta__inner { max-width: 640px; margin-inline: auto; }
+.prog-cta__title {
+  margin: var(--s2) 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  line-height: 1.12;
+  color: var(--color-on-dark);
+}
+.prog-cta__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: var(--s4); }
+@media (max-width: 599px) { .prog-cta__actions .btn { width: 100%; } }
