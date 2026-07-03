@@ -358,7 +358,9 @@
     document.addEventListener('pointerdown', function () { keyboardMode = false; }, true);
 
     var recs = items.map(function (item) {
-      var btn = $(':scope > button', item) || $('button', item);
+      /* trigger is a <button> (toggle-only) or an <a href> (navigates on
+         desktop click; dropdown still opens via hover / keyboard / first tap) */
+      var btn = $(':scope > button, :scope > a.nav__trigger', item) || $('button', item);
       var panel = null;
       if (btn && btn.getAttribute('aria-controls')) {
         panel = document.getElementById(btn.getAttribute('aria-controls'));
@@ -389,6 +391,18 @@
       if (!rec.btn) return;
 
       rec.btn.addEventListener('click', function (e) {
+        var isLink = rec.btn.tagName === 'A' && rec.btn.getAttribute('href');
+        if (isLink) {
+          /* fine pointer: hover already shows the panel — click navigates.
+             coarse pointer: first tap opens the panel, second tap navigates. */
+          if (canHover) return;
+          if (!rec.item.classList.contains('is-open')) {
+            e.preventDefault();
+            closeAll(rec);
+            setOpen(rec, true);
+          }
+          return;
+        }
         e.preventDefault();
         var open = !rec.item.classList.contains('is-open');
         closeAll(rec);
