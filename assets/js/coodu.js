@@ -380,6 +380,9 @@
 
     function setOpen(rec, open) {
       if (!rec.btn) return;
+      /* the base reset enforces [hidden]{display:none!important} — the class
+         alone can never show the panel, so keep the attribute in sync */
+      if (rec.panel) rec.panel.hidden = !open;
       rec.item.classList.toggle('is-open', open);
       rec.btn.setAttribute('aria-expanded', String(open));
     }
