@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="assets/css/coodu-tokens.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-components.css?v=9">
+  <link rel="stylesheet" href="assets/css/coodu-components.css?v=10">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
   <link rel="stylesheet" href="assets/css/coodu-media.css?v=7">
   <link rel="preload" as="image" href="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600,e_sharpen:80/v1754474804/coodu-trust/images/headers/media-bg.png">
@@ -42,91 +42,40 @@
             <a href="programs.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-programs" aria-haspopup="true">
               Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
             </a>
-            <div class="mega" id="mega-programs" hidden>
-              <div class="container mega__grid">
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/environment-resilience.html">
-                    <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Environment and Resilience</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
-                    <li><a href="programs/plantation-afforestation.html">Plantation &amp; Afforestation</a></li>
-                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
-                    <li><a href="programs/soil-land-management.html">Soil &amp; Land Management</a></li>
-                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation &amp; Mitigation</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/sustainable-agriculture.html">
-                    <span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Sustainable Agriculture</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization &amp; Agribusiness</a></li>
-                    <li><a href="programs/livestock-allied.html">Livestock &amp; Allied Activities</a></li>
-                    <li><a href="programs/horticulture-diversified.html">Horticulture &amp; Diversified Farming</a></li>
-                    <li><a href="programs/agricultural-technology.html">Agricultural Technology &amp; Youth Engagement</a></li>
-                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/women-empowerment.html">
-                    <span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Women Empowerment</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment &amp; Leadership</a></li>
-                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance &amp; Financial Inclusion</a></li>
-                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship &amp; Enterprise Development</a></li>
-                    <li><a href="programs/shg-community-mobilization.html">SHG &amp; Community Mobilization</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/education-skilling.html">
-                    <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Education and Skilling</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/vocational-livelihood-training.html">Vocational &amp; Livelihood Training</a></li>
-                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy &amp; IT Training</a></li>
-                    <li><a href="programs/formal-higher-education-support.html">Formal &amp; Higher Education Support</a></li>
-                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/health-sanitation.html">
-                    <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Health, Sanitation &amp; Waste Management</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/health-support-rehabilitation.html">Health Support &amp; Rehabilitation</a></li>
-                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
-                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                    <li><a href="programs/water-quality-safety.html">Water Quality &amp; Safety</a></li>
-                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation &amp; Hygiene Infrastructure</a></li>
-                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/consultancy-hr.html">
-                    <span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Consultancy and HR Management</span>
-                  </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/technology-knowledge-dissemination.html">Technology &amp; Knowledge Dissemination</a></li>
-                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning &amp; Advisory Services</a></li>
-                    <li><a href="programs/hr-staffing-solutions.html">Human Resource &amp; Staffing Solutions</a></li>
-                  </ul>
-                </div>
-
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <div class="mega__grid">
+                <a class="mega__tile" href="programs/environment-resilience.html">
+                  <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                  <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                </a>
+                <a class="mega__tile" href="programs/sustainable-agriculture.html">
+                  <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                  <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                </a>
+                <a class="mega__tile mega__tile--accent" href="programs/women-empowerment.html">
+                  <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                  <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                </a>
+                <a class="mega__tile" href="programs/education-skilling.html">
+                  <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                  <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                </a>
+                <a class="mega__tile" href="programs/health-sanitation.html">
+                  <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                  <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                </a>
+                <a class="mega__tile" href="programs/consultancy-hr.html">
+                  <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                  <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                </a>
+              </div>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
               </div>
             </div>
           </li>
@@ -135,15 +84,35 @@
             <a href="get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved" aria-haspopup="true">
               Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
             </a>
-            <div class="mega mega--small" id="mega-getinvolved" hidden>
-              <div class="container">
-                <ul class="mega__simple">
-                  <li><a href="get-involved.html">Overview</a></li>
-                  <li><a href="partner.html">Partner with Us</a></li>
-                  <li><a href="volunteer.html">Volunteer</a></li>
-                  <li><a href="donate.html">Donate</a></li>
-                </ul>
-              </div>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <a class="mega__item" href="get-involved.html">
+                <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                <span class="mega__item-txt">
+                  <span class="mega__item-title">Overview</span>
+                  <span class="mega__item-sub">Every way to support our work</span>
+                </span>
+              </a>
+              <a class="mega__item" href="partner.html">
+                <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                <span class="mega__item-txt">
+                  <span class="mega__item-title">Partner with us</span>
+                  <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                </span>
+              </a>
+              <a class="mega__item" href="volunteer.html">
+                <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                <span class="mega__item-txt">
+                  <span class="mega__item-title">Volunteer</span>
+                  <span class="mega__item-sub">Give your time &amp; skills</span>
+                </span>
+              </a>
+              <a class="mega__item mega__item--accent" href="donate.html">
+                <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                <span class="mega__item-txt">
+                  <span class="mega__item-title">Donate</span>
+                  <span class="mega__item-sub">Fund our field programmes</span>
+                </span>
+              </a>
             </div>
           </li>
 
