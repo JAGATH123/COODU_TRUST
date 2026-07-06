@@ -62,13 +62,16 @@
 .btn--light { background: var(--color-on-dark); color: var(--color-primary); }
 .btn--light:hover { background: var(--surface-alt); color: var(--color-primary-dark); }
 
-/* Transparent ghost on dark hero (white border) */
-.btn--ghost-light {
+/* Transparent ghost on dark surfaces (white border).
+   --ghost-dark is the alias used on the dark CTA bands. */
+.btn--ghost-light,
+.btn--ghost-dark {
   background: transparent;
   color: var(--color-on-dark);
   border-color: var(--border-on-dark);
 }
-.btn--ghost-light:hover { background: var(--color-on-dark); color: var(--color-deep); }
+.btn--ghost-light:hover,
+.btn--ghost-dark:hover { background: var(--color-on-dark); color: var(--color-deep); }
 
 /* Full-width helper (hero/CTA on mobile) */
 .btn--block { width: 100%; }
@@ -80,7 +83,8 @@
 
 /* Light-surface focus ring for dark contexts */
 .btn--light:focus-visible,
-.btn--ghost-light:focus-visible { outline-color: var(--color-on-dark); }
+.btn--ghost-light:focus-visible,
+.btn--ghost-dark:focus-visible { outline-color: var(--color-on-dark); }
 
 @media (prefers-reduced-motion: no-preference) {
   .btn { transition: background var(--ease), color var(--ease), transform var(--ease), box-shadow var(--ease); }

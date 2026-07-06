@@ -108,6 +108,47 @@
   .pd-stats .stat:last-child { border-right: 0; }
 }
 
+/* ---- Vivid stat slab variant: green-gradient pills, amber numbers -------- */
+.pd-stats--vivid .stat {
+  background: var(--grad-cta);
+  border: 0;
+  box-shadow: var(--shadow-2);
+}
+.pd-stats--vivid .stat__num { color: var(--color-amber); }
+.pd-stats--vivid .stat__label { color: var(--on-dark-80); }
+
+@media (min-width: 1200px) {
+  .pd-stats--vivid .pd-stats__card {
+    background: var(--grad-cta);
+    border: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .pd-stats--vivid .stat {
+    background: transparent;
+    box-shadow: none;
+    border-right: 1px solid var(--border-on-dark-soft);
+  }
+  .pd-stats--vivid .stat:last-child { border-right: 0; }
+}
+
+/* ---- Inline rich-text highlights ------------------------------------------ */
+/* Key terms: green, heavier weight */
+.pd-hl {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+/* Key figures: display type on a soft amber wash, like a marker pass */
+mark.pd-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02em;
+  color: var(--text-strong);
+  background: linear-gradient(transparent 58%, color-mix(in srgb, var(--color-amber) 32%, transparent) 0);
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
 /* ---- Understanding split: prose + callout | process card ----------------- */
 .pd-understand__grid {
   display: grid;
@@ -122,7 +163,7 @@
 .pd-callout {
   margin: var(--s3) 0;
   padding: 18px 20px;
-  background: var(--surface-tint);
+  background: linear-gradient(120deg, var(--surface-tint), color-mix(in srgb, var(--color-amber) 10%, var(--surface)));
   border-left: 4px solid var(--color-primary);
   border-radius: 0 var(--radius-card) var(--radius-card) 0;
 }
@@ -232,6 +273,7 @@
 /* ---- Single editorial field photo ---------------------------------------- */
 .pd-field { margin: 0; }
 .pd-field__frame {
+  position: relative;
   overflow: hidden;
   border-radius: var(--radius-frame);
   border: 1px solid var(--border);
@@ -240,12 +282,283 @@
   max-height: 540px;
 }
 .pd-field img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Floating achievement badge on the photo ("Since 2001") */
+.pd-field__badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 11px 18px;
+  background: var(--color-amber);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-float);
+  pointer-events: none;
+}
+.pd-field__badge-kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .625rem;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .62);
+}
+.pd-field__badge-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, .85);
+}
 .pd-field figcaption {
   margin-top: 10px;
   font-size: var(--fs-small);
   line-height: 1.5;
   color: var(--text-muted);
   text-align: center;
+}
+
+/* ---- Fact file (executive at-a-glance grid) -------------------------------- */
+.pd-facts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  margin: 0;
+  background: var(--border-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-frame);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+@media (min-width: 600px) { .pd-facts__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .pd-facts__grid { grid-template-columns: repeat(3, 1fr); } }
+.pd-fact { margin: 0; padding: 20px 22px; background: var(--surface); }
+.pd-fact dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pd-fact dd {
+  margin: 6px 0 0;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-strong);
+}
+.pd-fact dd .pd-fact__note { display: block; font-weight: 400; font-size: .8125rem; color: var(--text-muted); }
+
+/* ---- Challenge → response pairs (problem / how we solve it) ---------------- */
+.pd-cr { display: grid; gap: var(--s2); }
+.pd-cr__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-frame);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+@media (min-width: 900px) { .pd-cr__row { grid-template-columns: 1fr 1fr; } }
+
+.pd-cr__cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+}
+.pd-cr__cell--problem { background: color-mix(in srgb, var(--color-accent) 6%, var(--surface)); }
+.pd-cr__cell--response { background: color-mix(in srgb, var(--color-primary) 5%, var(--surface)); }
+.pd-cr__cell .icon-chip { flex: none; width: 42px; height: 42px; }
+
+.pd-cr__kicker {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+.pd-cr__cell--problem .pd-cr__kicker { color: var(--color-accent-dark); }
+.pd-cr__cell--response .pd-cr__kicker { color: var(--color-primary); }
+.pd-cr__title {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+.pd-cr__desc { margin: 5px 0 0; font-size: .875rem; line-height: 1.6; color: var(--text); }
+
+/* Connector arrow on the seam (desktop only) */
+.pd-cr__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  color: var(--color-primary);
+  pointer-events: none;
+}
+.pd-cr__arrow svg,
+.pd-cr__arrow [data-lucide] { width: 16px; height: 16px; }
+@media (min-width: 900px) { .pd-cr__arrow { display: inline-flex; } }
+
+/* ---- Programme portfolio table (executive track record) -------------------- */
+.pd-table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-frame);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+/* Summary bar above the head row */
+.pd-table__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding: 14px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-soft);
+}
+.pd-table__bar-strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .9375rem;
+  color: var(--text-strong);
+}
+.pd-table__bar-note { font-size: .8125rem; color: var(--text-muted); }
+
+.pd-table { width: 100%; border-collapse: collapse; text-align: left; }
+
+/* Mini timeline bar: each programme's span inside the 2001-2024 window.
+   Position/width come from inline --s / --w custom properties. */
+.pd-span {
+  display: block;
+  position: relative;
+  margin-top: 8px;
+  width: 132px;
+  max-width: 100%;
+  height: 5px;
+  border-radius: var(--radius-pill);
+  background: var(--border-soft);
+}
+.pd-span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--s, 0%);
+  width: var(--w, 10%);
+  min-width: 8px;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+.pd-span--live::after { background: var(--color-amber); }
+.pd-table th,
+.pd-table td { padding: 15px 20px; vertical-align: middle; }
+.pd-table thead th {
+  background: var(--color-primary-dark);
+  color: var(--color-on-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .71875rem;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pd-table tbody tr { border-top: 1px solid var(--border-soft); }
+.pd-table tbody tr:first-child { border-top: 0; }
+.pd-table tbody tr:hover { background: var(--surface-alt); }
+
+.pd-table__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: .9375rem;
+  line-height: 1.3;
+  color: var(--text-strong);
+}
+.pd-table__name a { color: inherit; text-decoration: none; }
+.pd-table__name a:hover { color: var(--color-primary); }
+.pd-table__period {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9375rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.pd-table__type { font-size: .875rem; color: var(--text-muted); white-space: nowrap; }
+.pd-table__note { font-size: .875rem; line-height: 1.5; color: var(--text); }
+
+/* Status chips */
+.pd-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .6875rem;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pd-chip--live { background: var(--surface-tint); color: var(--color-primary-dark); }
+.pd-chip--live::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+.pd-chip--done { background: var(--surface-alt); color: var(--text-muted); }
+
+/* Stacked rows below 900px: hide the head (kept in the a11y tree), label cells */
+@media (max-width: 899px) {
+  .pd-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .pd-table,
+  .pd-table tbody,
+  .pd-table tr,
+  .pd-table td { display: block; }
+  .pd-table tr { padding: 16px 18px; }
+  .pd-table td { padding: 4px 0; }
+  .pd-table td[data-label]::before {
+    content: attr(data-label);
+    display: inline-block;
+    min-width: 74px;
+    margin-right: 10px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: .6875rem;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .pd-table__name { font-size: 1.05rem; padding-bottom: 6px; }
 }
 
 /* ---- Project timeline ----------------------------------------------------- */
