@@ -295,6 +295,10 @@
     if (trigger) trigger.setAttribute('aria-expanded', String(open));
     if (!pnl) return;
 
+    /* the base reset enforces [hidden]{display:none!important} — the class
+       alone can never show the panel, so keep the attribute in sync */
+    pnl.hidden = !open;
+
     if (prefersReduced()) {
       pnl.style.maxHeight = open ? 'none' : '0px';
       return;
@@ -327,6 +331,7 @@
 
       var startOpen = acc.classList.contains('is-open');
       trigger.setAttribute('aria-expanded', String(startOpen));
+      pnl.hidden = !startOpen;
       pnl.style.maxHeight = startOpen ? 'none' : '0px';
 
       trigger.addEventListener('click', function (e) {
