@@ -61,6 +61,35 @@
   color: var(--on-dark-80);
 }
 
+/* ---- Hero meta chips (project dossier pages) — scheme · period · status -- */
+.pd-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: var(--s3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pd-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .13);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: .72rem;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--color-on-dark);
+  white-space: nowrap;
+}
+.pd-meta-chip svg { width: 14px; height: 14px; color: var(--color-amber); flex: none; }
+
 /* ---- Stat slab (overlaps hero) — the Home impact-card recipe ------------- */
 .pd-stats { position: relative; z-index: 3; margin-top: clamp(-70px, -7vw, -56px); }
 .pd-stats__card {

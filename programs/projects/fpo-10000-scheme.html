@@ -1,1076 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotion of FPOs under 10,000 FPO Scheme | Coodu Trust</title>
-    <meta name="description" content="Coodu Trust empanelled as Cluster-Based Business Organization (CBBO) by TNSFAC under the Central Sector Scheme for Promotion of 10,000 FPOs, establishing 4 Farmer Producer Companies with 1,103 enrolled farmers across Dindigul and Thiruvarur districts of Tamil Nadu.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promotion of FPOs (10,000 FPO scheme) &mdash; COODU Trust</title>
+  <meta name="description" content="Coodu Trust promotes Farmer Producer Organisations under the Central Sector Scheme for 10,000 FPOs as a TNSFAC-empanelled CBBO — 4 FPCs registered and 1,103 farmers enrolled across Dindigul and Thiruvarur.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <!-- Page-Specific Styles -->
-    <style>
-        /* FPO Project Page Specific Styles */
-        .fpo-page {
-            background: transparent !important;
-        }
-
-        .fpo-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-
-        /* Modern Hero Section */
-        .fpo-hero {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .hero-content-modern {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-text-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-visual-section {
-            position: relative;
-        }
-
-        .modern-carousel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
-
-        .quick-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .quick-stat {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: white !important;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-
-        /* Program Overview Modern */
-        .overview-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .overview-content-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .overview-sidebar {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
-        }
-
-        /* Achievement Dashboard */
-        .achievements-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .achievement-card-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 5px solid #28a745;
-        }
-
-        .achievement-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .achievement-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        /* FPO Cards Special Section */
-        .fpo-cards-section {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .fpo-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border-top: 4px solid #28a745;
-            margin-bottom: 25px;
-        }
-
-        .fpo-card h4 {
-            color: #28a745;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .fpo-detail {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            padding: 10px;
-            background: rgba(40, 167, 69, 0.05);
-            border-radius: 8px;
-        }
-
-        .fpo-detail strong {
-            color: #28a745;
-            margin-right: 8px;
-            min-width: 140px;
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .timeline-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 20px;
-            border-left: 5px solid #28a745;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .timeline-year {
-            color: #28a745;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .timeline-title {
-            color: #2c3e50;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .timeline-desc {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content-modern {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .overview-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .quick-stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .fpo-page .container {
-                padding: 0 15px;
-            }
-
-            .hero-text-section,
-            .overview-content-modern,
-            .overview-sidebar {
-                padding: 30px 25px;
-            }
-
-            .achievement-card-modern {
-                padding: 25px 20px;
-            }
-
-            .carousel-image {
-                height: 250px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/coodu-programs-detail.css?v=6">
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="project-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                <ul class="nav-menu">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../../about.html" class="nav-link">About</a></li>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                    <li class="dropdown">
-                        <a href="../../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="../environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="../solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+      <a class="brand" href="../../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
 
-                    <li class="dropdown">
-                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../../partner.html">Partner with Us</a></li>
-                            <li><a href="../../volunteer.html">Volunteer</a></li>
-                            <li><a href="../../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../index.html">Home</a></li>
+          <li><a class="nav__link" href="../../about.html">About</a></li>
 
-                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
-                </ul>
+          <li class="has-mega">
+            <a href="../../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="../environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="../women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
 
-                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+          <li class="has-mega">
+            <a href="../../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+          <li><a class="nav__link" href="../../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../../media.html">Media</a></li>
+          <li><a class="nav__link" href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../../index.html">Home</a>
+        <a class="drawer__link" href="../../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../../programs.html">All programs</a>
+            <a href="../environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="../women-empowerment.html">Women Empowerment</a>
+            <a href="../education-skilling.html">Education &amp; Skilling</a>
+            <a href="../health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="../consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== MODERN HERO SECTION =========== -->
-        <section class="fpo-hero">
-            <div class="container">
-                <div class="breadcrumb" style="margin-bottom: 30px;">
-                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../sustainable-agriculture.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Sustainable Agriculture</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../farmer-collectivization.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Farmer Collectivization & Agribusiness</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <span style="color: #2c3e50; font-weight: 600;">10,000 FPO Scheme</span>
-                </div>
-
-                <div class="hero-content-modern">
-                    <div class="hero-text-section">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🏛️ CENTRAL GOVERNMENT SCHEME</div>
-
-                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">Promotion of FPOs (10,000 FPO Scheme)</h1>
-                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Cluster-Based Business Organization for FPO Development in Dindigul & Thiruvarur (2022-Present)</p>
-
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
-                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Fostering and developing Farmer Producer Organisations under the Central Sector Scheme for Promotion of 10,000 FPOs, empanelled as a Cluster-Based Business Organization (CBBO) by the Tamil Nadu Small Farmers Agri-Business Consortium (TNSFAC) to establish sustainable farmer-owned companies that enhance agricultural productivity, improve market access, and foster economic development among small and marginal farmers.</p>
-                        </div>
-
-                        <div class="key-highlights" style="margin-bottom: 30px;">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2022-Present (Ongoing)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🏛️</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Central Government Scheme</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🏢</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">4 FPCs Registered</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">👩</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">24% Women Members</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Stats -->
-                        <div class="quick-stats">
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">1,103</span>
-                                <span class="stat-label" style="color: white;">Farmers Enrolled</span>
-                            </div>
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">4</span>
-                                <span class="stat-label" style="color: white;">FPOs Established</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-visual-section">
-                        <div class="modern-carousel">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Project Gallery</h3>
-
-                            <div class="hero-photo-carousel">
-                                <div class="carousel-frame">
-                                    <div class="photo-slides">
-                                        <div class="photo-slide active">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456726/coodu-trust/images/programs/program-sustainable-agriculture.jpg" alt="FPO farmer mobilization and enrollment" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">👨‍🌾 Farmer Mobilization & Enrollment</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="FPO training and capacity building" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 Training & Capacity Building</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="FPC registration and formation" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🏢 FPC Registration & Formation</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Farmer Producer Organizations in action" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🌾 FPOs in Action</div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-indicators">
-                                        <span class="indicator active" data-slide="0"></span>
-                                        <span class="indicator" data-slide="1"></span>
-                                        <span class="indicator" data-slide="2"></span>
-                                        <span class="indicator" data-slide="3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
-        <section class="overview-modern">
-            <div class="container">
-                <div class="overview-grid">
-                    <div class="overview-content-modern">
-                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Programme Overview</h2>
-
-                        <div style="margin-bottom: 35px;">
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
-                                Under the <strong>Central Sector Scheme for Promotion of 10,000 Farmers Producer Organisations (FPOs)</strong>, the Government of India aims to ensure economies of scale for small and marginal farmers through collective action. Towards achieving this goal, Coodu Trust has been empanelled as a <strong>Cluster-Based Business Organization (CBBO)</strong> by the Tamil Nadu Small Farmers Agri-Business Consortium (TNSFAC).
-                            </p>
-
-                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
-                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Core Objectives</h4>
-                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Establish and nurture Farmer Producer Companies that enable small farmers to aggregate their produce, improve bargaining power, access better market prices, and benefit from government schemes including financial support, subsidies, and equity grants — creating sustainable farmer-owned enterprises across Dindigul and Thiruvarur districts.</p>
-                            </div>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                The Trust is actively engaged in fostering and developing FPOs in the <strong>Dindigul and Thiruvarur districts</strong> of Tamil Nadu. Four Farmer Producer Companies have been successfully registered and are operational, with a total of <strong>1,103 farmers enrolled as members</strong>. Each FPO specialises in key agricultural trades relevant to its region, including <strong>garlic, maize, paddy, groundnut, coconut, onion, cotton, and green peas</strong>.
-                            </p>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
-                                All four FPOs have successfully secured <strong>equity grants</strong> for their business operations, strengthening their financial base. Business activities have commenced, with training programmes empowering farmers in areas like agri-export, post-harvest management, and food processing. Coodu Trust ensures timely submission of progress reports to TNSFAC, maintaining <strong>transparency and accountability</strong> throughout the implementation.
-                            </p>
-                        </div>
-
-                        <!-- Target Beneficiaries -->
-                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
-                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Target Beneficiaries</h4>
-                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👨‍🌾</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Small & Marginal Farmers</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👩‍🌾</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Women Farmers (24% participation)</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🌾</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Agricultural Communities in Dindigul & Thiruvarur</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="overview-sidebar">
-                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                <strong>Dindigul District:</strong><br>
-                                Oddanchatram Block, Kodaikanal Block
-                            </div>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Thiruvarur District:</strong><br>
-                                Needamangalam Block, Kottur Block
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Duration:</strong> 2022-Present (Ongoing)<br>
-                                <strong>Empanelment:</strong> CBBO under TNSFAC<br>
-                                <strong>Scheme:</strong> Central Sector Scheme for 10,000 FPOs<br>
-                                <strong>Status:</strong> 4 FPOs Established & Operational
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🏛️ Key Stakeholders</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Central Government:</strong> Ministry of Agriculture & Farmers Welfare<br><br>
-                                <strong>State Agency:</strong> TNSFAC (Tamil Nadu Small Farmers Agri-Business Consortium)<br><br>
-                                <strong>CBBO:</strong> Coodu Trust<br><br>
-                                <strong>Beneficiaries:</strong> 1,103 enrolled farmers across 4 FPOs
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== THE 4 PROMOTED FPOs - SPECIAL FEATURE SECTION =========== -->
-        <section class="fpo-cards-section">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">The 4 Promoted Farmer Producer Organisations</h2>
-
-                <!-- Dindigul District FPOs -->
-                <div style="background: rgba(40, 167, 69, 0.05); padding: 30px; border-radius: 20px; margin-bottom: 40px; border: 2px solid rgba(40, 167, 69, 0.2);">
-                    <h3 style="color: #28a745; font-size: 1.8rem; margin-bottom: 25px; text-align: center;">📍 Dindigul District</h3>
-
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
-                        <!-- FPO 1 -->
-                        <div class="fpo-card">
-                            <h4>🏢 Oddanchatram Agro Farmer Producer Company Limited</h4>
-                            <div class="fpo-detail">
-                                <strong>📍 Location:</strong>
-                                <span style="color: #2c3e50;">Abilikkai, Oddanchatram Block</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>👨‍🌾 Farmers Enrolled:</strong>
-                                <span style="color: #2c3e50; font-weight: 600;">311</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>🌾 Key Trades:</strong>
-                                <span style="color: #2c3e50;">Maize, Copra (Coconut) & Onion</span>
-                            </div>
-                        </div>
-
-                        <!-- FPO 2 -->
-                        <div class="fpo-card">
-                            <h4>🏔️ Kuriji Malai Farmer Producer Company Limited</h4>
-                            <div class="fpo-detail">
-                                <strong>📍 Location:</strong>
-                                <span style="color: #2c3e50;">Poondi, Kodaikanal Block</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>👨‍🌾 Farmers Enrolled:</strong>
-                                <span style="color: #2c3e50; font-weight: 600;">110</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>🌾 Key Trades:</strong>
-                                <span style="color: #2c3e50;">Hill Garlic & Green Peas</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Thiruvarur District FPOs -->
-                <div style="background: rgba(32, 201, 151, 0.05); padding: 30px; border-radius: 20px; margin-bottom: 40px; border: 2px solid rgba(32, 201, 151, 0.2);">
-                    <h3 style="color: #20c997; font-size: 1.8rem; margin-bottom: 25px; text-align: center;">📍 Thiruvarur District</h3>
-
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
-                        <!-- FPO 3 -->
-                        <div class="fpo-card" style="border-top: 4px solid #20c997;">
-                            <h4 style="color: #20c997;">🌾 Delta Vaduvur Agriculturist Welfare Farmers Producer Company Limited</h4>
-                            <div class="fpo-detail">
-                                <strong>📍 Location:</strong>
-                                <span style="color: #2c3e50;">Vaduvur, Needamangalam Block</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>👨‍🌾 Farmers Enrolled:</strong>
-                                <span style="color: #2c3e50; font-weight: 600;">365</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>🌾 Key Trades:</strong>
-                                <span style="color: #2c3e50;">Paddy & Groundnut</span>
-                            </div>
-                        </div>
-
-                        <!-- FPO 4 -->
-                        <div class="fpo-card" style="border-top: 4px solid #20c997;">
-                            <h4 style="color: #20c997;">🌿 Ponni Vanam Farmer Producer Company Limited</h4>
-                            <div class="fpo-detail">
-                                <strong>📍 Location:</strong>
-                                <span style="color: #2c3e50;">Kottur, Kottur Block</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>👨‍🌾 Farmers Enrolled:</strong>
-                                <span style="color: #2c3e50; font-weight: 600;">317</span>
-                            </div>
-                            <div class="fpo-detail">
-                                <strong>🌾 Key Trades:</strong>
-                                <span style="color: #2c3e50;">Paddy & Cotton</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Total Summary Box -->
-                <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3); text-align: center;">
-                    <h3 style="margin-bottom: 25px; font-size: 1.6rem;">📊 Total Summary</h3>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
-                        <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 12px;">
-                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">1,103</div>
-                            <div style="font-size: 1rem; opacity: 0.95;">Total Farmers Enrolled</div>
-                            <div style="font-size: 0.85rem; margin-top: 8px; opacity: 0.9;">(311 + 110 + 365 + 317)</div>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 12px;">
-                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">257</div>
-                            <div style="font-size: 1rem; opacity: 0.95;">Women Members</div>
-                            <div style="font-size: 0.85rem; margin-top: 8px; opacity: 0.9;">(24% of total membership)</div>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 12px;">
-                            <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">4</div>
-                            <div style="font-size: 1rem; opacity: 0.95;">FPCs Registered</div>
-                            <div style="font-size: 0.85rem; margin-top: 8px; opacity: 0.9;">Across 2 Districts</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY ACTIVITIES & ACHIEVEMENTS =========== -->
-        <section class="achievements-modern">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Activities & Achievements</h2>
-
-                <div class="achievement-grid">
-                    <!-- Card 1 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">🏢</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">FPO Registration & Formation</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">Stats:</strong> <span style="color: #2c3e50;">4 FPCs Registered | 2 Districts</span>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            Four Farmer Producer Companies were successfully registered — two in Dindigul district (Oddanchatram Agro and Kuriji Malai) and two in Thiruvarur district (Delta Vaduvur and Ponni Vanam). Each FPO was structured as a farmer-owned company with formal governance systems, elected boards, and operational business plans.
-                        </p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">👨‍🌾</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">Farmer Mobilization & Enrollment</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">Stats:</strong> <span style="color: #2c3e50;">1,103 Farmers Enrolled | 257 Women (24%)</span>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            Comprehensive farmer mobilization campaigns resulted in the enrollment of 1,103 farmers as members across the four FPOs. Notably, 257 members (24%) are women farmers, reflecting strong gender inclusion. Enrollment grew from 1,082 in 2022-2023 to 1,103 in 2023-2024, showing steady growth.
-                        </p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">💰</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">Equity Grants & Financial Support</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">Achievement:</strong>
-                            <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #2c3e50; font-size: 0.9rem;">
-                                <li>All 4 FPOs secured equity grants</li>
-                                <li>Business operations commenced</li>
-                                <li>Financial base strengthened for sustainability</li>
-                            </ul>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            All four FPOs successfully secured equity grants for their business operations from the government scheme, providing the critical seed capital needed to commence trading activities. This financial support has strengthened the FPOs' foundation and enabled them to begin serving their farmer members commercially.
-                        </p>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">🎓</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">Training & Capacity Building</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">Training Areas:</strong>
-                            <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #2c3e50; font-size: 0.9rem;">
-                                <li>Agri-export procedures and opportunities</li>
-                                <li>Post-harvest management techniques</li>
-                                <li>Food processing and value addition</li>
-                                <li>Agricultural marketing and development</li>
-                                <li>FPO governance and management</li>
-                            </ul>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            Comprehensive training programmes were conducted for FPO members covering agri-export, post-harvest management, food processing, and agricultural marketing. These skills empower farmers to add value to their produce, access premium markets, and manage their collective enterprises professionally.
-                        </p>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">🌾</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">Crop-Specific Business Development</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">FPO Specialisations:</strong>
-                            <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #2c3e50; font-size: 0.9rem;">
-                                <li><strong>Oddanchatram:</strong> Maize, Copra (Coconut) & Onion</li>
-                                <li><strong>Kuriji Malai:</strong> Hill Garlic & Green Peas</li>
-                                <li><strong>Delta Vaduvur:</strong> Paddy & Groundnut</li>
-                                <li><strong>Ponni Vanam:</strong> Paddy & Cotton</li>
-                            </ul>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            Each FPO was developed with a focus on the key agricultural trades of its region, ensuring that collective business activities are grounded in crops that farmers already grow and understand. This crop-specific approach ensures relevance and immediate applicability.
-                        </p>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="achievement-card-modern">
-                        <div class="achievement-icon">📊</div>
-                        <h3 style="color: #28a745; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600;">Compliance & Reporting</h3>
-                        <div style="background: rgba(40, 167, 69, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                            <strong style="color: #28a745;">Governance Framework:</strong>
-                            <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #2c3e50; font-size: 0.9rem;">
-                                <li>Timely progress reports to TNSFAC</li>
-                                <li>Transparent financial management</li>
-                                <li>Regular milestone tracking</li>
-                                <li>Accountability to Central Government scheme objectives</li>
-                            </ul>
-                        </div>
-                        <p style="color: #555; line-height: 1.7; font-size: 0.95rem;">
-                            Coodu Trust has maintained rigorous compliance standards, ensuring timely submission of progress reports to TNSFAC detailing milestones achieved and ongoing activities. This transparency and accountability reinforces the Trust's commitment to promoting FPOs in alignment with the national scheme objectives.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== FPO GROWTH TRAJECTORY - TIMELINE =========== -->
-        <section class="timeline-section">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">FPO Growth Trajectory</h2>
-
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">2015-2016: Foundation</div>
-                        <div class="timeline-title">🌱 FPO Awareness Building</div>
-                        <div class="timeline-desc">FPO awareness for 600 farmers across 10 villages in Dindigul, laying the groundwork for collective farmer organization and establishing early community engagement.</div>
-                    </div>
-
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">2022: CBBO Empanelment</div>
-                        <div class="timeline-title">🏛️ Official Recognition</div>
-                        <div class="timeline-desc">TNSFAC empanels Coodu Trust as Cluster-Based Business Organization (CBBO) under the Central Sector Scheme for Promotion of 10,000 FPOs, granting official mandate to establish and nurture Farmer Producer Companies.</div>
-                    </div>
-
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">2022-2023: Formation</div>
-                        <div class="timeline-title">🏢 FPC Registration & Mobilization</div>
-                        <div class="timeline-desc">4 Farmer Producer Companies registered across Dindigul and Thiruvarur districts, 1,082 farmers enrolled as members, including 257 women members (24%), establishing formal governance structures and business plans.</div>
-                    </div>
-
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">2023-2024: Growth</div>
-                        <div class="timeline-title">📈 Financial Strengthening & Expansion</div>
-                        <div class="timeline-desc">Enrollment grows to 1,103 farmers, all 4 FPOs receive equity grants from the government scheme, business operations commence with trading activities, and financial base strengthened for long-term sustainability.</div>
-                    </div>
-
-                    <!-- Timeline Item 5 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">2023-2024: Training</div>
-                        <div class="timeline-title">🎓 Capacity Building</div>
-                        <div class="timeline-desc">Comprehensive training delivered in agri-export procedures, post-harvest management techniques, food processing and value addition, agricultural marketing, and FPO governance — empowering farmers with professional business skills.</div>
-                    </div>
-
-                    <!-- Timeline Item 6 -->
-                    <div class="timeline-item">
-                        <div class="timeline-year">Ongoing: Expansion</div>
-                        <div class="timeline-title">🚀 Continued Development</div>
-                        <div class="timeline-desc">Continued farmer enrollment, business development and market diversification, creation of market linkages for better price realization, and strengthening of FPO governance and operational capacity for sustainable farmer-owned enterprises.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CSR PARTNERSHIP SECTION =========== -->
-        <section class="overview-modern">
-            <div class="container">
-                <div style="background: rgba(255, 255, 255, 0.95); padding: 45px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <h2 style="color: #28a745; font-size: 2.3rem; margin-bottom: 25px; font-weight: 700; text-align: center;">🤝 Sri Mugund Bakers & Traders Pvt. Ltd. Partnership</h2>
-
-                    <p style="color: #2c3e50; font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; text-align: center;">
-                        In addition to the TNSFAC scheme, Coodu Trust has initiated a separate <strong>FPO Promotion & Training Programme</strong> with the support of <strong>Sri Mugund Bakers & Traders Pvt. Ltd.</strong> in Kadavur Block, Karur District. This programme specifically focuses on empowering women farmers through:
-                    </p>
-
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 30px;">
-                        <!-- Training Box 1 -->
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; border-left: 4px solid #28a745;">
-                            <h4 style="color: #1b5e20; margin-bottom: 12px; font-size: 1.1rem;">📚 FPO Functioning Training</h4>
-                            <p style="color: #37474f; margin: 0; font-size: 0.95rem; line-height: 1.6;">Two-day training for 250 women on FPO structure, roles, responsibilities, and government scheme benefits</p>
-                        </div>
-
-                        <!-- Training Box 2 -->
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 4px solid #28a745;">
-                            <h4 style="color: #1565c0; margin-bottom: 12px; font-size: 1.1rem;">🐄 Dairy Farming Training</h4>
-                            <p style="color: #4a148c; margin: 0; font-size: 0.95rem; line-height: 1.6;">300 women trained in 6 batches on fodder cultivation, livestock management, animal nutrition, and health management</p>
-                        </div>
-
-                        <!-- Training Box 3 -->
-                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 25px; border-radius: 15px; border-left: 4px solid #28a745;">
-                            <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🌾 Crop Management Training</h4>
-                            <p style="color: #721c24; margin: 0; font-size: 0.95rem; line-height: 1.6;">Specialised sessions on crop management and fodder cultivation for integrated farming systems</p>
-                        </div>
-
-                        <!-- Training Box 4 -->
-                        <div style="background: linear-gradient(135deg, #d1ecf1, #d4edda); padding: 25px; border-radius: 15px; border-left: 4px solid #28a745;">
-                            <h4 style="color: #0c5460; margin-bottom: 12px; font-size: 1.1rem;">👨‍🏫 Expert Involvement</h4>
-                            <p style="color: #155724; margin: 0; font-size: 0.95rem; line-height: 1.6;">Trainers from Veterinary Department, Krishi Vigyan Kendra (KVK), and Agriculture Department</p>
-                        </div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 30px; border-radius: 15px; text-align: center;">
-                        <p style="margin: 0; font-size: 1.05rem; line-height: 1.7;">
-                            <strong>💪 Impact:</strong> This CSR-supported programme has significantly contributed to women's empowerment in Kadavur Block, making women central to FPO decision-making processes and enhancing their agricultural knowledge and economic independence.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== IMPLEMENTING PARTNERS SECTION =========== -->
-        <section class="achievements-modern">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Implementing Partners</h2>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                    <!-- Partner 1 -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-top: 5px solid #28a745; text-align: center;">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem;">🏛️</div>
-                        <h4 style="color: #28a745; font-size: 1.3rem; margin-bottom: 15px; font-weight: 600;">TNSFAC</h4>
-                        <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;"><strong>Tamil Nadu Small Farmers Agri-Business Consortium</strong></p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">State-level implementing agency for 10,000 FPO Scheme in Tamil Nadu. Empanelled Coodu Trust as CBBO. Receives progress reports and monitors FPO development.</p>
-                    </div>
-
-                    <!-- Partner 2 -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-top: 5px solid #20c997; text-align: center;">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem;">🤝</div>
-                        <h4 style="color: #20c997; font-size: 1.3rem; margin-bottom: 15px; font-weight: 600;">Sri Mugund Bakers & Traders Pvt. Ltd.</h4>
-                        <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;"><strong>CSR Partner</strong></p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">CSR partner for FPO Training Programme. Supports women empowerment through dairy and FPO training in Kadavur Block, Karur.</p>
-                    </div>
-
-                    <!-- Partner 3 -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-top: 5px solid #28a745; text-align: center;">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem;">👨‍🏫</div>
-                        <h4 style="color: #28a745; font-size: 1.3rem; margin-bottom: 15px; font-weight: 600;">Technical Support Partners</h4>
-                        <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;"><strong>Expert Training Bodies</strong></p>
-                        <p style="color: #666; font-size: 0.9rem; line-height: 1.5;"><strong>Veterinary Department</strong> — Livestock health and management expertise<br><br><strong>Krishi Vigyan Kendra (KVK)</strong> — Agricultural research and practical training<br><br><strong>Agriculture Department</strong> — Government scheme guidance and crop management</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== VERIFIED STATISTICS TABLE =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Verified Statistics</h2>
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>Metric</th>
-                                <th>2022-2023 Data</th>
-                                <th>2023-2024 Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>FPOs Registered</td>
-                                <td>4</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>Total Farmers Enrolled</td>
-                                <td>1,082</td>
-                                <td>1,103</td>
-                            </tr>
-                            <tr>
-                                <td>Oddanchatram FPO Members</td>
-                                <td>300</td>
-                                <td>311</td>
-                            </tr>
-                            <tr>
-                                <td>Kodaikanal FPO Members</td>
-                                <td>100</td>
-                                <td>110</td>
-                            </tr>
-                            <tr>
-                                <td>Vaduvur FPO Members</td>
-                                <td>365</td>
-                                <td>365</td>
-                            </tr>
-                            <tr>
-                                <td>Kottur FPO Members</td>
-                                <td>317</td>
-                                <td>317</td>
-                            </tr>
-                            <tr>
-                                <td>Women Members</td>
-                                <td>257 (24%)</td>
-                                <td>Data continued</td>
-                            </tr>
-                            <tr>
-                                <td>Districts Covered</td>
-                                <td>2 (Dindigul, Thiruvarur)</td>
-                                <td>2 (Dindigul, Thiruvarur)</td>
-                            </tr>
-                            <tr>
-                                <td>Equity Grants</td>
-                                <td>Secured</td>
-                                <td>All operational</td>
-                            </tr>
-                            <tr>
-                                <td>Business Status</td>
-                                <td>Started</td>
-                                <td>Active</td>
-                            </tr>
-                            <tr>
-                                <td>Empanelling Agency</td>
-                                <td>TNSFAC</td>
-                                <td>TNSFAC</td>
-                            </tr>
-                            <tr>
-                                <td>Scheme</td>
-                                <td>Central Sector 10,000 FPO</td>
-                                <td>Central Sector 10,000 FPO</td>
-                            </tr>
-                            <tr style="background-color: #e8f5e8;">
-                                <td><strong>CBBO Status</strong></td>
-                                <td><strong>Coodu Trust empanelled</strong></td>
-                                <td><strong>Active</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Program Impact Note -->
-                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px; border-left: 4px solid #28a745;">
-                    <p style="color: #1b5e20; margin: 0; font-size: 1rem; line-height: 1.6; text-align: center;">
-                        <strong>📊 Data Source:</strong> All statistics verified from Coodu Trust's TNSFAC progress reports (2022-2023 and 2023-2024) submitted as part of the Central Sector Scheme for Promotion of 10,000 FPOs implementation.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Farmer Producer Organisations</h2>
-                    <p class="cta-text">Join us in building sustainable farmer-owned enterprises that enhance agricultural productivity, improve market access, and create lasting economic opportunities for small and marginal farming communities across Tamil Nadu.</p>
-                    <div class="cta-buttons">
-                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../../about.html">About Us</a></li>
-                        <li><a href="../../programs.html">Our Programs</a></li>
-                        <li><a href="../../careers.html">Careers</a></li>
-                        <li><a href="../../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../../get-involved.html">Overview</a>
+            <a href="../../partner.html">Partner with Us</a>
+            <a href="../../volunteer.html">Volunteer</a>
+            <a href="../../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../../assets/js/main.js"></script>
+        <a class="drawer__link" href="../../documents.html">Documents</a>
+        <a class="drawer__link" href="../../media.html">Media</a>
+        <a class="drawer__link" href="../../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo + project meta) ---------- -->
+    <section class="pd-hero" style="--pd-hero-img: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1755146551/coodu-trust/images/programs/background-prgms/farmer-collectivization-and-agribusiness.png')" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../../programs.html">Programs</a></li>
+              <li><a href="../sustainable-agriculture.html">Sustainable agriculture</a></li>
+              <li><a href="../farmer-collectivization.html">Farmer collectivization &amp; agribusiness</a></li>
+              <li aria-current="page">10,000 FPO scheme</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Promotion of FPOs (10,000 FPO scheme)</h1>
+          <p class="pd-hero__sub">Under the Central Sector Scheme for Promotion of 10,000 FPOs, Coodu Trust &mdash; empanelled as a Cluster-Based Business Organization by TNSFAC &mdash; builds farmer-owned companies across Dindigul and Thiruvarur districts of Tamil Nadu.</p>
+          <ul class="pd-hero__meta" aria-label="Project facts">
+            <li class="pd-meta-chip"><i data-lucide="landmark" aria-hidden="true"></i>Central government scheme</li>
+            <li class="pd-meta-chip"><i data-lucide="calendar-days" aria-hidden="true"></i>2022&ndash;Present</li>
+            <li class="pd-meta-chip"><i data-lucide="badge-check" aria-hidden="true"></i>Ongoing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="10,000 FPO scheme at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="1103">1,103</span></span>
+            <span class="stat__label">Farmers enrolled (2023&ndash;2024)</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="4">4</span></span>
+            <span class="stat__label">Farmer Producer Companies registered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="257">257</span></span>
+            <span class="stat__label">Women members</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="2">2</span></span>
+            <span class="stat__label">Districts &mdash; Dindigul &amp; Thiruvarur</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- THE PROJECT ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">The project</p>
+            <h2 class="section-head" id="understand-title">Farmer-owned companies for small and marginal farmers</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">Project mission</span>
+              <p>Fostering and developing Farmer Producer Organisations under the Central Sector Scheme for Promotion of 10,000 FPOs &mdash; empanelled as a <strong class="pd-hl">Cluster-Based Business Organization (CBBO)</strong> by TNSFAC to establish <strong class="pd-hl">sustainable farmer-owned companies</strong> that enhance agricultural productivity, improve market access, and foster economic development among small and marginal farmers.</p>
+            </div>
+            <p>The <strong class="pd-hl">Central Sector Scheme for Promotion of 10,000 Farmers Producer Organisations</strong> is a Government of India initiative under the Ministry of Agriculture &amp; Farmers Welfare. In 2022, the <strong class="pd-hl">Tamil Nadu Small Farmers Agri-Business Consortium (TNSFAC)</strong> empanelled Coodu Trust as a CBBO. Since then, <mark class="pd-num">4 Farmer Producer Companies</mark> have been registered and are operational &mdash; Oddanchatram Agro and Kuriji Malai in Dindigul district, and Delta Vaduvur and Ponni Vanam in Thiruvarur district &mdash; with membership growing from <mark class="pd-num">1,082 farmers in 2022&ndash;2023</mark> to <mark class="pd-num">1,103 in 2023&ndash;2024</mark>, including <mark class="pd-num">257 women members (24%)</mark>.</p>
+            <p>Each company is built around the key agricultural trades of its region &mdash; <strong class="pd-hl">hill garlic, maize, paddy, groundnut, coconut, onion, cotton and green peas</strong> &mdash; and all four have secured <strong class="pd-hl">equity grants</strong> to commence trading. A separate CSR partnership with Sri Mugund Bakers &amp; Traders Pvt. Ltd. in Kadavur Block, Karur district, extends FPO and dairy-farming training to women farmers, with technical support from the Veterinary Department, Krishi Vigyan Kendra and the Agriculture Department.</p>
+            <ul class="pd-principles" aria-label="Focus areas">
+              <li><i data-lucide="building-2" aria-hidden="true"></i> FPO formation</li>
+              <li><i data-lucide="users" aria-hidden="true"></i> Farmer mobilization</li>
+              <li><i data-lucide="store" aria-hidden="true"></i> Market access</li>
+              <li><i data-lucide="hand-heart" aria-hidden="true"></i> Women's inclusion</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">What the project delivered</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">FPO registration &amp; formation</span>
+                <span class="pd-process__desc">Four Farmer Producer Companies registered with formal governance, elected boards and business plans.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Farmer mobilization &amp; enrollment</span>
+                <span class="pd-process__desc">1,103 farmers enrolled across the four FPOs, including 257 women members (24%).</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Equity grants &amp; financial support</span>
+                <span class="pd-process__desc">All four FPOs secured equity grants as seed capital to commence trading activities.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Training &amp; capacity building</span>
+                <span class="pd-process__desc">Agri-export procedures, post-harvest management, food processing, marketing and FPO governance.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Crop-specific business development</span>
+                <span class="pd-process__desc">Each FPO developed around its region's key trades &mdash; from hill garlic and green peas to paddy and cotton.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Compliance &amp; reporting</span>
+                <span class="pd-process__desc">Timely progress reports to TNSFAC, transparent finances and regular milestone tracking.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="users" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Small farmers negotiating alone</h3>
+                <p class="pd-cr__desc">Without a collective enterprise, small and marginal farmers face weak market access and little bargaining power for the crops their regions depend on.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="building-2" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Four farmer-owned companies registered</h3>
+                <p class="pd-cr__desc">1,103 farmers enrolled in 4 Farmer Producer Companies across Dindigul and Thiruvarur &mdash; each structured around its region's key trades, from hill garlic and green peas to paddy and cotton.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="coins" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">New companies without capital or business skills</h3>
+                <p class="pd-cr__desc">A newly registered FPO cannot trade without seed capital &mdash; or manage a collective enterprise without training in marketing, processing and governance.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Equity grants plus hands-on training</h3>
+                <p class="pd-cr__desc">All four FPOs secured equity grants to commence trading, backed by training in agri-export procedures, post-harvest management, food processing, agricultural marketing and FPO governance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Scheme</dt>
+            <dd>10,000 FPO scheme<span class="pd-fact__note">Central Sector Scheme for Promotion of 10,000 FPOs &mdash; Ministry of Agriculture &amp; Farmers Welfare</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Period</dt>
+            <dd>2022&ndash;Present<span class="pd-fact__note">TNSFAC empanelled Coodu Trust as CBBO in 2022; ongoing</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>2 districts<span class="pd-fact__note">Dindigul (Oddanchatram &amp; Kodaikanal blocks) and Thiruvarur (Needamangalam &amp; Kottur blocks)</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Beneficiaries</dt>
+            <dd>1,103 farmers<span class="pd-fact__note">Small &amp; marginal farmers, including 257 women members (24%)</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Partners</dt>
+            <dd>TNSFAC<span class="pd-fact__note">CSR training with Sri Mugund Bakers &amp; Traders Pvt. Ltd.; technical support from Veterinary Department, KVK &amp; Agriculture Department</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Status</dt>
+            <dd>Ongoing<span class="pd-fact__note">4 FPCs operational, all with equity grants secured &mdash; verified from TNSFAC progress reports</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- OUTCOMES ---------- -->
+    <section class="pd-impact section section--alt" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Outcomes</p>
+        <h2 class="section-head" id="impact-title">What the project changed</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="building-2" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">4 FPCs registered and operational</h3>
+            <p>Four Farmer Producer Companies successfully registered across Dindigul and Thiruvarur districts, all established and operational with formal governance.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">1,103 farmers enrolled, 24% women</h3>
+            <p>Total membership of 1,103 farmers including 257 women members, growing from 1,082 in 2022&ndash;2023 to 1,103 in 2023&ndash;2024.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="coins" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Equity grants secured by all 4 FPOs</h3>
+            <p>All four FPOs secured equity grants, business operations commenced with trading activities, and financial bases strengthened for long-term sustainability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROJECTS ---------- -->
+    <section class="pd-related section" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More from farmer collectivization &amp; agribusiness</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="../farmer-collectivization.html"><span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span><span class="pd-rel__title">Farmer collectivization overview</span></a></li>
+          <li><a class="pd-rel" href="dairy-development-kvb.html"><span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span><span class="pd-rel__title">Dairy development with KVB</span></a></li>
+          <li><a class="pd-rel" href="fpo-promotion-2015.html"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span><span class="pd-rel__title">FPO promotion (2015)</span></a></li>
+          <li><a class="pd-rel" href="../livestock-allied.html"><span class="icon-chip"><i data-lucide="egg" aria-hidden="true"></i></span><span class="pd-rel__title">Livestock &amp; allied activities</span></a></li>
+          <li><a class="pd-rel" href="../sustainable-agriculture.html"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="pd-rel__title">Sustainable agriculture sector</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support farmer collectivization</h2>
+          <p class="pd-cta__sub">Help us build farmer-owned companies that give small and marginal farmers real market power &mdash; from enrollment and equity to training and trade across Tamil Nadu.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../../about.html">About Us</a></li>
+              <li><a href="../../programs.html">Our Programs</a></li>
+              <li><a href="../../get-involved.html">Get Involved</a></li>
+              <li><a href="../../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../../assets/js/coodu.js?v=8" defer></script>
 
 </body>
 </html>

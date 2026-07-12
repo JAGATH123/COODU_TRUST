@@ -1,917 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dairy Development Programme - Karur Vysya Bank CSR | Coodu Trust</title>
-    <meta name="description" content="Dairy Development Programme supported by Karur Vysya Bank, promoting Tharangampatti Dairy Farmers Producer Company Limited (TDPCL) with 500 women farmers, 10 milk collection centres collecting 1,500-1,800 litres daily in Kadavur Block, Karur District.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dairy development programme (KVB) &mdash; COODU Trust</title>
+  <meta name="description" content="Dairy Development Programme with Karur Vysya Bank CSR support, originated under the State Balanced Growth Fund — 500 women farmers organised into TDPCL with 10 milk collection centres at Kadavur Block, Karur District.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Dairy Development Project Page Specific Styles */
-        .nursery-page {
-            background: transparent !important;
-        }
-
-        .nursery-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-
-        /* Modern Hero Section */
-        .nursery-hero {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .hero-content-modern {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-text-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-visual-section {
-            position: relative;
-        }
-
-        .modern-carousel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
-
-        .quick-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .quick-stat {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: white !important;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-
-        /* Program Overview Modern */
-        .overview-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .overview-content-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .overview-sidebar {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
-        }
-
-        /* Achievement Dashboard */
-        .achievements-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .achievement-card-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 5px solid #28a745;
-        }
-
-        .achievement-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .achievement-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        /* Statistics Dashboard */
-        .stats-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .stat-header {
-            color: #28a745;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .stat-value {
-            color: #2c3e50;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content-modern {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .overview-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .quick-stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nursery-page .container {
-                padding: 0 15px;
-            }
-
-            .hero-text-section,
-            .overview-content-modern,
-            .overview-sidebar {
-                padding: 30px 25px;
-            }
-
-            .achievement-card-modern {
-                padding: 25px 20px;
-            }
-
-            .carousel-image {
-                height: 250px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/coodu-programs-detail.css?v=6">
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="project-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                <ul class="nav-menu">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../../about.html" class="nav-link">About</a></li>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                    <li class="dropdown">
-                        <a href="../../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="../environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="../solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+      <a class="brand" href="../../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
 
-                    <li class="dropdown">
-                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../../partner.html">Partner with Us</a></li>
-                            <li><a href="../../volunteer.html">Volunteer</a></li>
-                            <li><a href="../../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../index.html">Home</a></li>
+          <li><a class="nav__link" href="../../about.html">About</a></li>
 
-                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
-                </ul>
+          <li class="has-mega">
+            <a href="../../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="../environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="../women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
 
-                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+          <li class="has-mega">
+            <a href="../../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+          <li><a class="nav__link" href="../../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../../media.html">Media</a></li>
+          <li><a class="nav__link" href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../../index.html">Home</a>
+        <a class="drawer__link" href="../../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../../programs.html">All programs</a>
+            <a href="../environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="../women-empowerment.html">Women Empowerment</a>
+            <a href="../education-skilling.html">Education &amp; Skilling</a>
+            <a href="../health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="../consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== MODERN HERO SECTION =========== -->
-        <section class="nursery-hero">
-            <div class="container">
-                <div class="breadcrumb" style="margin-bottom: 30px;">
-                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../sustainable-agriculture.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Sustainable Agriculture</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../farmer-collectivization.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Farmer Collectivization & Agribusiness</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <span style="color: #2c3e50; font-weight: 600;">Dairy Development Programme (KVB)</span>
-                </div>
-
-                <div class="hero-content-modern">
-                    <div class="hero-text-section">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🥛 WOMEN-LED DAIRY ENTERPRISE</div>
-
-                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">Dairy Development Programme</h1>
-                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Women's Agri-Entrepreneurship through Dairy Farming — Supported by Karur Vysya Bank (2022-Present)</p>
-
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
-                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Supporting the economic empowerment of women farmers through collective action in dairy farming, by establishing a women-led Farmer Producer Company, creating milk collection infrastructure, and providing comprehensive training in dairy management, fodder cultivation, and para-veterinary services — transforming women from subsistence farmers into agri-entrepreneurs.</p>
-                        </div>
-
-                        <div class="key-highlights" style="margin-bottom: 30px;">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2022-Present (Ongoing)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">👩‍🌾</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">500 Women Farmers</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🥛</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">10 Milk Collection Centres</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">💰</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Weekly Payments to Women</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Stats -->
-                        <div class="quick-stats">
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">1,500-1,800</span>
-                                <span class="stat-label" style="color: white;">Litres Milk Collected Daily</span>
-                            </div>
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">₹32-45/Litre</span>
-                                <span class="stat-label" style="color: white;">Women's Earnings (SNF-based)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-visual-section">
-                        <div class="modern-carousel">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Project Gallery</h3>
-
-                            <div class="hero-photo-carousel">
-                                <div class="carousel-frame">
-                                    <div class="photo-slides">
-                                        <div class="photo-slide active">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Women dairy farmers at milk collection centre" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">👩‍🌾 Women-Led Dairy Enterprise</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Milk collection and quality testing" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🥛 Milk Collection Infrastructure</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Dairy training sessions for women" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 Training & Capacity Building</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Fodder cultivation and livestock management" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🌾 Fodder & Livestock Management</div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-indicators">
-                                        <span class="indicator active" data-slide="0"></span>
-                                        <span class="indicator" data-slide="1"></span>
-                                        <span class="indicator" data-slide="2"></span>
-                                        <span class="indicator" data-slide="3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
-        <section class="overview-modern">
-            <div class="container">
-                <div class="overview-grid">
-                    <div class="overview-content-modern">
-                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Programme Overview</h2>
-
-                        <div style="margin-bottom: 35px;">
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
-                                Coodu Trust, with the support of <strong>Karur Vysya Bank (KVB)</strong>, has successfully promoted a Farmer Producer Company in Tharangampatti, Karur District, under the name <strong>Tharangampatti Dairy Farmers Producer Company Limited (TDPCL)</strong>. This initiative is specifically designed to empower women farmers and encourage them to become agri-entrepreneurs, with a focus on improving their dairy farming practices and creating sustainable income opportunities.
-                            </p>
-
-                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
-                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Core Objectives</h4>
-                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Support the economic empowerment of women farmers through collective action, while improving the productivity and profitability of dairy farming in the region through scientific management practices, infrastructure development, and market linkages that ensure fair prices and weekly payments to women producers.</p>
-                            </div>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                The programme originated under the <strong>State Balanced Growth Fund (SBGF)</strong>, a unique programme by the State Planning Commission to address regional imbalances in per capita income, employment, poverty, health, education, and gender issues. The State Planning Commission identified Coodu Trust as the coordinating agency to implement the "Sustainable Livelihood Enhancement through Scientific Management of Dairy Animals" project at Kadavur Block, Karur District.
-                            </p>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
-                                A total of <strong>500 women farmers</strong> have been enrolled as members of TDPCL, and <strong>100 Joint Liability Groups (JLGs)</strong> have been formed. Ten milk collection centres have been established, processing <strong>1,500 to 1,800 litres of milk daily</strong>. The milk is marketed through Raj Dairy, with women earning between <strong>Rs. 32 to Rs. 45 per litre</strong> based on the SNF (Solids-Not-Fat) value, with weekly payments ensuring regular income flow. Karur Vysya Bank provided a dedicated milk transport vehicle, and an application has been made to SBGF for a loan to acquire 500 milch animals with subsidy.
-                            </p>
-                        </div>
-
-                        <!-- Target Beneficiaries -->
-                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
-                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Target Beneficiaries</h4>
-                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👩‍🌾</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">500 Women Farmers</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👩‍💼</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Women Agri-Entrepreneurs</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👨‍⚕️</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">20 Youth (Para-Veterinary Trainees)</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="overview-sidebar">
-                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                                <strong>Kadavur Block,</strong><br>
-                                Karur District, Tamil Nadu
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Duration:</strong> 2022-Present (Ongoing)<br>
-                                <strong>Origin:</strong> State Balanced Growth Fund (SBGF) Programme<br>
-                                <strong>Designated by:</strong> State Planning Commission<br>
-                                <strong>Status:</strong> Operational — TDPCL actively collecting and marketing milk
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🤝 Key Partners</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>CSR Support:</strong> Karur Vysya Bank (KVB) — Milk transport vehicle<br>
-                                <strong>Government:</strong> State Balanced Growth Fund (SBGF), State Planning Commission<br>
-                                <strong>Marketing Partner:</strong> Raj Dairy<br>
-                                <strong>Technical Partners:</strong> Veterinary Department, KVK, Agriculture Department
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY ACTIVITIES & ACHIEVEMENTS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Activities & Achievements</h2>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 1: FPC Formation -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🏢</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Tharangampatti Dairy FPC Formation</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-                            <p style="color: #1565c0; margin: 0; font-weight: 600; text-align: center;"><strong>500 Women Farmers | 100 JLGs</strong></p>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">Tharangampatti Dairy Farmers Producer Company Limited (TDPCL) was promoted with 500 women farmers as members, providing them a platform to collectively manage and market their milk production. 100 Joint Liability Groups (JLGs) were formed to organise the women into manageable operational units for dairy activities.</p>
-                    </div>
-
-                    <!-- Card 2: Milk Collection Infrastructure -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🥛</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Milk Collection Infrastructure</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-                            <p style="color: #1565c0; margin: 0; font-weight: 600; text-align: center;"><strong>10 Centres | 1,500-1,800 Litres/Day</strong></p>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">Ten milk collection centres were established across Kadavur Block, making it easier for women farmers to deliver their milk efficiently and receive fair prices. The collection unit processes 1,500 to 1,800 litres of milk daily, ensuring consistent and large-scale procurement with a steady market for all participating women farmers.</p>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 3: Marketing & Income Generation -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">💰</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Marketing & Income Generation</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-                            <h4 style="color: #28a745; margin-bottom: 15px; font-size: 1.1rem;">Earnings Structure:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Marketing Partner: Raj Dairy
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Price Range: ₹32 to ₹45 per litre (based on SNF value)
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Payment Cycle: Weekly payments to all beneficiaries
-                                </li>
-                                <li style="padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Transport: Dedicated milk vehicle funded by Karur Vysya Bank
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin: 0; font-size: 1.05rem;">Milk is marketed through Raj Dairy with prices determined by SNF (Solids-Not-Fat) content, ensuring quality-based fair pricing. Weekly payments provide women with regular, predictable income, significantly improving their economic stability and household financial management.</p>
-                    </div>
-
-                    <!-- Card 4: Dairy Farming Training -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎓</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Dairy Farming Training</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-                            <p style="color: #1565c0; margin: 0; font-weight: 600; text-align: center;"><strong>260 Women Trained (2022-23) | 100 Women in Fodder & Azolla (2023-24)</strong></p>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-                            <h4 style="color: #28a745; margin-bottom: 15px; font-size: 1.1rem;">Training Modules:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Fodder cultivation techniques for year-round nutritious livestock feed
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Livestock management for improved health and milk yield
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Animal nutrition and health management including vaccination schedules
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Disease prevention and feeding practices
-                                </li>
-                                <li style="padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Azolla cultivation — high-protein aquatic plant as natural feed supplement
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin: 0; font-size: 1.05rem;">Comprehensive training on dairy farming was delivered to women farmers, covering scientific methods of livestock rearing, feeding schedules, and health management to maximise milk yield and cow health.</p>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
-                    <!-- Card 5: Para-Veterinary Youth Training -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">👨‍⚕️</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Para-Veterinary Youth Training</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
-                            <p style="color: #1565c0; margin: 0; font-weight: 600; text-align: center;"><strong>20 Youth | 30-Day Programme</strong></p>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">A specialised 30-day training programme was conducted for 20 youth from the area on Para-Veterinary Services, with support from the Veterinary Department. This equipped local youth with skills to provide veterinary care to dairy animals, improving livestock health and productivity in the community while creating employment opportunities for rural youth.</p>
-                    </div>
-
-                    <!-- Card 6: Infrastructure & Scale-Up -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🚛</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Infrastructure & Scale-Up</h3>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-                            <h4 style="color: #28a745; margin-bottom: 15px; font-size: 1.1rem;">Infrastructure Developed:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • 10 milk collection centres operational
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Dedicated milk transport vehicle (funded by KVB)
-                                </li>
-                                <li style="margin-bottom: 10px; padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • SBGF loan application for 500 milch animals with subsidy
-                                </li>
-                                <li style="padding: 8px 12px; background: rgba(40, 167, 69, 0.1); border-radius: 6px; color: #2c3e50; font-size: 0.9rem;">
-                                    • Quality-based SNF testing at collection centres
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin: 0; font-size: 1.05rem;">Karur Vysya Bank supported the programme by funding a dedicated vehicle for transporting milk from collection centres to the marketing partner, ensuring cold-chain efficiency. An application to SBGF for a subsidised loan to acquire 500 milch animals will further expand the programme's scale.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== PROGRAMME IMPACT =========== -->
-        <section class="stats-modern">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Programme Impact</h2>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3 class="stat-header">Economic Empowerment</h3>
-                        <p class="stat-value">Women have transitioned from subsistence farming to agri-entrepreneurship. The added income from dairy farming — averaging ₹34 per litre with weekly payments — has significantly improved economic status and financial independence of women farmers and their families.</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3 class="stat-header">Improved Dairy Productivity</h3>
-                        <p class="stat-value">Training in fodder cultivation, Azolla farming, and veterinary care has led to healthier cows, better milk yield, and increased overall productivity. Milk yield has shown remarkable improvement as a result of better feeding techniques and management practices.</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3 class="stat-header">Community & Market Development</h3>
-                        <p class="stat-value">TDPCL has created a strong support network for women farmers through milk collection centres and collective marketing via Raj Dairy. This network ensures better prices and a steady market, making women less vulnerable to market fluctuations.</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3 class="stat-header">Youth Employment</h3>
-                        <p class="stat-value">The 30-day para-veterinary training for 20 youth has created local employment opportunities, ensuring that veterinary care is accessible within the community and not dependent on external services.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== EARLIER DAIRY WORK — HISTORICAL CONTEXT =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Earlier Dairy Work — Historical Context</h2>
-                <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    Coodu Trust has over a decade of expertise in dairy development, having trained thousands of farmers across Tamil Nadu before establishing the current TDPCL model.
-                </p>
-
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>Year</th>
-                                <th>Activity</th>
-                                <th>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2013-2014</td>
-                                <td>Dairy Farmer Skill Training</td>
-                                <td>2,476 farm women trained across Dindigul, Karur, Tirunelveli, Virudhunagar, Salem, Vellore</td>
-                            </tr>
-                            <tr>
-                                <td>2014-2015</td>
-                                <td>PMKVY Dairy Training</td>
-                                <td>539 dairy farmers trained in Karur, Dindigul, Salem under NSDC</td>
-                            </tr>
-                            <tr>
-                                <td>2016-2017</td>
-                                <td>Dairy Farmer/Entrepreneur Training</td>
-                                <td>560 beneficiaries in Dindigul, Karur, Salem; 461 obtained NSDC certificates</td>
-                            </tr>
-                            <tr style="background-color: #e8f5e8;">
-                                <td><strong>2022-Present</strong></td>
-                                <td><strong>TDPCL (KVB CSR)</strong></td>
-                                <td><strong>500 women, 10 centres, 1,800 litres/day</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Historical Impact Note -->
-                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px; border-left: 4px solid #28a745;">
-                    <p style="color: #1b5e20; margin: 0; font-size: 1rem; line-height: 1.6; text-align: center;">
-                        <strong>🥛 Decade of Dairy Expertise:</strong> This demonstrates over a decade of dairy development expertise leading up to the current TDPCL model, with over <strong>3,575 farmers trained</strong> across Tamil Nadu, establishing Coodu Trust as a leader in women-centric dairy development.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== VERIFIED STATISTICS TABLE =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Verified Statistics</h2>
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>Metric</th>
-                                <th>2022-2023 Data</th>
-                                <th>2023-2024 Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>FPC Name</td>
-                                <td>Tharangampatti Dairy Farmers Producer Company Limited (TDPCL)</td>
-                                <td>Same</td>
-                            </tr>
-                            <tr>
-                                <td>Women Farmers Enrolled</td>
-                                <td>500</td>
-                                <td>500</td>
-                            </tr>
-                            <tr>
-                                <td>Joint Liability Groups</td>
-                                <td>100</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>Milk Collection Centres</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <td>Daily Milk Collection</td>
-                                <td>1,800 litres</td>
-                                <td>1,500-1,700 litres</td>
-                            </tr>
-                            <tr>
-                                <td>Price Per Litre</td>
-                                <td>₹32-45 (SNF-based)</td>
-                                <td>₹34 average</td>
-                            </tr>
-                            <tr>
-                                <td>Payment Frequency</td>
-                                <td>Weekly</td>
-                                <td>Weekly</td>
-                            </tr>
-                            <tr>
-                                <td>Marketing Partner</td>
-                                <td>Raj Dairy</td>
-                                <td>Raj Dairy</td>
-                            </tr>
-                            <tr>
-                                <td>Women Trained (Dairy)</td>
-                                <td>260</td>
-                                <td>100 (Fodder & Azolla)</td>
-                            </tr>
-                            <tr>
-                                <td>Youth Trained (Para-Vet)</td>
-                                <td>—</td>
-                                <td>20 (30-day programme)</td>
-                            </tr>
-                            <tr>
-                                <td>KVB Support</td>
-                                <td>Milk transport vehicle</td>
-                                <td>Continued</td>
-                            </tr>
-                            <tr>
-                                <td>SBGF Loan Application</td>
-                                <td>Applied for 500 milch animals</td>
-                                <td>Pending</td>
-                            </tr>
-                            <tr>
-                                <td>Programme Origin</td>
-                                <td>State Balanced Growth Fund (SBGF)</td>
-                                <td>Continued</td>
-                            </tr>
-                            <tr style="background-color: #e8f5e8;">
-                                <td><strong>Designated by</strong></td>
-                                <td><strong>State Planning Commission</strong></td>
-                                <td><strong>—</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Program Impact Note -->
-                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px; border-left: 4px solid #28a745;">
-                    <p style="color: #1b5e20; margin: 0; font-size: 1rem; line-height: 1.6; text-align: center;">
-                        <strong>👩‍🌾 Women-Led Success:</strong> This programme demonstrates the power of collective action and women's entrepreneurship in dairy farming, creating sustainable livelihoods for <strong>500 women farmers</strong> while building a robust dairy value chain that ensures fair prices, weekly incomes, and economic independence.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Women-Led Dairy Enterprises</h2>
-                    <p class="cta-text">Join us in empowering women farmers through sustainable dairy development that creates lasting income opportunities, improves livestock productivity, and builds women-led agri-enterprises across rural Tamil Nadu.</p>
-                    <div class="cta-buttons">
-                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../../about.html">About Us</a></li>
-                        <li><a href="../../programs.html">Our Programs</a></li>
-                        <li><a href="../../careers.html">Careers</a></li>
-                        <li><a href="../../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../../get-involved.html">Overview</a>
+            <a href="../../partner.html">Partner with Us</a>
+            <a href="../../volunteer.html">Volunteer</a>
+            <a href="../../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../../assets/js/main.js"></script>
+        <a class="drawer__link" href="../../documents.html">Documents</a>
+        <a class="drawer__link" href="../../media.html">Media</a>
+        <a class="drawer__link" href="../../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo + project meta) ---------- -->
+    <section class="pd-hero" style="--pd-hero-img: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1755146551/coodu-trust/images/programs/background-prgms/farmer-collectivization-and-agribusiness.png')" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../../programs.html">Programs</a></li>
+              <li><a href="../sustainable-agriculture.html">Sustainable agriculture</a></li>
+              <li><a href="../farmer-collectivization.html">Farmer collectivization &amp; agribusiness</a></li>
+              <li aria-current="page">Dairy Development (KVB)</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Dairy development programme (Karur Vysya Bank)</h1>
+          <p class="pd-hero__sub">A CSR partnership with Karur Vysya Bank, originated under the State Balanced Growth Fund &mdash; building a women-led dairy producer company at Kadavur Block, Karur District, Tamil Nadu.</p>
+          <ul class="pd-hero__meta" aria-label="Project facts">
+            <li class="pd-meta-chip"><i data-lucide="landmark" aria-hidden="true"></i>CSR partnership &middot; SBGF origin</li>
+            <li class="pd-meta-chip"><i data-lucide="calendar-days" aria-hidden="true"></i>2022&ndash;Present</li>
+            <li class="pd-meta-chip"><i data-lucide="badge-check" aria-hidden="true"></i>Ongoing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Dairy development programme at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="500">500</span></span>
+            <span class="stat__label">Women farmers enrolled in TDPCL</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="100">100</span></span>
+            <span class="stat__label">Joint Liability Groups formed</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="10">10</span></span>
+            <span class="stat__label">Milk collection centres established</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="1500" data-suffix="&ndash;1,800">1,500&ndash;1,800</span></span>
+            <span class="stat__label">Litres of milk collected daily</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- THE PROJECT ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">The project</p>
+            <h2 class="section-head" id="understand-title">Turning women dairy farmers into agri-entrepreneurs</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">Project mission</span>
+              <p>Supporting the economic empowerment of women farmers through collective action in dairy farming, by establishing a <strong class="pd-hl">women-led Farmer Producer Company</strong>, creating milk collection infrastructure, and providing comprehensive training in dairy management, fodder cultivation, and para-veterinary services &mdash; transforming women from subsistence farmers into <strong class="pd-hl">agri-entrepreneurs</strong>.</p>
+            </div>
+            <p>The programme originated under the <strong class="pd-hl">State Balanced Growth Fund (SBGF)</strong>, a State Planning Commission programme addressing regional imbalances in per capita income, employment, poverty, health, education and gender issues. The Commission identified Coodu Trust as the coordinating agency for the &ldquo;Sustainable Livelihood Enhancement through Scientific Management of Dairy Animals&rdquo; project at <strong class="pd-hl">Kadavur Block, Karur District</strong> &mdash; with <strong class="pd-hl">Karur Vysya Bank</strong> layering CSR support, including a dedicated milk transport vehicle.</p>
+            <p>At its centre is the <strong class="pd-hl">Tharangampatti Dairy Farmers Producer Company Limited (TDPCL)</strong>: <mark class="pd-num">500 women farmers</mark> enrolled as members and organised into <mark class="pd-num">100 Joint Liability Groups</mark>. Ten milk collection centres process <mark class="pd-num">1,500 to 1,800 litres daily</mark>, marketed through Raj Dairy at <mark class="pd-num">&#8377;32 to &#8377;45 per litre</mark> based on SNF (Solids-Not-Fat) value, with weekly payments to every producer.</p>
+            <p>Training runs alongside the infrastructure: <mark class="pd-num">260 women</mark> trained in dairy farming (2022&ndash;23), <mark class="pd-num">100 women</mark> in fodder and Azolla cultivation (2023&ndash;24), and <mark class="pd-num">20 youth</mark> through a 30-day para-veterinary programme with the Veterinary Department &mdash; building on a decade of Coodu Trust dairy work that has trained over <mark class="pd-num">3,575 farmers</mark> across Tamil Nadu.</p>
+            <ul class="pd-principles" aria-label="Focus areas">
+              <li><i data-lucide="users" aria-hidden="true"></i> Women-led collectivisation</li>
+              <li><i data-lucide="milk" aria-hidden="true"></i> Milk collection &amp; marketing</li>
+              <li><i data-lucide="sprout" aria-hidden="true"></i> Fodder &amp; Azolla cultivation</li>
+              <li><i data-lucide="graduation-cap" aria-hidden="true"></i> Para-veterinary skilling</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">What the project delivered</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">TDPCL FPC formation</span>
+                <span class="pd-process__desc">500 women farmers enrolled as members; 100 Joint Liability Groups organise dairy activities.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Milk collection infrastructure</span>
+                <span class="pd-process__desc">Ten collection centres across Kadavur Block with quality-based SNF testing.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Marketing &amp; income generation</span>
+                <span class="pd-process__desc">Milk marketed through Raj Dairy at &#8377;32&ndash;45 per litre, with weekly payments.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Fodder &amp; Azolla training</span>
+                <span class="pd-process__desc">Year-round nutritious livestock feed, plus Azolla as a high-protein natural supplement.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Para-veterinary youth training</span>
+                <span class="pd-process__desc">30-day programme for 20 local youth, supported by the Veterinary Department.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Infrastructure &amp; scale-up</span>
+                <span class="pd-process__desc">KVB-funded milk transport vehicle; SBGF loan application for 500 subsidised milch animals.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="users" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Women selling milk alone, at the market&rsquo;s mercy</h3>
+                <p class="pd-cr__desc">Individual subsistence farmers have no collective bargaining power &mdash; leaving women vulnerable to market fluctuations, with no assured price or steady buyer for their milk.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">A women-led producer company with assured marketing</h3>
+                <p class="pd-cr__desc">TDPCL organises 500 women through 100 JLGs and 10 collection centres, marketing collectively via Raj Dairy at &#8377;32&ndash;45 per litre on SNF value &mdash; with weekly payments to every beneficiary.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Animal care dependent on distant external services</h3>
+                <p class="pd-cr__desc">When veterinary care sits outside the community, feeding practices, vaccination schedules and disease prevention are hard to sustain &mdash; and herd health and milk yield suffer.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Skills and para-vets inside the community</h3>
+                <p class="pd-cr__desc">Training in livestock management, animal nutrition, vaccination schedules and disease prevention &mdash; plus a 30-day para-veterinary programme for 20 local youth with the Veterinary Department.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Scheme</dt>
+            <dd>KVB CSR partnership<span class="pd-fact__note">Originated under the State Balanced Growth Fund (SBGF), State Planning Commission</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Period</dt>
+            <dd>2022&ndash;Present<span class="pd-fact__note">Ongoing &mdash; SBGF loan application for 500 subsidised milch animals pending</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>Kadavur Block<span class="pd-fact__note">Karur District, Tamil Nadu &mdash; FPC based at Tharangampatti</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Beneficiaries</dt>
+            <dd>500 women farmers<span class="pd-fact__note">Plus 20 youth para-veterinary trainees; 100 Joint Liability Groups</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Partners</dt>
+            <dd>Raj Dairy (marketing)<span class="pd-fact__note">Technical support from the Veterinary Department, KVK &amp; Agriculture Department</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Part of</dt>
+            <dd>A decade of dairy work<span class="pd-fact__note">Over 3,575 farmers trained across Tamil Nadu, from Dindigul to Vellore</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- OUTCOMES ---------- -->
+    <section class="pd-impact section section--alt" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Outcomes</p>
+        <h2 class="section-head" id="impact-title">What the project changed</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="coins" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Economic empowerment</h3>
+            <p>Women have moved from subsistence farming to agri-entrepreneurship &mdash; dairy income averaging &#8377;34 per litre with weekly payments has improved the economic status and financial independence of women farmers and their families.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Improved dairy productivity</h3>
+            <p>Training in fodder cultivation, Azolla farming and veterinary care has produced healthier cows and better milk yield &mdash; a remarkable improvement driven by better feeding techniques and management practices.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Community &amp; market development</h3>
+            <p>TDPCL&rsquo;s collection centres and collective marketing via Raj Dairy give women farmers better prices and a steady market &mdash; a support network that makes them less vulnerable to market fluctuations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROJECTS ---------- -->
+    <section class="pd-related section" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More from farmer collectivization &amp; agribusiness</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="../farmer-collectivization.html"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span><span class="pd-rel__title">Farmer collectivization overview</span></a></li>
+          <li><a class="pd-rel" href="fpo-10000-scheme.html"><span class="icon-chip"><i data-lucide="layers" aria-hidden="true"></i></span><span class="pd-rel__title">FPO 10,000 scheme</span></a></li>
+          <li><a class="pd-rel" href="fpo-promotion-2015.html"><span class="icon-chip"><i data-lucide="sprout" aria-hidden="true"></i></span><span class="pd-rel__title">FPO promotion (2015)</span></a></li>
+          <li><a class="pd-rel" href="../livestock-allied.html"><span class="icon-chip"><i data-lucide="egg" aria-hidden="true"></i></span><span class="pd-rel__title">Livestock &amp; allied activities</span></a></li>
+          <li><a class="pd-rel" href="../sustainable-agriculture.html"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="pd-rel__title">Sustainable agriculture sector</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support women-led dairy enterprise</h2>
+          <p class="pd-cta__sub">Help us grow producer companies like TDPCL &mdash; where collective milk marketing, fair SNF-based prices and local para-veterinary skills turn women farmers into agri-entrepreneurs.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../../about.html">About Us</a></li>
+              <li><a href="../../programs.html">Our Programs</a></li>
+              <li><a href="../../get-involved.html">Get Involved</a></li>
+              <li><a href="../../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../../assets/js/coodu.js?v=8" defer></script>
 
 </body>
 </html>

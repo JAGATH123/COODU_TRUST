@@ -1,749 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WUA Capacity Building Project | Coodu Trust</title>
-    <meta name="description" content="Capacity Building of Water Users Associations (WUAs) for Participatory Irrigation Management under TNIAMWARM Project implemented by Coodu Trust from 2011-2014, empowering farmers with sustainable water management practices.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WUA capacity building &mdash; COODU Trust</title>
+  <meta name="description" content="World Bank-funded WUA capacity building under the TNIAMWARM project, delivered by Coodu Trust with the Tamil Nadu WRO, 2011-2014 — 5,644 PIM beneficiaries trained across project sub-basins in Tamil Nadu.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
-    
-    <!-- Page-Specific Styles -->
-    <style>
-        /* WUA Capacity Building Project Page Specific Styles */
-        .wua-page {
-            background: transparent !important;
-        }
-        
-        .wua-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-        
-        /* Modern Hero Section */
-        .wua-hero {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-        
-        .hero-content-modern {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .hero-text-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .hero-visual-section {
-            position: relative;
-        }
-        
-        .modern-carousel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .carousel-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
-        
-        .quick-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-        
-        .quick-stat {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: white !important;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-        
-        /* Program Overview Modern */
-        .overview-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-        
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-        
-        .overview-content-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .overview-sidebar {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
-        }
-        
-        /* Achievement Dashboard */
-        .achievements-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-        
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .achievement-card-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 5px solid #28a745;
-        }
-        
-        .achievement-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .achievement-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        /* Statistics Dashboard */
-        .stats-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .stat-header {
-            color: #28a745;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .stat-value {
-            color: #2c3e50;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content-modern {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .overview-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .quick-stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .wua-page .container {
-                padding: 0 15px;
-            }
-            
-            .hero-text-section,
-            .overview-content-modern,
-            .overview-sidebar {
-                padding: 30px 25px;
-            }
-            
-            .achievement-card-modern {
-                padding: 25px 20px;
-            }
-            
-            .carousel-image {
-                height: 250px;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/coodu-programs-detail.css?v=6">
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="project-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../../about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="../environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="../solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../../partner.html">Partner with Us</a></li>
-                            <li><a href="../../volunteer.html">Volunteer</a></li>
-                            <li><a href="../../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+      <a class="brand" href="../../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../index.html">Home</a></li>
+          <li><a class="nav__link" href="../../about.html">About</a></li>
+
+          <li class="has-mega">
+            <a href="../../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="../environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="../women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <a href="../../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="../../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../../media.html">Media</a></li>
+          <li><a class="nav__link" href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../../index.html">Home</a>
+        <a class="drawer__link" href="../../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../../programs.html">All programs</a>
+            <a href="../environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="../women-empowerment.html">Women Empowerment</a>
+            <a href="../education-skilling.html">Education &amp; Skilling</a>
+            <a href="../health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="../consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== MODERN HERO SECTION =========== -->
-        <section class="wua-hero">
-            <div class="container">
-                <div class="breadcrumb" style="margin-bottom: 30px;">
-                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a> 
-                    <span style="color: #555; margin: 0 8px;">></span> 
-                    <a href="../environment-resilience.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Environment and Resilience</a> 
-                    <span style="color: #555; margin: 0 8px;">></span> 
-                    <a href="../water-resource-management.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Water Resource Management</a> 
-                    <span style="color: #555; margin: 0 8px;">></span> 
-                    <span style="color: #2c3e50; font-weight: 600;">WUA Capacity Building</span>
-                </div>
-                
-                <div class="hero-content-modern">
-                    <div class="hero-text-section">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🏛️ WORLD BANK SUPPORTED PROJECT</div>
-                        
-                        <h1 style="color: #28a745; font-size: 2.8rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">WUA Capacity Building</h1>
-                        <p style="color: #2c3e50; font-size: 1.2rem; margin-bottom: 30px; line-height: 1.4;">Participatory Irrigation Management under TNIAMWARM (2011-2014)</p>
-                        
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
-                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Build institutional capacity of Water Users Associations (WUAs) to ensure successful and sustainable implementation of Participatory Irrigation Management, empowering farmers to operate and maintain water resources efficiently, equitably, and sustainably.</p>
-                        </div>
-                        
-                        <div class="key-highlights" style="margin-bottom: 30px;">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2011-2014 Period</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">💧</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Participatory Management</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🎓</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Institutional Capacity</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🤝</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Community Ownership</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Quick Stats -->
-                        <div class="quick-stats">
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">3</span>
-                                <span class="stat-label" style="color: white;">Years Training</span>
-                            </div>
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">39%</span>
-                                <span class="stat-label" style="color: white;">Irrigation Increase</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-visual-section">
-                        <div class="modern-carousel">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Project Gallery</h3>
-                            
-                            <div class="hero-photo-carousel">
-                                <div class="carousel-frame">
-                                    <div class="photo-slides">
-                                        <div class="photo-slide active">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="WUA training and capacity building sessions" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 WUA Capacity Building</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Participatory irrigation management training" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">💧 Irrigation Management</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Farmer awareness and technical training" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">👨‍🌾 Farmer Training</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Women participation in WUA governance" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">👩‍💼 Women Participation</div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-indicators">
-                                        <span class="indicator active" data-slide="0"></span>
-                                        <span class="indicator" data-slide="1"></span>
-                                        <span class="indicator" data-slide="2"></span>
-                                        <span class="indicator" data-slide="3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
-        <section class="overview-modern">
-            <div class="container">
-                <div class="overview-grid">
-                    <div class="overview-content-modern">
-                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Project Overview</h2>
-                        
-                        <div style="margin-bottom: 35px;">
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
-                                The <strong>Capacity Building of Water Users Associations (WUAs) for Participatory Irrigation Management (PIM)</strong> was implemented under the Tamil Nadu Irrigated Agriculture Modernization and Water-Bodies Restoration and Management (TNIAMWARM) Project from 2011–2014.
-                            </p>
-                            
-                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
-                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Primary Objective</h4>
-                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Transition the management of local irrigation systems to the farmers themselves, empowering them to operate and maintain their water resources efficiently, equitably, and sustainably through comprehensive institutional capacity building.</p>
-                            </div>
-                            
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                This initiative was a critical <strong>"software" component</strong> that complemented the "hardware" (infrastructure restoration) of the broader TNIAMWARM project. The project aimed to create comprehensive awareness among farmers about the TNIAMWARM project objectives and the legal framework of the Tamil Nadu Farmers' Management of Irrigation Systems (TNFMIS) Act.
-                            </p>
-                            
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
-                                Key goals included training WUA members on technical and administrative aspects of water management, promoting modern water-saving agricultural technologies, and ensuring long-term sustainability of irrigation infrastructure through community ownership and responsibility.
-                            </p>
-                        </div>
-                        
-                        <!-- Key Goals -->
-                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
-                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Key Goals</h4>
-                            <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
-                                <div style="padding: 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745;">
-                                    <strong style="color: #28a745;">📚 Awareness Creation:</strong> <span style="color: #2c3e50; font-size: 0.95rem;">Comprehensive understanding of TNIAMWARM project and TNFMIS Act</span>
-                                </div>
-                                <div style="padding: 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745;">
-                                    <strong style="color: #28a745;">🎓 Technical Training:</strong> <span style="color: #2c3e50; font-size: 0.95rem;">Modern water-saving technologies and agricultural productivity enhancement</span>
-                                </div>
-                                <div style="padding: 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745;">
-                                    <strong style="color: #28a745;">🤝 Community Ownership:</strong> <span style="color: #2c3e50; font-size: 0.95rem;">Foster sense of responsibility for long-term irrigation infrastructure sustainability</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="overview-sidebar">
-                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
-                        
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🗺️ Geographic Coverage</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                                <strong>Scope:</strong><br>
-                                TNIAMWARM project sub-basins across Tamil Nadu
-                            </div>
-                        </div>
-                        
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Duration:</strong> 2011-2014<br>
-                                <strong>Phase:</strong> Institutional Development<br>
-                                <strong>Status:</strong> Successfully Completed
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🏛️ Key Stakeholders</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Government:</strong> Tamil Nadu WRO<br>
-                                <strong>Funding:</strong> World Bank (IBRD/IDA)<br>
-                                <strong>NGO Partner:</strong> Coodu Trust<br>
-                                <strong>Beneficiaries:</strong> Water Users Associations
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY ACTIVITIES & ACHIEVEMENTS (IMPROVED) =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Activities & Achievements (2011–2014)</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 1: Awareness Creation -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">📚</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Awareness Creation</h3>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 15px; margin-bottom: 20px;">
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    🎯 <strong>TNIAMWARM Project Goals:</strong> Extensive campaigns on project objectives and expected outcomes
-                                </li>
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    ⚖️ <strong>TNFMIS Act Education:</strong> Legal framework and procedures for participatory irrigation management
-                                </li>
-                                <li style="padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    👩‍💼 <strong>Women Participation:</strong> Encouraging active involvement in WUA activities and governance
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2: Technical Training -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🔧</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Technical Training for Farmers</h3>
-                        </div>
-                        
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 15px;">
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    💧 <strong>Water Management:</strong> Micro-irrigation, sprinkler systems, and fertigation technologies
-                                </li>
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    🌱 <strong>Production Technologies:</strong> Improved crop techniques for various agricultural systems
-                                </li>
-                                <li style="padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    🌿 <strong>Organic Farming:</strong> Sustainable and environmentally-friendly agricultural practices
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 3: Institutional Capacity Building -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🏛️</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Institutional Capacity Building</h3>
-                        </div>
-                        
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 1.05rem;">Specialized training for WUA managing committees and four functional sub-committees on governance and operations:</p>
-                        
-                        <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 15px;">
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    📊 <strong>Governance Training:</strong> Leadership and decision-making processes
-                                </li>
-                                <li style="margin-bottom: 15px; padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    💰 <strong>Financial Management:</strong> Budget planning and resource allocation
-                                </li>
-                                <li style="padding: 12px 15px; background: rgba(40, 167, 69, 0.05); border-radius: 8px; border-left: 3px solid #28a745; color: #2c3e50; font-size: 0.95rem; line-height: 1.5;">
-                                    🔧 <strong>O&M Training:</strong> Operation and maintenance of irrigation assets
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 4: Project Impact -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">📈</div>
-                            <h3 style="color: #28a745; font-size: 1.6rem; margin: 0; font-weight: 600;">Achievements & Outcomes</h3>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">💧</span>
-                                    <strong style="color: #28a745; font-size: 1.1rem;">39% Irrigation Increase</strong>
-                                </div>
-                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Fully irrigated area expanded across TNIAMWARM sub-basins</p>
-                            </div>
-                            
-                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">📊</span>
-                                    <strong style="color: #28a745; font-size: 1.1rem;">23-47% Yield Increase</strong>
-                                </div>
-                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Significant productivity improvements across various crops</p>
-                            </div>
-                            
-                            <div style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.05)); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <span style="color: #28a745; font-size: 1.5rem; margin-right: 10px;">🤝</span>
-                                    <strong style="color: #28a745; font-size: 1.1rem;">Strengthened Institutions</strong>
-                                </div>
-                                <p style="color: #555; font-size: 0.95rem; margin: 0; line-height: 1.5;">Functional, self-governing WUAs for sustainable water management</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== VERIFIED STATISTICS TABLE =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Training Implementation Timeline</h2>
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>Year</th>
-                                <th>Training Conducted</th>
-                                <th>No. of WUAs Covered</th>
-                                <th>Farmers Benefited</th>
-                                <th>Key Outcomes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2011–2012</td>
-                                <td>Awareness & Capacity Building on PIM, TNFMIS Act, and Water Management Techniques.</td>
-                                <td colspan="2" style="text-align: center; font-style: italic; color: #666;">Year-wise breakdown not available</td>
-                                <td>Established foundational knowledge for WUA members on their roles, responsibilities, and technical options.</td>
-                            </tr>
-                            <tr>
-                                <td>2012–2013</td>
-                                <td>Continued capacity building on PIM, agricultural modernization, and water resource management.</td>
-                                <td colspan="2" style="text-align: center; font-style: italic; color: #666;">Year-wise breakdown not available</td>
-                                <td>Strengthened the governance and operational capabilities of WUAs.</td>
-                            </tr>
-                            <tr>
-                                <td>2013–2014</td>
-                                <td>Post-Project Management training for Water User Association members.</td>
-                                <td colspan="2" style="text-align: center; font-style: italic; color: #666;">Year-wise breakdown not available</td>
-                                <td>Equipped WUAs with skills for long-term, sustainable management of irrigation systems beyond the project period.</td>
-                            </tr>
-                            <tr style="background-color: #e8f5e8; font-weight: bold;">
-                                <td><strong>Total (2011-2014)</strong></td>
-                                <td><strong>Complete PIM Training Programme</strong></td>
-                                <td colspan="2" style="text-align: center;"><strong>5,644 PIM Beneficiaries</strong></td>
-                                <td><strong>Comprehensive capacity building across multiple Water User Associations</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Participatory Water Management</h2>
-                    <p class="cta-text">Join us in empowering farming communities through institutional capacity building and participatory irrigation management for sustainable water resource governance and enhanced agricultural productivity.</p>
-                    <div class="cta-buttons">
-                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../../about.html">About Us</a></li>
-                        <li><a href="../../programs.html">Our Programs</a></li>
-                        <li><a href="../../careers.html">Careers</a></li>
-                        <li><a href="../../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../../get-involved.html">Overview</a>
+            <a href="../../partner.html">Partner with Us</a>
+            <a href="../../volunteer.html">Volunteer</a>
+            <a href="../../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../../assets/js/main.js"></script>
+        <a class="drawer__link" href="../../documents.html">Documents</a>
+        <a class="drawer__link" href="../../media.html">Media</a>
+        <a class="drawer__link" href="../../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo + project meta) ---------- -->
+    <section class="pd-hero" style="--pd-hero-img: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1755146607/coodu-trust/images/programs/background-prgms/waterresourcemanagement.png')" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../../programs.html">Programs</a></li>
+              <li><a href="../environment-resilience.html">Environment &amp; resilience</a></li>
+              <li><a href="../water-resource-management.html">Water resource management</a></li>
+              <li aria-current="page">WUA Capacity Building</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">WUA capacity building for participatory irrigation management</h1>
+          <p class="pd-hero__sub">A World Bank-supported component of the TNIAMWARM project &mdash; delivered by Coodu Trust with the Tamil Nadu WRO to strengthen Water Users Associations across project sub-basins in Tamil Nadu.</p>
+          <ul class="pd-hero__meta" aria-label="Project facts">
+            <li class="pd-meta-chip"><i data-lucide="landmark" aria-hidden="true"></i>World Bank-funded state project</li>
+            <li class="pd-meta-chip"><i data-lucide="calendar-days" aria-hidden="true"></i>2011&ndash;2014</li>
+            <li class="pd-meta-chip"><i data-lucide="badge-check" aria-hidden="true"></i>Completed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="WUA capacity building at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="5644">5,644</span></span>
+            <span class="stat__label">PIM beneficiaries (2011&ndash;2014)</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="39" data-suffix="%">39%</span></span>
+            <span class="stat__label">Irrigation increase</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="23" data-suffix="&ndash;47%">23&ndash;47%</span></span>
+            <span class="stat__label">Yield increase across crops</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="3">3</span></span>
+            <span class="stat__label">Years of training</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- THE PROJECT ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">The project</p>
+            <h2 class="section-head" id="understand-title">Preparing farmers to manage their own irrigation systems</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">Project mission</span>
+              <p>Build institutional capacity of <strong class="pd-hl">Water Users Associations (WUAs)</strong> to ensure successful and sustainable implementation of <strong class="pd-hl">Participatory Irrigation Management</strong>, empowering farmers to operate and maintain water resources efficiently, equitably, and sustainably.</p>
+            </div>
+            <p>This World Bank-supported project was implemented under the <strong class="pd-hl">Tamil Nadu Irrigated Agriculture Modernization and Water-Bodies Restoration and Management (TNIAMWARM) Project</strong> &mdash; funded by the <strong class="pd-hl">World Bank (IBRD/IDA)</strong>, with the <strong class="pd-hl">Tamil Nadu WRO</strong> as the government stakeholder and Coodu Trust as the NGO partner. It was the critical &ldquo;software&rdquo; component complementing the &ldquo;hardware&rdquo; of infrastructure restoration in the broader TNIAMWARM project, reaching Water Users Associations across project sub-basins in Tamil Nadu.</p>
+            <p>Over <mark class="pd-num">3 years</mark> of training between 2011 and 2014, <mark class="pd-num">5,644 PIM beneficiaries</mark> completed the programme. Awareness campaigns covered TNIAMWARM project goals and the <strong class="pd-hl">TNFMIS Act</strong> &mdash; the legal framework for participatory irrigation management &mdash; and encouraged women&rsquo;s participation in WUA activities and governance, while specialized training reached WUA managing committees and <mark class="pd-num">4 functional sub-committees</mark> on governance and operations.</p>
+            <ul class="pd-principles" aria-label="Focus areas">
+              <li><i data-lucide="lightbulb" aria-hidden="true"></i> Awareness creation</li>
+              <li><i data-lucide="droplets" aria-hidden="true"></i> Water management technology</li>
+              <li><i data-lucide="sprout" aria-hidden="true"></i> Organic farming</li>
+              <li><i data-lucide="users" aria-hidden="true"></i> Institutional governance</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">What the training covered</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">TNIAMWARM &amp; TNFMIS Act awareness</span>
+                <span class="pd-process__desc">Project goals and outcomes, plus the legal framework and procedures for participatory irrigation management.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Water management technology</span>
+                <span class="pd-process__desc">Micro-irrigation, sprinkler systems, and fertigation technologies.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Production technologies &amp; organic farming</span>
+                <span class="pd-process__desc">Improved crop techniques and sustainable, environmentally-friendly practices.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Governance &amp; financial management</span>
+                <span class="pd-process__desc">Leadership, decision-making, budget planning and resource allocation for managing committees and four sub-committees.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">O&amp;M training</span>
+                <span class="pd-process__desc">Operation and maintenance of irrigation assets.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Post-project management (2013&ndash;2014)</span>
+                <span class="pd-process__desc">Skills for long-term, sustainable management of irrigation systems beyond the project period.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="scale" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Restored infrastructure without institutions to run it</h3>
+                <p class="pd-cr__desc">Restoring canals and water bodies is only the &ldquo;hardware&rdquo; &mdash; without capable, self-governing farmer institutions, irrigation systems risk falling back into neglect once the project team leaves.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">The &ldquo;software&rdquo; of participatory management</h3>
+                <p class="pd-cr__desc">Awareness on the TNFMIS Act plus governance, financial management and O&amp;M training for WUA managing committees and four functional sub-committees &mdash; capped by post-project management training in 2013&ndash;2014.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="cloud-off" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Water used inefficiently, productivity held back</h3>
+                <p class="pd-cr__desc">Farmers managing irrigation without modern water management and production techniques cannot get the most from every drop of water &mdash; or from every field it reaches.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="droplets" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Technical training that moved the numbers</h3>
+                <p class="pd-cr__desc">Training on micro-irrigation, sprinkler systems, fertigation, improved production technologies and organic farming &mdash; alongside a 39% expansion in fully irrigated area and 23&ndash;47% yield increases across various crops.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Scheme</dt>
+            <dd>TNIAMWARM<span class="pd-fact__note">Tamil Nadu Irrigated Agriculture Modernization and Water-Bodies Restoration and Management Project &mdash; World Bank (IBRD/IDA) funded</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Period</dt>
+            <dd>2011&ndash;2014<span class="pd-fact__note">Three years of training, successfully completed</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>TNIAMWARM sub-basins<span class="pd-fact__note">Project sub-basins across Tamil Nadu</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Beneficiaries</dt>
+            <dd>5,644 trained<span class="pd-fact__note">PIM beneficiaries from multiple Water Users Associations</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Partners</dt>
+            <dd>Tamil Nadu WRO<span class="pd-fact__note">Government stakeholder, with Coodu Trust as the NGO partner</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Part of</dt>
+            <dd>TNIAMWARM &ldquo;software&rdquo; component<span class="pd-fact__note">Institutional development complementing infrastructure restoration, under the TNFMIS Act framework</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- OUTCOMES ---------- -->
+    <section class="pd-impact section section--alt" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Outcomes</p>
+        <h2 class="section-head" id="impact-title">What the project changed</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="droplets" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">39% irrigation increase</h3>
+            <p>Fully irrigated area expanded across TNIAMWARM sub-basins.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">23&ndash;47% yield increase</h3>
+            <p>Significant productivity improvements across various crops.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Strengthened institutions</h3>
+            <p>Functional, self-governing WUAs for sustainable water management &mdash; 5,644 PIM beneficiaries completed the training programme.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROJECTS ---------- -->
+    <section class="pd-related section" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More from water resource management</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="../water-resource-management.html"><span class="icon-chip"><i data-lucide="waves" aria-hidden="true"></i></span><span class="pd-rel__title">Water resource management overview</span></a></li>
+          <li><a class="pd-rel" href="mi-tank-initiative.html"><span class="icon-chip"><i data-lucide="droplets" aria-hidden="true"></i></span><span class="pd-rel__title">MI tank initiative</span></a></li>
+          <li><a class="pd-rel" href="rainwater-harvesting-program.html"><span class="icon-chip"><i data-lucide="cloud-rain" aria-hidden="true"></i></span><span class="pd-rel__title">Rainwater harvesting programme</span></a></li>
+          <li><a class="pd-rel" href="rwh-activities.html"><span class="icon-chip"><i data-lucide="layers" aria-hidden="true"></i></span><span class="pd-rel__title">RWH activities</span></a></li>
+          <li><a class="pd-rel" href="../environment-resilience.html"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="pd-rel__title">Environment &amp; resilience sector</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support water resource management</h2>
+          <p class="pd-cta__sub">Join us in strengthening farmer institutions that manage water efficiently, equitably and sustainably &mdash; so irrigation systems keep working long after the project ends.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../../about.html">About Us</a></li>
+              <li><a href="../../programs.html">Our Programs</a></li>
+              <li><a href="../../get-involved.html">Get Involved</a></li>
+              <li><a href="../../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../../assets/js/coodu.js?v=8" defer></script>
 
 </body>
 </html>
