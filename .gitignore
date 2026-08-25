@@ -31,3 +31,12 @@ design/redesign-renders/
 /Adding globe to design/
 /NGO Website Design Enhancement/
 about globle interactive ness /
+
+# Photo staging + Cloudinary upload masters.
+# NOT part of the shipped site — this repo is the deployed web root, so anything
+# here would be publicly served. photos/ is the user's raw archive (3 GB, lives in
+# OneDrive); cloudinary-upload/ holds regenerable masters that belong on Cloudinary.
+/photos/
+/cloudinary-upload/
+/photo-review.html
+.vscode/

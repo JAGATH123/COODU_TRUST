@@ -27,7 +27,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report 2023 - 2024.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456790/coodu-trust/images/resources/annual-report-2023-2024.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673036/coodu-trust/images/resources/annual-report-2023-2024"
   },
   {
     "year": "2023",
@@ -56,7 +56,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annula Report 2022 - 2023.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456788/coodu-trust/images/resources/annual-report-2022-2023.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673035/coodu-trust/images/resources/annual-report-2022-2023"
   },
   {
     "year": "2022",
@@ -85,7 +85,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report - 2021 - 2022.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456787/coodu-trust/images/resources/annual-report-2021-2022.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673032/coodu-trust/images/resources/annual-report-2021-2022"
   },
   {
     "year": "2021",
@@ -114,7 +114,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report 2020 - 2021.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456786/coodu-trust/images/resources/annual-report-2020-2021.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673030/coodu-trust/images/resources/annual-report-2020-2021"
   },
   {
     "year": "2020",
@@ -142,7 +142,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report 2019-20.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456784/coodu-trust/images/resources/annual-report-2019-2020.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673029/coodu-trust/images/resources/annual-report-2019-2020"
   },
   {
     "year": "2019",
@@ -172,7 +172,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report 2018-2019.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456783/coodu-trust/images/resources/annual-report-2018-2019.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673027/coodu-trust/images/resources/annual-report-2018-2019"
   },
   {
     "year": "2018",
@@ -203,7 +203,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report_2017-2018.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456781/coodu-trust/images/resources/annual-report-2017-2018.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673025/coodu-trust/images/resources/annual-report-2017-2018"
   },
   {
     "year": "2017",
@@ -233,7 +233,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual Report 2016-2017.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456780/coodu-trust/images/resources/annual-report-2016-2017.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673024/coodu-trust/images/resources/annual-report-2016-2017"
   },
   {
     "year": "2016",
@@ -262,7 +262,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual report 2015-2016.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456778/coodu-trust/images/resources/annual-report-2015-2016.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673022/coodu-trust/images/resources/annual-report-2015-2016"
   },
   {
     "year": "2015",
@@ -351,7 +351,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2012-2013.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456773/coodu-trust/images/resources/annual-report-2012-2013.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673021/coodu-trust/images/resources/annual-report-2012-2013"
   },
   {
     "year": "2012",
@@ -379,7 +379,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2011-2012.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456772/coodu-trust/images/resources/annual-report-2011-2012.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673019/coodu-trust/images/resources/annual-report-2011-2012"
   },
   {
     "year": "2011",
@@ -407,7 +407,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2010-2011.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456770/coodu-trust/images/resources/annual-report-2010-2011.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673017/coodu-trust/images/resources/annual-report-2010-2011"
   },
   {
     "year": "2010",
@@ -435,7 +435,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2009-2010.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456769/coodu-trust/images/resources/annual-report-2009-2010.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673016/coodu-trust/images/resources/annual-report-2009-2010"
   },
   {
     "year": "2009",
@@ -462,7 +462,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2008-2009.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456767/coodu-trust/images/resources/annual-report-2008-2009.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673014/coodu-trust/images/resources/annual-report-2008-2009"
   },
   {
     "year": "2008",
@@ -489,7 +489,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2007-2008.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456766/coodu-trust/images/resources/annual-report-2007-2008.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673012/coodu-trust/images/resources/annual-report-2007-2008"
   },
   {
     "year": "2007",
@@ -516,7 +516,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2006-2007.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456764/coodu-trust/images/resources/annual-report-2006-2007.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673010/coodu-trust/images/resources/annual-report-2006-2007"
   },
   {
     "year": "2006",
@@ -543,7 +543,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2005-2006.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456763/coodu-trust/images/resources/annual-report-2005-2006.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673008/coodu-trust/images/resources/annual-report-2005-2006"
   },
   {
     "year": "2005",
@@ -570,7 +570,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2004-2005.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456761/coodu-trust/images/resources/annual-report-2004-2005.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673007/coodu-trust/images/resources/annual-report-2004-2005"
   },
   {
     "year": "2004",
@@ -597,7 +597,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2003-2004.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456759/coodu-trust/images/resources/annual-report-2003-2004.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673005/coodu-trust/images/resources/annual-report-2003-2004"
   },
   {
     "year": "2003",
@@ -624,7 +624,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2002-2003.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456758/coodu-trust/images/resources/annual-report-2002-2003.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673004/coodu-trust/images/resources/annual-report-2002-2003"
   },
   {
     "year": "2002",
@@ -651,6 +651,6 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/annual-report-2001-2002.pdf",
-    "cover": "https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456756/coodu-trust/images/resources/annual-report-2001-2002.jpg"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/v1787673002/coodu-trust/images/resources/annual-report-2001-2002"
   }
 ];

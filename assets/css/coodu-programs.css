@@ -118,6 +118,12 @@
   overflow: hidden;
   background: var(--surface-alt);
 }
+.prog-area__media--plain {
+  background-color: var(--surface-alt);
+  background-image: var(--texture-weave-light);
+}
+.prog-area__media--plain::after { display: none; }
+
 .prog-area__media img {
   width: 100%;
   height: 100%;

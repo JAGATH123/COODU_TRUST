@@ -28,7 +28,7 @@
   inset: 0;
   /* w_1600 + light sharpen = the crispest this 1650×300 source can render
      (mirrors the Donate hero transform, which reads sharp). */
-  background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600,e_sharpen:80/v1754474804/coodu-trust/images/headers/media-bg.png');
+  background-image: url('https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600,e_sharpen:80/v1787661922/coodu-trust/images/headers/media-bg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -404,6 +404,7 @@
 }
 
 .media-tile .img-slot__label {
+  display: none;
   display: none;
 }
 

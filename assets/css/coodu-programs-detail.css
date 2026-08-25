@@ -22,6 +22,17 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, .38), rgba(0, 0, 0, .55));
   pointer-events: none;
 }
+/* Hero with NO photograph. Used where the archive holds no honest image for the
+   subject — an intentional textured band is preferable to a stand-in that
+   depicts work we cannot evidence. Scrim is lightened since there is no photo
+   to darken, only the brand green. */
+.pd-hero--plain {
+  background-image: var(--texture-weave);
+}
+.pd-hero--plain .pd-hero__scrim {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .08), rgba(0, 0, 0, .26));
+}
+
 .pd-hero .container { position: relative; z-index: 1; }
 .pd-hero__content {
   max-width: 720px;
@@ -733,6 +744,12 @@ mark.pd-num {
   background: var(--surface-alt);
 }
 .pd-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pd-card__media--plain {
+  background-color: var(--surface-alt);
+  background-image: var(--texture-weave-light);
+}
+.pd-card__media--plain::after { display: none; }
+
 .pd-card__media::after {
   content: "";
   position: absolute;

@@ -31,7 +31,7 @@
   color: var(--surface);
   /* dark-green base behind the photo (shows while it loads / under the scrim) */
   background-color: #10271a;
-  background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456733/coodu-trust/images/headers/about-us-header.jpg');
+  background-image: url('https://res.cloudinary.com/usq2sbox/image/upload/v1787672997/coodu-trust/images/headers/about-us-header');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

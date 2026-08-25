@@ -14,10 +14,10 @@
 
   <!-- Design-system CSS (convention order) — ?v bust browser cache on each change -->
   <link rel="stylesheet" href="assets/css/coodu-tokens.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-base.css?v=9">
   <link rel="stylesheet" href="assets/css/coodu-components.css?v=11">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=6">
-  <link rel="stylesheet" href="assets/css/coodu-home.css?v=5">
+  <link rel="stylesheet" href="assets/css/coodu-home.css?v=14">
 </head>
 <body data-page="home">
 
@@ -28,7 +28,7 @@
     <div class="container site-header__inner">
 
       <a class="brand" href="index.html">
-        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
         <span class="brand__text">
           <span class="brand__name">COODU TRUST</span>
           <span class="brand__sub">Tamil Nadu</span>
@@ -164,7 +164,7 @@
 
       <div class="drawer__head">
         <a class="brand brand--drawer" href="index.html">
-          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
           <span class="brand__name">COODU TRUST</span>
         </a>
         <button class="drawer__close" data-drawer-close aria-label="Close menu">
@@ -222,11 +222,44 @@
   <main id="main">
 
     <!-- ---------- HERO A (dark field-photo banner) ---------- -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__layers" aria-hidden="true">
-        <span class="hero__texture"></span>
-        <span class="hero__scrim"></span>
-        <span class="hero__note">Photo &middot; farmers / community &middot; warm natural light</span>
+    <section class="hero" aria-labelledby="hero-title" data-carousel data-carousel-autoplay
+             data-carousel-interval="6000" aria-roledescription="carousel" aria-label="Field photographs">
+      <div class="hero__layers">
+        <div class="hero__slides">
+          <div class="hero__slide is-active" data-carousel-slide>
+            <picture>
+              <source media="(max-width: 899px)" srcset="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662092/coodu-trust/images/home/home-hero-01-skills-training-portrait" width="1200" height="1400">
+              <img class="hero__img" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662096/coodu-trust/images/home/home-hero-01-skills-training-wide"
+                   alt="Trainees at industrial sewing machines in a DDU-GKY vocational tailoring hall"
+                   width="2880" height="900" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <div class="hero__slide" data-carousel-slide>
+            <picture>
+              <source media="(max-width: 899px)" srcset="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662099/coodu-trust/images/home/home-hero-02-mrf-facility-portrait" width="1200" height="1400">
+              <img class="hero__img" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662102/coodu-trust/images/home/home-hero-02-mrf-facility-wide"
+                   alt="The Material Recovery Facility in Dindigul, its board reading Managed by Coodu Trust"
+                   width="2880" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="hero__slide" data-carousel-slide>
+            <picture>
+              <source media="(max-width: 899px)" srcset="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662106/coodu-trust/images/home/home-hero-03-felicitation-portrait" width="1200" height="1400">
+              <img class="hero__img" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662118/coodu-trust/images/home/home-hero-03-felicitation-wide"
+                   alt="An elder being honoured with a silk shawl at a Coodu Trust ceremony"
+                   width="2880" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="hero__slide" data-carousel-slide>
+            <picture>
+              <source media="(max-width: 899px)" srcset="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662122/coodu-trust/images/home/home-hero-04-ddugky-batch-portrait" width="1200" height="1400">
+              <img class="hero__img" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_2880/v1787662125/coodu-trust/images/home/home-hero-04-ddugky-batch-wide"
+                   alt="A DDU-GKY vocational training batch assembled with Coodu Trust staff"
+                   width="2880" height="900" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+        <span class="hero__scrim" aria-hidden="true"></span>
       </div>
       <div class="container">
         <div class="hero__content reveal">
@@ -244,13 +277,13 @@
           </p>
         </div>
       </div>
-      <div class="hero__dots" role="tablist" aria-label="Hero image slides">
-        <button class="hero__dot is-active" type="button" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-        <button class="hero__dot" type="button" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-        <button class="hero__dot" type="button" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-        <button class="hero__dot" type="button" role="tab" aria-selected="false" aria-label="Slide 4"></button>
-        <button class="hero__dot" type="button" role="tab" aria-selected="false" aria-label="Slide 5"></button>
-      </div>
+      <div class="hero__dots" data-carousel-dots aria-label="Choose a photograph">
+          <button class="hero__dot is-active" type="button" aria-label="Photograph 1"></button>
+          <button class="hero__dot" type="button" aria-label="Photograph 2"></button>
+          <button class="hero__dot" type="button" aria-label="Photograph 3"></button>
+          <button class="hero__dot" type="button" aria-label="Photograph 4"></button>
+        </div>
+      <p class="u-sr-only" aria-live="polite" data-carousel-live></p>
     </section>
 
     <!-- ---------- IMPACT STAT BAND (overlaps hero) ---------- -->
@@ -314,7 +347,8 @@
 
           <a class="card card--program reveal" href="programs/environment-resilience.html">
             <div class="card__media">
-              <div class="img-slot" data-ratio="16/9"><i data-lucide="image" aria-hidden="true"></i><span class="img-slot__label">Watershed / plantation</span></div>
+              <img class="card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662068/coodu-trust/images/home/home-card-01-environment-resilience" alt="Aerial view of a young tree plantation laid out in rows across restored land near Dindigul"
+                   width="1200" height="675" loading="lazy" decoding="async">
               <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
             </div>
             <div class="card__body">
@@ -338,7 +372,8 @@
 
           <a class="card card--program reveal" href="programs/women-empowerment.html">
             <div class="card__media">
-              <div class="img-slot" data-ratio="16/9"><i data-lucide="image" aria-hidden="true"></i><span class="img-slot__label">Women's self-help group</span></div>
+              <img class="card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662072/coodu-trust/images/home/home-card-03-women-empowerment" alt="Women in training vests working at industrial sewing machines in a tailoring workshop"
+                   width="1200" height="675" loading="lazy" decoding="async">
               <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
               <span class="badge">New</span>
             </div>
@@ -351,7 +386,8 @@
 
           <a class="card card--program reveal" href="programs/education-skilling.html">
             <div class="card__media">
-              <div class="img-slot" data-ratio="16/9"><i data-lucide="image" aria-hidden="true"></i><span class="img-slot__label">Vocational training</span></div>
+              <img class="card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662081/coodu-trust/images/home/home-card-04-education-skilling" alt="Hospitality trainees practising table setting during a catering and hotel-management course"
+                   width="1200" height="675" loading="lazy" decoding="async">
               <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
             </div>
             <div class="card__body">
@@ -363,7 +399,8 @@
 
           <a class="card card--program reveal" href="programs/health-sanitation.html">
             <div class="card__media">
-              <div class="img-slot" data-ratio="16/9"><i data-lucide="image" aria-hidden="true"></i><span class="img-slot__label">Health camp / sanitation</span></div>
+              <img class="card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662083/coodu-trust/images/home/home-card-05-health-sanitation-waste" alt="A sanitation worker collecting segregated household waste from residents at a door-to-door collection cart"
+                   width="1200" height="675" loading="lazy" decoding="async">
               <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
             </div>
             <div class="card__body">
@@ -375,7 +412,9 @@
 
           <a class="card card--program reveal" href="programs/consultancy-hr.html">
             <div class="card__media">
-              <div class="img-slot" data-ratio="16/9"><i data-lucide="image" aria-hidden="true"></i><span class="img-slot__label">Training workshop</span></div>
+              <img class="card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662088/coodu-trust/images/home/home-card-06-consultancy-hr"
+                   alt="A facilitator addressing participants during a climate-change adaptation training workshop"
+                   width="1200" height="675" loading="lazy" decoding="async">
               <span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span>
             </div>
             <div class="card__body">
@@ -543,7 +582,7 @@
 
         <div class="footer__col footer__col--brand">
           <a class="brand footer__brand" href="index.html" aria-label="Coodu Trust home">
-            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
           </a>
           <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
         </div>
