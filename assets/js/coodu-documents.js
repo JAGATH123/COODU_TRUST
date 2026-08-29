@@ -12,7 +12,7 @@
   if (!grid || !reports || !reports.length) return;
 
   var DECADES = ['2020s', '2010s', '2000s'];
-  var DECADE_LABEL = { '2020s': '2020 – 2024', '2010s': '2010 – 2019', '2000s': '2001 – 2009' };
+  var DECADE_LABEL = { '2020s': '2020 – 2025', '2010s': '2010 – 2019', '2000s': '2001 – 2009' };
 
   function decadeOf(year) { return (Math.floor(Number(year) / 10) * 10) + 's'; }
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }

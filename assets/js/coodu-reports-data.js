@@ -1,6 +1,35 @@
 /* Auto-extracted from report-viewer.js — COODU annual reports (newest first). Covers use the original documents.html URLs. */
 window.COODU_REPORTS = [
   {
+    "year": "2025",
+    "label": "2024\u20132025",
+    "title": "Dairy Livelihoods, Farmer Producer Organisations & Rural Skilling",
+    "fullTitle": "Annual Report 2024-2025: Dairy Livelihoods, FPOs & Rural Skilling",
+    "summary": "Coodu Trust deepened its work with women-led dairy collectives at Tharagampatti with Karur Vysya Bank support, was empanelled as a Cluster-Based Business Organisation under the Government of India\u2019s 10,000 FPO Scheme, and continued rural skilling under DDU-GKY, alongside TWAD water-quality laboratory operations.",
+    "highlights": [
+      "Empanelled as a Cluster-Based Business Organisation (CBBO) by TNSFAC under the Central Sector Scheme for Promotion of 10,000 FPOs, working across Dindigul and Thiruvarur districts",
+      "40 Azolla cultivation units established after hands-on training, plus a Super Napier fodder unit for year-round green fodder",
+      "Farmers reported a 15\u201320% increase in milk yield following the fodder and nutrition improvements",
+      "40 women farmers took part in exposure visits to TANUVAS institutes at Karur and Namakkal",
+      "10 youth trained in artificial insemination, building local breeding-service capacity",
+      "624 rural youth trained under DDU-GKY, with 582 placed",
+      "Institutional strengthening of a 100% women-led FPO at Tharagampatti, with collection centres and name boards established",
+      "Continued maintenance of water-quality testing laboratories for the Tamil Nadu Water Supply and Drainage (TWAD) Board"
+    ],
+    "stats": [
+      {
+        "number": "624",
+        "label": "Rural Youth Trained"
+      },
+      {
+        "number": "582",
+        "label": "Youth Placed"
+      }
+    ],
+    "pdf": "assets/Annual reports/annual-report 2024 - 2025.pdf",
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1200/v1787987165/coodu-trust/images/resources/annual-report-2024-2025"
+  },
+  {
     "year": "2024",
     "label": "2023–2024",
     "title": "Scaling Impact Through Collaboration & Innovation",
@@ -291,7 +320,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual report 2014-2015.pdf",
-    "cover": "assets/images/resources/annual-report-2014-2015.png"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_482/v1787987164/coodu-trust/images/resources/annual-report-2014-2015"
   },
   {
     "year": "2014",
@@ -321,7 +350,7 @@ window.COODU_REPORTS = [
       }
     ],
     "pdf": "assets/Annual reports/Annual reopt 2013-2014.pdf",
-    "cover": "assets/images/resources/annual-report-2013-2014.png"
+    "cover": "https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_442/v1787987163/coodu-trust/images/resources/annual-report-2013-2014"
   },
   {
     "year": "2013",
