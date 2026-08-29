@@ -1,787 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Agriculture | Coodu Trust</title>
-    <meta name="description" content="Promoting sustainable farming practices, farmer empowerment, and agricultural innovation for enhanced productivity and rural prosperity.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable agriculture &mdash; COODU Trust</title>
+  <meta name="description" content="Coodu Trust's sustainable agriculture programs: 8,250+ farmers trained, 4,660 animals treated, 1,202 milch animals distributed across Tamil Nadu. Farmer collectivization, livestock, horticulture, agri-tech and organic farming.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Agriculture Page Specific Styles */
-        .agriculture-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-        
-        .agriculture-page .sustainable-future-section {
-            background: transparent !important;
-            padding: 80px 0;
-        }
-        
-        .agriculture-page .sustainable-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-        
-        .agriculture-page .sustainable-text {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .agriculture-page .sustainable-image {
-            position: relative;
-        }
-        
-        .agriculture-page .sustainable-photo {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .agriculture-page .impact-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .agriculture-page .stat-item {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-        }
-        
-        .agriculture-page .stat-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: white;
-        }
-        
-        .agriculture-page .stat-label {
-            font-size: 0.95rem;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-        
-        /* Focus Areas Grid Styling */
-        .agriculture-page .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .agriculture-page .focus-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .agriculture-page .focus-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .agriculture-page .focus-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .agriculture-page .focus-title {
-            color: #28a745;
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .agriculture-page .focus-description {
-            color: #555;
-            line-height: 1.6;
-            margin: 0 0 15px 0;
-            font-size: 0.95rem;
-        }
-        
-        .agriculture-page .focus-link {
-            color: #28a745;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .agriculture-page .focus-link:hover {
-            color: #20c997;
-            transform: translateX(5px);
-        }
-        
-        /* Core Programs Section Styling */
-        .agriculture-page .core-program-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .agriculture-page .program-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .agriculture-page .program-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .agriculture-page .program-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            display: block;
-        }
-        
-        .agriculture-page .program-item h4 {
-            color: #28a745;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        
-        .agriculture-page .program-item p {
-            color: #555;
-            line-height: 1.5;
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        /* Featured Projects Grid */
-        .agriculture-page .projects-overview-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .agriculture-page .project-overview-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .agriculture-page .project-overview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .agriculture-page .project-overview-card h3 {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .agriculture-page .project-overview-card p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        
-        .agriculture-page .project-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .agriculture-page .project-stat {
-            text-align: center;
-            padding: 10px;
-            background: rgba(40, 167, 69, 0.1);
-            border-radius: 8px;
-        }
-        
-        .agriculture-page .project-stat-number {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #28a745;
-            display: block;
-        }
-        
-        .agriculture-page .project-stat-label {
-            font-size: 0.8rem;
-            color: #666;
-        }
-        
-        /* Benefits Section Styling */
-        .agriculture-page .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .agriculture-page .benefit-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .agriculture-page .benefit-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .agriculture-page .benefit-item h4 {
-            color: #28a745;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .agriculture-page .benefit-item p {
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.9rem;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-        /* Sections Background Override */
-        .agriculture-page .section-padding {
-            background: transparent !important;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .agriculture-page .sustainable-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .agriculture-page .impact-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .agriculture-page .focus-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .agriculture-page .core-program-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .agriculture-page .projects-overview-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            
-            .agriculture-page .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .agriculture-page .container {
-                padding: 0 15px;
-            }
-            
-            .agriculture-page .sustainable-text {
-                padding: 25px;
-            }
-            
-            .agriculture-page .impact-stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .agriculture-page .sustainable-photo {
-                height: 250px;
-            }
-            
-            .agriculture-page .focus-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .agriculture-page .core-program-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .agriculture-page .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../assets/css/coodu-programs-detail.css?v=8">
 </head>
-<body class="agriculture-page" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="program-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../partner.html">Partner with Us</a></li>
-                            <li><a href="../volunteer.html">Volunteer</a></li>
-                            <li><a href="../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <a href="../donate.html" class="btn btn-primary donate-button">Donate</a>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+
+          <li class="has-mega">
+            <a href="../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <a href="../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../media.html">Media</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../index.html">Home</a>
+        <a class="drawer__link" href="../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../programs.html">All programs</a>
+            <a href="environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="women-empowerment.html">Women Empowerment</a>
+            <a href="education-skilling.html">Education &amp; Skilling</a>
+            <a href="health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146592/coodu-trust/images/programs/background-prgms/sustainable-agriculture.png');">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../programs.html">Programs</a> > <span>Sustainable Agriculture</span>
-                </div>
-                <h1 class="page-title">Sustainable Agriculture</h1>
-                <p class="page-subtitle">Promoting sustainable farming practices and farmer empowerment for rural prosperity</p>
-            </div>
-        </section>
-
-        <!-- =========== CREATING SUSTAINABLE AGRICULTURE =========== -->
-        <section class="sustainable-future-section">
-            <div class="container">
-                <div class="sustainable-content">
-                    <div class="sustainable-text">
-                        <h2 class="section-title" style="color: #28a745; margin-bottom: 30px; font-size: 2.8rem;">Creating Sustainable Agriculture</h2>
-                        
-                        <div class="intro-content">
-                            <p class="overview-description" style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px; color: #2c3e50;">
-                                For over two decades, <strong>Coodu Trust</strong> has been empowering farmers and rural communities through sustainable agriculture practices in Tamil Nadu. Our comprehensive approach addresses farming challenges through science-based solutions, collective action, and innovative agricultural technologies that ensure environmental sustainability and economic profitability.
-                            </p>
-                            
-                            <p class="overview-description" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px; color: #34495e;">
-                                We integrate traditional farming wisdom with modern agricultural techniques to create resilient farming systems. From farmer collectivization and organic practices to livestock management and market linkages, our programs build sustainable livelihoods that support both agricultural productivity and rural prosperity.
-                            </p>
-                        </div>
-                        
-                        <div class="mission-highlights" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 10px; border-left: 4px solid #28a745;">
-                            <h3 style="color: #28a745; margin-bottom: 15px; font-size: 1.4rem;">Our Agricultural Mission</h3>
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌾 <strong>Empower farming communities</strong> through collective action and modern techniques</li>
-                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🐄 <strong>Diversify rural livelihoods</strong> through integrated livestock and agriculture systems</li>
-                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🌱 <strong>Promote organic farming</strong> for environmental sustainability and health</li>
-                                <li style="margin-bottom: 12px; padding-left: 25px; position: relative;">🏭 <strong>Strengthen value chains</strong> through agribusiness and market linkages</li>
-                                <li style="padding-left: 25px; position: relative;">👨‍🌾 <strong>Build farmer resilience</strong> through technology and knowledge transfer</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Impact Statistics -->
-                        <div class="impact-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">8,250+</span>
-                                <span class="stat-label">Farmers Trained</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">4,660</span>
-                                <span class="stat-label">Animals Treated</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">1,202</span>
-                                <span class="stat-label">Milch Animals Distributed</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">25+</span>
-                                <span class="stat-label">Years Experience</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="sustainable-image">
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Sustainable agriculture and farming activities" class="sustainable-photo">
-                        
-                        <!-- Image Caption -->
-                        <div style="background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <p style="margin: 0; font-size: 0.95rem; color: #666; font-style: italic;">Community-led sustainable agriculture project in rural Tamil Nadu, showcasing our integrated approach to farmer empowerment</p>
-                        </div>
-                        
-                        <!-- Achievement Badge -->
-                        <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 12px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); text-align: center; font-weight: 600;">
-                            <div style="font-size: 0.8rem; opacity: 0.9;">Since</div>
-                            <div style="font-size: 1.2rem;">2000</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== PROGRAM FOCUS AREAS =========== -->
-        <section class="focus-areas section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Focus Areas</h2>
-                <div class="focus-grid">
-                    <div class="focus-card">
-                        <div class="focus-icon">🤝</div>
-                        <h3 class="focus-title">Farmer Collectivization & Agribusiness</h3>
-                        <p class="focus-description">Organizing farmers into self-help groups and cooperatives, establishing agribusiness ventures, and creating market linkages for enhanced income and sustainability.</p>
-                        <a href="farmer-collectivization.html" class="focus-link">Learn More →</a>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-icon">🐄</div>
-                        <h3 class="focus-title">Livestock & Allied Activities</h3>
-                        <p class="focus-description">Promoting livestock development, dairy farming, poultry, fisheries, and other allied agricultural activities for diversified income sources.</p>
-                        <a href="livestock-allied.html" class="focus-link">Learn More →</a>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-icon">🌺</div>
-                        <h3 class="focus-title">Horticulture & Diversified Farming</h3>
-                        <p class="focus-description">Developing fruit cultivation, vegetable production, floriculture, and crop diversification programs to enhance agricultural productivity and profitability.</p>
-                        <a href="horticulture-diversified.html" class="focus-link">Learn More →</a>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-icon">📱</div>
-                        <h3 class="focus-title">Agricultural Technology & Youth Engagement</h3>
-                        <p class="focus-description">Introducing modern agricultural technologies, precision farming techniques, and engaging rural youth in innovative farming practices and agri-entrepreneurship.</p>
-                        <a href="agricultural-technology.html" class="focus-link">Learn More →</a>
-                    </div>
-                    <div class="focus-card">
-                        <div class="focus-icon">🌱</div>
-                        <h3 class="focus-title">Organic Farming Practices</h3>
-                        <p class="focus-description">Promoting chemical-free farming methods, organic certification processes, and sustainable agricultural practices that protect soil health and environmental quality.</p>
-                        <a href="organic-farming.html" class="focus-link">Learn More →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CORE PROGRAMS =========== -->
-        <section class="core-programs section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Core Programs</h2>
-                <div class="core-program-grid">
-                    <div class="program-item">
-                        <div class="program-icon">🌾</div>
-                        <h4>Farmer Producer Organizations (FPOs)</h4>
-                        <p>Establishing and strengthening collective farming institutions for better market access and resource optimization.</p>
-                    </div>
-                    <div class="program-item">
-                        <div class="program-icon">🚜</div>
-                        <h4>Farm Mechanization</h4>
-                        <p>Introducing appropriate agricultural machinery and equipment to reduce labor costs and improve efficiency.</p>
-                    </div>
-                    <div class="program-item">
-                        <div class="program-icon">🌿</div>
-                        <h4>Integrated Pest Management</h4>
-                        <p>Promoting eco-friendly pest control methods that reduce chemical dependency and environmental impact.</p>
-                    </div>
-                    <div class="program-item">
-                        <div class="program-icon">💧</div>
-                        <h4>Water-Efficient Farming</h4>
-                        <p>Implementing drip irrigation, micro-sprinklers, and water conservation techniques for sustainable water use.</p>
-                    </div>
-                    <div class="program-item">
-                        <div class="program-icon">🌽</div>
-                        <h4>Crop Diversification</h4>
-                        <p>Encouraging farmers to grow multiple crops to reduce risks and increase overall farm productivity.</p>
-                    </div>
-                    <div class="program-item">
-                        <div class="program-icon">📊</div>
-                        <h4>Market Intelligence</h4>
-                        <p>Providing real-time market information and price data to help farmers make informed decisions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ONGOING & RECENT PROJECTS =========== -->
-        <section class="featured-projects section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    
-                    <!-- Ongoing Project 1 -->
-                    <div class="project-card ongoing">
-                        <div class="project-status">
-                            <span class="status-badge ongoing">Ongoing</span>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="project-title">Farmer Producer Organization Development Program</h3>
-                            <span class="project-period">2022-2025</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="FPO development activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">500+</span>
-                                <span class="impact-label">Farmers Organized</span>
-                            </div>
-                        </div>
-                        <a href="projects/fpo-development.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Recent Project 1 -->
-                    <div class="project-card recent">
-                        <div class="project-status">
-                            <span class="status-badge recent">Recent</span>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="project-title">Integrated Horticulture Development Initiative</h3>
-                            <span class="project-period">2021-2023</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Horticulture development activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">1,200</span>
-                                <span class="impact-label">Farmers Benefited</span>
-                            </div>
-                        </div>
-                        <a href="projects/horticulture-development.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Historical Project -->
-                    <div class="project-card completed">
-                        <div class="project-status">
-                            <span class="status-badge completed">Completed</span>
-                        </div>
-                        <div class="project-header">
-                            <h3 class="project-title">Vermi-composting and Organic Farming Training</h3>
-                            <span class="project-period">2003-2005</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Vermicomposting training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">244+</span>
-                                <span class="impact-label">Women Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/vermicomposting-organic-farming.html" class="project-link">View Details →</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== SUSTAINABLE AGRICULTURE BENEFITS =========== -->
-        <section class="benefits-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Benefits of Sustainable Agriculture</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>🌍 Environmental Protection</h4>
-                        <p>Reduces chemical pollution, conserves soil health, protects water resources, and maintains biodiversity in agricultural landscapes.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>💰 Economic Sustainability</h4>
-                        <p>Improves farm profitability through reduced input costs, premium pricing for sustainable products, and diversified income sources.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🏥 Health Benefits</h4>
-                        <p>Produces safer, chemical-free food while protecting farmer and consumer health from harmful pesticide exposure.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌱 Soil Health Enhancement</h4>
-                        <p>Improves soil fertility and structure through organic matter addition, crop rotation, and reduced chemical dependency.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌧️ Climate Resilience</h4>
-                        <p>Builds resilience to climate change through drought-resistant varieties, water conservation, and adaptive farming practices.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🤝 Community Empowerment</h4>
-                        <p>Strengthens rural communities through collective action, knowledge sharing, and sustainable livelihood opportunities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding" style="background: transparent !important;">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Sustainable Agriculture</h2>
-                    <p class="cta-text">Join us in promoting sustainable farming practices that protect the environment, ensure food security, and create prosperous rural communities. Your support helps farmers adopt eco-friendly practices and build resilient agricultural systems.</p>
-                    <div class="cta-buttons">
-                        <a href="../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../programs.html">Our Programs</a></li>
-                        <li><a href="../careers.html">Careers</a></li>
-                        <li><a href="../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../get-involved.html">Overview</a>
+            <a href="../partner.html">Partner with Us</a>
+            <a href="../volunteer.html">Volunteer</a>
+            <a href="../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../assets/js/main.js"></script>
+        <a class="drawer__link" href="../documents.html">Documents</a>
+        <a class="drawer__link" href="../media.html">Media</a>
+        <a class="drawer__link" href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo) ---------- -->
+    <section class="pd-hero pd-hero--plain" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../programs.html">Programs</a></li>
+              <li aria-current="page">Sustainable agriculture</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Sustainable agriculture</h1>
+          <p class="pd-hero__sub">Promoting sustainable farming practices and farmer empowerment for rural prosperity &mdash; across Tamil Nadu since 2000.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Sustainable agriculture at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="8250" data-suffix="+">8,250+</span></span>
+            <span class="stat__label">Farmers trained</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="4660">4,660</span></span>
+            <span class="stat__label">Animals treated</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="1202">1,202</span></span>
+            <span class="stat__label">Milch animals distributed</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="25" data-suffix="+">25+</span></span>
+            <span class="stat__label">Years of experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- MISSION ---------- -->
+    <section class="pd-understand section" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">Our agricultural mission</p>
+            <h2 class="section-head" id="mission-title">Creating sustainable agriculture</h2>
+            <p>For over two decades, Coodu Trust has been empowering farmers and rural communities through sustainable agriculture practices in Tamil Nadu. Our comprehensive approach addresses farming challenges through <strong class="pd-hl">science-based solutions</strong>, <strong class="pd-hl">collective action</strong> and innovative agricultural technologies that ensure environmental sustainability and economic profitability.</p>
+            <p>We integrate traditional farming wisdom with modern agricultural techniques to create resilient farming systems. From <strong class="pd-hl">farmer collectivization</strong> and <strong class="pd-hl">organic practices</strong> to livestock management and market linkages, our programs have trained <mark class="pd-num">8,250+ farmers</mark>, treated <mark class="pd-num">4,660 animals</mark> and distributed <mark class="pd-num">1,202 milch animals</mark> &mdash; building sustainable livelihoods that support both agricultural productivity and rural prosperity.</p>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="mission-list-title">
+            <h3 class="pd-process__title" id="mission-list-title">What this sector delivers</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">Empowered farming communities</span>
+                <span class="pd-process__desc">Collective action, cooperatives and modern techniques for organized farmers.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Diversified rural livelihoods</span>
+                <span class="pd-process__desc">Integrated livestock and agriculture systems for multiple income sources.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Organic farming</span>
+                <span class="pd-process__desc">Chemical-free methods for environmental sustainability and health.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Stronger value chains</span>
+                <span class="pd-process__desc">Agribusiness ventures, market linkages, and technology and knowledge transfer that build farmer resilience.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- SUB-PROGRAM CARDS ---------- -->
+    <section class="pd-programs section section--alt" aria-labelledby="focus-title">
+      <div class="container">
+        <p class="eyebrow">Focus areas</p>
+        <h2 class="section-head" id="focus-title">Five programs, one resilient farm economy</h2>
+        <div class="pd-programs__grid">
+          <article class="pd-card reveal">
+            <div class="pd-card__media">
+              <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_800/v1787661910/coodu-trust/images/cards/card-ag-producer-stall" alt="Men stand beside a stall table stacked with mesh bags of garlic under a board naming a farmer producer company" loading="lazy" width="1200" height="525">
+            </div>
+            <div class="pd-card__body">
+              <div class="pd-card__top"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span></div>
+              <h3 class="pd-card__title">Farmer collectivization &amp; agribusiness</h3>
+              <p class="pd-card__desc">Organizing farmers into self-help groups and cooperatives, establishing agribusiness ventures, and creating market linkages for enhanced income and sustainability.</p>
+              <div class="pd-card__cta">
+                <a class="pd-card__link" href="farmer-collectivization.html">Explore this program <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="pd-card reveal">
+            <div class="pd-card__media">
+              <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_800/v1787661900/coodu-trust/images/cards/card-ag-azolla-demo" alt="A woman explains a blue-lined pond covered with green azolla to a group of men standing around its edge" loading="lazy" width="1200" height="525">
+            </div>
+            <div class="pd-card__body">
+              <div class="pd-card__top"><span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span></div>
+              <h3 class="pd-card__title">Livestock &amp; allied activities</h3>
+              <p class="pd-card__desc">Promoting livestock development, dairy farming, poultry, fisheries and other allied agricultural activities for diversified income sources.</p>
+              <div class="pd-card__cta">
+                <a class="pd-card__link" href="livestock-allied.html">Explore this program <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="pd-card reveal">
+            <div class="pd-card__media"><img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_800/v1787987109/coodu-trust/images/mockups/mk-hd-fruit-vegetable-harvest" alt="Women sorting tomatoes, chillies and limes into wicker baskets at a harvest" loading="lazy" width="800" height="450"></div>
+            <div class="pd-card__body">
+              <div class="pd-card__top"><span class="icon-chip"><i data-lucide="apple" aria-hidden="true"></i></span></div>
+              <h3 class="pd-card__title">Horticulture &amp; diversified farming</h3>
+              <p class="pd-card__desc">Developing fruit cultivation, vegetable production, floriculture and crop diversification programs to enhance agricultural productivity and profitability.</p>
+              <div class="pd-card__cta">
+                <a class="pd-card__link" href="horticulture-diversified.html">Explore this program <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="pd-card reveal">
+            <div class="pd-card__media"><img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_800/v1787987102/coodu-trust/images/mockups/mk-agtech-solar-extension" alt="Three extension workers with datasheets standing in a paddy field in front of a solar array" loading="lazy" width="800" height="450"></div>
+            <div class="pd-card__body">
+              <div class="pd-card__top"><span class="icon-chip"><i data-lucide="tractor" aria-hidden="true"></i></span></div>
+              <h3 class="pd-card__title">Agricultural technology &amp; youth engagement</h3>
+              <p class="pd-card__desc">Introducing modern agricultural technologies, precision farming techniques, and engaging rural youth in innovative farming practices and agri-entrepreneurship.</p>
+              <div class="pd-card__cta">
+                <a class="pd-card__link" href="agricultural-technology.html">Explore this program <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="pd-card reveal">
+            <div class="pd-card__media"><img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_800/v1787987114/coodu-trust/images/mockups/mk-orgf-marigold-rows" alt="A farmer tending rows of marigolds beside vegetable beds on red soil, mulch alongside" loading="lazy" width="800" height="450"></div>
+            <div class="pd-card__body">
+              <div class="pd-card__top"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span></div>
+              <h3 class="pd-card__title">Organic farming practices</h3>
+              <p class="pd-card__desc">Promoting chemical-free farming methods, organic certification processes, and sustainable agricultural practices that protect soil health and environmental quality.</p>
+              <div class="pd-card__cta">
+                <a class="pd-card__link" href="organic-farming.html">Explore this program <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support sustainable agriculture</h2>
+          <p class="pd-cta__sub">Join us in promoting sustainable farming practices that protect the environment, ensure food security, and create prosperous rural communities. Your support helps farmers adopt eco-friendly practices and build resilient agricultural systems.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../programs.html">Our Programs</a></li>
+              <li><a href="../get-involved.html">Get Involved</a></li>
+              <li><a href="../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../assets/js/coodu.js?v=9" defer></script>
 
 </body>
 </html>

@@ -60,10 +60,12 @@
 .has-mega.is-open .mega { opacity: 1; visibility: visible; }
 
 /* no-JS fallback: when coodu.js never runs, let fine-pointer + keyboard users
-   still open the mega via hover / focus-within (disabled once JS is live). */
+   still open the mega via hover / focus-within (disabled once JS is live).
+   Must out-!important the base [hidden]{display:none!important} reset —
+   the panels ship with the hidden attribute and only JS clears it. */
 @media (hover: hover) and (pointer: fine) {
-  html:not(.coodu-js) .has-mega:hover > .mega,
-  html:not(.coodu-js) .has-mega:focus-within > .mega { opacity: 1; visibility: visible; }
+  html:not(.coodu-js) .has-mega:hover > .mega[hidden],
+  html:not(.coodu-js) .has-mega:focus-within > .mega[hidden] { display: block !important; }
 }
 
 /* ---- accordion: JS animates max-height, CSS just clips ---- */
@@ -142,12 +144,6 @@
   /* dots / arrows */
   .dot, .arrow { transition: transform var(--ease), background-color var(--ease),
                               color var(--ease), border-color var(--ease), opacity var(--ease); }
-}
-
-/* mega scale reset for the no-JS hover/focus fallback (motion-on only) */
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  html:not(.coodu-js) .has-mega:hover > .mega,
-  html:not(.coodu-js) .has-mega:focus-within > .mega { transform: none; }
 }
 
 /* ==========================================================================

@@ -1,838 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantation & Afforestation | Coodu Trust</title>
-    <meta name="description" content="Large-scale tree plantation drives, forest restoration, and agroforestry programs to enhance green cover and biodiversity.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantation &amp; afforestation &mdash; COODU Trust</title>
+  <meta name="description" content="Coodu Trust's plantation and afforestation work across Tamil Nadu — 26,93,250 trees planted over 35,000+ hectares in 14 districts. Nursery development, native species and community-led greening.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Plantation & Afforestation Page Specific Styles */
-        .plantation-page {
-            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        
-        .plantation-page::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        .plantation-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-        
-        .understanding-plantation-section {
-            background: transparent !important;
-            padding: 80px 0;
-        }
-        
-        .plantation-hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-        
-        .plantation-text-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .plantation-visual-content {
-            position: relative;
-        }
-        
-        .plantation-process-flow {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
-        }
-        
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            border-left: 4px solid #28a745;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
-        }
-        
-        .step-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 1.5rem;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .step-content h4 {
-            color: #28a745;
-            margin: 0 0 8px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .step-content p {
-            margin: 0;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .plantation-stats-modern {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
-        .stat-card-modern {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s;
-        }
-        
-        .stat-card-modern:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
-        }
-        
-        .stat-card-modern:hover::before {
-            left: 100%;
-        }
-        
-        .stat-number-modern {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-        
-        .stat-label-modern {
-            font-size: 0.95rem;
-            opacity: 0.95;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        
-        .plantation-image-modern {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .image-caption {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            font-size: 0.95rem;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .plantation-hero-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .plantation-stats-modern {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-        
-        /* Project Cards Styling */
-        .plantation-page .project-card {
-            width: 433px;
-            height: 506px;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .plantation-page .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .plantation-page .project-title {
-            font-size: 1.4rem !important;
-            line-height: 1.3;
-            font-weight: 600;
-        }
-        
-        .plantation-page .programs-section {
-            background: transparent !important;
-        }
-        
-        .plantation-page .impact-section {
-            background: transparent !important;
-        }
-        
-        .plantation-page .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
-            gap: 30px;
-            justify-items: center;
-        }
-        
-        @media (max-width: 1200px) {
-            .plantation-page .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            }
-            
-            .plantation-page .project-card {
-                width: 380px;
-                height: 450px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .plantation-page .container {
-                padding: 0 15px;
-            }
-            
-            .plantation-text-content {
-                padding: 30px 25px;
-            }
-            
-            .plantation-process-flow {
-                padding: 25px;
-            }
-            
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 15px;
-            }
-            
-            .step-icon {
-                margin: 0 0 15px 0;
-            }
-            
-            .plantation-stats-modern {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .plantation-image-modern {
-                height: 250px;
-            }
-            
-            .plantation-page .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .plantation-page .project-card {
-                width: 100%;
-                max-width: 350px;
-                height: 400px;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../assets/css/coodu-programs-detail.css?v=8">
 </head>
-<body class="plantation-page">
+<body data-page="program-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../partner.html">Partner with Us</a></li>
-                            <li><a href="../volunteer.html">Volunteer</a></li>
-                            <li><a href="../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <a href="../donate.html" class="btn btn-primary donate-button">Donate</a>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+
+          <li class="has-mega">
+            <a href="../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <a href="../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../media.html">Media</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../index.html">Home</a>
+        <a class="drawer__link" href="../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../programs.html">All programs</a>
+            <a href="environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="women-empowerment.html">Women Empowerment</a>
+            <a href="education-skilling.html">Education &amp; Skilling</a>
+            <a href="health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146578/coodu-trust/images/programs/background-prgms/plantationafforestation.png');">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../programs.html">Programs</a> > <a href="environment-resilience.html">Environment and Resilience</a> > <span>Plantation & Afforestation</span>
-                </div>
-                <h1 class="page-title">Plantation & Afforestation</h1>
-                <p class="page-subtitle">Large-scale tree plantation drives and forest restoration for enhanced biodiversity</p>
-            </div>
-        </section>
-
-        <!-- =========== UNDERSTANDING PLANTATION & AFFORESTATION =========== -->
-        <section class="understanding-plantation-section">
-            <div class="container">
-                <!-- Hero Content -->
-                <div class="plantation-hero-content">
-                    <div class="plantation-text-content">
-                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Plantation & Afforestation</h2>
-                        
-                        <div class="definition-section" style="margin-bottom: 35px;">
-                            <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
-                                <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.3rem;">What is Plantation & Afforestation? 🌳</h3>
-                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Plantation</strong> refers to the systematic cultivation of trees on agricultural or non-forested land, while <strong>afforestation</strong> involves establishing forests on lands that have not been forested in recent history.</p>
-                            </div>
-                            
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
-                                <strong>Plantation and afforestation</strong> are our comprehensive environmental interventions aimed at increasing forest cover, restoring degraded landscapes, and enhancing biodiversity. Since 2000, Coodu Trust has pioneered sustainable tree planting initiatives that transform entire ecosystems across <strong>14 districts of Tamil Nadu</strong>.
-                            </p>
-                            
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                Our programs focus on creating sustainable green cover through scientifically planned tree planting initiatives. We emphasize <strong>native species selection</strong>, community participation, and long-term maintenance to ensure optimal tree survival rates and lasting environmental impact.
-                            </p>
-                        </div>
-                        
-                        <!-- Key Principles -->
-                        <div class="principles-section">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Our Core Principles</h3>
-                            <div class="principles-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌱</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Native Species Focus</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌍</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Climate Mitigation</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🤝</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Community Engagement</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">📊</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Scientific Approach</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="plantation-visual-content">
-                        <!-- Process Flow Visualization -->
-                        <div class="plantation-process-flow">
-                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Plantation Development Process</h3>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">1</div>
-                                <div class="step-content">
-                                    <h4>Nursery Development</h4>
-                                    <p>Establishing quality nurseries and training communities in sustainable seedling production techniques.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">2</div>
-                                <div class="step-content">
-                                    <h4>Site Selection & Preparation</h4>
-                                    <p>Scientific site assessment, soil preparation, and optimal planting location identification.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">3</div>
-                                <div class="step-content">
-                                    <h4>Scientific Plantation</h4>
-                                    <p>Implementation of proper planting techniques with native species selection and optimal spacing.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">4</div>
-                                <div class="step-content">
-                                    <h4>Maintenance & Monitoring</h4>
-                                    <p>Post-plantation care, protection measures, and long-term monitoring for optimal survival rates.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Main Image -->
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Large-scale tree plantation and afforestation activities showing community participation" class="plantation-image-modern">
-                        
-                        <div class="image-caption">
-                            Community-led tree plantation initiative showcasing nursery development, species selection, and sustainable afforestation practices in Dindigul district
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enhanced Statistics Section -->
-                <div class="plantation-stats-modern">
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">26,93,250</span>
-                        <span class="stat-label-modern">Trees Planted</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">14</span>
-                        <span class="stat-label-modern">Districts Covered</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">25+</span>
-                        <span class="stat-label-modern">Years Excellence</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">35,000+</span>
-                        <span class="stat-label-modern">Hectares Planted</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Plantation & Afforestation Projects (2003-2010)</h2>
-                
-                <div class="projects-grid">
-                    <!-- Nursery and Raising Plantation Training -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nursery and Raising Plantation Training</h3>
-                            <span class="project-period">2003-2004</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Nursery raising and plantation training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Training</span>
-                                <span class="impact-label">Foundation</span>
-                            </div>
-                        </div>
-                        <a href="projects/nursery-plantation-training.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Bamboo Cultivation Demonstration -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Bamboo Cultivation Demonstration</h3>
-                            <span class="project-period">2009-2010</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-environment.jpg" alt="Bamboo cultivation demonstration activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Sustainable</span>
-                                <span class="impact-label">Forestry</span>
-                            </div>
-                        </div>
-                        <a href="projects/bamboo-cultivation.html" class="project-link">View Details →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== VERIFIED STATISTICS & KEY ACTIVITIES =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Verified Statistics & Key Activities</h2>
-
-                <!-- District-wise Plantation Breakdown -->
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); margin-bottom: 40px;">
-                    <h3 style="color: #28a745; text-align: center; padding: 25px 25px 10px 25px; font-size: 1.5rem;">District-wise Plantation Coverage</h3>
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>District</th>
-                                <th>Area Planted (Hectares)</th>
-                                <th>Percentage of Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Salem</td>
-                                <td>12,500</td>
-                                <td>35.7%</td>
-                            </tr>
-                            <tr>
-                                <td>Kancheepuram</td>
-                                <td>9,000</td>
-                                <td>25.7%</td>
-                            </tr>
-                            <tr>
-                                <td>Tirunelveli</td>
-                                <td>6,500</td>
-                                <td>18.6%</td>
-                            </tr>
-                            <tr>
-                                <td>Dindigul</td>
-                                <td>3,500</td>
-                                <td>10.0%</td>
-                            </tr>
-                            <tr>
-                                <td>Namakkal</td>
-                                <td>3,500</td>
-                                <td>10.0%</td>
-                            </tr>
-                            <tr style="background-color: #f8f9fa; font-weight: bold;">
-                                <td><strong>Total</strong></td>
-                                <td><strong>35,000 Ha</strong></td>
-                                <td><strong>100%</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Key Activities Grid -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px;">
-                    <!-- Nursery Development -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-right: 15px;">🌱</div>
-                            <h3 style="color: #28a745; font-size: 1.4rem; margin: 0; font-weight: 600;">Nursery Development</h3>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <p style="color: #2c3e50; margin: 0 0 12px 0; font-size: 1.05rem; line-height: 1.6;"><strong>5 Nurseries Established</strong> including a state-of-the-art Hi-tech nursery in <strong>Karur district</strong></p>
-                            <p style="color: #555; margin: 0; font-size: 0.95rem; line-height: 1.5;">Comprehensive training provided to communities in sustainable seedling production techniques, native species cultivation, and nursery management practices.</p>
-                        </div>
-                    </div>
-
-                    <!-- Jatropha Cultivation Project -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-right: 15px;">🌿</div>
-                            <h3 style="color: #28a745; font-size: 1.4rem; margin: 0; font-weight: 600;">Jatropha Cultivation</h3>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 15px; border-radius: 8px; text-align: center;">
-                                    <div style="color: #28a745; font-size: 1.5rem; font-weight: 700;">2,00,000</div>
-                                    <div style="color: #555; font-size: 0.85rem; font-weight: 600;">Seedlings Distributed</div>
-                                </div>
-                                <div style="background: rgba(40, 167, 69, 0.1); padding: 15px; border-radius: 8px; text-align: center;">
-                                    <div style="color: #28a745; font-size: 1.5rem; font-weight: 700;">500 Ha</div>
-                                    <div style="color: #555; font-size: 0.85rem; font-weight: 600;">Cultivation Area</div>
-                                </div>
-                            </div>
-                            <p style="color: #555; margin: 0; font-size: 0.95rem; line-height: 1.5;">Promoted sustainable biofuel cultivation through large-scale Jatropha seedling distribution and farmer training in cultivation practices.</p>
-                        </div>
-                    </div>
-
-                    <!-- United Way Mumbai CSR Project -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-right: 15px;">🌳</div>
-                            <h3 style="color: #28a745; font-size: 1.4rem; margin: 0; font-weight: 600;">United Way Mumbai Project</h3>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <div style="background: rgba(40, 167, 69, 0.1); padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 12px;">
-                                <div style="color: #28a745; font-size: 1.8rem; font-weight: 700;">2,60,000</div>
-                                <div style="color: #555; font-size: 0.9rem; font-weight: 600;">Saplings Planted</div>
-                            </div>
-                            <p style="color: #555; margin: 0; font-size: 0.95rem; line-height: 1.5;">Corporate Social Responsibility initiative in partnership with United Way Mumbai, focusing on large-scale tree plantation for climate mitigation and green cover enhancement.</p>
-                        </div>
-                    </div>
-
-                    <!-- TNCWP Plantation Activities -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-right: 15px;">🌲</div>
-                            <h3 style="color: #28a745; font-size: 1.4rem; margin: 0; font-weight: 600;">TNCWP Plantation</h3>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <p style="color: #2c3e50; margin: 0 0 12px 0; font-size: 1.05rem; line-height: 1.6;"><strong>Large-scale plantation activities</strong> implemented across <strong>5 districts</strong> as part of the Tamil Nadu Comprehensive Watershed Programme (TNCWP)</p>
-                            <p style="color: #555; margin: 0; font-size: 0.95rem; line-height: 1.5;">Integrated plantation with watershed development activities in Dindigul, Theni, Tirunelveli, Namakkal, and Salem districts.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Funders & Partners Section -->
-                <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); margin-top: 40px;">
-                    <h3 style="color: #28a745; text-align: center; margin-bottom: 30px; font-size: 1.5rem;">Key Funders & Partners</h3>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
-                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px;">
-                            <div style="color: #28a745; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">🏛️ Government of Tamil Nadu</div>
-                            <p style="color: #555; margin: 0; font-size: 0.9rem;">TNCWP State Programme</p>
-                        </div>
-                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px;">
-                            <div style="color: #28a745; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">🌲 Forest Department</div>
-                            <p style="color: #555; margin: 0; font-size: 0.9rem;">Technical Support & Coordination</p>
-                        </div>
-                        <div style="text-align: center; padding: 20px; background: linear-gradient(135deg, #e8f5e8, #f1f8e9); border-radius: 12px;">
-                            <div style="color: #28a745; font-size: 1.3rem; margin-bottom: 10px; font-weight: 600;">🤝 United Way Mumbai</div>
-                            <p style="color: #555; margin: 0; font-size: 0.9rem;">CSR Partnership Project</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== PLANTATION IMPACT =========== -->
-        <section class="impact-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Plantation & Afforestation Impact</h2>
-                <div class="impact-grid">
-                    <div class="impact-card">
-                        <div class="impact-icon">🌳</div>
-                        <h3 class="impact-title">Forest Cover Enhancement</h3>
-                        <p class="impact-description">Significantly increased green cover through systematic plantation drives and afforestation initiatives across multiple districts, creating sustainable forest ecosystems.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🌱</div>
-                        <h3 class="impact-title">Nursery Development</h3>
-                        <p class="impact-description">Established sustainable nursery systems and trained over 100 communities in quality seedling production and scientific plantation techniques.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🎋</div>
-                        <h3 class="impact-title">Sustainable Forestry</h3>
-                        <p class="impact-description">Promoted sustainable forestry practices through bamboo cultivation demonstrations and eco-friendly forest management approaches.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🤝</div>
-                        <h3 class="impact-title">Community Capacity</h3>
-                        <p class="impact-description">Built local expertise in plantation and nursery management, creating sustainable livelihoods and environmental stewardship in rural communities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== PLANTATION BENEFITS =========== -->
-        <section class="benefits-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Environmental Benefits</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>🌍 Carbon Sequestration</h4>
-                        <p>Trees absorb CO2 from the atmosphere, helping mitigate climate change through natural carbon storage.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>💧 Water Conservation</h4>
-                        <p>Forest cover improves water retention, reduces soil erosion, and enhances groundwater recharge.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🦋 Biodiversity Protection</h4>
-                        <p>Planted forests provide habitat for wildlife and support ecosystem diversity and balance.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌬️ Air Quality Improvement</h4>
-                        <p>Trees filter air pollutants and produce oxygen, contributing to cleaner and healthier environments.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌱 Soil Health Enhancement</h4>
-                        <p>Tree roots prevent soil erosion and improve soil structure through organic matter addition.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>💼 Livelihood Opportunities</h4>
-                        <p>Plantation activities create employment and sustainable livelihood options for rural communities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Green Conservation</h2>
-                    <p class="cta-text">Join us in creating a greener future through large-scale plantation and afforestation initiatives. Your support helps restore degraded landscapes and build sustainable forest ecosystems.</p>
-                    <div class="cta-buttons">
-                        <a href="../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../programs.html">Our Programs</a></li>
-                        <li><a href="../careers.html">Careers</a></li>
-                        <li><a href="../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../get-involved.html">Overview</a>
+            <a href="../partner.html">Partner with Us</a>
+            <a href="../volunteer.html">Volunteer</a>
+            <a href="../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../assets/js/main.js"></script>
+        <a class="drawer__link" href="../documents.html">Documents</a>
+        <a class="drawer__link" href="../media.html">Media</a>
+        <a class="drawer__link" href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo) ---------- -->
+    <section class="pd-hero" style="--pd-hero-img: url('https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662005/coodu-trust/images/programs/environment-resilience/pa-banner-mature-plantation-aerial')" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../programs.html">Programs</a></li>
+              <li><a href="environment-resilience.html">Environment &amp; resilience</a></li>
+              <li aria-current="page">Plantation &amp; afforestation</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Plantation &amp; afforestation</h1>
+          <p class="pd-hero__sub">Large-scale tree plantation drives and forest restoration for enhanced biodiversity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Plantation and afforestation at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="2693250" data-format="indian">26,93,250</span></span>
+            <span class="stat__label">Trees planted</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="14">14</span></span>
+            <span class="stat__label">Districts covered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="25" data-suffix="+">25+</span></span>
+            <span class="stat__label">Years of excellence</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="35000" data-suffix="+">35,000+</span></span>
+            <span class="stat__label">Hectares planted</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- UNDERSTANDING ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">Understanding</p>
+            <h2 class="section-head" id="understand-title">What plantation &amp; afforestation means</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">What is plantation &amp; afforestation?</span>
+              <p><strong class="pd-hl">Plantation</strong> refers to the systematic cultivation of trees on agricultural or non-forested land, while <strong class="pd-hl">afforestation</strong> involves establishing forests on lands that have not been forested in recent history.</p>
+            </div>
+            <p>Plantation and afforestation are our comprehensive environmental interventions aimed at increasing forest cover, restoring degraded landscapes, and enhancing biodiversity. Since 2000, Coodu Trust has pioneered <strong class="pd-hl">sustainable tree planting initiatives</strong> that transform entire ecosystems across <mark class="pd-num">14 districts</mark> of Tamil Nadu.</p>
+            <p>Our programs focus on creating sustainable green cover through scientifically planned tree planting initiatives. We emphasize <strong class="pd-hl">native species selection</strong>, community participation, and long-term maintenance to ensure optimal tree survival rates and lasting environmental impact.</p>
+            <ul class="pd-principles" aria-label="Core principles">
+              <li><i data-lucide="sprout" aria-hidden="true"></i> Native species focus</li>
+              <li><i data-lucide="sun" aria-hidden="true"></i> Climate mitigation</li>
+              <li><i data-lucide="handshake" aria-hidden="true"></i> Community engagement</li>
+              <li><i data-lucide="bar-chart-3" aria-hidden="true"></i> Scientific approach</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">Our plantation development process</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">Nursery development</span>
+                <span class="pd-process__desc">Establishing quality nurseries and training communities in sustainable seedling production techniques.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Site selection &amp; preparation</span>
+                <span class="pd-process__desc">Scientific site assessment, soil preparation, and optimal planting location identification.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Scientific plantation</span>
+                <span class="pd-process__desc">Implementation of proper planting techniques with native species selection and optimal spacing.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Maintenance &amp; monitoring</span>
+                <span class="pd-process__desc">Post-plantation care, protection measures, and long-term monitoring for optimal survival rates.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FIELD PHOTO ---------- -->
+    <section class="section" aria-label="From the field">
+      <div class="container">
+        <figure class="pd-field reveal">
+          <div class="pd-field__frame">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662008/coodu-trust/images/programs/environment-resilience/pa-field-01-plantation-block" alt="Aerial view of a young plantation block of trees bordered by a dirt track and uncleared scrubland" loading="lazy" width="1600" height="900">
+          </div>
+          <figcaption>A young plantation block established on cleared land, bordered by an access track and uncleared scrub.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="mountain" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Degraded land, shrinking green cover</h3>
+                <p class="pd-cr__desc">Deforested and degraded landscapes across rural Tamil Nadu lose soil, water and habitat year after year.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="trees" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Plant at landscape scale</h3>
+                <p class="pd-cr__desc">Systematic plantation drives have put 26,93,250 trees in the ground across 35,000+ hectares in 14 districts of Tamil Nadu.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="leaf" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">No local supply of quality seedlings</h3>
+                <p class="pd-cr__desc">Without nearby nurseries and trained growers, planting drives depend on distant, unreliable seedling stock.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="sprout" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Build nurseries, train communities</h3>
+                <p class="pd-cr__desc">5 nurseries established &mdash; including a hi-tech nursery in Karur district &mdash; with communities trained in seedling production and nursery management.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="sun" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Saplings planted but not surviving</h3>
+                <p class="pd-cr__desc">Tree planting without species matching and after-care leaves saplings to die in the dry months.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="bar-chart-3" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Science from nursery to maturity</h3>
+                <p class="pd-cr__desc">Native species selection, optimal spacing, post-plantation care and long-term monitoring keep tree survival rates high.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="thermometer-sun" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">A warming climate needs green cover</h3>
+                <p class="pd-cr__desc">Climate change presses hardest on rural communities with the least tree cover to buffer it.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Partner for climate mitigation</h3>
+                <p class="pd-cr__desc">A CSR partnership with United Way Mumbai planted 2,60,000 saplings for climate mitigation and green cover enhancement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Active since</dt>
+            <dd>2000<span class="pd-fact__note">25+ years of tree planting across Tamil Nadu</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>26,93,250 trees planted<span class="pd-fact__note">35,000+ hectares across 14 districts</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>CSR partner</dt>
+            <dd>United Way Mumbai<span class="pd-fact__note">2,60,000 saplings planted for climate mitigation</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>State programme</dt>
+            <dd>TNCWP plantation<span class="pd-fact__note">Government of Tamil Nadu, with Forest Department support</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Nursery network</dt>
+            <dd>5 nurseries established<span class="pd-fact__note">Including a hi-tech nursery in Karur district</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Delivery model</dt>
+            <dd>Community-led &amp; scientific<span class="pd-fact__note">Native species, trained communities, long-term maintenance</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- PROGRAMME PORTFOLIO TABLE ---------- -->
+    <section class="pd-projects section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Track record</p>
+        <h2 class="section-head" id="projects-title">Project portfolio, 2003&ndash;2010</h2>
+        <div class="pd-table-wrap reveal">
+          <div class="pd-table__bar">
+            <span class="pd-table__bar-strong">6 projects &amp; key activities</span>
+            <span class="pd-table__bar-note">2003&ndash;2010 &middot; training, nurseries, biofuel, CSR and state plantation drives</span>
+          </div>
+          <table class="pd-table">
+            <thead>
+              <tr>
+                <th scope="col">Programme</th>
+                <th scope="col">Period</th>
+                <th scope="col">Type</th>
+                <th scope="col">Highlights</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pd-table__name"><a href="projects/nursery-plantation-training.html">Nursery and raising plantation training</a></td>
+                <td class="pd-table__period" data-label="Period">2003&ndash;2004<span class="pd-span" style="--s:0%;--w:14%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">Foundation project &mdash; where our plantation work began</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/bamboo-cultivation.html">Bamboo cultivation demonstration</a></td>
+                <td class="pd-table__period" data-label="Period">2009&ndash;2010<span class="pd-span" style="--s:86%;--w:14%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">Sustainable forestry demonstration</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name">Nursery development</td>
+                <td class="pd-table__period" data-label="Period">Key activity</td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">5 nurseries established &middot; including a hi-tech nursery in Karur district</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/jatropha-cultivation.html">Jatropha cultivation</a></td>
+                <td class="pd-table__period" data-label="Period">Key activity</td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">2,00,000 seedlings distributed &middot; 500 Ha cultivation area</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name">United Way Mumbai project</td>
+                <td class="pd-table__period" data-label="Period">Key activity</td>
+                <td class="pd-table__type" data-label="Type">CSR partnership</td>
+                <td class="pd-table__note" data-label="Focus">2,60,000 saplings planted &middot; climate mitigation</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/tncwp.html">TNCWP plantation</a></td>
+                <td class="pd-table__period" data-label="Period">Key activity</td>
+                <td class="pd-table__type" data-label="Type">State programme</td>
+                <td class="pd-table__note" data-label="Focus">Plantation across 5 districts &middot; Dindigul, Theni, Tirunelveli, Namakkal and Salem</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- IMPACT PILLARS ---------- -->
+    <section class="pd-impact section" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Impact</p>
+        <h2 class="section-head" id="impact-title">What plantation &amp; afforestation changes</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Forest cover enhancement</h3>
+            <p>Significantly increased green cover through systematic plantation drives and afforestation initiatives across multiple districts, creating sustainable forest ecosystems.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="sprout" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Nursery development</h3>
+            <p>Established sustainable nursery systems and trained <mark class="pd-num">over 100 communities</mark> in quality seedling production and scientific plantation techniques.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="recycle" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Sustainable forestry</h3>
+            <p>Promoted sustainable forestry practices through bamboo cultivation demonstrations and eco-friendly forest management approaches.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Community capacity</h3>
+            <p>Built local expertise in plantation and nursery management, creating sustainable livelihoods and environmental stewardship in rural communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROGRAMS ---------- -->
+    <section class="pd-related section section--alt" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More in Environment &amp; resilience</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="watershed-management.html"><span class="icon-chip"><i data-lucide="waves" aria-hidden="true"></i></span><span class="pd-rel__title">Watershed management</span></a></li>
+          <li><a class="pd-rel" href="water-resource-management.html"><span class="icon-chip"><i data-lucide="droplets" aria-hidden="true"></i></span><span class="pd-rel__title">Water resource management</span></a></li>
+          <li><a class="pd-rel" href="soil-land-management.html"><span class="icon-chip"><i data-lucide="sprout" aria-hidden="true"></i></span><span class="pd-rel__title">Soil &amp; land management</span></a></li>
+          <li><a class="pd-rel" href="biodiversity-conservation.html"><span class="icon-chip"><i data-lucide="bird" aria-hidden="true"></i></span><span class="pd-rel__title">Biodiversity conservation</span></a></li>
+          <li><a class="pd-rel" href="climate-change-adaptation.html"><span class="icon-chip"><i data-lucide="thermometer-sun" aria-hidden="true"></i></span><span class="pd-rel__title">Climate change adaptation</span></a></li>
+          <li><a class="pd-rel" href="environment-resilience.html"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="pd-rel__title">Sector overview</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support green conservation</h2>
+          <p class="pd-cta__sub">Join us in creating a greener future through large-scale plantation and afforestation initiatives. Your support helps restore degraded landscapes and build sustainable forest ecosystems.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../programs.html">Our Programs</a></li>
+              <li><a href="../get-involved.html">Get Involved</a></li>
+              <li><a href="../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../assets/js/coodu.js?v=9" defer></script>
 
 </body>
 </html>

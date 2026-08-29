@@ -34,7 +34,7 @@ body {
   background-color: var(--surface);
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.8)),
-    url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
+    url('https://res.cloudinary.com/usq2sbox/image/upload/v1787672989/coodu-trust/images/aboutus/background');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -176,7 +176,14 @@ a:hover { color: var(--color-primary-dark); }
 .img-slot[data-ratio="1/1"]   { aspect-ratio: 1 / 1; }
 .img-slot[data-ratio="21/9"]  { aspect-ratio: 21 / 9; }
 
+/* Placeholder captions are hidden. They named content that does not exist yet
+   (invented beneficiary names, press clippings we do not hold), which read as
+   false claims on the page. The textured panel remains as a neutral slot. */
 .img-slot__label {
+  /* Hidden: these captions named content that does not exist yet (invented
+     beneficiary names, press clippings we do not hold) and read as false
+     claims on the page. The textured panel remains as a neutral slot. */
+  display: none;
   position: absolute;
   left: 12px;
   bottom: 10px;

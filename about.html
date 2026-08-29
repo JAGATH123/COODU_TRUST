@@ -14,10 +14,10 @@
 
   <!-- Design-system CSS (convention order) — ?v bust browser cache on each change -->
   <link rel="stylesheet" href="assets/css/coodu-tokens.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-base.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-components.css?v=9">
-  <link rel="stylesheet" href="assets/css/coodu-motion.css?v=5">
-  <link rel="stylesheet" href="assets/css/coodu-about.css?v=9">
+  <link rel="stylesheet" href="assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="assets/css/coodu-about.css?v=11">
 </head>
 <body data-page="about">
 
@@ -28,7 +28,7 @@
     <div class="container site-header__inner">
 
       <a class="brand" href="index.html">
-        <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
         <span class="brand__text">
           <span class="brand__name">COODU TRUST</span>
           <span class="brand__sub">Tamil Nadu</span>
@@ -41,111 +41,102 @@
           <li><a class="nav__link is-active" href="about.html" aria-current="page">About</a></li>
 
           <li class="has-mega">
-            <a href="programs.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-programs" aria-haspopup="true">
+            <a href="programs.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-programs">
               Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
             </a>
-            <div class="mega" id="mega-programs" hidden>
-              <div class="container mega__grid">
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/environment-resilience.html">
-                    <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Environment and Resilience</span>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="programs/environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/watershed-management.html">Watershed Management</a></li>
-                    <li><a href="programs/plantation-afforestation.html">Plantation &amp; Afforestation</a></li>
-                    <li><a href="programs/water-resource-management.html">Water Resource Management</a></li>
-                    <li><a href="programs/soil-land-management.html">Soil &amp; Land Management</a></li>
-                    <li><a href="programs/biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                    <li><a href="programs/climate-change-adaptation.html">Climate Change Adaptation &amp; Mitigation</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/sustainable-agriculture.html">
-                    <span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Sustainable Agriculture</span>
+                </li>
+                <li>
+                  <a class="mega__tile" href="programs/sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/farmer-collectivization.html">Farmer Collectivization &amp; Agribusiness</a></li>
-                    <li><a href="programs/livestock-allied.html">Livestock &amp; Allied Activities</a></li>
-                    <li><a href="programs/horticulture-diversified.html">Horticulture &amp; Diversified Farming</a></li>
-                    <li><a href="programs/agricultural-technology.html">Agricultural Technology &amp; Youth Engagement</a></li>
-                    <li><a href="programs/organic-farming.html">Organic Farming Practices</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/women-empowerment.html">
-                    <span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Women Empowerment</span>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="programs/women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/social-empowerment-leadership.html">Social Empowerment &amp; Leadership</a></li>
-                    <li><a href="programs/microfinance-financial-inclusion.html">Microfinance &amp; Financial Inclusion</a></li>
-                    <li><a href="programs/entrepreneurship-enterprise-development.html">Entrepreneurship &amp; Enterprise Development</a></li>
-                    <li><a href="programs/shg-community-mobilization.html">SHG &amp; Community Mobilization</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/education-skilling.html">
-                    <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Education and Skilling</span>
+                </li>
+                <li>
+                  <a class="mega__tile" href="programs/education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/vocational-livelihood-training.html">Vocational &amp; Livelihood Training</a></li>
-                    <li><a href="programs/digital-literacy-it-training.html">Digital Literacy &amp; IT Training</a></li>
-                    <li><a href="programs/formal-higher-education-support.html">Formal &amp; Higher Education Support</a></li>
-                    <li><a href="programs/school-infrastructure-development.html">School Infrastructure Development</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/health-sanitation.html">
-                    <span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Health, Sanitation &amp; Waste Management</span>
+                </li>
+                <li>
+                  <a class="mega__tile" href="programs/health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/health-support-rehabilitation.html">Health Support &amp; Rehabilitation</a></li>
-                    <li><a href="programs/community-health-services.html">Community Health Services</a></li>
-                    <li><a href="programs/disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                    <li><a href="programs/water-quality-safety.html">Water Quality &amp; Safety</a></li>
-                    <li><a href="programs/sanitation-hygiene-infrastructure.html">Sanitation &amp; Hygiene Infrastructure</a></li>
-                    <li><a href="programs/solid-waste-management.html">Solid Waste Management</a></li>
-                  </ul>
-                </div>
-
-                <div class="mega__col">
-                  <a class="mega__cat" href="programs/consultancy-hr.html">
-                    <span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span>
-                    <span class="mega__cat-title">Consultancy and HR Management</span>
+                </li>
+                <li>
+                  <a class="mega__tile" href="programs/consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
                   </a>
-                  <ul class="mega__sub">
-                    <li><a href="programs/technology-knowledge-dissemination.html">Technology &amp; Knowledge Dissemination</a></li>
-                    <li><a href="programs/strategic-planning-advisory.html">Strategic Planning &amp; Advisory Services</a></li>
-                    <li><a href="programs/hr-staffing-solutions.html">Human Resource &amp; Staffing Solutions</a></li>
-                  </ul>
-                </div>
-
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
               </div>
             </div>
           </li>
 
           <li class="has-mega">
-            <a href="get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved" aria-haspopup="true">
+            <a href="get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
               Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
             </a>
-            <div class="mega mega--small" id="mega-getinvolved" hidden>
-              <div class="container">
-                <ul class="mega__simple">
-                  <li><a href="get-involved.html">Overview</a></li>
-                  <li><a href="partner.html">Partner with Us</a></li>
-                  <li><a href="volunteer.html">Volunteer</a></li>
-                  <li><a href="donate.html">Donate</a></li>
-                </ul>
-              </div>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </li>
 
@@ -173,7 +164,7 @@
 
       <div class="drawer__head">
         <a class="brand brand--drawer" href="index.html">
-          <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
           <span class="brand__name">COODU TRUST</span>
         </a>
         <button class="drawer__close" data-drawer-close aria-label="Close menu">
@@ -394,22 +385,22 @@
 
         <div class="team-grid">
           <div class="team-card reveal">
-            <img class="team-card__photo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1754456731/coodu-trust/images/team/member-1.jpg" alt="S. Jagadeesan" width="170" height="170" loading="lazy">
+            <img class="team-card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1754456731/coodu-trust/images/team/member-1.jpg" alt="S. Jagadeesan" width="170" height="170" loading="lazy">
             <h3 class="team-card__name">S. Jagadeesan</h3>
             <p class="team-card__role">Managing Trustee</p>
           </div>
           <div class="team-card reveal">
-            <img class="team-card__photo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771837844/coodu-trust/images/team/KUMAR.png" alt="C.T.V. Chidambara Kumar" width="170" height="170" loading="lazy">
+            <img class="team-card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771837844/coodu-trust/images/team/KUMAR.png" alt="C.T.V. Chidambara Kumar" width="170" height="170" loading="lazy">
             <h3 class="team-card__name">C.T.V. Chidambara Kumar</h3>
             <p class="team-card__role">Trustee</p>
           </div>
           <div class="team-card reveal">
-            <img class="team-card__photo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771834963/coodu-trust/images/team/VENKATESAN.png" alt="Dr. P. Venkatesan" width="170" height="170" loading="lazy">
+            <img class="team-card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771834963/coodu-trust/images/team/VENKATESAN.png" alt="Dr. P. Venkatesan" width="170" height="170" loading="lazy">
             <h3 class="team-card__name">Dr. P. Venkatesan</h3>
             <p class="team-card__role">Advisory Board</p>
           </div>
           <div class="team-card reveal">
-            <img class="team-card__photo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771834950/coodu-trust/images/team/SARAVANAN.png" alt="P.P. Saravanan" width="170" height="170" loading="lazy">
+            <img class="team-card__photo" src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_400,h_400,c_fill,g_face/v1771834950/coodu-trust/images/team/SARAVANAN.png" alt="P.P. Saravanan" width="170" height="170" loading="lazy">
             <h3 class="team-card__name">P.P. Saravanan</h3>
             <p class="team-card__role">Advisory Board</p>
           </div>
@@ -477,28 +468,50 @@
           <p class="section-head__sub">We are proud to collaborate with a wide range of government bodies, corporate partners, and funding agencies who share our vision.</p>
         </div>
 
+        <!-- Recognition photographs -->
+        <ul class="recognition-row reveal">
+          <li class="recognition-row__item">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787987093/coodu-trust/images/aboutus/recognition/rec-01-kalam-delegation"
+                 alt="Coodu Trust&rsquo;s Director shaking hands with Dr A. P. J. Abdul Kalam"
+                 loading="lazy" width="1200" height="675">
+            <p class="recognition-row__cap">Coodu Trust&rsquo;s Director with Dr A.&nbsp;P.&nbsp;J. Abdul Kalam, leading a delegation of farmers from Karur district. A photograph from the same meeting appears on the cover of the trust&rsquo;s Annual Report 2003&ndash;2004.</p>
+          </li>
+          <li class="recognition-row__item">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_792/v1787987094/coodu-trust/images/aboutus/recognition/rec-02-nhrc-training"
+                 alt="A panel seated beneath a banner reading One Day Training on Human Rights for Panchayat Leaders and SHG Federation Leaders and NGOs in Karur District, carrying both the Coodu Trust and National Human Rights Commission emblems"
+                 loading="lazy" width="792" height="445">
+            <p class="recognition-row__cap">A one-day human rights training for panchayat and SHG federation leaders in Karur district, convened with the National Human Rights Commission.</p>
+          </li>
+          <li class="recognition-row__item">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_627/v1787987095/coodu-trust/images/aboutus/recognition/rec-03-collector-field-visit"
+                 alt="Dr J. Radhakrishnan I.A.S. standing in a village speaking with women and men gathered around him"
+                 loading="lazy" width="627" height="352">
+            <p class="recognition-row__cap">Dr&nbsp;J.&nbsp;Radhakrishnan&nbsp;I.A.S., then District Collector, on a field visit.</p>
+          </li>
+        </ul>
+
         <div class="partners__marquee reveal" data-marquee>
           <div class="partners__track">
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456755/coodu-trust/images/partners/govt-of-india.png" alt="Government of India" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1754456755/coodu-trust/images/partners/govt-of-india.png" alt="Government of India" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771841185/coodu-trust/images/partners/tamilnadu-govt.png" alt="Government of Tamil Nadu" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771841185/coodu-trust/images/partners/tamilnadu-govt.png" alt="Government of Tamil Nadu" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771842144/coodu-trust/images/partners/nabard.png" alt="NABARD" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771842144/coodu-trust/images/partners/nabard.png" alt="NABARD" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771841188/coodu-trust/images/partners/sbi.png" alt="SBI Foundation" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771841188/coodu-trust/images/partners/sbi.png" alt="SBI Foundation" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771842145/coodu-trust/images/partners/nsdc-new.png" alt="NSDC" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771842145/coodu-trust/images/partners/nsdc-new.png" alt="NSDC" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771841183/coodu-trust/images/partners/tata-power.png" alt="Tata Power" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771841183/coodu-trust/images/partners/tata-power.png" alt="Tata Power" loading="lazy">
           </div>
           <div class="partner">
-            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1771842143/coodu-trust/images/partners/kvb.png" alt="Karur Vysya Bank" loading="lazy">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/v1771842143/coodu-trust/images/partners/kvb.png" alt="Karur Vysya Bank" loading="lazy">
           </div>
           </div>
         </div>
@@ -527,7 +540,7 @@
 
         <div class="footer__col footer__col--brand">
           <a class="brand footer__brand" href="index.html" aria-label="Coodu Trust home">
-            <img class="brand__logo" src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
           </a>
           <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
         </div>
@@ -556,9 +569,9 @@
         <div class="footer__col">
           <h2 class="footer__heading">Follow Us</h2>
           <div class="footer__socials">
-            <a href="#" aria-label="Coodu Trust on Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Coodu Trust on X"><i data-lucide="twitter" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Coodu Trust on Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
           </div>
         </div>
 
@@ -572,7 +585,7 @@
 
   <!-- Scripts: Lucide icons, then site behavior + About page motion (deferred, in order) -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="assets/js/coodu.js?v=7" defer></script>
+  <script src="assets/js/coodu.js?v=9" defer></script>
   <script src="assets/js/coodu-about.js?v=2" defer></script>
   <!-- d3-geo draws the India maps in "Our reach" (geometry: assets/data/india-districts.min.json) -->
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>

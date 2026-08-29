@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 "currency": orderData.data.currency,
                 "name": "Coodu Trust",
                 "description": `Donation for ${formData.cause.replace('-', ' ').toUpperCase()}`,
-                "image": "assets/images/logos/123.jpeg",
+                "image": "https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_550/v1787987101/coodu-trust/images/logos/123",
                 "order_id": orderData.data.orderId,
                 "handler": function(response) {
                     handlePaymentSuccess(response);

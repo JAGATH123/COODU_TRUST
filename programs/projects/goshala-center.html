@@ -1,920 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goshala — Cow Care Center at Velliyani | Coodu Trust</title>
-    <meta name="description" content="Coodu Trust's Goshala at Velliyani, Karur District — a cow care center rescuing and rehabilitating 32 stray cows, producing 400-450 litres of milk daily, creating local employment, and promoting animal welfare and sustainable dairy farming in the community.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goshala cow care center &mdash; COODU Trust</title>
+  <meta name="description" content="The Coodu Trust Goshala at Velliyani, Karur District shelters 32 rescued stray cows — a self-sustaining cow care centre producing 400-450 litres of milk daily to fund animal welfare, employment and community education.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
-
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Goshala Project Page Specific Styles */
-        .goshala-page {
-            background: transparent !important;
-        }
-
-        .goshala-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-
-        /* Modern Hero Section */
-        .goshala-hero {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .hero-content-modern {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-text-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-visual-section {
-            position: relative;
-        }
-
-        .modern-carousel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
-        }
-
-        .quick-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .quick-stat {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 25px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 8px;
-            color: white !important;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-
-        /* Program Overview Modern */
-        .overview-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .overview-content-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .overview-sidebar {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.3);
-        }
-
-        /* Achievement Dashboard */
-        .achievements-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .achievement-card-modern {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 5px solid #28a745;
-        }
-
-        .achievement-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .achievement-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        /* Statistics Dashboard */
-        .stats-modern {
-            background: transparent !important;
-            padding: 60px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .stat-header {
-            color: #28a745;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .stat-value {
-            color: #2c3e50;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content-modern {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .overview-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .quick-stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .goshala-page .container {
-                padding: 0 15px;
-            }
-
-            .hero-text-section,
-            .overview-content-modern,
-            .overview-sidebar {
-                padding: 30px 25px;
-            }
-
-            .achievement-card-modern {
-                padding: 25px 20px;
-            }
-
-            .carousel-image {
-                height: 250px;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../../assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="../../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/coodu-programs-detail.css?v=8">
 </head>
-<body style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; position: relative;">
-    <!-- Global background overlay for the entire page -->
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.4); z-index: -1; pointer-events: none;"></div>
+<body data-page="project-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                <ul class="nav-menu">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../../about.html" class="nav-link">About</a></li>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                    <li class="dropdown">
-                        <a href="../../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="../environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="../plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="../water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="../soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="../biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="../climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="../livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="../horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="../agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="../organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="../microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="../entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="../shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="../digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="../formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="../school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="../community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="../disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="../water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="../sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="../solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="../consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="../technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="../strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="../hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+      <a class="brand" href="../../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
 
-                    <li class="dropdown">
-                        <a href="../../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../../partner.html">Partner with Us</a></li>
-                            <li><a href="../../volunteer.html">Volunteer</a></li>
-                            <li><a href="../../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../../index.html">Home</a></li>
+          <li><a class="nav__link" href="../../about.html">About</a></li>
 
-                    <li><a href="../../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../../contact.html" class="nav-link">Contact</a></li>
-                </ul>
+          <li class="has-mega">
+            <a href="../../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="../environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="../women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="../consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
 
-                <a href="../../donate.html" class="btn btn-primary donate-button">Donate</a>
+          <li class="has-mega">
+            <a href="../../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+          <li><a class="nav__link" href="../../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../../media.html">Media</a></li>
+          <li><a class="nav__link" href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../../index.html">Home</a>
+        <a class="drawer__link" href="../../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../../programs.html">All programs</a>
+            <a href="../environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="../sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="../women-empowerment.html">Women Empowerment</a>
+            <a href="../education-skilling.html">Education &amp; Skilling</a>
+            <a href="../health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="../consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== MODERN HERO SECTION =========== -->
-        <section class="goshala-hero">
-            <div class="container">
-                <div class="breadcrumb" style="margin-bottom: 30px;">
-                    <a href="../../programs.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Programs</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../sustainable-agriculture.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Sustainable Agriculture</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <a href="../livestock-allied.html" style="color: #28a745; text-decoration: none; font-weight: 500;">Livestock & Allied Activities</a>
-                    <span style="color: #555; margin: 0 8px;">></span>
-                    <span style="color: #2c3e50; font-weight: 600;">Goshala (Cow Care Center)</span>
-                </div>
-
-                <div class="hero-content-modern">
-                    <div class="hero-text-section">
-                        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 25px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-size: 0.9rem; font-weight: 600;">🐄 ANIMAL WELFARE & COMMUNITY DEVELOPMENT</div>
-
-                        <h1 style="color: #28a745; font-size: 3rem; font-weight: 700; margin-bottom: 15px; line-height: 1.2;">Goshala (Cow Care Center)</h1>
-                        <p style="color: #2c3e50; font-size: 1.3rem; margin-bottom: 30px; line-height: 1.4;">Stray Cattle Rescue, Rehabilitation & Sustainable Dairy at Velliyani, Karur (2021-Present)</p>
-
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1b5e20; margin-bottom: 15px; font-size: 1.2rem;">🎯 Program Mission</h3>
-                            <p style="color: #37474f; line-height: 1.7; margin: 0;">Promoting the welfare of stray cattle by providing shelter, nutrition, and medical care while creating a sustainable livelihood model for local communities through milk production, employment generation, and community education on animal welfare and responsible livestock care.</p>
-                        </div>
-
-                        <div class="key-highlights" style="margin-bottom: 30px;">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem;">📋 Implementation Highlights</h3>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">📅</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">2021-Present (Ongoing)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🐄</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">32 Stray Cows Rescued</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">🥛</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">400-450 Litres Milk/Day</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">👷</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.9rem;">Local Employment Created</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Stats -->
-                        <div class="quick-stats">
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">32</span>
-                                <span class="stat-label" style="color: white;">Rescued Stray Cows</span>
-                            </div>
-                            <div class="quick-stat">
-                                <span class="stat-number" style="color: white;">400-450 L</span>
-                                <span class="stat-label" style="color: white;">Daily Milk Production</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-visual-section">
-                        <div class="modern-carousel">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.3rem; text-align: center;">📸 Goshala Gallery</h3>
-
-                            <div class="hero-photo-carousel">
-                                <div class="carousel-frame">
-                                    <div class="photo-slides">
-                                        <div class="photo-slide active">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-sustainable-agriculture.jpg" alt="Rescued stray cows" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🐄 Rescued Stray Cows</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Veterinary care" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🏥 Veterinary Care</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Milk production" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🥛 Milk Production</div>
-                                        </div>
-                                        <div class="photo-slide">
-                                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Community education" class="carousel-image">
-                                            <div style="background: rgba(40, 167, 69, 0.1); padding: 10px 15px; border-radius: 8px; text-align: center; color: #2c3e50; font-weight: 500; font-size: 0.9rem;">🎓 Community Education</div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-indicators">
-                                        <span class="indicator active" data-slide="0"></span>
-                                        <span class="indicator" data-slide="1"></span>
-                                        <span class="indicator" data-slide="2"></span>
-                                        <span class="indicator" data-slide="3"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ENHANCED PROGRAM OVERVIEW =========== -->
-        <section class="overview-modern">
-            <div class="container">
-                <div class="overview-grid">
-                    <div class="overview-content-modern">
-                        <h2 style="color: #28a745; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Programme Overview</h2>
-
-                        <div style="margin-bottom: 35px;">
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 25px;">
-                                Coodu Trust established the <strong>Goshala (Cow Care Center)</strong> at Velliyani, Karur District, with the dual aim of promoting the welfare of stray cattle and providing a sustainable livelihood for local communities. This initiative is a testament to Coodu Trust's commitment to animal welfare, rural development, and promoting dairy farming as a sustainable economic activity.
-                            </p>
-
-                            <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; margin-bottom: 25px;">
-                                <h4 style="color: #856404; margin-bottom: 12px; font-size: 1.1rem;">🎯 Core Objectives</h4>
-                                <p style="color: #721c24; margin: 0; font-size: 1rem; line-height: 1.6;">Rescue and rehabilitate stray cattle from the streets, provide them with proper shelter, nutrition, and veterinary care, while simultaneously generating sustainable income through milk production — creating a model that combines animal welfare with economic viability and community development.</p>
-                            </div>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                The Goshala is home to <strong>32 stray cows</strong>, all rescued from the streets and brought to the centre for care and rehabilitation. These cows are provided with proper shelter, nutrition, and medical care to ensure their well-being. The centre is equipped with facilities to cater to the daily needs of the cows including feeding, health monitoring, and milking operations.
-                            </p>
-
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7;">
-                                Beyond its primary welfare function, the Goshala generates <strong>400-450 litres of milk daily</strong>, which is sold to a private company. This creates a sustainable source of income that supports the Goshala's operational costs while providing employment opportunities for local youth and women as caretakers, milk collectors, and administrative staff. The Goshala also serves as an educational resource where community members and school children learn about animal welfare and sustainable farming practices.
-                            </p>
-                        </div>
-
-                        <!-- Target Beneficiaries -->
-                        <div style="background: rgba(40, 167, 69, 0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(40, 167, 69, 0.2);">
-                            <h4 style="color: #28a745; margin-bottom: 20px; font-size: 1.2rem;">🎯 Target Beneficiaries</h4>
-                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🐄</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Stray Cattle (32 rescued cows)</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">👷</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Local Youth & Women (employment)</div>
-                                </div>
-                                <div style="text-align: center; padding: 15px;">
-                                    <div style="background: #28a745; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 1.2rem;">🎓</div>
-                                    <div style="color: #2c3e50; font-weight: 600; font-size: 0.9rem;">Community & School Children (education)</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="overview-sidebar">
-                        <h3 style="margin-bottom: 25px; font-size: 1.4rem;">📈 Project Scope</h3>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📍 Location</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                Velliyani, Karur District, Tamil Nadu
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📅 Implementation Timeline</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Established:</strong> 2021<br>
-                                <strong>Status:</strong> Ongoing Operations
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">📊 Current Scale</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                • <strong>Cows Housed:</strong> 32 rescued stray cows<br>
-                                • <strong>Daily Milk Production:</strong> 400-450 litres<br>
-                                • <strong>Marketing:</strong> Sold to private dairy company<br>
-                                • <strong>Employment:</strong> Local youth and women in multiple roles
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 style="margin-bottom: 15px; font-size: 1.1rem; opacity: 0.9;">🏢 Implementing Organisation</h4>
-                            <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px;">
-                                <strong>Lead:</strong> Coodu Trust<br>
-                                <strong>Focus:</strong> Animal Welfare + Sustainable Dairy + Community Development
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY ACTIVITIES & ACHIEVEMENTS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Key Activities & Achievements</h2>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 1: Stray Cattle Rescue & Rehabilitation -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🐄</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Stray Cattle Rescue & Rehabilitation</h3>
-                                <p style="margin: 0; color: #555; font-weight: 600; font-size: 0.9rem;">32 Stray Cows Rescued</p>
-                            </div>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">All 32 cows housed at the Goshala were rescued from the streets, where they posed hazards to both themselves and the public. Each cow is brought to the centre for care and rehabilitation, receiving proper shelter, nutrition, and medical attention. By removing stray cattle from streets, the Goshala contributes to both animal welfare and public safety.</p>
-                    </div>
-
-                    <!-- Card 2: Veterinary Care & Health Management -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🏥</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Veterinary Care & Health Management</h3>
-                            </div>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                            <h4 style="color: #1b5e20; margin-bottom: 12px; font-size: 1rem;">Care Protocols:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.8;">
-                                <li>• Regular monitoring by veterinary professionals</li>
-                                <li>• Necessary medical treatment and vaccinations</li>
-                                <li>• Preventive care and disease management</li>
-                                <li>• Ongoing health monitoring systems</li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">The cows are regularly monitored by veterinary professionals, ensuring they receive necessary medical treatment, vaccinations, and preventive care. This comprehensive health management system ensures the well-being of every animal and maintains the productivity of the herd for sustainable milk production.</p>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 50px;">
-                    <!-- Card 3: Feeding & Nutrition Management -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🌾</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Feeding & Nutrition Management</h3>
-                            </div>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                            <h4 style="color: #856404; margin-bottom: 12px; font-size: 1rem;">Nutrition Programme:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #721c24; font-size: 0.95rem; line-height: 1.8;">
-                                <li>• Balanced diet including green fodder, silage, and essential nutrients</li>
-                                <li>• Year-round feeding programme</li>
-                                <li>• Nutritional management for health and productivity</li>
-                                <li>• Clean, spacious housing enclosures</li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">A carefully designed balanced diet is provided to every cow, including green fodder, silage, and other essential nutrients. This nutrition management ensures both animal health and optimal milk production, with cows housed in clean, spacious enclosures that provide safety and comfort.</p>
-                    </div>
-
-                    <!-- Card 4: Milk Production & Revenue -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🥛</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Milk Production & Revenue</h3>
-                                <p style="margin: 0; color: #555; font-weight: 600; font-size: 0.9rem;">400-450 Litres/Day | Sold to Private Company</p>
-                            </div>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">The Goshala produces 400-450 litres of high-quality milk daily from the rescued cows. This milk is sold to a private company, creating a sustainable revenue stream that funds the Goshala's operational costs including feeding, medical care, and staff salaries. The quality of milk is consistently high as the cows are well-cared for and healthy.</p>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
-                    <!-- Card 5: Employment & Community Impact -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">👷</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Employment & Community Impact</h3>
-                            </div>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                            <h4 style="color: #1b5e20; margin-bottom: 12px; font-size: 1rem;">Employment Created:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.8;">
-                                <li>• Farmhands and caretakers</li>
-                                <li>• Milk collectors and handlers</li>
-                                <li>• Administrative staff</li>
-                                <li>• Youth and women from local communities</li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">The Goshala provides direct employment to local youth and women in various roles — caretakers, milk collectors, and administrative staff. This creates steady income opportunities in a rural area, contributing to the economic upliftment of the surrounding community while ensuring the centre is managed by people invested in the local area.</p>
-                    </div>
-
-                    <!-- Card 6: Education & Awareness -->
-                    <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); border-left: 5px solid #28a745;">
-                        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                            <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-right: 20px;">🎓</div>
-                            <div>
-                                <h3 style="color: #28a745; font-size: 1.6rem; margin: 0 0 8px 0; font-weight: 600;">Education & Awareness</h3>
-                            </div>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                            <h4 style="color: #856404; margin-bottom: 12px; font-size: 1rem;">Community Engagement:</h4>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #721c24; font-size: 0.95rem; line-height: 1.8;">
-                                <li>• Educational visits for school children</li>
-                                <li>• Animal welfare awareness programmes</li>
-                                <li>• Sustainable farming practice demonstrations</li>
-                                <li>• Compassion for animals advocacy</li>
-                            </ul>
-                        </div>
-
-                        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1.05rem;">The Goshala serves as an educational resource where community members, especially school children, learn about the importance of animal welfare and sustainable farming practices. The centre actively promotes compassion for animals and encourages responsible pet and livestock care in the community.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== ECONOMIC SUSTAINABILITY MODEL =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Economic Sustainability Model</h2>
-                <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">The Goshala operates on a self-sustaining economic model where animal welfare and economic viability work hand in hand.</p>
-
-                <div style="background: rgba(255, 255, 255, 0.95); padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                        <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1b5e20; margin-bottom: 20px; font-size: 1.3rem;">💰 Revenue</h3>
-                            <p style="color: #2c3e50; font-size: 0.95rem; line-height: 1.6;">400-450 litres milk/day sold to private dairy company generates consistent daily income</p>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #856404; margin-bottom: 20px; font-size: 1.3rem;">📊 Costs Covered</h3>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #721c24; font-size: 0.9rem; line-height: 1.7;">
-                                <li>• Animal feeding (fodder, silage, nutrients)</li>
-                                <li>• Veterinary care and treatment</li>
-                                <li>• Staff salaries</li>
-                                <li>• Infrastructure maintenance</li>
-                            </ul>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 30px; border-radius: 15px; border-left: 5px solid #28a745;">
-                            <h3 style="color: #1565c0; margin-bottom: 20px; font-size: 1.3rem;">🌟 Community Benefits</h3>
-                            <ul style="list-style: none; padding: 0; margin: 0; color: #2c3e50; font-size: 0.9rem; line-height: 1.7;">
-                                <li>• Direct employment for local youth and women</li>
-                                <li>• Reduced stray cattle hazard on streets</li>
-                                <li>• Educational resource for community</li>
-                                <li>• Promotion of animal welfare values</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== FUTURE EXPANSION PLANS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Future Expansion Plans</h2>
-
-                <div style="background: rgba(255, 255, 255, 0.95); padding: 50px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-                        <div style="display: flex; align-items: flex-start; padding: 25px; background: rgba(40, 167, 69, 0.05); border-radius: 12px; border-left: 4px solid #28a745;">
-                            <span style="background: #28a745; color: white; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 1.3rem; flex-shrink: 0;">📈</span>
-                            <div>
-                                <h4 style="color: #28a745; margin-bottom: 10px; font-size: 1.1rem;">Increasing Capacity</h4>
-                                <p style="margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.6;">Plans to rescue and rehabilitate more stray cows, creating a larger impact on animal welfare in the region</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: flex-start; padding: 25px; background: rgba(40, 167, 69, 0.05); border-radius: 12px; border-left: 4px solid #28a745;">
-                            <span style="background: #28a745; color: white; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 1.3rem; flex-shrink: 0;">🧈</span>
-                            <div>
-                                <h4 style="color: #28a745; margin-bottom: 10px; font-size: 1.1rem;">Dairy Product Processing</h4>
-                                <p style="margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.6;">Future consideration to process milk into butter, cheese, and yoghurt — increasing revenue and creating additional business opportunities for local enterprises</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: flex-start; padding: 25px; background: rgba(40, 167, 69, 0.05); border-radius: 12px; border-left: 4px solid #28a745;">
-                            <span style="background: #28a745; color: white; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 1.3rem; flex-shrink: 0;">📚</span>
-                            <div>
-                                <h4 style="color: #28a745; margin-bottom: 10px; font-size: 1.1rem;">Training Programmes</h4>
-                                <p style="margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.6;">Intention to offer training programmes on animal care, milking, and sustainable farming practices, helping local farmers improve their livestock management skills</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: flex-start; padding: 25px; background: rgba(40, 167, 69, 0.05); border-radius: 12px; border-left: 4px solid #28a745;">
-                            <span style="background: #28a745; color: white; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 1.3rem; flex-shrink: 0;">🔄</span>
-                            <div>
-                                <h4 style="color: #28a745; margin-bottom: 10px; font-size: 1.1rem;">Model Replication</h4>
-                                <p style="margin: 0; color: #2c3e50; font-size: 0.95rem; line-height: 1.6;">Establishing the Velliyani Goshala as a replicable model for other communities to combine animal welfare with sustainable livelihood creation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CONNECTION TO DAIRY HERITAGE =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Connection to Coodu Trust's Dairy Heritage</h2>
-                <p style="text-align: center; color: #555; font-size: 1.1rem; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">The Goshala represents the latest chapter in Coodu Trust's 15+ year dairy development journey.</p>
-
-                <div style="background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <thead>
-                            <tr style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
-                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Period</th>
-                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Initiative</th>
-                                <th style="padding: 20px; text-align: left; font-size: 1.1rem; border: 1px solid rgba(255, 255, 255, 0.3);">Scale</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #e0e0e0;">
-                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2008-2010</td>
-                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Calf rearing promotion under RMK/Mahalir Thittam</td>
-                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">50 milch animals distributed, 120 sheep farms</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0;">
-                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2013-2014</td>
-                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">Dairy farmer skill training</td>
-                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">2,476 farm women across 6 districts</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0;">
-                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2014-2017</td>
-                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">PMKVY/NSDC certified dairy training</td>
-                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">1,099 farmers, 461 NSDC certified</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e0e0e0; background: rgba(40, 167, 69, 0.05);">
-                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2021-Present</td>
-                                <td style="padding: 20px; color: #28a745; font-weight: 700; font-size: 1rem;">Goshala at Velliyani</td>
-                                <td style="padding: 20px; color: #1b5e20; font-size: 0.95rem; line-height: 1.6; font-weight: 600;">32 rescued cows, 400-450L milk/day</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 20px; color: #2c3e50; font-weight: 600; font-size: 1rem;">2022-Present</td>
-                                <td style="padding: 20px; color: #28a745; font-weight: 600; font-size: 1rem;">TDPCL Dairy FPC (KVB/SBGF)</td>
-                                <td style="padding: 20px; color: #555; font-size: 0.95rem; line-height: 1.6;">500 women, 10 milk centres, 1,800L/day</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div style="background: linear-gradient(135deg, #fff3cd, #f8d7da); padding: 25px; border-radius: 12px; border-left: 4px solid #28a745; margin-top: 30px;">
-                        <p style="color: #721c24; margin: 0; font-size: 1.05rem; line-height: 1.7;"><strong>The Goshala adds a unique animal welfare dimension to Coodu Trust's dairy portfolio</strong> — while all other programmes focus on enabling farmers to rear dairy animals, the Goshala directly cares for abandoned cattle while demonstrating that welfare and productivity go hand in hand.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== VERIFIED STATISTICS TABLE =========== -->
-        <section class="statistics-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Verified Statistics</h2>
-                <div class="statistics-table-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-                    <table class="statistics-table">
-                        <thead>
-                            <tr>
-                                <th>Metric</th>
-                                <th>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Location</td>
-                                <td>Velliyani, Karur District</td>
-                            </tr>
-                            <tr>
-                                <td>Establishment</td>
-                                <td>2021</td>
-                            </tr>
-                            <tr>
-                                <td>Stray Cows Rescued</td>
-                                <td>32</td>
-                            </tr>
-                            <tr>
-                                <td>Daily Milk Production</td>
-                                <td>400-450 litres</td>
-                            </tr>
-                            <tr>
-                                <td>Milk Marketing</td>
-                                <td>Sold to private company</td>
-                            </tr>
-                            <tr>
-                                <td>Veterinary Care</td>
-                                <td>Regular monitoring by veterinary professionals</td>
-                            </tr>
-                            <tr>
-                                <td>Diet</td>
-                                <td>Balanced — green fodder, silage, essential nutrients</td>
-                            </tr>
-                            <tr>
-                                <td>Housing</td>
-                                <td>Clean, spacious enclosures</td>
-                            </tr>
-                            <tr>
-                                <td>Employment</td>
-                                <td>Local youth and women (caretakers, milk collectors, admin)</td>
-                            </tr>
-                            <tr>
-                                <td>Education</td>
-                                <td>School children visits, animal welfare awareness</td>
-                            </tr>
-                            <tr>
-                                <td>Revenue Model</td>
-                                <td>Self-sustaining through milk sales</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Animal Welfare & Community Livelihoods</h2>
-                    <p class="cta-text">Join us in caring for rescued stray cattle while creating sustainable livelihood opportunities for rural communities. Your support helps maintain the Goshala, expand rescue operations, and demonstrate that animal welfare and economic development can thrive together.</p>
-                    <div class="cta-buttons">
-                        <a href="../../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../../about.html">About Us</a></li>
-                        <li><a href="../../programs.html">Our Programs</a></li>
-                        <li><a href="../../careers.html">Careers</a></li>
-                        <li><a href="../../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../../get-involved.html">Overview</a>
+            <a href="../../partner.html">Partner with Us</a>
+            <a href="../../volunteer.html">Volunteer</a>
+            <a href="../../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../../assets/js/main.js"></script>
+        <a class="drawer__link" href="../../documents.html">Documents</a>
+        <a class="drawer__link" href="../../media.html">Media</a>
+        <a class="drawer__link" href="../../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo + project meta) ---------- -->
+    <section class="pd-hero pd-hero--plain" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../../programs.html">Programs</a></li>
+              <li><a href="../sustainable-agriculture.html">Sustainable agriculture</a></li>
+              <li><a href="../livestock-allied.html">Livestock &amp; allied activities</a></li>
+              <li aria-current="page">Goshala</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Goshala (cow care center)</h1>
+          <p class="pd-hero__sub">A Coodu Trust initiative at Velliyani, Karur District, Tamil Nadu &mdash; sheltering rescued stray cattle since 2021 while a self-sustaining dairy model funds their care and creates local livelihoods.</p>
+          <ul class="pd-hero__meta" aria-label="Project facts">
+            <li class="pd-meta-chip"><i data-lucide="landmark" aria-hidden="true"></i>Trust initiative</li>
+            <li class="pd-meta-chip"><i data-lucide="calendar-days" aria-hidden="true"></i>2021&ndash;Present</li>
+            <li class="pd-meta-chip"><i data-lucide="badge-check" aria-hidden="true"></i>Ongoing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Goshala at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="32">32</span></span>
+            <span class="stat__label">Rescued stray cows</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">400&ndash;450</span>
+            <span class="stat__label">Litres of milk daily</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="15" data-suffix="+">15+</span></span>
+            <span class="stat__label">Years of dairy development journey</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="2021" data-format="none">2021</span></span>
+            <span class="stat__label">Year established</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- THE PROJECT ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">The project</p>
+            <h2 class="section-head" id="understand-title">A shelter that pays for its own compassion</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">Project mission</span>
+              <p>Promoting the welfare of <strong class="pd-hl">stray cattle</strong> by providing shelter, nutrition and medical care while creating a <strong class="pd-hl">sustainable livelihood model</strong> for local communities through milk production, employment generation and community education on animal welfare and responsible livestock care.</p>
+            </div>
+            <p>The Goshala at <strong class="pd-hl">Velliyani, Karur District</strong> is home to <mark class="pd-num">32 stray cows</mark>, all rescued from the streets &mdash; where they posed hazards to themselves and the public &mdash; and brought to the centre for care and rehabilitation. Established by Coodu Trust in <mark class="pd-num">2021</mark>, the centre combines <strong class="pd-hl">animal welfare</strong>, sustainable dairy and community development: the herd produces <mark class="pd-num">400&ndash;450 litres of milk daily</mark>, sold to a private dairy company to create a revenue stream that covers fodder, veterinary care, staff salaries and infrastructure maintenance.</p>
+            <p>The Goshala also creates <strong class="pd-hl">direct employment</strong> for local youth and women &mdash; as farmhands and caretakers, milk collectors and handlers, and administrative staff &mdash; and hosts educational visits for school children alongside awareness programmes on responsible livestock care. It is the latest chapter in Coodu Trust&rsquo;s <mark class="pd-num">15+ year</mark> dairy development journey, which runs from RMK/Mahalir Thittam calf rearing (2008&ndash;2010) through PMKVY/NSDC certified dairy training (2014&ndash;2017) to the TDPCL Dairy FPC (2022&ndash;Present).</p>
+            <ul class="pd-principles" aria-label="Focus areas">
+              <li><i data-lucide="heart" aria-hidden="true"></i> Animal welfare</li>
+              <li><i data-lucide="milk" aria-hidden="true"></i> Sustainable dairy</li>
+              <li><i data-lucide="users" aria-hidden="true"></i> Community employment</li>
+              <li><i data-lucide="graduation-cap" aria-hidden="true"></i> Education &amp; awareness</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">What the Goshala provides</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">Stray cattle rescue &amp; rehabilitation</span>
+                <span class="pd-process__desc">All 32 cows were rescued from the streets and now receive proper shelter, nutrition and medical attention.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Veterinary care &amp; health management</span>
+                <span class="pd-process__desc">Regular monitoring by veterinary professionals, vaccinations and preventive disease management.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Feeding &amp; nutrition management</span>
+                <span class="pd-process__desc">A balanced year-round diet of green fodder, silage and essential nutrients in clean, spacious enclosures.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Milk production &amp; revenue</span>
+                <span class="pd-process__desc">400&ndash;450 litres of high-quality milk daily, sold to a private company to fund the centre.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Employment &amp; community impact</span>
+                <span class="pd-process__desc">Steady rural income for local youth and women as caretakers, milk handlers and administrative staff.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Education &amp; awareness</span>
+                <span class="pd-process__desc">School visits, animal welfare programmes and sustainable farming demonstrations.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Stray cattle left on the streets</h3>
+                <p class="pd-cr__desc">Abandoned cows roaming the streets pose hazards to both themselves and the public &mdash; with no shelter, nutrition or medical care of their own.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="home" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Rescue, shelter and rehabilitation</h3>
+                <p class="pd-cr__desc">32 stray cows rescued from the streets now live at the Velliyani centre, where each receives proper shelter, balanced nutrition and regular veterinary attention &mdash; improving animal welfare and public safety.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="coins" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Care that depends on outside funding</h3>
+                <p class="pd-cr__desc">Feeding, veterinary treatment, staff salaries and infrastructure upkeep are recurring costs that a shelter cannot sustain without a reliable income of its own.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">A self-sustaining milk revenue model</h3>
+                <p class="pd-cr__desc">400&ndash;450 litres of milk sold daily to a private dairy company generate consistent income that covers animal feeding, veterinary care, staff salaries and infrastructure maintenance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Scheme</dt>
+            <dd>Trust initiative<span class="pd-fact__note">Established and led by Coodu Trust</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Period</dt>
+            <dd>2021&ndash;Present<span class="pd-fact__note">Ongoing operations, self-sustaining through milk sales</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Location</dt>
+            <dd>Velliyani<span class="pd-fact__note">Karur District, Tamil Nadu</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Beneficiaries</dt>
+            <dd>32 rescued cows<span class="pd-fact__note">Plus local youth &amp; women through employment, and community &amp; school children through education</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Partners</dt>
+            <dd>Private dairy company<span class="pd-fact__note">Buys the 400&ndash;450 litres of milk produced daily, creating a sustainable revenue stream</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Part of</dt>
+            <dd>Livestock &amp; allied activities<span class="pd-fact__note">The latest chapter in Coodu Trust&rsquo;s 15+ year dairy development journey</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- OUTCOMES ---------- -->
+    <section class="pd-impact section section--alt" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Outcomes</p>
+        <h2 class="section-head" id="impact-title">What the project changed</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="coins" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Self-sustaining economic model</h3>
+            <p>400&ndash;450 litres of milk a day sold to a private dairy company generates consistent income that covers animal feeding, veterinary care, staff salaries and infrastructure maintenance.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Community benefits</h3>
+            <p>Direct employment for local youth and women, reduced stray-cattle hazard on the streets, an educational resource for the community and the promotion of animal welfare values.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="heart" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">A welfare dimension to the dairy portfolio</h3>
+            <p>While other Coodu Trust dairy programmes enable farmers to rear dairy animals, the Goshala directly cares for abandoned cattle &mdash; demonstrating that welfare and productivity go hand in hand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROJECTS ---------- -->
+    <section class="pd-related section" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More from livestock &amp; allied activities</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="../livestock-allied.html"><span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span><span class="pd-rel__title">Livestock &amp; allied activities overview</span></a></li>
+          <li><a class="pd-rel" href="mahalir-thittam.html"><span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="pd-rel__title">Mahalir Thittam</span></a></li>
+          <li><a class="pd-rel" href="rmk-project.html"><span class="icon-chip"><i data-lucide="banknote" aria-hidden="true"></i></span><span class="pd-rel__title">RMK project</span></a></li>
+          <li><a class="pd-rel" href="../farmer-collectivization.html"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span><span class="pd-rel__title">Farmer collectivization</span></a></li>
+          <li><a class="pd-rel" href="../sustainable-agriculture.html"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="pd-rel__title">Sustainable agriculture sector</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support the Goshala</h2>
+          <p class="pd-cta__sub">Help us shelter more rescued cattle, strengthen a self-sustaining dairy model and create rural livelihoods &mdash; while teaching the next generation compassion for animals.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../../about.html">About Us</a></li>
+              <li><a href="../../programs.html">Our Programs</a></li>
+              <li><a href="../../get-involved.html">Get Involved</a></li>
+              <li><a href="../../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../../assets/js/coodu.js?v=9" defer></script>
 
 </body>
 </html>

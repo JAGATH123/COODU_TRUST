@@ -16,7 +16,7 @@
 .contact-hero__layers { position: absolute; inset: 0; z-index: -1; }
 .contact-hero__layers::before {
   content: ""; position: absolute; inset: 0;
-  background-image: url("https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1754456736/coodu-trust/images/headers/Contact_us_bg.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787672991/coodu-trust/images/headers/Contact_us_bg");
   background-size: cover; background-position: center;
 }
 .contact-hero__scrim { position: absolute; inset: 0; background: var(--overlay-hero); }

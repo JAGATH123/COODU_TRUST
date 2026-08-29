@@ -1,1155 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horticulture & Diversified Farming | Coodu Trust</title>
-    <meta name="description" content="Developing fruit cultivation, vegetable production, floriculture, and crop diversification programs to enhance agricultural productivity and profitability.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horticulture &amp; diversified farming &mdash; COODU Trust</title>
+  <meta name="description" content="Coodu Trust's horticulture and diversified farming across Tamil Nadu — 3,000+ beneficiaries trained since 2003 in 5+ districts. Mushroom, coconut, mango and vegetable cultivation with market linkage.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Horticulture & Diversified Farming Page Specific Styles */
-        .horticulture-page {
-            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        
-        .horticulture-page::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        .horticulture-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-        
-        .understanding-horticulture-section {
-            background: transparent !important;
-            padding: 80px 0;
-        }
-        
-        .horticulture-hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-        
-        .horticulture-text-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .horticulture-visual-content {
-            position: relative;
-        }
-        
-        .horticulture-process-flow {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
-        }
-        
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            border-left: 4px solid #28a745;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
-        }
-        
-        .step-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 1.5rem;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .step-content h4 {
-            color: #28a745;
-            margin: 0 0 8px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .step-content p {
-            margin: 0;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .horticulture-stats-modern {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
-        .stat-card-modern {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s;
-        }
-        
-        .stat-card-modern:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
-        }
-        
-        .stat-card-modern:hover::before {
-            left: 100%;
-        }
-        
-        .stat-number-modern {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-        
-        .stat-label-modern {
-            font-size: 0.95rem;
-            opacity: 0.95;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        
-        .horticulture-image-modern {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .image-caption {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            font-size: 0.95rem;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .horticulture-hero-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .horticulture-stats-modern {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-        
-        /* Project Cards Styling */
-        .horticulture-page .project-card {
-            width: 433px;
-            height: 506px;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .horticulture-page .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .horticulture-page .project-title {
-            font-size: 1.4rem !important;
-            line-height: 1.3;
-            font-weight: 600;
-        }
-        
-        .horticulture-page .programs-section {
-            background: transparent !important;
-        }
-        
-        .horticulture-page .impact-section {
-            background: transparent !important;
-        }
-        
-        .horticulture-page .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
-            gap: 30px;
-            justify-items: center;
-        }
-        
-        @media (max-width: 1200px) {
-            .horticulture-page .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            }
-            
-            .horticulture-page .project-card {
-                width: 380px;
-                height: 450px;
-            }
-        }
-        
-        /* Benefits Section Styling */
-        .horticulture-page .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .horticulture-page .benefit-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 4px solid #28a745;
-        }
-        
-        .horticulture-page .benefit-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .horticulture-page .benefit-item h4 {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .horticulture-page .benefit-item p {
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        
-        /* Approaches Section Styling */
-        .horticulture-page .approaches-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .horticulture-page .approach-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 2px solid transparent;
-        }
-        
-        .horticulture-page .approach-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .horticulture-page .approach-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-        .horticulture-page .approach-title {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .horticulture-page .approach-description {
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.95rem;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-        @media (max-width: 1024px) {
-            .horticulture-page .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .horticulture-page .approaches-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .horticulture-page .container {
-                padding: 0 15px;
-            }
-            
-            .horticulture-text-content {
-                padding: 30px 25px;
-            }
-            
-            .horticulture-process-flow {
-                padding: 25px;
-            }
-            
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 15px;
-            }
-            
-            .step-icon {
-                margin: 0 0 15px 0;
-            }
-            
-            .horticulture-stats-modern {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .horticulture-image-modern {
-                height: 250px;
-            }
-            
-            .horticulture-page .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .horticulture-page .project-card {
-                width: 100%;
-                max-width: 350px;
-                height: 400px;
-            }
-            
-            .horticulture-page .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .horticulture-page .benefit-item {
-                padding: 25px 20px;
-            }
-            
-            .horticulture-page .approach-card {
-                padding: 30px 25px;
-            }
-        }
-
-        /* Horticulture Focus Areas Section Styling */
-        .horticulture-page .crops-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .horticulture-page .crop-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .horticulture-page .crop-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
-            transition: left 0.6s;
-        }
-        
-        .horticulture-page .crop-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .horticulture-page .crop-card:hover::before {
-            left: 100%;
-        }
-        
-        .horticulture-page .crop-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            display: block;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 2px 4px rgba(40, 167, 69, 0.3));
-        }
-        
-        .horticulture-page .crop-title {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            position: relative;
-        }
-        
-        .horticulture-page .crop-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 2px;
-        }
-        
-        .horticulture-page .crop-description {
-            color: #555;
-            line-height: 1.7;
-            margin: 0;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-
-        /* Crop Diversification Strategies Section Styling */
-        .horticulture-page .strategies-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .horticulture-page .strategy-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 35px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .horticulture-page .strategy-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
-            transition: left 0.6s;
-        }
-        
-        .horticulture-page .strategy-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .horticulture-page .strategy-card:hover::before {
-            left: 100%;
-        }
-        
-        .horticulture-page .strategy-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            display: block;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 2px 4px rgba(40, 167, 69, 0.3));
-        }
-        
-        .horticulture-page .strategy-title {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            font-weight: 600;
-            position: relative;
-        }
-        
-        .horticulture-page .strategy-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 2px;
-        }
-        
-        .horticulture-page .strategy-description {
-            color: #555;
-            line-height: 1.7;
-            margin: 0;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 1024px) {
-            .horticulture-page .crops-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .horticulture-page .strategies-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .horticulture-page .crops-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .horticulture-page .crop-card {
-                padding: 30px 25px;
-            }
-            
-            .horticulture-page .crop-icon {
-                font-size: 3rem;
-            }
-            
-            .horticulture-page .crop-title {
-                font-size: 1.2rem;
-            }
-            
-            .horticulture-page .crop-description {
-                font-size: 0.95rem;
-            }
-            
-            .horticulture-page .strategy-card {
-                padding: 30px 25px;
-            }
-            
-            .horticulture-page .strategy-icon {
-                font-size: 3rem;
-            }
-            
-            .horticulture-page .strategy-title {
-                font-size: 1.2rem;
-            }
-            
-            .horticulture-page .strategy-description {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../assets/css/coodu-programs-detail.css?v=8">
 </head>
-<body class="horticulture-page">
+<body data-page="program-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../partner.html">Partner with Us</a></li>
-                            <li><a href="../volunteer.html">Volunteer</a></li>
-                            <li><a href="../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <a href="../donate.html" class="btn btn-primary donate-button">Donate</a>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+
+          <li class="has-mega">
+            <a href="../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <a href="../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../media.html">Media</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../index.html">Home</a>
+        <a class="drawer__link" href="../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../programs.html">All programs</a>
+            <a href="environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="women-empowerment.html">Women Empowerment</a>
+            <a href="education-skilling.html">Education &amp; Skilling</a>
+            <a href="health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146561/coodu-trust/images/programs/background-prgms/horiculture.png');">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../programs.html">Programs</a> > <a href="sustainable-agriculture.html">Sustainable Agriculture</a> > <span>Horticulture & Diversified Farming</span>
-                </div>
-                <h1 class="page-title">Horticulture & Diversified Farming</h1>
-                <p class="page-subtitle">Developing fruit cultivation, vegetable production, and crop diversification for enhanced profitability</p>
-            </div>
-        </section>
-
-        <!-- =========== UNDERSTANDING HORTICULTURE & DIVERSIFIED FARMING =========== -->
-        <section class="understanding-horticulture-section">
-            <div class="container">
-                <!-- Hero Content -->
-                <div class="horticulture-hero-content">
-                    <div class="horticulture-text-content">
-                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Horticulture & Diversified Farming</h2>
-                        
-                        <div class="definition-section" style="margin-bottom: 35px;">
-                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
-                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Horticulture & Diversified Farming? 🌺</h3>
-                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Horticulture</strong> is the branch of agriculture focusing on intensive cultivation of fruits, vegetables, flowers, spices, and specialty crops with higher returns per unit area.</p>
-                            </div>
-                            
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
-                                <strong>Our approach</strong> focuses on introducing high-value crops, providing technical training in specialized cultivation techniques, and establishing market linkages for horticultural products through sustainable production practices that maximize yield while conserving natural resources.
-                            </p>
-                            
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                Our programs include <strong>modern cultivation techniques</strong>, post-harvest management, value addition, and developing entrepreneurial skills for horticultural enterprises that optimize land use and increase farm profitability.
-                            </p>
-                        </div>
-                        
-                        <!-- Key Components -->
-                        <div class="components-section">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
-                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🍎</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Fruit Cultivation</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🥬</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Vegetable Production</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌺</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Floriculture</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🍄</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Mushroom Cultivation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="horticulture-visual-content">
-                        <!-- Process Flow Visualization -->
-                        <div class="horticulture-process-flow">
-                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Horticulture Development Process</h3>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">1</div>
-                                <div class="step-content">
-                                    <h4>Crop Selection</h4>
-                                    <p>Identifying suitable high-value horticultural crops for local agro-climatic conditions.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">2</div>
-                                <div class="step-content">
-                                    <h4>Technical Training</h4>
-                                    <p>Providing specialized cultivation techniques, modern practices, and scientific methods.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">3</div>
-                                <div class="step-content">
-                                    <h4>Production Support</h4>
-                                    <p>Supporting farmers with quality inputs, equipment, and cultivation guidance.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">4</div>
-                                <div class="step-content">
-                                    <h4>Market Linkage</h4>
-                                    <p>Establishing market connections, post-harvest management, and value addition.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Main Image -->
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Horticulture and diversified farming activities" class="horticulture-image-modern">
-                        
-                        <div class="image-caption">
-                            Supporting diversified farming through fruit cultivation, vegetable production, floriculture and mushroom cultivation across Tamil Nadu
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enhanced Statistics Section -->
-                <div class="horticulture-stats-modern">
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">3,000+</span>
-                        <span class="stat-label-modern">Beneficiaries Trained</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">Mushroom, Coconut</span>
-                        <span class="stat-label-modern">Mango, Vegetables</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">Since 2003</span>
-                        <span class="stat-label-modern">21+ Years Experience</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">5+ Districts</span>
-                        <span class="stat-label-modern">Coverage</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Horticulture & Diversified Farming Projects (2003-Present)</h2>
-
-                <div class="projects-grid">
-                    <!-- Mushroom Cultivation Training -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Mushroom Cultivation Training & Entrepreneurship</h3>
-                            <span class="project-period">2003-2024 (Recurring)</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Mushroom cultivation training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">1,612</span>
-                                <span class="impact-label">Women Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/mushroom-cultivation-training.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Training on Coconut Climbing -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Coconut Climbing Training</h3>
-                            <span class="project-period">2013-2014</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Coconut climbing training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">220</span>
-                                <span class="impact-label">Rural Youth Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/coconut-climbing-training.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Organic Vegetable & Fruit Cultivation -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Organic Vegetable & Fruit Cultivation (KVK)</h3>
-                            <span class="project-period">2014-2015</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456725/coodu-trust/images/programs/program-sustainable-agriculture.jpg" alt="Organic vegetable and fruit cultivation" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">750</span>
-                                <span class="impact-label">Farmers Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/organic-vegetable-fruit-cultivation.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Nursery Technology Training -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nursery Technology Training</h3>
-                            <span class="project-period">2013-2014</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456729/coodu-trust/images/programs/watershed-development.jpg" alt="Nursery technology training" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">300</span>
-                                <span class="impact-label">Youth Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/nursery-technology-training.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Medicinal Plants Cultivation -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Medicinal Plants Cultivation Training</h3>
-                            <span class="project-period">2021-2022</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456724/coodu-trust/images/programs/health-sanitation.jpg" alt="Medicinal plants cultivation training" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">200</span>
-                                <span class="impact-label">Women Trained</span>
-                            </div>
-                        </div>
-                        <a href="projects/medicinal-plants-cultivation.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Nutrient Gardens in Schools -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nutrient Gardens in Schools</h3>
-                            <span class="project-period">2015-2017</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Nutrient gardens in schools" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">15</span>
-                                <span class="impact-label">Schools</span>
-                            </div>
-                        </div>
-                        <a href="projects/nutrient-gardens-schools.html" class="project-link">View Details →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== HORTICULTURE IMPACT =========== -->
-        <section class="impact-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Horticulture & Diversified Farming Impact</h2>
-                <div class="impact-grid">
-                    <div class="impact-card">
-                        <div class="impact-icon">🍄</div>
-                        <h3 class="impact-title">Specialty Crop Development</h3>
-                        <p class="impact-description">Introduced high-value specialty crops like mushrooms, providing farmers with profitable alternative cultivation options.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🥥</div>
-                        <h3 class="impact-title">Skill-Based Training</h3>
-                        <p class="impact-description">Provided specialized technical training in coconut climbing and cultivation techniques for improved farm management.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🌱</div>
-                        <h3 class="impact-title">Crop Diversification</h3>
-                        <p class="impact-description">Enabled farmers to diversify their cropping systems and reduce dependence on traditional low-value crops.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">💰</div>
-                        <h3 class="impact-title">Income Enhancement</h3>
-                        <p class="impact-description">Increased farmer incomes through high-value horticultural crops with better market prices and shorter crop cycles.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== HORTICULTURE BENEFITS =========== -->
-        <section class="benefits-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Benefits of Horticulture & Diversified Farming</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>💰 Higher Returns</h4>
-                        <p>Horticultural crops typically provide 3-5 times higher returns per unit area compared to traditional field crops.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌾 Crop Diversification</h4>
-                        <p>Multiple cropping systems reduce risk and provide year-round income through different harvest seasons.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🍎 Nutritional Security</h4>
-                        <p>Fresh fruits and vegetables improve household nutrition and food security for farming families.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>⚡ Quick Returns</h4>
-                        <p>Many horticultural crops have shorter growing periods, providing faster cash flow compared to annual crops.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🏭 Value Addition</h4>
-                        <p>Opportunities for processing, packaging, and value addition create additional income streams.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌍 Export Potential</h4>
-                        <p>High-quality horticultural products have strong domestic and international market demand.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== HORTICULTURE CROPS =========== -->
-        <section class="crops-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Horticulture Focus Areas</h2>
-                <div class="crops-grid">
-                    <div class="crop-card">
-                        <div class="crop-icon">🍄</div>
-                        <h3 class="crop-title">Mushroom Cultivation</h3>
-                        <p class="crop-description">Specialized training in oyster mushroom, button mushroom, and other varieties for profitable indoor farming. 1,612 women trained since 2003, with 41 women earning ₹300/day from mushroom enterprises (2023-24).</p>
-                    </div>
-                    <div class="crop-card">
-                        <div class="crop-icon">🥥</div>
-                        <h3 class="crop-title">Coconut Farming</h3>
-                        <p class="crop-description">Coconut cultivation techniques, climbing skills using TNAU and Coconut Development Board devices. 220 youth trained, with 72 youth now earning up to ₹750/day from coconut climbing services.</p>
-                    </div>
-                    <div class="crop-card">
-                        <div class="crop-icon">🍅</div>
-                        <h3 class="crop-title">Organic Vegetables & Fruits</h3>
-                        <p class="crop-description">Intensive vegetable farming in Oddanchatram and mango cultivation in Natham through KVK Dindigul. 750 farmers trained in organic input-based technologies (2014-15).</p>
-                    </div>
-                    <div class="crop-card">
-                        <div class="crop-icon">🌿</div>
-                        <h3 class="crop-title">Medicinal Plants</h3>
-                        <p class="crop-description">Cultivation of medicinal and aromatic plants, nursery raising, and marketing. 200 women trained at Velliyani, Karur. Also managing 3-acre ethno-botanical garden.</p>
-                    </div>
-                    <div class="crop-card">
-                        <div class="crop-icon">🌱</div>
-                        <h3 class="crop-title">Nursery Technology</h3>
-                        <p class="crop-description">Forest and horticultural crop propagation, vegetative propagation techniques. 300 rural youth trained through 15 programmes in Karur, Dindigul, and Virudhunagar (2013-14).</p>
-                    </div>
-                    <div class="crop-card">
-                        <div class="crop-icon">🥗</div>
-                        <h3 class="crop-title">Nutrient Gardens</h3>
-                        <p class="crop-description">School nutrition gardens promoting vegetable cultivation for improved dietary diversity. Established in 15 schools in Athoor and Nilakottai blocks, Dindigul District (2015-17).</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== DIVERSIFICATION STRATEGIES =========== -->
-        <section class="strategies-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Crop Diversification Strategies</h2>
-                <div class="strategies-grid">
-                    <div class="strategy-card">
-                        <div class="strategy-icon">🔄</div>
-                        <h3 class="strategy-title">Crop Rotation</h3>
-                        <p class="strategy-description">Systematic rotation of different crops to maintain soil health and break pest cycles.</p>
-                    </div>
-                    <div class="strategy-card">
-                        <div class="strategy-icon">🌾</div>
-                        <h3 class="strategy-title">Mixed Cropping</h3>
-                        <p class="strategy-description">Growing multiple crops simultaneously to optimize land use and reduce risks.</p>
-                    </div>
-                    <div class="strategy-card">
-                        <div class="strategy-icon">📅</div>
-                        <h3 class="strategy-title">Seasonal Planning</h3>
-                        <p class="strategy-description">Strategic crop planning across seasons to ensure continuous income throughout the year.</p>
-                    </div>
-                    <div class="strategy-card">
-                        <div class="strategy-icon">💧</div>
-                        <h3 class="strategy-title">Water-Efficient Systems</h3>
-                        <p class="strategy-description">Drip irrigation and micro-sprinkler systems for efficient water use in horticultural crops.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding" style="background: transparent !important;">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Horticultural Development</h2>
-                    <p class="cta-text">Join us in promoting high-value horticulture and diversified farming systems that enhance farm productivity, increase farmer incomes, and contribute to nutritional security. Your support helps farmers adopt modern horticultural practices and access profitable markets.</p>
-                    <div class="cta-buttons">
-                        <a href="../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../programs.html">Our Programs</a></li>
-                        <li><a href="../careers.html">Careers</a></li>
-                        <li><a href="../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../get-involved.html">Overview</a>
+            <a href="../partner.html">Partner with Us</a>
+            <a href="../volunteer.html">Volunteer</a>
+            <a href="../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../assets/js/main.js"></script>
+        <a class="drawer__link" href="../documents.html">Documents</a>
+        <a class="drawer__link" href="../media.html">Media</a>
+        <a class="drawer__link" href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo) ---------- -->
+    <section class="pd-hero pd-hero--plain" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../programs.html">Programs</a></li>
+              <li><a href="sustainable-agriculture.html">Sustainable agriculture</a></li>
+              <li aria-current="page">Horticulture &amp; diversified farming</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Horticulture &amp; diversified farming</h1>
+          <p class="pd-hero__sub">Developing fruit cultivation, vegetable production and crop diversification for enhanced profitability &mdash; since 2003.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Horticulture and diversified farming at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="3000" data-suffix="+">3,000+</span></span>
+            <span class="stat__label">Beneficiaries trained</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="21" data-suffix="+">21+</span></span>
+            <span class="stat__label">Years of experience &mdash; since 2003</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="5" data-suffix="+">5+</span></span>
+            <span class="stat__label">Districts covered</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">Mushroom, coconut</span>
+            <span class="stat__label">Mango &amp; vegetables</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ---------- UNDERSTANDING ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">Understanding</p>
+            <h2 class="section-head" id="understand-title">What horticulture &amp; diversified farming means</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">What is horticulture?</span>
+              <p><strong class="pd-hl">Horticulture</strong> is the branch of agriculture focusing on intensive cultivation of fruits, vegetables, flowers, spices, and specialty crops with higher returns per unit area.</p>
+            </div>
+            <p>Our approach focuses on introducing <strong class="pd-hl">high-value crops</strong>, providing technical training in specialized cultivation techniques, and establishing <strong class="pd-hl">market linkages</strong> for horticultural products through sustainable production practices that maximize yield while conserving natural resources. Since 2003, <mark class="pd-num">3,000+ beneficiaries</mark> have been trained across <mark class="pd-num">5+ districts</mark>.</p>
+            <p>Our programs include <strong class="pd-hl">modern cultivation techniques</strong>, post-harvest management, value addition, and developing entrepreneurial skills for horticultural enterprises that optimize land use and increase farm profitability &mdash; horticultural crops typically provide <mark class="pd-num">3&ndash;5 times higher returns</mark> per unit area compared to traditional field crops.</p>
+            <ul class="pd-principles" aria-label="Key components">
+              <li><i data-lucide="apple" aria-hidden="true"></i> Fruit cultivation</li>
+              <li><i data-lucide="leaf" aria-hidden="true"></i> Vegetable production</li>
+              <li><i data-lucide="sun" aria-hidden="true"></i> Floriculture</li>
+              <li><i data-lucide="sprout" aria-hidden="true"></i> Mushroom cultivation</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">Our horticulture development process</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">Crop selection</span>
+                <span class="pd-process__desc">Identifying suitable high-value horticultural crops for local agro-climatic conditions.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Technical training</span>
+                <span class="pd-process__desc">Providing specialized cultivation techniques, modern practices, and scientific methods.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Production support</span>
+                <span class="pd-process__desc">Supporting farmers with quality inputs, equipment, and cultivation guidance.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Market linkage</span>
+                <span class="pd-process__desc">Establishing market connections, post-harvest management, and value addition.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="wheat" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Low returns from traditional field crops</h3>
+                <p class="pd-cr__desc">Families dependent on traditional low-value crops earn little from their land, with no clear path to a better income from the same acreage.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="trending-up" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Introduce high-value horticultural crops</h3>
+                <p class="pd-cr__desc">Fruits, vegetables, flowers and specialty crops typically provide 3-5 times higher returns per unit area compared to traditional field crops.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="cloud-rain" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">One crop, one harvest, one income</h3>
+                <p class="pd-cr__desc">Single-crop systems concentrate a family's entire income into one harvest season &mdash; one failure can mean a lost year.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="recycle" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Diversify the cropping system</h3>
+                <p class="pd-cr__desc">Crop rotation, mixed cropping and seasonal planning reduce risk and provide year-round income through different harvest seasons and shorter crop cycles.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="users" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Rural women and youth without income skills</h3>
+                <p class="pd-cr__desc">Without specialized skills, rural women and young people have few ways to earn a reliable daily income close to home.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Skill-based horticulture training</h3>
+                <p class="pd-cr__desc">1,612 women trained in mushroom cultivation and 220 youth in coconut climbing &mdash; 72 youth now earn up to ₹750/day and 41 women earn ₹300/day from their enterprises.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Poor household nutrition</h3>
+                <p class="pd-cr__desc">Farming families and school children often lack fresh fruits and vegetables in their daily diet.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="apple" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Grow nutrition at home and school</h3>
+                <p class="pd-cr__desc">Fresh fruits and vegetables improve household nutrition and food security &mdash; nutrient gardens established in 15 schools in Athoor and Nilakottai blocks, Dindigul district.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Active since</dt>
+            <dd>2003<span class="pd-fact__note">21+ years of horticulture training and support</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>3,000+ beneficiaries trained<span class="pd-fact__note">Across 5+ districts of Tamil Nadu</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Key partners</dt>
+            <dd>KVK Dindigul, TNAU &amp; Coconut Development Board<span class="pd-fact__note">Training technologies and coconut-climbing devices</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Project portfolio</dt>
+            <dd>6 projects<span class="pd-fact__note">Trainings and school gardens, 2003&ndash;2024</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Currently delivering</dt>
+            <dd>Mushroom cultivation &amp; entrepreneurship<span class="pd-fact__note">Recurring since 2003; 41 women earning ₹300/day (2023&ndash;24)</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Delivery model</dt>
+            <dd>Training-led with market linkage<span class="pd-fact__note">Crop selection, technical training, production support, market linkage</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- PROGRAMME PORTFOLIO TABLE ---------- -->
+    <section class="pd-projects section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Track record</p>
+        <h2 class="section-head" id="projects-title">Project portfolio, 2003&ndash;2024</h2>
+        <div class="pd-table-wrap reveal">
+          <div class="pd-table__bar">
+            <span class="pd-table__bar-strong">6 projects</span>
+            <span class="pd-table__bar-note">2003&ndash;2024 &middot; trainings and school gardens &middot; 3,000+ beneficiaries trained</span>
+          </div>
+          <table class="pd-table">
+            <thead>
+              <tr>
+                <th scope="col">Programme</th>
+                <th scope="col">Period</th>
+                <th scope="col">Type</th>
+                <th scope="col">Highlights</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pd-table__name"><a href="projects/mushroom-cultivation-training.html">Mushroom cultivation training &amp; entrepreneurship</a></td>
+                <td class="pd-table__period" data-label="Period">2003&ndash;2024<span class="pd-span pd-span--live" style="--s:0%;--w:100%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">1,612 women trained; 41 earning ₹300/day (2023&ndash;24)</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--live">Ongoing</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/coconut-climbing-training.html">Coconut climbing training</a></td>
+                <td class="pd-table__period" data-label="Period">2013&ndash;2014<span class="pd-span" style="--s:48%;--w:5%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">220 rural youth trained; 72 earning up to ₹750/day</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/nursery-technology-training.html">Nursery technology training</a></td>
+                <td class="pd-table__period" data-label="Period">2013&ndash;2014<span class="pd-span" style="--s:48%;--w:5%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">300 youth trained through 15 programmes in Karur, Dindigul and Virudhunagar</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/organic-vegetable-fruit-cultivation.html">Organic vegetable &amp; fruit cultivation (KVK)</a></td>
+                <td class="pd-table__period" data-label="Period">2014&ndash;2015<span class="pd-span" style="--s:52%;--w:5%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">750 farmers trained in organic input-based technologies</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name">Nutrient gardens in schools</td>
+                <td class="pd-table__period" data-label="Period">2015&ndash;2017<span class="pd-span" style="--s:57%;--w:10%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Key activity</td>
+                <td class="pd-table__note" data-label="Focus">Gardens in 15 schools, Athoor and Nilakottai blocks</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/medicinal-plants-cultivation.html">Medicinal plants cultivation training</a></td>
+                <td class="pd-table__period" data-label="Period">2021&ndash;2022<span class="pd-span" style="--s:86%;--w:5%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">200 women trained at Velliyani, Karur; 3-acre ethno-botanical garden</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- IMPACT PILLARS ---------- -->
+    <section class="pd-impact section" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Impact</p>
+        <h2 class="section-head" id="impact-title">What horticulture &amp; diversified farming changes</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="sprout" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Specialty crop development</h3>
+            <p>Introduced high-value specialty crops like mushrooms, providing farmers with profitable alternative cultivation options &mdash; <mark class="pd-num">1,612 women</mark> trained since 2003.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Skill-based training</h3>
+            <p>Provided specialized technical training in coconut climbing and cultivation techniques for improved farm management.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Crop diversification</h3>
+            <p>Enabled farmers to diversify their cropping systems and reduce dependence on traditional low-value crops.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="coins" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Income enhancement</h3>
+            <p>Increased farmer incomes through high-value horticultural crops with better market prices and shorter crop cycles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROGRAMS ---------- -->
+    <section class="pd-related section section--alt" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More in Sustainable agriculture</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="farmer-collectivization.html"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span><span class="pd-rel__title">Farmer collectivization &amp; agribusiness</span></a></li>
+          <li><a class="pd-rel" href="livestock-allied.html"><span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span><span class="pd-rel__title">Livestock &amp; allied activities</span></a></li>
+          <li><a class="pd-rel" href="agricultural-technology.html"><span class="icon-chip"><i data-lucide="tractor" aria-hidden="true"></i></span><span class="pd-rel__title">Agricultural technology &amp; youth engagement</span></a></li>
+          <li><a class="pd-rel" href="organic-farming.html"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="pd-rel__title">Organic farming practices</span></a></li>
+          <li><a class="pd-rel" href="sustainable-agriculture.html"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="pd-rel__title">Sector overview</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support horticultural development</h2>
+          <p class="pd-cta__sub">Join us in promoting high-value horticulture and diversified farming systems that enhance farm productivity, increase farmer incomes, and contribute to nutritional security. Your support helps farmers adopt modern horticultural practices and access profitable markets.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../programs.html">Our Programs</a></li>
+              <li><a href="../get-involved.html">Get Involved</a></li>
+              <li><a href="../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../assets/js/coodu.js?v=9" defer></script>
 
 </body>
 </html>

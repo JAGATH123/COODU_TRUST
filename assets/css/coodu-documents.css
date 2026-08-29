@@ -16,7 +16,7 @@
 .docs-hero__layers { position: absolute; inset: 0; z-index: -1; }
 .docs-hero__layers::before {
   content: ""; position: absolute; inset: 0;
-  background-image: url("https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1754548275/coodu-trust/images/headers/Documents_bg.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787672994/coodu-trust/images/headers/Documents_bg");
   background-size: cover; background-position: center;
 }
 .docs-hero__scrim { position: absolute; inset: 0; background: var(--overlay-hero); }
@@ -142,4 +142,69 @@
 @media (prefers-reduced-motion: reduce) {
   .report-card, .report-card__cover img { transition: none; }
   .report-card:hover .report-card__cover img { transform: none; }
+}
+
+/* ---- Statutory registrations ---------------------------------------------
+   Recovered from the previous site's backup. Certificate scans link to the
+   source PDF. Deliberately excludes PAN, ITR filings and FCRA page 2. */
+.compliance__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s3);
+  grid-template-columns: 1fr;
+}
+.compliance__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-1);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.compliance__card:hover,
+.compliance__card:focus-visible {
+  box-shadow: var(--shadow-2);
+  transform: translateY(-2px);
+}
+.compliance__card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+}
+.compliance__body {
+  padding: var(--s3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.compliance__title { margin: 0; font-size: 1.0625rem; color: var(--text-strong); }
+.compliance__meta  { margin: 0; font-size: 0.75rem; color: var(--text-muted); }
+.compliance__note  { margin: 0; font-size: 0.8125rem; line-height: 1.55; color: var(--text-body); }
+.compliance__link {
+  margin-top: auto;
+  padding-top: var(--s2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display, inherit);
+  font-size: 0.75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.compliance__link i { width: 15px; height: 15px; }
+@media (min-width: 760px) {
+  .compliance__grid { grid-template-columns: repeat(3, 1fr); }
 }

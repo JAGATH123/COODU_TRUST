@@ -21,7 +21,7 @@
 .donate-hero__layers::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: url("https://res.cloudinary.com/dvxbg6to3/image/upload/f_auto,q_auto,w_1600/v1754551326/coodu-trust/images/headers/Donate_bg.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787672995/coodu-trust/images/headers/Donate_bg");
   background-size: cover;
   background-position: center;
 }

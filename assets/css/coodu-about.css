@@ -31,7 +31,7 @@
   color: var(--surface);
   /* dark-green base behind the photo (shows while it loads / under the scrim) */
   background-color: #10271a;
-  background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456733/coodu-trust/images/headers/about-us-header.jpg');
+  background-image: url('https://res.cloudinary.com/usq2sbox/image/upload/v1787672997/coodu-trust/images/headers/about-us-header');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -932,4 +932,40 @@
 @media (min-width: 600px) {
   .about-cta__actions { flex-direction: row; max-width: none; width: auto; }
   .about-cta__actions .btn { width: auto; }
+}
+
+/* ---- Recognition photographs (About > Partners & recognition) -------------
+   Three archive frames that each authenticate themselves from within the
+   frame. Sits above the logo marquee. Sources are 800px scans, so the tiles
+   are deliberately small - never promote these to a banner. */
+.recognition-row {
+  list-style: none;
+  margin: 0 0 var(--s5);
+  padding: 0;
+  display: grid;
+  gap: var(--s3);
+  grid-template-columns: 1fr;
+}
+.recognition-row__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+.recognition-row__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.recognition-row__cap {
+  margin: 0;
+  padding: var(--s2) var(--s3) var(--s3);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+@media (min-width: 720px) {
+  .recognition-row { grid-template-columns: repeat(3, 1fr); }
 }

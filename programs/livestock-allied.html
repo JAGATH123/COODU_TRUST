@@ -1,992 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livestock & Allied Activities | Coodu Trust</title>
-    <meta name="description" content="Promoting livestock development, dairy farming, poultry, fisheries, and other allied agricultural activities for diversified income sources.">
-    
-    <!-- Google Fonts (Oswald) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestock &amp; allied activities &mdash; COODU Trust</title>
+  <meta name="description" content="Coodu Trust's livestock &amp; allied activities across Tamil Nadu — 4,660+ animals treated, 7,500+ farmers and women trained and 1,202 milch animals distributed in 6+ districts.">
+  <meta name="theme-color" content="#1e7e34">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    
-    <!-- Page-Specific Styles -->
-    <style>
-        /* Livestock & Allied Activities Page Specific Styles */
-        .livestock-page {
-            background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456792/coodu-trust/images/aboutus/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-        
-        .livestock-page::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.4);
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        .livestock-page .container {
-            max-width: 1400px;
-            padding: 0 20px;
-        }
-        
-        .understanding-livestock-section {
-            background: transparent !important;
-            padding: 80px 0;
-        }
-        
-        .livestock-hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-        
-        .livestock-text-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .livestock-visual-content {
-            position: relative;
-        }
-        
-        .livestock-process-flow {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 30px;
-        }
-        
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            border-left: 4px solid #28a745;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
-        }
-        
-        .step-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 1.5rem;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .step-content h4 {
-            color: #28a745;
-            margin: 0 0 8px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .step-content p {
-            margin: 0;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .livestock-stats-modern {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
-        .stat-card-modern {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s;
-        }
-        
-        .stat-card-modern:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
-        }
-        
-        .stat-card-modern:hover::before {
-            left: 100%;
-        }
-        
-        .stat-number-modern {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-        
-        .stat-label-modern {
-            font-size: 0.95rem;
-            opacity: 0.95;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        
-        .livestock-image-modern {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .image-caption {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            font-size: 0.95rem;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .livestock-hero-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .livestock-stats-modern {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-        
-        /* Project Cards Styling */
-        .livestock-page .project-card {
-            width: 433px;
-            height: 506px;
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .livestock-page .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .livestock-page .project-title {
-            font-size: 1.4rem !important;
-            line-height: 1.3;
-            font-weight: 600;
-        }
-        
-        .livestock-page .programs-section {
-            background: transparent !important;
-        }
-        
-        .livestock-page .impact-section {
-            background: transparent !important;
-        }
-        
-        .livestock-page .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
-            gap: 30px;
-            justify-items: center;
-        }
-        
-        @media (max-width: 1200px) {
-            .livestock-page .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            }
-            
-            .livestock-page .project-card {
-                width: 380px;
-                height: 450px;
-            }
-        }
-        
-        /* Benefits Section Styling */
-        .livestock-page .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .livestock-page .benefit-item {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-left: 4px solid #28a745;
-        }
-        
-        .livestock-page .benefit-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .livestock-page .benefit-item h4 {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .livestock-page .benefit-item p {
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        
-        /* Approaches Section Styling */
-        .livestock-page .approaches-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .livestock-page .approach-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 2px solid transparent;
-        }
-        
-        .livestock-page .approach-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .livestock-page .approach-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-        .livestock-page .approach-title {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .livestock-page .approach-description {
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.95rem;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
-        @media (max-width: 1024px) {
-            .livestock-page .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .livestock-page .approaches-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .livestock-page .container {
-                padding: 0 15px;
-            }
-            
-            .livestock-text-content {
-                padding: 30px 25px;
-            }
-            
-            .livestock-process-flow {
-                padding: 25px;
-            }
-            
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 15px;
-            }
-            
-            .step-icon {
-                margin: 0 0 15px 0;
-            }
-            
-            .livestock-stats-modern {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .livestock-image-modern {
-                height: 250px;
-            }
-            
-            .livestock-page .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .livestock-page .project-card {
-                width: 100%;
-                max-width: 350px;
-                height: 400px;
-            }
-            
-            .livestock-page .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .livestock-page .benefit-item {
-                padding: 25px 20px;
-            }
-            
-            .livestock-page .approach-card {
-                padding: 30px 25px;
-            }
-        }
-
-        /* Livestock Activities Section Styling */
-        .livestock-page .activities-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .livestock-page .activity-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 35px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .livestock-page .activity-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(40, 167, 69, 0.1), transparent);
-            transition: left 0.6s;
-        }
-        
-        .livestock-page .activity-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            border-color: #28a745;
-        }
-        
-        .livestock-page .activity-card:hover::before {
-            left: 100%;
-        }
-        
-        .livestock-page .activity-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            display: block;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 2px 4px rgba(40, 167, 69, 0.3));
-        }
-        
-        .livestock-page .activity-title {
-            color: #28a745;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            position: relative;
-        }
-        
-        .livestock-page .activity-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 2px;
-        }
-        
-        .livestock-page .activity-description {
-            color: #555;
-            line-height: 1.7;
-            margin: 0;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 1024px) {
-            .livestock-page .activities-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .livestock-page .activities-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .livestock-page .activity-card {
-                padding: 30px 25px;
-            }
-            
-            .livestock-page .activity-icon {
-                font-size: 3rem;
-            }
-            
-            .livestock-page .activity-title {
-                font-size: 1.2rem;
-            }
-            
-            .livestock-page .activity-description {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="../assets/css/coodu-tokens.css?v=5">
+  <link rel="stylesheet" href="../assets/css/coodu-base.css?v=9">
+  <link rel="stylesheet" href="../assets/css/coodu-components.css?v=11">
+  <link rel="stylesheet" href="../assets/css/coodu-motion.css?v=6">
+  <link rel="stylesheet" href="../assets/css/coodu-programs-detail.css?v=8">
 </head>
-<body class="livestock-page">
+<body data-page="program-detail">
 
-    <!-- =========== HEADER =========== -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust Logo" class="logo-img">
-                    <span class="logo-text">Coodu Trust</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../about.html" class="nav-link">About</a></li>
-                    
-                    <li class="dropdown">
-                        <a href="../programs.html" class="nav-link active">Programs</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="environment-resilience.html">Environment and Resilience</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="watershed-management.html">Watershed Management</a></li>
-                                    <li><a href="plantation-afforestation.html">Plantation & Afforestation</a></li>
-                                    <li><a href="water-resource-management.html">Water Resource Management</a></li>
-                                    <li><a href="soil-land-management.html">Soil & Land Management</a></li>
-                                    <li><a href="biodiversity-conservation.html">Biodiversity Conservation</a></li>
-                                    <li><a href="climate-change-adaptation.html">Climate Change Adaptation & Mitigation</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="farmer-collectivization.html">Farmer Collectivization & Agribusiness</a></li>
-                                    <li><a href="livestock-allied.html">Livestock & Allied Activities</a></li>
-                                    <li><a href="horticulture-diversified.html">Horticulture & Diversified Farming</a></li>
-                                    <li><a href="agricultural-technology.html">Agricultural Technology & Youth Engagement</a></li>
-                                    <li><a href="organic-farming.html">Organic Farming Practices</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="women-empowerment.html">Women Empowerment</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="social-empowerment-leadership.html">Social Empowerment & Leadership</a></li>
-                                    <li><a href="microfinance-financial-inclusion.html">Microfinance & Financial Inclusion</a></li>
-                                    <li><a href="entrepreneurship-enterprise-development.html">Entrepreneurship & Enterprise Development</a></li>
-                                    <li><a href="shg-community-mobilization.html">SHG & Community Mobilization</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="education-skilling.html">Education and Skilling</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="vocational-livelihood-training.html">Vocational & Livelihood Training</a></li>
-                                    <li><a href="digital-literacy-it-training.html">Digital Literacy & IT Training</a></li>
-                                    <li><a href="formal-higher-education-support.html">Formal & Higher Education Support</a></li>
-                                    <li><a href="school-infrastructure-development.html">School Infrastructure Development</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="health-sanitation.html">Health, Sanitation & Waste Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="health-support-rehabilitation.html">Health Support & Rehabilitation</a></li>
-                                    <li><a href="community-health-services.html">Community Health Services</a></li>
-                                    <li><a href="disease-specific-interventions.html">Disease-Specific Interventions</a></li>
-                                    <li><a href="water-quality-safety.html">Water Quality & Safety</a></li>
-                                    <li><a href="sanitation-hygiene-infrastructure.html">Sanitation & Hygiene Infrastructure</a></li>
-                                    <li><a href="solid-waste-management.html">Solid Waste Management</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="consultancy-hr.html">Consultancy and HR Management</a>
-                                <ul class="dropdown-submenu-menu">
-                                    <li><a href="technology-knowledge-dissemination.html">Technology & Knowledge Dissemination</a></li>
-                                    <li><a href="strategic-planning-advisory.html">Strategic Planning & Advisory Services</a></li>
-                                    <li><a href="hr-staffing-solutions.html">Human Resource & Staffing Solutions</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="dropdown">
-                        <a href="../get-involved.html" class="nav-link">Get Involved</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../partner.html">Partner with Us</a></li>
-                            <li><a href="../volunteer.html">Volunteer</a></li>
-                            <li><a href="../donate.html">Donate</a></li>
-                        </ul>
-                    </li>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-                    <li><a href="../documents.html" class="nav-link">Documents</a></li>
-                    <li><a href="../media.html" class="nav-link">Media</a></li>
-                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <a href="../donate.html" class="btn btn-primary donate-button">Donate</a>
+  <!-- ============================================================ HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+      <a class="brand" href="../index.html">
+        <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="42" height="42">
+        <span class="brand__text">
+          <span class="brand__name">COODU TRUST</span>
+          <span class="brand__sub">Tamil Nadu</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+
+          <li class="has-mega">
+            <a href="../programs.html" class="nav__link nav__trigger is-active" aria-expanded="false" aria-controls="mega-programs">
+              Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--programs" id="mega-programs" hidden>
+              <div class="mega__head">
+                <span class="mega__kicker">Our programs</span>
+                <span class="mega__headnote">Six integrated sectors — one approach to rural change</span>
+              </div>
+              <ul class="mega__grid">
+                <li>
+                  <a class="mega__tile" href="environment-resilience.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="mega__tile-title">Environment &amp; resilience</span></span>
+                    <span class="mega__tile-sub">Watershed, plantation, water, biodiversity &amp; climate</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="sustainable-agriculture.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="mega__tile-title">Sustainable agriculture</span></span>
+                    <span class="mega__tile-sub">Organic, collective &amp; tech-enabled farming</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile mega__tile--accent" href="women-empowerment.html">
+                    <span class="mega__tile-head"><span class="icon-chip icon-chip--accent"><i data-lucide="hand-heart" aria-hidden="true"></i></span><span class="mega__tile-title">Women empowerment</span></span>
+                    <span class="mega__tile-sub">SHGs, finance, leadership &amp; enterprise</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="education-skilling.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><span class="mega__tile-title">Education &amp; skilling</span></span>
+                    <span class="mega__tile-sub">Training, digital literacy &amp; school support</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="health-sanitation.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="heart-pulse" aria-hidden="true"></i></span><span class="mega__tile-title">Health &amp; sanitation</span></span>
+                    <span class="mega__tile-sub">Health, safe water, sanitation &amp; waste</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__tile" href="consultancy-hr.html">
+                    <span class="mega__tile-head"><span class="icon-chip"><i data-lucide="briefcase" aria-hidden="true"></i></span><span class="mega__tile-title">Consultancy &amp; HR</span></span>
+                    <span class="mega__tile-sub">Advisory, planning &amp; staffing services</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="mega__foot">
+                <a class="mega__foot-link" href="../programs.html">View all six sectors <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--cta mega__foot-cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="has-mega">
+            <a href="../get-involved.html" class="nav__link nav__trigger" aria-expanded="false" aria-controls="mega-getinvolved">
+              Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="mega mega--menu" id="mega-getinvolved" hidden>
+              <ul class="mega__rows">
+                <li>
+                  <a class="mega__item" href="../get-involved.html">
+                    <span class="icon-chip"><i data-lucide="compass" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Overview</span>
+                      <span class="mega__item-sub">Every way to support our work</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../partner.html">
+                    <span class="icon-chip"><i data-lucide="handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Partner with us</span>
+                      <span class="mega__item-sub">CSR &amp; institutional partnerships</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item" href="../volunteer.html">
+                    <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Volunteer</span>
+                      <span class="mega__item-sub">Give your time &amp; skills</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="mega__item mega__item--accent" href="../donate.html">
+                    <span class="icon-chip icon-chip--accent"><i data-lucide="heart-handshake" aria-hidden="true"></i></span>
+                    <span class="mega__item-txt">
+                      <span class="mega__item-title">Donate</span>
+                      <span class="mega__item-sub">Fund our field programmes</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="../documents.html">Documents</a></li>
+          <li><a class="nav__link" href="../media.html">Media</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+        <button class="hamburger" data-drawer-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <!-- ============================================================ MOBILE DRAWER -->
+  <div class="drawer" id="mobile-drawer">
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+
+      <div class="drawer__head">
+        <a class="brand brand--drawer" href="../index.html">
+          <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754464373/coodu-trust/images/logos/coodu_frontlogo.png" alt="Coodu Trust logo" width="34" height="34">
+          <span class="brand__name">COODU TRUST</span>
+        </a>
+        <button class="drawer__close" data-drawer-close aria-label="Close menu">
+          <i data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="drawer__nav" aria-label="Mobile">
+        <a class="drawer__link" href="../index.html">Home</a>
+        <a class="drawer__link" href="../about.html">About</a>
+
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-programs">
+            Programs <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-programs" hidden>
+            <a href="../programs.html">All programs</a>
+            <a href="environment-resilience.html">Environment &amp; Resilience</a>
+            <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+            <a href="women-empowerment.html">Women Empowerment</a>
+            <a href="education-skilling.html">Education &amp; Skilling</a>
+            <a href="health-sanitation.html">Health &amp; Sanitation</a>
+            <a href="consultancy-hr.html">Consultancy &amp; HR</a>
+          </div>
         </div>
-    </header>
 
-    <main>
-
-        <!-- =========== PAGE HEADER =========== -->
-        <section class="page-header" style="background-image: url('https://res.cloudinary.com/dvxbg6to3/image/upload/v1755146565/coodu-trust/images/programs/background-prgms/livestock-and-allied-activities.png');">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../programs.html">Programs</a> > <a href="sustainable-agriculture.html">Sustainable Agriculture</a> > <span>Livestock & Allied Activities</span>
-                </div>
-                <h1 class="page-title">Livestock & Allied Activities</h1>
-                <p class="page-subtitle">Promoting livestock development and allied activities for diversified income sources</p>
-            </div>
-        </section>
-
-        <!-- =========== UNDERSTANDING LIVESTOCK & ALLIED ACTIVITIES =========== -->
-        <section class="understanding-livestock-section">
-            <div class="container">
-                <!-- Hero Content -->
-                <div class="livestock-hero-content">
-                    <div class="livestock-text-content">
-                        <h2 style="color: #28a745; font-size: 2.8rem; margin-bottom: 30px; font-weight: 700;">Understanding Livestock & Allied Activities</h2>
-                        
-                        <div class="definition-section" style="margin-bottom: 35px;">
-                            <div style="background: linear-gradient(135deg, #e3f2fd, #f3e5f5); padding: 25px; border-radius: 15px; border-left: 5px solid #28a745; margin-bottom: 25px;">
-                                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.3rem;">What is Livestock & Allied Activities? 🐄</h3>
-                                <p style="color: #37474f; line-height: 1.7; margin: 0; font-size: 1.1rem;"><strong>Livestock & Allied Activities</strong> encompass the breeding, rearing, and management of domesticated animals including dairy farming, animal husbandry, veterinary services, and value-added processing.</p>
-                            </div>
-                            
-                            <p style="color: #2c3e50; font-size: 1.15rem; line-height: 1.8; margin-bottom: 20px;">
-                                <strong>Our approach</strong> focuses on improving animal productivity, enhancing veterinary care, establishing dairy enterprises, and developing market linkages for livestock products through sustainable management practices that ensure animal welfare and economic viability.
-                            </p>
-                            
-                            <p style="color: #34495e; font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                                Our integrated approach includes <strong>quality breeding stock</strong>, modern animal husbandry techniques, feed production units, and value chains for milk, eggs, and meat products to provide regular income and nutritional security.
-                            </p>
-                        </div>
-                        
-                        <!-- Key Components -->
-                        <div class="components-section">
-                            <h3 style="color: #28a745; margin-bottom: 20px; font-size: 1.4rem;">Key Components</h3>
-                            <div class="components-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🥛</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Dairy Development</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🩺</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Veterinary Services</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🌾</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Feed & Fodder</span>
-                                </div>
-                                <div style="display: flex; align-items: center; padding: 12px; background: rgba(40, 167, 69, 0.1); border-radius: 8px;">
-                                    <span style="background: #28a745; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.9rem;">🏭</span>
-                                    <span style="color: #2c3e50; font-weight: 500; font-size: 0.95rem;">Value Addition</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="livestock-visual-content">
-                        <!-- Process Flow Visualization -->
-                        <div class="livestock-process-flow">
-                            <h3 style="color: #28a745; margin-bottom: 25px; font-size: 1.4rem; text-align: center;">Our Livestock Development Process</h3>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">1</div>
-                                <div class="step-content">
-                                    <h4>Animal Selection</h4>
-                                    <p>Identifying quality breeding stock and livestock varieties suitable for local conditions.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">2</div>
-                                <div class="step-content">
-                                    <h4>Husbandry Training</h4>
-                                    <p>Training farmers in modern animal care, feeding, breeding, and disease prevention.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">3</div>
-                                <div class="step-content">
-                                    <h4>Health Management</h4>
-                                    <p>Providing veterinary services, vaccination programs, and health monitoring systems.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-icon">4</div>
-                                <div class="step-content">
-                                    <h4>Market Integration</h4>
-                                    <p>Establishing processing units and market linkages for livestock products.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Main Image -->
-                        <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Livestock and dairy development activities" class="livestock-image-modern">
-                        
-                        <div class="image-caption">
-                            Supporting livestock development through dairy enterprises, veterinary services and value chain development across rural Tamil Nadu
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enhanced Statistics Section -->
-                <div class="livestock-stats-modern">
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">4,660+</span>
-                        <span class="stat-label-modern">Animals Treated</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">7,500+</span>
-                        <span class="stat-label-modern">Farmers/Women Trained</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">1,202</span>
-                        <span class="stat-label-modern">Milch Animals Distributed</span>
-                    </div>
-                    <div class="stat-card-modern">
-                        <span class="stat-number-modern">6+</span>
-                        <span class="stat-label-modern">Districts Covered</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== KEY PROJECTS =========== -->
-        <section class="programs-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Livestock & Allied Activities Projects (2009-2023)</h2>
-                
-                <div class="projects-grid">
-                    <!-- Rashtriya Mahila Kosh (RMK) Project -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Rashtriya Mahila Kosh (RMK) Project</h3>
-                            <span class="project-period">2009-2015</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Milch animals and livestock development" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Milch</span>
-                                <span class="impact-label">Animals</span>
-                            </div>
-                        </div>
-                        <a href="projects/rmk-project.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Mahalir Thittam Project -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Mahalir Thittam Project</h3>
-                            <span class="project-period">2009-2015</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Dairy entrepreneurship training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Dairy</span>
-                                <span class="impact-label">Entrepreneurship</span>
-                            </div>
-                        </div>
-                        <a href="projects/mahalir-thittam.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Skill Development through PMKVY & NSDC -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Skill Development through PMKVY & NSDC (Dairy & Apparel)</h3>
-                            <span class="project-period">2014-2016</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Dairy skill training activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Skill</span>
-                                <span class="impact-label">Training</span>
-                            </div>
-                        </div>
-                        <a href="projects/pmkvy-dairy-skills.html" class="project-link">View Details →</a>
-                    </div>
-
-                    <!-- Goshala (Cow Care Center) -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Goshala (Cow Care Center)</h3>
-                            <span class="project-period">2021-2023</span>
-                        </div>
-                        <div class="project-summary">
-                            <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754456727/coodu-trust/images/programs/program-women-empowerment.jpg" alt="Goshala and animal welfare activities" class="project-image">
-                            <div class="project-impact">
-                                <span class="impact-number">Animal</span>
-                                <span class="impact-label">Welfare</span>
-                            </div>
-                        </div>
-                        <a href="projects/goshala-center.html" class="project-link">View Details →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== LIVESTOCK IMPACT =========== -->
-        <section class="impact-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Livestock & Allied Activities Impact</h2>
-                <div class="impact-grid">
-                    <div class="impact-card">
-                        <div class="impact-icon">🐄</div>
-                        <h3 class="impact-title">Livestock Development</h3>
-                        <p class="impact-description">Improved animal productivity through better breeding, feeding, and healthcare practices, enhancing milk production and farmer incomes.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🥛</div>
-                        <h3 class="impact-title">Dairy Enterprise</h3>
-                        <p class="impact-description">Established sustainable dairy businesses through entrepreneurship training, milk collection systems, and market linkage development.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🎓</div>
-                        <h3 class="impact-title">Skill Enhancement</h3>
-                        <p class="impact-description">Provided technical training in dairy farming, animal husbandry, and livestock management to improve farmer capabilities.</p>
-                    </div>
-                    <div class="impact-card">
-                        <div class="impact-icon">🏥</div>
-                        <h3 class="impact-title">Animal Welfare</h3>
-                        <p class="impact-description">Promoted animal welfare through goshala management, veterinary care, and humane treatment practices.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== LIVESTOCK BENEFITS =========== -->
-        <section class="benefits-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Benefits of Livestock & Allied Activities</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>💰 Regular Income</h4>
-                        <p>Provides steady cash flow through daily milk sales, egg production, and periodic sale of animals.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🍼 Nutritional Security</h4>
-                        <p>Ensures household access to high-quality protein through milk, eggs, and meat products.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>♻️ Resource Utilization</h4>
-                        <p>Converts agricultural by-products and crop residues into valuable animal products through efficient feed conversion.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🌱 Organic Fertilizer</h4>
-                        <p>Provides high-quality manure for crop production, improving soil fertility and reducing chemical fertilizer dependency.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>👩 Women's Empowerment</h4>
-                        <p>Creates income opportunities for rural women through dairy entrepreneurship and livestock management activities.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>🛡️ Risk Diversification</h4>
-                        <p>Reduces agricultural risk by providing alternative income sources that complement crop farming activities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== LIVESTOCK ACTIVITIES =========== -->
-        <section class="activities-section section-padding" style="background: transparent !important;">
-            <div class="container">
-                <h2 class="section-title">Our Livestock Activities</h2>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="activity-icon">🐄</div>
-                        <h3 class="activity-title">Dairy Farming</h3>
-                        <p class="activity-description">Milk production systems, breed improvement, and dairy enterprise development for sustainable income generation.</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🐓</div>
-                        <h3 class="activity-title">Poultry Development</h3>
-                        <p class="activity-description">Layer and broiler farming systems, egg production, and backyard poultry for household nutrition and income.</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🐐</div>
-                        <h3 class="activity-title">Goat Rearing</h3>
-                        <p class="activity-description">Small ruminant farming for meat and milk production, suitable for marginal farmers with limited resources.</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🐟</div>
-                        <h3 class="activity-title">Fisheries Development</h3>
-                        <p class="activity-description">Freshwater fish culture, pond management, and integrated fish farming systems for protein and income.</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🌾</div>
-                        <h3 class="activity-title">Feed Production</h3>
-                        <p class="activity-description">Fodder cultivation, feed processing, and nutrition management for optimal animal productivity and health.</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🏥</div>
-                        <h3 class="activity-title">Veterinary Services</h3>
-                        <p class="activity-description">Animal healthcare, vaccination programs, and preventive treatment for maintaining livestock health.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== CALL TO ACTION =========== -->
-        <section class="sector-cta section-padding" style="background: transparent !important;">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Support Livestock Development</h2>
-                    <p class="cta-text">Join us in promoting sustainable livestock development that provides regular income, nutritional security, and economic empowerment to rural families. Your support helps farmers adopt modern animal husbandry practices and build profitable livestock enterprises.</p>
-                    <div class="cta-buttons">
-                        <a href="../partner.html" class="btn btn-primary">Partner with Us</a>
-                        <a href="../donate.html" class="btn btn-secondary">Support Our Work</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- =========== FOOTER =========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust White Logo" class="footer-logo">
-                    <p class="footer-about">Coodu Trust is a registered non-profit organization working towards sustainable development in Tamil Nadu, India since 2000.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../programs.html">Our Programs</a></li>
-                        <li><a href="../careers.html">Careers</a></li>
-                        <li><a href="../donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <address class="footer-contact">
-                        <p>H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India.</p>
-                        <p>Email: <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
-                        <p>Phone: <a href="tel:+914512461362">+91-451-2461362</a></p>
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476344/coodu-trust/images/icons/facebook.png" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476343/coodu-trust/images/icons/twitter.png" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://res.cloudinary.com/dvxbg6to3/image/upload/v1754476341/coodu-trust/images/icons/instagram.png" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Coodu Trust. All Rights Reserved.</p>
-            </div>
+        <div class="acc">
+          <button class="acc__trigger" aria-expanded="false" aria-controls="acc-getinvolved">
+            Get Involved <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="acc__panel" id="acc-getinvolved" hidden>
+            <a href="../get-involved.html">Overview</a>
+            <a href="../partner.html">Partner with Us</a>
+            <a href="../volunteer.html">Volunteer</a>
+            <a href="../donate.html">Donate</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript Files -->
-    <script src="../assets/js/main.js"></script>
+        <a class="drawer__link" href="../documents.html">Documents</a>
+        <a class="drawer__link" href="../media.html">Media</a>
+        <a class="drawer__link" href="../contact.html">Contact</a>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i> Donate now</a>
+        <a class="drawer__phone" href="tel:+914512461362"><i data-lucide="phone" aria-hidden="true"></i> +91-451-2461362</a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ============================================================ MAIN -->
+  <main id="main">
+
+    <!-- ---------- HERO (banner photo) ---------- -->
+    <section class="pd-hero" style="--pd-hero-img: url('https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787662183/coodu-trust/images/programs/sustainable-agriculture/la-banner-azolla-pond')" aria-labelledby="pd-title">
+      <span class="pd-hero__scrim" aria-hidden="true"></span>
+      <div class="container">
+        <div class="pd-hero__content">
+          <nav aria-label="Breadcrumb">
+            <ol class="pd-crumbs">
+              <li><a href="../programs.html">Programs</a></li>
+              <li><a href="sustainable-agriculture.html">Sustainable agriculture</a></li>
+              <li aria-current="page">Livestock &amp; allied activities</li>
+            </ol>
+          </nav>
+          <h1 class="pd-hero__title" id="pd-title">Livestock &amp; allied activities</h1>
+          <p class="pd-hero__sub">Promoting livestock development and allied activities for diversified income sources across rural Tamil Nadu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- STAT SLAB (overlaps hero) ---------- -->
+    <section class="pd-stats pd-stats--vivid" aria-label="Livestock &amp; allied activities at a glance">
+      <div class="container">
+        <div class="pd-stats__card">
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="4660" data-suffix="+">4,660+</span></span>
+            <span class="stat__label">Animals treated</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="7500" data-suffix="+">7,500+</span></span>
+            <span class="stat__label">Farmers &amp; women trained</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="1202">1,202</span></span>
+            <span class="stat__label">Milch animals distributed</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span class="counter" data-target="6" data-suffix="+">6+</span></span>
+            <span class="stat__label">Districts covered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ---------- UNDERSTANDING ---------- -->
+    <section class="pd-understand section" aria-labelledby="understand-title">
+      <div class="container">
+        <div class="pd-understand__grid">
+          <div class="pd-understand__prose">
+            <p class="eyebrow">Understanding</p>
+            <h2 class="section-head" id="understand-title">What livestock &amp; allied activities mean</h2>
+            <div class="pd-callout">
+              <span class="pd-callout__label">What are livestock &amp; allied activities?</span>
+              <p><strong class="pd-hl">Livestock &amp; allied activities</strong> encompass the breeding, rearing and management of domesticated animals &mdash; including dairy farming, animal husbandry, veterinary services and value-added processing.</p>
+            </div>
+            <p>Our approach focuses on improving <strong class="pd-hl">animal productivity</strong>, enhancing veterinary care, establishing <strong class="pd-hl">dairy enterprises</strong> and developing market linkages for livestock products &mdash; sustainable management practices that ensure animal welfare and economic viability, with <mark class="pd-num">4,660+ animals treated</mark> and <mark class="pd-num">1,202 milch animals distributed</mark>.</p>
+            <p>The work integrates <strong class="pd-hl">quality breeding stock</strong>, modern animal husbandry techniques, feed production units and value chains for milk, eggs and meat products &mdash; giving <mark class="pd-num">7,500+ trained farmers and women</mark> regular income and <strong class="pd-hl">nutritional security</strong>.</p>
+            <ul class="pd-principles" aria-label="Key components">
+              <li><i data-lucide="milk" aria-hidden="true"></i> Dairy development</li>
+              <li><i data-lucide="stethoscope" aria-hidden="true"></i> Veterinary services</li>
+              <li><i data-lucide="wheat" aria-hidden="true"></i> Feed &amp; fodder</li>
+              <li><i data-lucide="factory" aria-hidden="true"></i> Value addition</li>
+            </ul>
+          </div>
+          <aside class="pd-process reveal" aria-labelledby="process-title">
+            <h3 class="pd-process__title" id="process-title">Our livestock development process</h3>
+            <ol>
+              <li>
+                <span class="pd-process__step">Animal selection</span>
+                <span class="pd-process__desc">Identifying quality breeding stock and livestock varieties suitable for local conditions.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Husbandry training</span>
+                <span class="pd-process__desc">Training farmers in modern animal care, feeding, breeding and disease prevention.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Health management</span>
+                <span class="pd-process__desc">Providing veterinary services, vaccination programs and health monitoring systems.</span>
+              </li>
+              <li>
+                <span class="pd-process__step">Market integration</span>
+                <span class="pd-process__desc">Establishing processing units and market linkages for livestock products.</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FIELD PHOTO ---------- -->
+    <section class="section" aria-label="From the field">
+      <div class="container">
+        <figure class="pd-field reveal">
+          <div class="pd-field__frame">
+            <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787987157/coodu-trust/images/programs/sustainable-agriculture/la-field-01-husbandry-training" alt="Women seated in plastic chairs in a training hall lined with livestock health and breed charts, two men presenting beside a projection screen at the front" loading="lazy" width="1600" height="900">
+          </div>
+          <figcaption>Animal husbandry training for women livestock keepers at a veterinary research centre.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ---------- CHALLENGE -> RESPONSE ---------- -->
+    <section class="section section--alt" aria-labelledby="cr-title">
+      <div class="container">
+        <p class="eyebrow">Why this work matters</p>
+        <h2 class="section-head" id="cr-title">The challenge on the ground &mdash; and our answer</h2>
+        <div class="pd-cr">
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="cloud-rain" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">One crop, one fragile income</h3>
+                <p class="pd-cr__desc">When a family depends on crop farming alone, a single failed season can take the whole year's income with it.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Daily income from livestock</h3>
+                <p class="pd-cr__desc">Dairy, poultry, goat rearing and fisheries provide steady cash flow through daily milk sales, egg production and periodic sale of animals &mdash; 1,202 milch animals distributed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="heart-pulse" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Disease drains a family's biggest asset</h3>
+                <p class="pd-cr__desc">Without healthcare and vaccination, livestock &mdash; often a rural household's most valuable asset &mdash; is lost to preventable disease.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="stethoscope" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Veterinary care and vaccination</h3>
+                <p class="pd-cr__desc">Veterinary services, vaccination programs, health monitoring and preventive treatment keep herds healthy &mdash; 4,660+ animals treated so far.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="book-open" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Husbandry skills that limit productivity</h3>
+                <p class="pd-cr__desc">Without training in modern animal care, feeding and breeding, milk yields and farmer incomes stay low.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Technical training at scale</h3>
+                <p class="pd-cr__desc">7,500+ farmers and women trained in dairy farming, animal husbandry and livestock management to improve productivity and capability.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pd-cr__row reveal">
+            <div class="pd-cr__cell pd-cr__cell--problem">
+              <span class="icon-chip icon-chip--amber"><i data-lucide="users" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">The challenge</span>
+                <h3 class="pd-cr__title">Few income opportunities for rural women</h3>
+                <p class="pd-cr__desc">Rural women often lack independent income sources of their own within farming households.</p>
+              </div>
+            </div>
+            <span class="pd-cr__arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+            <div class="pd-cr__cell pd-cr__cell--response">
+              <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+              <div>
+                <span class="pd-cr__kicker">Our response</span>
+                <h3 class="pd-cr__title">Dairy entrepreneurship for women</h3>
+                <p class="pd-cr__desc">Through the RMK and Mahalir Thittam projects, women build dairy enterprises with entrepreneurship training, milk collection systems and market linkages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FACT FILE (executive at-a-glance) ---------- -->
+    <section class="pd-facts section" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">At a glance</p>
+        <h2 class="section-head" id="facts-title">The essentials</h2>
+        <dl class="pd-facts__grid">
+          <div class="pd-fact">
+            <dt>Active since</dt>
+            <dd>2009<span class="pd-fact__note">Livestock and allied projects delivered 2009&ndash;2023</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Coverage</dt>
+            <dd>6+ districts<span class="pd-fact__note">1,202 milch animals distributed to rural families</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Scheme partnerships</dt>
+            <dd>RMK, Mahalir Thittam, PMKVY &amp; NSDC<span class="pd-fact__note">National and state schemes behind our projects</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Project portfolio</dt>
+            <dd>4 projects<span class="pd-fact__note">Dairy, skilling and animal welfare, 2009&ndash;2023</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Most recent delivery</dt>
+            <dd>Goshala (cow care center)<span class="pd-fact__note">Animal welfare, 2021&ndash;2023</span></dd>
+          </div>
+          <div class="pd-fact">
+            <dt>Delivery model</dt>
+            <dd>Training-led &amp; enterprise-focused<span class="pd-fact__note">Husbandry training, veterinary care, market linkages</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ---------- PROGRAMME PORTFOLIO TABLE ---------- -->
+    <section class="pd-projects section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow">Track record</p>
+        <h2 class="section-head" id="projects-title">Project portfolio, 2009&ndash;2023</h2>
+        <div class="pd-table-wrap reveal">
+          <div class="pd-table__bar">
+            <span class="pd-table__bar-strong">4 projects</span>
+            <span class="pd-table__bar-note">2009&ndash;2023 &middot; national and state schemes &middot; dairy, skilling and animal welfare</span>
+          </div>
+          <table class="pd-table">
+            <thead>
+              <tr>
+                <th scope="col">Programme</th>
+                <th scope="col">Period</th>
+                <th scope="col">Type</th>
+                <th scope="col">Highlights</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pd-table__name"><a href="projects/rmk-project.html">Rashtriya Mahila Kosh (RMK) project</a></td>
+                <td class="pd-table__period" data-label="Period">2009&ndash;2015<span class="pd-span" style="--s:0%;--w:43%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">National scheme</td>
+                <td class="pd-table__note" data-label="Focus">Milch animal distribution for women's livestock livelihoods</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/mahalir-thittam.html">Mahalir Thittam project</a></td>
+                <td class="pd-table__period" data-label="Period">2009&ndash;2015<span class="pd-span" style="--s:0%;--w:43%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">State programme</td>
+                <td class="pd-table__note" data-label="Focus">Dairy entrepreneurship for rural women</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name">Skill development through PMKVY &amp; NSDC (dairy &amp; apparel)</td>
+                <td class="pd-table__period" data-label="Period">2014&ndash;2016<span class="pd-span" style="--s:36%;--w:14%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Training programme</td>
+                <td class="pd-table__note" data-label="Focus">Dairy and apparel skill training</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+              <tr>
+                <td class="pd-table__name"><a href="projects/goshala-center.html">Goshala (cow care center)</a></td>
+                <td class="pd-table__period" data-label="Period">2021&ndash;2023<span class="pd-span" style="--s:86%;--w:14%" aria-hidden="true"></span></td>
+                <td class="pd-table__type" data-label="Type">Key activity</td>
+                <td class="pd-table__note" data-label="Focus">Animal welfare through goshala management and humane care</td>
+                <td data-label="Status"><span class="pd-chip pd-chip--done">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- IMPACT PILLARS ---------- -->
+    <section class="pd-impact section" aria-labelledby="impact-title">
+      <div class="container">
+        <p class="eyebrow">Impact</p>
+        <h2 class="section-head" id="impact-title">What livestock &amp; allied activities change</h2>
+        <div class="pd-impact__grid">
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="trending-up" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Livestock development</h3>
+            <p>Improved animal productivity through better breeding, feeding and healthcare practices, enhancing milk production and farmer incomes.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="milk" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Dairy enterprise</h3>
+            <p>Established sustainable dairy businesses through entrepreneurship training, milk collection systems and market linkage development.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="graduation-cap" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Skill enhancement</h3>
+            <p>Provided technical training in dairy farming, animal husbandry and livestock management to <mark class="pd-num">7,500+ farmers and women</mark>, improving their capabilities.</p>
+          </article>
+          <article class="pd-pillar reveal">
+            <span class="icon-chip"><i data-lucide="hand-heart" aria-hidden="true"></i></span>
+            <h3 class="pd-pillar__title">Animal welfare</h3>
+            <p>Promoted animal welfare through goshala management, veterinary care and humane treatment practices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- RELATED PROGRAMS ---------- -->
+    <section class="pd-related section section--alt" aria-labelledby="related-title">
+      <div class="container">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section-head" id="related-title">More in Sustainable agriculture</h2>
+        <ul class="pd-related__grid">
+          <li><a class="pd-rel" href="farmer-collectivization.html"><span class="icon-chip"><i data-lucide="users" aria-hidden="true"></i></span><span class="pd-rel__title">Farmer collectivization &amp; agribusiness</span></a></li>
+          <li><a class="pd-rel" href="horticulture-diversified.html"><span class="icon-chip"><i data-lucide="apple" aria-hidden="true"></i></span><span class="pd-rel__title">Horticulture &amp; diversified farming</span></a></li>
+          <li><a class="pd-rel" href="agricultural-technology.html"><span class="icon-chip"><i data-lucide="tractor" aria-hidden="true"></i></span><span class="pd-rel__title">Agricultural technology &amp; youth engagement</span></a></li>
+          <li><a class="pd-rel" href="organic-farming.html"><span class="icon-chip"><i data-lucide="leaf" aria-hidden="true"></i></span><span class="pd-rel__title">Organic farming practices</span></a></li>
+          <li><a class="pd-rel" href="sustainable-agriculture.html"><span class="icon-chip"><i data-lucide="wheat" aria-hidden="true"></i></span><span class="pd-rel__title">Sector overview</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- CTA ---------- -->
+    <section class="pd-cta section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="pd-cta__inner">
+          <p class="eyebrow eyebrow--on-dark">Get involved</p>
+          <h2 class="pd-cta__title" id="cta-title">Support livestock development</h2>
+          <p class="pd-cta__sub">Join us in promoting sustainable livestock development that provides regular income, nutritional security and economic empowerment to rural families. Your support helps farmers adopt modern animal husbandry practices and build profitable livestock enterprises.</p>
+          <div class="pd-cta__actions">
+            <a class="btn btn--cta" href="../donate.html"><i data-lucide="heart" aria-hidden="true"></i><span>Donate</span></a>
+            <a class="btn btn--ghost-dark" href="../partner.html"><span>Partner with us</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__col footer__col--brand">
+          <a class="brand footer__brand" href="../index.html" aria-label="Coodu Trust home">
+            <img class="brand__logo" src="https://res.cloudinary.com/usq2sbox/image/upload/v1754476345/coodu-trust/images/logos/logo-white.png" alt="Coodu Trust" width="278" height="85">
+          </a>
+          <p class="footer__about">A registered non-profit working towards sustainable development in Tamil Nadu, India since 2000.</p>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Quick Links</h2>
+          <nav aria-label="Footer">
+            <ul class="footer__links">
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../programs.html">Our Programs</a></li>
+              <li><a href="../get-involved.html">Get Involved</a></li>
+              <li><a href="../donate.html">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact Us</h2>
+          <address class="footer__contact">
+            <p><i data-lucide="map-pin" aria-hidden="true"></i> H-83, R.M. Colony, Dindigul &ndash; 624 001, Tamil Nadu, India</p>
+            <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+            <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Follow Us</h2>
+          <div class="footer__socials">
+            <a href="#" aria-label="Coodu Trust on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.234 2.686.234v2.953H15.83c-1.491 0-1.956.926-1.956 1.875v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932zm-1.291 19.491h2.039L6.486 3.24H4.298l13.312 17.404z"/></svg></a>
+            <a href="#" aria-label="Coodu Trust on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Coodu Trust. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Lucide icons, then site behavior (both deferred, execute in order) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="../assets/js/coodu.js?v=9" defer></script>
 
 </body>
 </html>

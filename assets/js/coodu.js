@@ -295,6 +295,10 @@
     if (trigger) trigger.setAttribute('aria-expanded', String(open));
     if (!pnl) return;
 
+    /* the base reset enforces [hidden]{display:none!important} — the class
+       alone can never show the panel, so keep the attribute in sync */
+    pnl.hidden = !open;
+
     if (prefersReduced()) {
       pnl.style.maxHeight = open ? 'none' : '0px';
       return;
@@ -327,6 +331,7 @@
 
       var startOpen = acc.classList.contains('is-open');
       trigger.setAttribute('aria-expanded', String(startOpen));
+      pnl.hidden = !startOpen;
       pnl.style.maxHeight = startOpen ? 'none' : '0px';
 
       trigger.addEventListener('click', function (e) {
@@ -349,14 +354,6 @@
     var items = $$('.has-mega');
     if (!items.length) return;
 
-    /* track input modality so keyboard focus opens, but a mouse click doesn't
-       double-fire (pointerdown -> focusin -> click). */
-    var keyboardMode = false;
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Tab') keyboardMode = true;
-    }, true);
-    document.addEventListener('pointerdown', function () { keyboardMode = false; }, true);
-
     var recs = items.map(function (item) {
       /* trigger is a <button> (toggle-only) or an <a href> (navigates on
          desktop click; dropdown still opens via hover / keyboard / first tap) */
@@ -368,7 +365,9 @@
       if (!panel) panel = $('.mega', item);
 
       if (btn) {
-        btn.setAttribute('aria-haspopup', 'true');
+        /* plain disclosure (aria-expanded + aria-controls); no aria-haspopup —
+           the panels are link groups, not menus with menu semantics */
+        btn.removeAttribute('aria-haspopup');
         btn.setAttribute('aria-expanded', 'false');
         if (panel) {
           if (!panel.id) panel.id = uid('mega');
@@ -412,10 +411,9 @@
         setOpen(rec, open);
       });
 
-      /* open when keyboard focus lands inside */
-      rec.item.addEventListener('focusin', function () {
-        if (keyboardMode) { closeAll(rec); setOpen(rec, true); }
-      });
+      /* Keyboard path: the trigger is a real link to the hub page, which
+         carries every destination the panel offers — no auto-open on focus
+         (it would force tabbing through every panel link). */
       /* close when focus leaves the whole item */
       rec.item.addEventListener('focusout', function (e) {
         if (!rec.item.contains(e.relatedTarget)) setOpen(rec, false);
@@ -478,7 +476,7 @@
     if (dotsWrap) {
       var existing = $$('button', dotsWrap);
       if (!existing.length) {
-        slides.forEach(function (s, di) {
+        slides.forEach(function (_s, di) {
           var b = document.createElement('button');
           b.type = 'button';
           b.className = 'dot';
