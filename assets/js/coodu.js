@@ -246,6 +246,16 @@
       lastFocused = null;
     }
 
+    /* If the viewport crosses to desktop while the drawer is open, CSS hides it
+       (@media min-width:1200px { .drawer{display:none} }) but close() never runs,
+       leaving the scroll lock and background inert/aria-hidden in place. Close it. */
+    var desktopMQ = window.matchMedia ? window.matchMedia('(min-width: 1200px)') : null;
+    if (desktopMQ) {
+      onMediaChange(desktopMQ, function (e) {
+        if ((e && e.matches) || desktopMQ.matches) close();
+      });
+    }
+
     function onKeydown(e) {
       if (e.key === 'Escape' || e.key === 'Esc') {
         e.preventDefault();
