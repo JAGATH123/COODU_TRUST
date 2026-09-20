@@ -41,3 +41,16 @@ about globle interactive ness /
 /photo-review.html
 .vscode/
 assets/images/programs/education/sid-banner-school-facade.jpg
+
+# Images live on Cloudinary, not in the repo. Every page references
+# res.cloudinary.com/usq2sbox/... — the local copies here are upload sources
+# and offline fallbacks only. Re-upload with:
+#   node --env-file=.env scripts-upload-cloudinary.mjs --swap
+/assets/images/
+
+# Annual-report ground truth + content audit. NOT shipped: this repo is the
+# subdomain document root, and .htaccess only blocks .md — the .json, .txt and
+# .yaml here would be publicly downloadable. AUDIT.json and DISCREPANCY-REPORT
+# catalogue every unsupported claim the site used to carry; that is internal.
+# Keep this directory locally and back it up somewhere private.
+/ground-truth/

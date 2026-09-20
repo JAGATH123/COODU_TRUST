@@ -312,6 +312,8 @@ mark.pd-num {
 
 /* ---- Single editorial field photo ---------------------------------------- */
 .pd-field { margin: 0; }
+/* Two field frames stacked in one section (e.g. watershed-management). */
+.pd-field + .pd-field { margin-top: var(--s4); }
 .pd-field__frame {
   position: relative;
   overflow: hidden;

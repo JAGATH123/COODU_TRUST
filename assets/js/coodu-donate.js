@@ -246,7 +246,7 @@
           '<div><dt>Donor</dt><dd>' + (data.donorName || payload.donorInfo.name) + '</dd></div>' +
         '</dl>' +
         '<p class="receipt__impact"><strong>Your gift can ' + num(imp.val) + ' ' + imp.noun + '</strong> ' + imp.caption + '.</p>' +
-        '<p class="receipt__lead">A confirmation email is on its way; your 80G receipt follows within 24 hours.</p>' +
+        '<p class="receipt__lead">A confirmation email is on its way. Your 80G certificate (Form 10BE) is issued annually by 31 May for the previous financial year; we will send an acknowledgement receipt before then.</p>' +
         '<div class="receipt__actions">' +
           '<button type="button" class="btn btn--cta" id="again"><i data-lucide="refresh-cw"></i> Make another donation</button>' +
           '<a class="btn btn--outline" href="index.html">Back to home</a>' +

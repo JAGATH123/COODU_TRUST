@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annual Reports &amp; Documents | Coodu Trust</title>
-  <meta name="description" content="Twenty-five years of transparency — browse and read Coodu Trust's annual reports (2001–2025), with impact summaries, highlights and downloadable PDFs.">
+  <title>Refund & Cancellation Policy | Coodu Trust</title>
+  <meta name="description" content="When a donation to Coodu Trust can be refunded, how to ask, and how long it takes — duplicates, wrong amounts, unauthorised payments and failed transactions.">
   <meta name="theme-color" content="#1e7e34">
+  <link rel="canonical" href="https://coodutrust.org/refund-policy.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,9 @@
   <link rel="stylesheet" href="assets/css/coodu-base.css?v=9">
   <link rel="stylesheet" href="assets/css/coodu-components.css?v=11">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=6">
-  <link rel="stylesheet" href="assets/css/coodu-documents.css?v=6">
+  <link rel="stylesheet" href="assets/css/coodu-legal.css?v=1">
 </head>
-<body data-page="documents">
+<body data-page="legal">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -134,7 +135,7 @@
               </ul>
             </div>
           </li>
-          <li><a class="nav__link is-active" href="documents.html" aria-current="page">Documents</a></li>
+          <li><a class="nav__link" href="documents.html">Documents</a></li>
           <li><a class="nav__link" href="media.html">Media</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
@@ -183,7 +184,7 @@
             <a href="donate.html">Donate</a>
           </div>
         </div>
-        <a class="drawer__link is-active" href="documents.html" aria-current="page">Documents <span class="drawer__dot" aria-hidden="true"></span></a>
+        <a class="drawer__link" href="documents.html">Documents</a>
         <a class="drawer__link" href="media.html">Media</a>
         <a class="drawer__link" href="contact.html">Contact</a>
       </nav>
@@ -197,86 +198,179 @@
   <!-- ============================================================ MAIN -->
   <main id="main">
 
+    <!-- Masthead: hidden on screen, printed at the top of the PDF -->
+    <div class="legal-print-head" aria-hidden="true">
+      <p class="legal-print-head__org">COODU TRUST</p>
+      <p class="legal-print-head__addr">74, 2nd Floor, Thadicombu Road, Dindigul &ndash; 624&nbsp;001, Tamil Nadu, India &middot; PAN AAATC5133E<br>director@coodutrust.org &middot; +91-451-2461362 &middot; coodutrust.org</p>
+    </div>
+
     <!-- ---------- HERO ---------- -->
-    <section class="docs-hero" aria-labelledby="docs-hero-title">
-      <div class="docs-hero__layers" aria-hidden="true"><span class="docs-hero__scrim"></span></div>
+    <section class="legal-hero" aria-labelledby="legal-hero-title">
       <div class="container">
-        <div class="docs-hero__content reveal">
-          <p class="eyebrow eyebrow--on-dark">Transparency &amp; accountability</p>
-          <h1 class="docs-hero__title" id="docs-hero-title">Annual reports &amp; documents</h1>
-          <p class="docs-hero__sub">Twenty-five years of our work in rural Tamil Nadu, year by year &mdash; impact summaries, highlights and the full reports to read or download.</p>
-          <div class="docs-hero__stats">
-            <span><strong class="counter" data-target="24">24</strong> annual reports</span>
-            <span><strong>2001&ndash;2025</strong></span>
-            <span><strong>80G</strong> registered</span>
+        <div class="legal-hero__content reveal">
+          <p class="eyebrow eyebrow--on-dark">If something went wrong</p>
+          <h1 class="legal-hero__title" id="legal-hero-title">Refund &amp; Cancellation Policy</h1>
+          <p class="legal-hero__sub">When a donation made on this site can be refunded, how to ask for one, and how long it takes. Please read this before you give.</p>
+          <div class="legal-hero__meta">
+            <span><i data-lucide="calendar-clock" aria-hidden="true"></i> Last updated 20 September 2026</span>
+            <span><i data-lucide="map-pin" aria-hidden="true"></i> Governed by the laws of India</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------- LIBRARY ---------- -->
-    <section class="section docs" id="docs" aria-label="Annual reports library">
+    <nav class="legal-switch" aria-label="Policies">
       <div class="container">
-
-        <div class="docs__toolbar reveal">
-          <div class="docs__filters" role="tablist" aria-label="Filter by period">
-            <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All <span class="filter-pill__n" data-count="all"></span></button>
-            <button class="filter-pill" data-filter="2020s" role="tab" aria-selected="false">2020s <span class="filter-pill__n" data-count="2020s"></span></button>
-            <button class="filter-pill" data-filter="2010s" role="tab" aria-selected="false">2010s <span class="filter-pill__n" data-count="2010s"></span></button>
-            <button class="filter-pill" data-filter="2000s" role="tab" aria-selected="false">2000s <span class="filter-pill__n" data-count="2000s"></span></button>
-          </div>
-          <div class="docs__search">
-            <i data-lucide="search" aria-hidden="true"></i>
-            <input type="search" id="docs-search" placeholder="Search by year, title or keyword&hellip;" aria-label="Search reports">
-          </div>
-        </div>
-        <p class="docs__count" data-docs-count aria-live="polite"></p>
-
-        <div data-docs-grid>
-          <!-- coodu-documents.js builds grouped report cards here -->
-        </div>
-
-        <p class="docs__empty" data-docs-empty hidden>No reports match your search. <button type="button" class="docs__empty-reset" data-docs-reset>Clear search</button></p>
-
-      </div>
-    </section>
-
-    <!-- ---------- STATUTORY REGISTRATIONS ---------- -->
-    <section class="section section--alt compliance" id="compliance" aria-labelledby="compliance-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Registrations</p>
-          <h2 class="section-head__title" id="compliance-title">Statutory registrations</h2>
-          <p class="section-head__sub">Coodu Trust is a registered public charitable trust. The registration orders on record are reproduced below.</p>
-        </div>
-
-        <ul class="compliance__grid reveal">
-          <li class="compliance__item">
-            <a class="compliance__card" href="assets/Compliance/80G-registration.pdf" target="_blank" rel="noopener">
-              <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787987098/coodu-trust/images/compliance/cert-80g" alt="Income Tax Department order granting Coodu Trust exemption under Section 80G(5)" loading="lazy" width="900" height="651">
-              <div class="compliance__body">
-                <h3 class="compliance__title">80G(5) exemption</h3>
-                <p class="compliance__meta">Commissioner of Income Tax II, Madurai &middot; C.No.102/110/CIT-II/2006-07 &middot; 28 May 2009</p>
-                <p class="compliance__note">Donations to Coodu Trust are eligible for deduction under Section 80G. Includes CBDT Circular 7/2010, under which approvals of this vintage continue in force.</p>
-                <span class="compliance__link">View order (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </li>
-          <li class="compliance__item">
-            <a class="compliance__card" href="assets/Compliance/12A-registration.pdf" target="_blank" rel="noopener">
-              <img src="https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1200/v1787987097/coodu-trust/images/compliance/cert-12a" alt="Income Tax Department order registering Coodu Trust under Section 12A" loading="lazy" width="636" height="900">
-              <div class="compliance__body">
-                <h3 class="compliance__title">12A registration</h3>
-                <p class="compliance__meta">Commissioner of Income Tax II, Madurai &middot; C.No.101&amp;102/110/CIT-II/2006-07 &middot; 30 March 2007</p>
-                <p class="compliance__note">Registration as a charitable trust. Records the trust deed dated 20 June 2000, registered as Document No.&nbsp;150/B&nbsp;IV of 2000.</p>
-                <span class="compliance__link">View order (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </li>
+        <ul class="legal-switch__list">
+            <li><a class="legal-switch__link" href="privacy-policy.html"><i data-lucide="shield-check" aria-hidden="true"></i>Privacy Policy</a></li>
+            <li><a class="legal-switch__link" href="terms-and-conditions.html"><i data-lucide="file-text" aria-hidden="true"></i>Terms &amp; Conditions</a></li>
+            <li><a class="legal-switch__link" href="refund-policy.html" aria-current="page"><i data-lucide="rotate-ccw" aria-hidden="true"></i>Refund Policy</a></li>
         </ul>
       </div>
-    </section>
+    </nav>
 
+    <!-- ---------- POLICY ---------- -->
+    <section class="legal" aria-label="Refund & Cancellation Policy">
+      <div class="container">
+        <div class="legal__layout">
+
+          <nav class="legal__toc" data-legal-toc aria-labelledby="toc-title">
+            <h2 class="legal__toc-title" id="toc-title">On this page</h2>
+            <ul class="legal__toc-list">
+            <li><a href="#summary">The short version</a></li>
+            <li><a href="#why-non-refundable">Why donations are non-refundable</a></li>
+            <li><a href="#when-refund">When we consider a refund</a></li>
+            <li><a href="#time-limit">The 7-day time limit</a></li>
+            <li><a href="#how-to-request">How to request a refund</a></li>
+            <li><a href="#what-happens">What happens next</a></li>
+            <li><a href="#timeline">How long it takes</a></li>
+            <li><a href="#receipt">If a receipt was issued</a></li>
+            <li><a href="#cancellations">Cancellations</a></li>
+            <li><a href="#grievance">Grievances</a></li>
+            </ul>
+          </nav>
+
+          <div class="legal__body reveal">
+
+            <section id="summary" aria-labelledby="h-summary">
+              <h2 id="h-summary">The short version</h2>
+              
+              <div class="legal__note">
+                <i data-lucide="info" aria-hidden="true"></i>
+                <p>Donations to COODU TRUST are <strong>voluntary gifts and are generally not refundable</strong>. But if something genuinely went wrong with the transaction &mdash; a duplicate, a typing error, an unauthorised payment, or money debited that never reached us &mdash; email <a href="mailto:director@coodutrust.org">director@coodutrust.org</a> <strong>within 7 days</strong> with the date, the amount and the Razorpay payment ID, and we will look into it and put it right where we can.</p>
+              </div>
+            </section>
+
+            <section id="why-non-refundable" aria-labelledby="h-why-non-refundable">
+              <h2 id="h-why-non-refundable">1. Why donations are normally non-refundable</h2>
+              
+              <p>A donation is a gift, not a purchase. You are not buying a product or a service, and nothing is being delivered to you in exchange. Once a donation is received it is committed to our charitable work in Tamil Nadu &mdash; watershed development, agriculture, women&rsquo;s self-help groups, education and skilling, health and sanitation, and solid waste management &mdash; and is usually applied to programme costs quickly.</p>
+              <p>For that reason we do not refund donations simply because a donor has changed their mind.</p>
+            </section>
+
+            <section id="when-refund" aria-labelledby="h-when-refund">
+              <h2 id="h-when-refund">2. When we will consider a refund</h2>
+              
+              <p class="legal__lead">We will consider a refund in these situations.</p>
+              <dl class="legal__rows">
+                <div><dt>Duplicate transaction</dt><dd>The same donation was charged more than once &mdash; for example the page was submitted twice, or the payment went through on a retry after appearing to fail. We will refund the extra charge or charges.</dd></div>
+                <div><dt>An amount entered in error</dt><dd>You meant to give &#8377;1,000 and typed &#8377;10,000. Tell us quickly and we will refund the excess, or the whole amount if you prefer.</dd></div>
+                <div><dt>An unauthorised transaction</dt><dd>The payment was made using your card, account or UPI without your knowledge or permission. Please also report it to your bank or card issuer immediately &mdash; they have their own process and timelines.</dd></div>
+                <div><dt>Money debited but not credited</dt><dd>Your account was debited but the donation did not complete on our side. In most such cases the amount is returned automatically by your bank or the payment network within a few working days. If it is not, contact us and we will trace it with Razorpay.</dd></div>
+              </dl>
+              <p>Outside these situations, refunds are at the Trust&rsquo;s discretion. We also reserve the right, under our <a href="terms-and-conditions.html">Terms &amp; Conditions</a>, to return any donation we decide not to accept.</p>
+            </section>
+
+            <section id="time-limit" aria-labelledby="h-time-limit">
+              <h2 id="h-time-limit">3. The time limit: 7 days</h2>
+              
+              <p>Please send your refund request <strong>within 7 days of the transaction date</strong>.</p>
+              <p>We apply this window because after that point donations are accounted for, may have been receipted, and may have been reported for income-tax purposes &mdash; which makes reversal considerably harder. Requests made after 7 days may still be considered where the circumstances are genuinely exceptional, but we cannot promise it.</p>
+            </section>
+
+            <section id="how-to-request" aria-labelledby="h-how-to-request">
+              <h2 id="h-how-to-request">4. How to request a refund</h2>
+              
+              <p>Email <a href="mailto:director@coodutrust.org?subject=Refund%20request">director@coodutrust.org</a> with the subject line &ldquo;Refund request&rdquo;, and include:</p>
+              <ol>
+                <li>The <strong>date</strong> of the transaction.</li>
+                <li>The <strong>amount</strong> debited.</li>
+                <li>The <strong>Razorpay payment ID</strong> &mdash; it appears on your payment confirmation and in the acknowledgement email, and usually looks like <code>pay_XXXXXXXXXXXX</code>.</li>
+                <li>The <strong>name, email address and phone number</strong> used on the donation form.</li>
+                <li><strong>Which of the reasons above</strong> applies, in a line or two.</li>
+                <li>Where it helps, a copy of the <strong>bank or card statement entry</strong>, or a screenshot of the debit.</li>
+              </ol>
+              <p>If you cannot find the payment ID, send us whatever you do have &mdash; the date, the amount, and the last four digits of the card or the UPI reference &mdash; and we will try to trace it.</p>
+              <p>You may also telephone us to tell us what has happened, but <strong>please follow up by email</strong> so there is a written record with the details we need.</p>
+            </section>
+
+            <section id="what-happens" aria-labelledby="h-what-happens">
+              <h2 id="h-what-happens">5. What happens next</h2>
+              
+              <ol class="legal__steps">
+                <li><strong>We acknowledge your request.</strong> We confirm that we have received it.</li>
+                <li><strong>We verify it with Razorpay.</strong> We check the transaction against our records and Razorpay&rsquo;s, to confirm the debit, the amount, and whether it is a duplicate or a failed transfer.</li>
+                <li><strong>We tell you the outcome.</strong> If the refund is approved we say so and process it. If it is declined we explain why.</li>
+                <li><strong>Approved refunds go back to the original payment method</strong> &mdash; the same card, bank account, UPI handle or wallet that was debited. We cannot redirect a refund to a different account, to cash, or to another person. That is a payment-industry rule, not our preference.</li>
+              </ol>
+              <p>We refund the <strong>full amount you were debited</strong>. We do not deduct a processing charge, and there is no fee for making a refund request.</p>
+            </section>
+
+            <section id="timeline" aria-labelledby="h-timeline">
+              <h2 id="h-timeline">6. How long it takes</h2>
+              
+              <p>Once a refund is approved, allow <strong>5 to 10 business days</strong> for the money to appear.</p>
+              <p>To be straightforward about this: the part we control is initiating the refund with Razorpay, which we do promptly after approval. After that, the timing is in the hands of Razorpay, the card networks and <strong>your own bank</strong>, and banks differ. Some credit within a few days; some take longer, particularly across weekends, bank holidays and month-ends. If the money has not reached you after 10 business days, write to us with the refund reference and we will chase it with Razorpay.</p>
+              <p>If your bank or card issuer raises a <strong>chargeback</strong> instead, that process is run by them and by Razorpay under their own rules and timelines, and sits outside this policy.</p>
+            </section>
+
+            <section id="receipt" aria-labelledby="h-receipt">
+              <h2 id="h-receipt">7. If a receipt was already issued</h2>
+              
+              <p class="legal__lead">If we had already issued an 80G receipt for a donation that is later refunded:</p>
+              <ul>
+                <li><strong>The receipt is cancelled</strong> with effect from the refund. It no longer represents a donation to COODU TRUST and <strong>must not be used to claim a deduction</strong>. Please destroy or disregard it.</li>
+                <li>We record the cancellation in our books.</li>
+                <li>If the donation had already been included in a statement of donations filed with the Income Tax Department, we will correct that statement in the manner the law allows.</li>
+                <li>If you have already filed your income-tax return using the cancelled receipt, please take your own tax advice on correcting it. That part is between you and the Income Tax Department and we cannot do it for you &mdash; though we will of course give you written confirmation of the refund if it helps.</li>
+              </ul>
+              <p>Partial refunds work the same way: the original receipt is replaced by one for the amount actually retained.</p>
+            </section>
+
+            <section id="cancellations" aria-labelledby="h-cancellations">
+              <h2 id="h-cancellations">8. Cancellations</h2>
+              
+              <p>There is nothing to cancel.</p>
+              <p>Donations on this website are <strong>one-time payments only</strong>. There is no subscription, no recurring donation, no standing instruction and no auto-debit, so no future payment will ever be taken from you. A donation that has already completed cannot be &ldquo;cancelled&rdquo; &mdash; it can only be refunded, and only in the situations set out above.</p>
+              <p>If you begin a donation and close the page before paying, nothing is charged and nothing needs to be cancelled.</p>
+            </section>
+
+            <section id="grievance" aria-labelledby="h-grievance">
+              <h2 id="h-grievance">9. Grievances</h2>
+              
+              <p>If you are not satisfied with how we have handled a refund request, please write to <strong>the Director (Grievance Contact)</strong> at the address below and we will look at it again. We will acknowledge your grievance and respond as quickly as we reasonably can.</p>
+              <p>This policy should be read with our <a href="terms-and-conditions.html">Terms &amp; Conditions</a> and our <a href="privacy-policy.html">Privacy Policy</a>. It is governed by the laws of India, and the courts at Dindigul, Tamil Nadu shall have exclusive jurisdiction.</p>
+            </section>
+
+            <div class="legal__contact">
+              <h2>Contact us</h2>
+              <p>To request a refund, or if you are not satisfied with how we have handled one, write to the Director — our grievance contact.</p>
+              <div class="legal__contact-rows">
+                <p><i data-lucide="building-2" aria-hidden="true"></i> <span><strong>COODU TRUST</strong><br>74, 2nd Floor, Thadicombu Road, Dindigul &ndash; 624&nbsp;001, Tamil Nadu, India</span></p>
+                <p><i data-lucide="mail" aria-hidden="true"></i> <a href="mailto:director@coodutrust.org">director@coodutrust.org</a></p>
+                <p><i data-lucide="phone" aria-hidden="true"></i> <a href="tel:+914512461362">+91-451-2461362</a> &middot; <a href="tel:+914323251663">+91-4323-251663</a> &middot; <a href="tel:+919047043593">+91-90470-43593</a></p>
+              </div>
+            </div>
+
+            <div class="legal__foot">
+              <span>Last updated 20 September 2026.</span>
+              <a href="#main">Back to top</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -326,8 +420,7 @@
 
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="assets/js/coodu.js?v=10" defer></script>
-  <script src="assets/js/coodu-reports-data.js?v=4" defer></script>
-  <script src="assets/js/coodu-documents.js?v=4" defer></script>
+  <script src="assets/js/coodu-legal.js?v=1" defer></script>
 
 </body>
 </html>

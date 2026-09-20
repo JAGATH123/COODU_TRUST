@@ -62,7 +62,7 @@ const sendDonationConfirmation = async (donation) => {
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
             <p>Coodu Trust<br>
-            H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India<br>
+            74, 2nd Floor, Thadicombu Road, Dindigul – 624 001, Tamil Nadu, India<br>
             Email: director@coodutrust.org | Phone: +91-451-2461362</p>
           </div>
         </div>
@@ -144,7 +144,7 @@ const sendContactConfirmation = async (contact) => {
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
             <p>Coodu Trust<br>
-            H-83, R.M. Colony, Dindigul – 624 001, Tamil Nadu, India<br>
+            74, 2nd Floor, Thadicombu Road, Dindigul – 624 001, Tamil Nadu, India<br>
             Email: director@coodutrust.org | Phone: +91-451-2461362</p>
           </div>
         </div>

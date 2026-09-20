@@ -31,7 +31,7 @@
   color: var(--surface);
   /* dark-green base behind the photo (shows while it loads / under the scrim) */
   background-color: #10271a;
-  background-image: url('https://res.cloudinary.com/usq2sbox/image/upload/v1787672997/coodu-trust/images/headers/about-us-header');
+  background-image: url('../images/headers/about-hero-sbi-plantation-aerial.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -935,9 +935,10 @@
 }
 
 /* ---- Recognition photographs (About > Partners & recognition) -------------
-   Three archive frames that each authenticate themselves from within the
-   frame. Sits above the logo marquee. Sources are 800px scans, so the tiles
-   are deliberately small - never promote these to a banner. */
+   Archive frames that each authenticate themselves from within the frame.
+   Sits above the logo marquee. Most sources are 800px scans, so the tiles are
+   deliberately small - never promote these to a banner. The grid is auto-fit
+   so the row takes a fourth (or later fifth) frame without a stranded tile. */
 .recognition-row {
   list-style: none;
   margin: 0 0 var(--s5);
@@ -967,5 +968,5 @@
   color: var(--text-muted);
 }
 @media (min-width: 720px) {
-  .recognition-row { grid-template-columns: repeat(3, 1fr); }
+  .recognition-row { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 }

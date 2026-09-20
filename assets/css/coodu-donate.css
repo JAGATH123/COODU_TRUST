@@ -18,12 +18,16 @@
   color: var(--color-on-dark);
 }
 .donate-hero__layers { position: absolute; inset: 0; z-index: -1; }
+/* Photograph layer. NOTE: this url() sits in a normal declaration inside this
+   stylesheet, so the path resolves against assets/css/ — keep it relative to
+   the CSS file (../images/…), not to the document. */
 .donate-hero__layers::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787672995/coodu-trust/images/headers/Donate_bg");
+  background-image: url("../images/donate/donate-hero-01-nursery-grow-bags.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 28%;
+  background-repeat: no-repeat;
 }
 .donate-hero__scrim { position: absolute; inset: 0; background: var(--overlay-hero); }
 @media (max-width: 760px) {

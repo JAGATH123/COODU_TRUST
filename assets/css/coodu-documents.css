@@ -16,7 +16,7 @@
 .docs-hero__layers { position: absolute; inset: 0; z-index: -1; }
 .docs-hero__layers::before {
   content: ""; position: absolute; inset: 0;
-  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1787672994/coodu-trust/images/headers/Documents_bg");
+  background-image: url("../images/headers/documents-hero-climate-water-workshop.jpg");
   background-size: cover; background-position: center;
 }
 .docs-hero__scrim { position: absolute; inset: 0; background: var(--overlay-hero); }
@@ -206,5 +206,5 @@
 }
 .compliance__link i { width: 15px; height: 15px; }
 @media (min-width: 760px) {
-  .compliance__grid { grid-template-columns: repeat(3, 1fr); }
+  .compliance__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }

@@ -34,12 +34,29 @@
   pointer-events: none;
 }
 
-/* Hue-free black scrim — darkens the bottom edge slightly for text safety
-   without shifting the gradient's green tone. */
+/* Photograph layer. NOTE: this url() sits in a normal declaration inside this
+   stylesheet, so the path resolves against assets/css/ — keep it relative to
+   the CSS file (../images/…), not to the document. */
+.gi-hero__layers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/get-involved/gi-hero-01-village-training-under-trees.jpg");
+  background-size: cover;
+  background-position: center 68%;
+  background-repeat: no-repeat;
+}
+
+/* Scrim over the photograph. Uses the same deep-green base as the shared
+   --overlay-hero token so the hero keeps its brand tone while the centred
+   white heading stays legible over a bright, busy image. */
 .gi-hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .06) 0%, rgba(0, 0, 0, .3) 100%);
+  background: linear-gradient(180deg,
+    rgba(8, 26, 15, .78) 0%,
+    rgba(8, 26, 15, .7) 48%,
+    rgba(8, 26, 15, .88) 100%);
 }
 
 .gi-hero .container {
@@ -372,9 +389,41 @@
 
 /* ---- CTA band ------------------------------------------------------------ */
 .gi-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--grad-cta);
   color: var(--surface);
   text-align: center;
+}
+
+.gi-cta__layers {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Photograph layer — path is relative to this stylesheet (assets/css/). */
+.gi-cta__layers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/get-involved/gi-cta-01-farm-pond.jpg");
+  background-size: cover;
+  background-position: center 58%;
+  background-repeat: no-repeat;
+}
+
+/* Heavy scrim — the photograph reads as texture behind the closing message
+   rather than competing with it. */
+.gi-cta__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(8, 26, 15, .88) 0%,
+    rgba(8, 26, 15, .78) 50%,
+    rgba(8, 26, 15, .92) 100%);
 }
 
 .gi-cta__inner {
