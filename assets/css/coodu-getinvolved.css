@@ -41,7 +41,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/get-involved/gi-hero-01-village-training-under-trees.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1789967189/coodu-trust/images/get-involved/gi-hero-01-village-training-under-trees");
   background-size: cover;
   background-position: center 68%;
   background-repeat: no-repeat;
@@ -409,7 +409,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../images/get-involved/gi-cta-01-farm-pond.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1789967191/coodu-trust/images/get-involved/gi-cta-01-farm-pond");
   background-size: cover;
   background-position: center 58%;
   background-repeat: no-repeat;

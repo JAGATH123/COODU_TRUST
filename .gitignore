@@ -54,3 +54,11 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 # catalogue every unsupported claim the site used to carry; that is internal.
 # Keep this directory locally and back it up somewhere private.
 /ground-truth/
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# Local dev tooling — not part of the shipped site (this repo is the web root).
+/.mcp.json
+/.ignore
+/graft/

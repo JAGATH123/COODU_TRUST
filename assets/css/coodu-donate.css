@@ -24,7 +24,7 @@
 .donate-hero__layers::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: url("../images/donate/donate-hero-01-nursery-grow-bags.jpg");
+  background-image: url("https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1789967192/coodu-trust/images/donate/donate-hero-01-nursery-grow-bags");
   background-size: cover;
   background-position: center 28%;
   background-repeat: no-repeat;

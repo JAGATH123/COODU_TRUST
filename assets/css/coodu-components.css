@@ -890,6 +890,25 @@
 
 /* ---- Drawer accordion (.acc) ------------------------------------------- */
 .acc__trigger[aria-expanded="true"] { color: var(--color-primary); }
+
+/* Current section: the page lives inside this accordion. Mirrors
+   .drawer__link.is-active so the drawer reads consistently whichever
+   kind of row the current page happens to be. Set at runtime by
+   initActiveNav() in coodu.js - never hand-written into pages. */
+.acc__trigger.is-active {
+  background: var(--surface-tint);
+  color: var(--color-primary);
+}
+.acc__trigger.is-active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-amber);
+  flex: none;
+  order: 2;
+  margin-left: auto;
+}
 .acc__trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
 
 .acc__panel {
@@ -1104,6 +1123,13 @@
   padding: 0;
   list-style: none;
 }
+/* Legal strip — required links for the payment gateway and for donors.
+   .footer__bottom is already flex-wrap with a centred gap, so the nav sits
+   beside the copyright on desktop and drops below it on narrow screens. */
+.footer__legal ul { flex-wrap: wrap; justify-content: center; }
+.footer__legal a { text-decoration: none; }
+.footer__legal a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
 .footer__bottom a { color: var(--footer-text-faint); text-decoration: none; }
 .footer__bottom a:hover { color: var(--color-on-dark); }
 

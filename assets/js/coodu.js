@@ -734,6 +734,79 @@
     $$('[data-year]').forEach(function (el) { el.textContent = y; });
   }
 
+  /* ======================= 9. ACTIVE NAV ============================
+     The header/drawer chrome is copy-pasted into 79 pages, so the hand-written
+     "you are here" markers drifted into four competing conventions - three of
+     which have no CSS and render nothing. Deriving it from location.pathname
+     at runtime fixes every page at once and cannot drift again.
+     ================================================================= */
+  function initActiveNav() {
+    var here = location.pathname.replace(/\/+$/, '/');
+    if (/\/$|^$/.test(here)) here += 'index.html';
+    var page = here.slice(here.lastIndexOf('/') + 1).toLowerCase();
+    if (!page) page = 'index.html';
+
+    /* a programme page highlights its sector's parent nav item */
+    var inPrograms = /\/programs\//.test(here);
+
+    function target(a) {
+      var h = a.getAttribute('href') || '';
+      if (!h || /^(https?:|mailto:|tel:|#)/i.test(h)) return '';
+      return h.split(/[?#]/)[0].split('/').pop().toLowerCase();
+    }
+
+    /* --- desktop nav: exact match, else the Programs trigger for /programs/ --- */
+    var navLinks = $$('.nav__list a.nav__link');
+    var matched = false;
+    navLinks.forEach(function (a) {
+      a.classList.remove('is-active');
+      a.removeAttribute('aria-current');
+    });
+    navLinks.forEach(function (a) {
+      if (!matched && target(a) === page) {
+        a.classList.add('is-active');
+        a.setAttribute('aria-current', 'page');
+        matched = true;
+      }
+    });
+    if (!matched && inPrograms) {
+      navLinks.forEach(function (a) {
+        if (!matched && target(a) === 'programs.html') {
+          a.classList.add('is-active');
+          a.setAttribute('aria-current', 'page');
+          matched = true;
+        }
+      });
+    }
+
+    /* --- drawer: only .drawer__link.is-active has CSS, so use that alone --- */
+    var drawerLinks = $$('.drawer__nav a');
+    drawerLinks.forEach(function (a) {
+      a.classList.remove('is-active');
+      a.removeAttribute('aria-current');
+    });
+    var hit = null;
+    drawerLinks.forEach(function (a) { if (!hit && target(a) === page) hit = a; });
+    if (!hit && inPrograms) {
+      drawerLinks.forEach(function (a) { if (!hit && target(a) === 'programs.html') hit = a; });
+    }
+    if (hit) {
+      hit.classList.add('is-active');
+      hit.setAttribute('aria-current', 'page');
+      /* a link inside an accordion panel is invisible until the panel opens,
+         so also light up the section trigger that contains it */
+      var panel = hit.closest ? hit.closest('.acc__panel') : null;
+      if (panel) {
+        var acc = panel.closest('.acc');
+        var trig = acc && acc.querySelector('.acc__trigger');
+        if (trig) trig.classList.add('is-active');
+      }
+    }
+    $$('.drawer__nav .acc__trigger').forEach(function (t) {
+      if (!t.classList.contains('is-active')) t.classList.remove('is-active');
+    });
+  }
+
   /* ============================ BOOT =============================== */
   ready(function () {
     safe('icons', initIcons);          /* convert <i data-lucide> first */
@@ -744,5 +817,6 @@
     safe('counters', initCounters);
     safe('reveal', initReveal);
     safe('year', initYear);
+    safe('activeNav', initActiveNav);
   });
 })();

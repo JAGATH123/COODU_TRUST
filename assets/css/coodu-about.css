@@ -31,7 +31,7 @@
   color: var(--surface);
   /* dark-green base behind the photo (shows while it loads / under the scrim) */
   background-color: #10271a;
-  background-image: url('../images/headers/about-hero-sbi-plantation-aerial.jpg');
+  background-image: url('https://res.cloudinary.com/usq2sbox/image/upload/f_auto,q_auto,w_1600/v1789967187/coodu-trust/images/headers/about-hero-sbi-plantation-aerial');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
