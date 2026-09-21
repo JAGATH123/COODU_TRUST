@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annual Reports &amp; Documents | Coodu Trust</title>
-  <meta name="description" content="Twenty-five years of transparency — browse and read Coodu Trust's annual reports (2001–2025), with impact summaries, highlights and downloadable PDFs.">
+  <title>Documents &amp; Credentials | Coodu Trust</title>
+  <meta name="description" content="Coodu Trust's registrations, government empanelment, ISO certification and institutional MoUs, alongside twenty-five years of annual reports (2001–2025) — every document readable and downloadable in full.">
   <meta name="theme-color" content="#1e7e34">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="assets/css/coodu-base.css?v=9">
   <link rel="stylesheet" href="assets/css/coodu-components.css?v=11">
   <link rel="stylesheet" href="assets/css/coodu-motion.css?v=6">
-  <link rel="stylesheet" href="assets/css/coodu-documents.css?v=6">
+  <link rel="stylesheet" href="assets/css/coodu-documents.css?v=8">
 </head>
 <body data-page="documents">
 
@@ -203,51 +203,37 @@
       <div class="container">
         <div class="docs-hero__content reveal">
           <p class="eyebrow eyebrow--on-dark">Transparency &amp; accountability</p>
-          <h1 class="docs-hero__title" id="docs-hero-title">Annual reports &amp; documents</h1>
-          <p class="docs-hero__sub">Twenty-five years of our work in rural Tamil Nadu, year by year &mdash; impact summaries, highlights and the full reports to read or download.</p>
+          <h1 class="docs-hero__title" id="docs-hero-title">Documents &amp; credentials</h1>
+          <p class="docs-hero__sub">Our registrations, government empanelment, certifications and institutional agreements &mdash; alongside twenty-five years of annual reports. Every document on this page can be read or downloaded in full.</p>
           <div class="docs-hero__stats">
             <span><strong class="counter" data-target="24">24</strong> annual reports</span>
             <span><strong>2001&ndash;2025</strong></span>
-            <span><strong>80G</strong> registered</span>
+            <span><strong>13</strong> credentials on file</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------- LIBRARY ---------- -->
-    <section class="section docs" id="docs" aria-label="Annual reports library">
+    <!-- ---------- STICKY SECTION NAV ---------- -->
+    <nav class="docs-jump" id="docs-jump" aria-label="Sections on this page">
       <div class="container">
-
-        <div class="docs__toolbar reveal">
-          <div class="docs__filters" role="tablist" aria-label="Filter by period">
-            <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All <span class="filter-pill__n" data-count="all"></span></button>
-            <button class="filter-pill" data-filter="2020s" role="tab" aria-selected="false">2020s <span class="filter-pill__n" data-count="2020s"></span></button>
-            <button class="filter-pill" data-filter="2010s" role="tab" aria-selected="false">2010s <span class="filter-pill__n" data-count="2010s"></span></button>
-            <button class="filter-pill" data-filter="2000s" role="tab" aria-selected="false">2000s <span class="filter-pill__n" data-count="2000s"></span></button>
-          </div>
-          <div class="docs__search">
-            <i data-lucide="search" aria-hidden="true"></i>
-            <input type="search" id="docs-search" placeholder="Search by year, title or keyword&hellip;" aria-label="Search reports">
-          </div>
-        </div>
-        <p class="docs__count" data-docs-count aria-live="polite"></p>
-
-        <div data-docs-grid>
-          <!-- coodu-documents.js builds grouped report cards here -->
-        </div>
-
-        <p class="docs__empty" data-docs-empty hidden>No reports match your search. <button type="button" class="docs__empty-reset" data-docs-reset>Clear search</button></p>
-
+        <ul class="docs-jump__inner">
+          <li><a class="docs-jump__link" href="#registrations"><i data-lucide="stamp" aria-hidden="true"></i>Registrations</a></li>
+          <li><a class="docs-jump__link" href="#empanelment"><i data-lucide="landmark" aria-hidden="true"></i>Empanelment</a></li>
+          <li><a class="docs-jump__link" href="#certification"><i data-lucide="award" aria-hidden="true"></i>ISO certification</a></li>
+          <li><a class="docs-jump__link" href="#collaborations"><i data-lucide="handshake" aria-hidden="true"></i>Collaborations</a></li>
+          <li><a class="docs-jump__link" href="#docs"><i data-lucide="book-open" aria-hidden="true"></i>Annual reports</a></li>
+        </ul>
       </div>
-    </section>
+    </nav>
 
     <!-- ---------- STATUTORY REGISTRATIONS ---------- -->
-    <section class="section section--alt compliance" id="compliance" aria-labelledby="compliance-title">
+    <section class="section compliance" id="registrations" aria-labelledby="registrations-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Registrations</p>
-          <h2 class="section-head__title" id="compliance-title">Statutory registrations</h2>
-          <p class="section-head__sub">Coodu Trust is a registered public charitable trust. The registration orders on record are reproduced below.</p>
+          <h2 class="section-head__title" id="registrations-title">Statutory registrations</h2>
+          <p class="section-head__sub">Coodu Trust is a registered public charitable trust. The registration orders and certificates on record are reproduced below &mdash; every number is verifiable with the issuing body.</p>
         </div>
 
         <ul class="compliance__grid reveal">
@@ -273,10 +259,264 @@
               </div>
             </a>
           </li>
+
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="badge-check"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">NITI Aayog, Government of India</p>
+                <h3 class="compliance__title">NGO Darpan</h3>
+                <p class="cred__id"><span class="cred__id-label">Unique ID</span><span class="cred__id-num">TN/2009/0001334</span></p>
+                <p class="compliance__note">Registered voluntary organisation on the Government of India&rsquo;s NGO Darpan portal.</p>
+                <p class="compliance__meta">No expiry stated &middot; verifiable at ngodarpan.gov.in</p>
+                <a class="compliance__link" href="assets/Credentials/ngo-darpan-registration.pdf" target="_blank" rel="noopener">View record (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="factory"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Ministry of Micro, Small and Medium Enterprises, Government of India</p>
+                <h3 class="compliance__title">Udyam registration</h3>
+                <p class="cred__id"><span class="cred__id-label">Udyam no.</span><span class="cred__id-num">UDYAM-TN-06-0029885</span></p>
+                <p class="compliance__note">Udyam registration of Coodu Trust as a small enterprise in the services sector, registered 2022.</p>
+                <p class="compliance__meta">No expiry &middot; re-classified annually</p>
+                <a class="compliance__link" href="assets/Credentials/udyam-msme-registration.pdf" target="_blank" rel="noopener">View certificate (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="line-chart"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">National Stock Exchange of India Limited &mdash; Social Stock Exchange</p>
+                <h3 class="compliance__title">Registered Social Entity</h3>
+                <p class="cred__id"><span class="cred__id-label">Registration</span><span class="cred__id-num">NSESSENPO00188</span></p>
+                <p class="compliance__note">Registered Social Entity (Not for Profit Organization) on the NSE Social Stock Exchange.</p>
+                <p class="compliance__meta">Valid to 12 May 2027</p>
+                <a class="compliance__link" href="assets/Credentials/nse-social-stock-exchange.pdf" target="_blank" rel="noopener">View letter (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="graduation-cap"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Tamil Nadu State Rural Livelihoods Mission (TNSRLM) / Tamil Nadu Corporation for Development of Women Ltd.</p>
+                <h3 class="compliance__title">DDU-GKY Project Implementing Agency</h3>
+                <p class="cred__id"><span class="cred__id-label">PRN</span><span class="cred__id-num">TN2025RT0227</span></p>
+                <p class="compliance__note">Registered Project Implementing Agency under the Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY).</p>
+                <p class="compliance__meta">Registration issued 16 December 2025</p>
+                <a class="compliance__link" href="assets/Credentials/tnsrlm-ddugky-pia-registration.pdf" target="_blank" rel="noopener">View orders (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
 
+    <!-- ---------- GOVERNMENT EMPANELMENT ---------- -->
+    <section class="section section--alt" id="empanelment" aria-labelledby="empanelment-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Government empanelment</p>
+          <h2 class="section-head__title" id="empanelment-title">National Water Mission field agency</h2>
+        </div>
+
+        <div class="nwm reveal">
+          <div class="nwm__main">
+            <span class="nwm__crest" aria-hidden="true"><i data-lucide="droplets"></i></span>
+            <p class="nwm__issuer">National Water Mission, Department of Water Resources, River Development &amp; Ganga Rejuvenation, Ministry of Jal Shakti, Government of India</p>
+            <p class="nwm__lead">In August 2020 the National Water Mission, under the Ministry of Jal Shakti, empanelled Coodu Trust as a field agency for water conservation, awareness and capacity-building work, with the letter copied to the District Collectors of Ariyalur, Coimbatore, Madurai, Salem and Tiruppur.</p>
+            <p class="nwm__note">Empanelled as a field agency (Zone-4 South) under Goal II of the National Water Mission, 2020. The letter states no validity period.</p>
+            <a class="btn btn--primary nwm__cta" href="assets/Credentials/nwm-field-agency-empanelment.pdf" target="_blank" rel="noopener"><i data-lucide="file-text" aria-hidden="true"></i><span>Read the empanelment letter (PDF)</span></a>
+          </div>
+          <dl class="nwm__facts">
+            <div class="nwm__fact">
+              <dt>Letter no.</dt>
+              <dd><span class="cred__id-num">M-26014/1/2014-NWM</span></dd>
+            </div>
+            <div class="nwm__fact">
+              <dt>Issued</dt>
+              <dd>August 2020</dd>
+            </div>
+            <div class="nwm__fact">
+              <dt>Status conferred</dt>
+              <dd>Field agency</dd>
+            </div>
+            <div class="nwm__fact">
+              <dt>Zone</dt>
+              <dd>Zone-4 South</dd>
+            </div>
+            <div class="nwm__fact">
+              <dt>Scheme</dt>
+              <dd>Goal II, National Water Mission</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- QUALITY CERTIFICATION ---------- -->
+    <section class="section compliance" id="certification" aria-labelledby="certification-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Quality certification</p>
+          <h2 class="section-head__title" id="certification-title">ISO management systems</h2>
+          <p class="section-head__sub">ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 &mdash; certified by <strong>Ingrain Global Standard Private Limited</strong>, accredited by the GCC Accreditation Center (GAC). All three certificates cover manpower supply, sustainable agriculture, capacity building, skill development, water and natural resource management, sanitation, health, education, women development and tribal development.</p>
+        </div>
+
+        <ul class="compliance__grid reveal">
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="check-circle-2"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Ingrain Global Standard Private Limited &middot; accredited by the GCC Accreditation Center (GAC)</p>
+                <h3 class="compliance__title">ISO 9001:2015 &mdash; Quality management</h3>
+                <p class="cred__id"><span class="cred__id-label">Certificate</span><span class="cred__id-num">MSC07251375</span></p>
+                <p class="compliance__meta">Issued 9 July 2025 &middot; valid to 8 July 2028</p>
+                <a class="compliance__link" href="assets/Credentials/iso-9001-14001-45001.pdf" target="_blank" rel="noopener">View certificates (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="leaf"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Ingrain Global Standard Private Limited &middot; accredited by the GCC Accreditation Center (GAC)</p>
+                <h3 class="compliance__title">ISO 14001:2015 &mdash; Environmental management</h3>
+                <p class="cred__id"><span class="cred__id-label">Certificate</span><span class="cred__id-num">MSC02262648</span></p>
+                <p class="compliance__meta">Issued 25 February 2026 &middot; valid to 25 February 2029</p>
+                <a class="compliance__link" href="assets/Credentials/iso-9001-14001-45001.pdf" target="_blank" rel="noopener">View certificates (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="hard-hat"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Ingrain Global Standard Private Limited &middot; accredited by the GCC Accreditation Center (GAC)</p>
+                <h3 class="compliance__title">ISO 45001:2018 &mdash; Occupational health &amp; safety</h3>
+                <p class="cred__id"><span class="cred__id-label">Certificate</span><span class="cred__id-num">MSC02262649</span></p>
+                <p class="compliance__meta">Issued 25 February 2026 &middot; valid to 25 February 2029</p>
+                <a class="compliance__link" href="assets/Credentials/iso-9001-14001-45001.pdf" target="_blank" rel="noopener">View certificates (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- INSTITUTIONAL COLLABORATIONS ---------- -->
+    <section class="section section--alt compliance" id="collaborations" aria-labelledby="collaborations-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Institutional collaborations</p>
+          <h2 class="section-head__title" id="collaborations-title">Memoranda of Understanding</h2>
+          <p class="section-head__sub">Signed agreements with universities, institutes and civil-society organisations. Each is a Memorandum of Understanding with the term written into it; the signed copy is linked below.</p>
+        </div>
+
+        <ul class="compliance__grid reveal">
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="waves"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Memorandum of Understanding</p>
+                <h3 class="compliance__title">Vyakti Vikas Kendra India (The Art of Living Social Projects)</h3>
+                <p class="cred__id"><span class="cred__id-label">Term</span><span class="cred__id-num">2023&ndash;2027</span></p>
+                <p class="compliance__note">Memorandum of Understanding for river rejuvenation and watershed management in Tamil Nadu.</p>
+                <a class="compliance__link" href="assets/Credentials/mou-vyakti-vikas-kendra-india.pdf" target="_blank" rel="noopener">View MoU (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="users"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Memorandum of Understanding</p>
+                <h3 class="compliance__title">Madras School of Social Work, Chennai</h3>
+                <p class="cred__id"><span class="cred__id-label">Term</span><span class="cred__id-num">2023&ndash;2028</span></p>
+                <p class="compliance__note">Memorandum of Understanding for youth development, student fieldwork and research.</p>
+                <a class="compliance__link" href="assets/Credentials/mou-madras-school-of-social-work.pdf" target="_blank" rel="noopener">View MoU (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="sprout"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Memorandum of Understanding</p>
+                <h3 class="compliance__title">The Gandhigram Rural Institute (Deemed to be University), School of Agriculture and Animal Sciences</h3>
+                <p class="cred__id"><span class="cred__id-label">Term</span><span class="cred__id-num">2025&ndash;2027</span></p>
+                <p class="compliance__note">Memorandum of Understanding for academic collaboration, internships and joint field projects.</p>
+                <a class="compliance__link" href="assets/Credentials/mou-gandhigram-rural-institute.pdf" target="_blank" rel="noopener">View MoU (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="book-open"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Memorandum of Understanding</p>
+                <h3 class="compliance__title">Anugraha Institute of Social Sciences, Dindigul (Research Centre affiliated to Madurai Kamaraj University)</h3>
+                <p class="cred__id"><span class="cred__id-label">Term</span><span class="cred__id-num">2026&ndash;2027</span></p>
+                <p class="compliance__note">Memorandum of Understanding for academic collaboration.</p>
+                <a class="compliance__link" href="assets/Credentials/mou-anugraha-institute.pdf" target="_blank" rel="noopener">View MoU (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="compliance__item">
+            <div class="compliance__card compliance__card--text">
+              <span class="cred__icon" aria-hidden="true"><i data-lucide="recycle"></i></span>
+              <div class="compliance__body">
+                <p class="cred__issuer">Franchisee &amp; implementation partner</p>
+                <h3 class="compliance__title">Residents Awareness Association of Coimbatore (RAAC)</h3>
+                <p class="cred__id"><span class="cred__id-label">Term</span><span class="cred__id-num">2025&ndash;2028</span></p>
+                <p class="compliance__note">Authorised franchisee and implementation partner for Wellbeing Out of Waste (WoW), an ITC Limited CSR initiative, for dry-waste collection and segregation in Dindigul district.</p>
+                <a class="compliance__link" href="assets/Credentials/raac-wellbeing-out-of-waste.pdf" target="_blank" rel="noopener">View letter &amp; MoU (PDF) <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- LIBRARY ---------- -->
+    <section class="section docs" id="docs" aria-labelledby="docs-library-title">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <p class="eyebrow">Annual reports</p>
+          <h2 class="section-head__title" id="docs-library-title">Twenty-five years, year by year</h2>
+          <p class="section-head__sub">Impact summaries, highlights and the full reports to read or download.</p>
+        </div>
+
+        <div class="docs__toolbar reveal">
+          <div class="docs__filters" role="tablist" aria-label="Filter by period">
+            <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All <span class="filter-pill__n" data-count="all"></span></button>
+            <button class="filter-pill" data-filter="2020s" role="tab" aria-selected="false">2020s <span class="filter-pill__n" data-count="2020s"></span></button>
+            <button class="filter-pill" data-filter="2010s" role="tab" aria-selected="false">2010s <span class="filter-pill__n" data-count="2010s"></span></button>
+            <button class="filter-pill" data-filter="2000s" role="tab" aria-selected="false">2000s <span class="filter-pill__n" data-count="2000s"></span></button>
+          </div>
+          <div class="docs__search">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input type="search" id="docs-search" placeholder="Search by year, title or keyword&hellip;" aria-label="Search reports">
+          </div>
+        </div>
+        <p class="docs__count" data-docs-count aria-live="polite"></p>
+
+        <div data-docs-grid>
+          <!-- coodu-documents.js builds grouped report cards here -->
+        </div>
+
+        <p class="docs__empty" data-docs-empty hidden>No reports match your search. <button type="button" class="docs__empty-reset" data-docs-reset>Clear search</button></p>
+
+      </div>
+    </section>
 
   </main>
 

@@ -40,7 +40,7 @@
   padding: clamp(12px, 2vw, 16px);
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-frame); box-shadow: var(--shadow-1);
-  position: sticky; top: 78px; z-index: 5;
+  position: sticky; top: calc(var(--docs-top) + var(--docs-jump-h)); z-index: 5;
 }
 .docs__filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-pill {
@@ -207,4 +207,153 @@
 .compliance__link i { width: 15px; height: 15px; }
 @media (min-width: 760px) {
   .compliance__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+
+/* ==========================================================================
+   CREDENTIALS — sticky section nav, text-forward credential cards and the
+   National Water Mission empanelment panel.
+   Sticky maths: the jump bar pins under the header; the reports toolbar
+   pins under the jump bar. Both offsets come from the two vars below, so
+   changing one height keeps the stack correct.
+   ========================================================================== */
+body[data-page="documents"] {
+  --docs-top: 60px;      /* header height on mobile */
+  --docs-jump-h: 62px;   /* total height of the sticky jump bar */
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (min-width: 900px) {
+  body[data-page="documents"] { --docs-top: 76px; --docs-jump-h: 74px; }
+}
+
+/* ------------------------------------------------- sticky section nav --- */
+.docs-jump {
+  position: sticky; top: var(--docs-top); z-index: 6;
+  padding-block: 8px;
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+}
+@media (min-width: 900px) { .docs-jump { padding-block: 10px; } }
+
+.docs-jump__inner {
+  list-style: none; margin: 0;
+  display: flex; align-items: center; gap: 6px;
+  min-height: 46px; padding: 6px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-frame); box-shadow: var(--shadow-1);
+  overflow-x: auto; overflow-y: hidden;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.docs-jump__inner::-webkit-scrollbar { display: none; }
+.docs-jump__inner > li { flex: 0 0 auto; }
+@media (min-width: 900px) { .docs-jump__inner { min-height: 54px; gap: 8px; padding: 8px; } }
+
+.docs-jump__link {
+  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  min-height: 34px; padding: 6px 13px;
+  font-family: var(--font-display); font-weight: 600; font-size: .8125rem;
+  color: var(--text-body); text-decoration: none;
+  border: 1.5px solid var(--border); border-radius: var(--radius-pill);
+  transition: color var(--ease), border-color var(--ease), background-color var(--ease);
+}
+.docs-jump__link i { width: 15px; height: 15px; flex: 0 0 auto; }
+.docs-jump__link:hover,
+.docs-jump__link:focus-visible { color: var(--color-primary-dark); border-color: var(--color-primary); background: var(--surface-alt); }
+@media (min-width: 900px) { .docs-jump__link { min-height: 38px; font-size: .875rem; padding: 7px 16px; } }
+
+/* jump targets clear the two stacked sticky bars */
+#registrations, #empanelment, #certification, #collaborations, #docs {
+  scroll-margin-top: calc(var(--docs-top) + var(--docs-jump-h) + 14px);
+}
+
+/* ------------------------------------- text-forward credential cards --- */
+/* Several credentials are a PDF with no certificate scan. Rather than fake
+   an image, the card leads with an icon and sets the registration number in
+   a monospace chip so it reads as a record — and stays selectable text. */
+.compliance__card--text { padding-top: var(--s3); }
+.compliance__card--text:hover { transform: none; box-shadow: var(--shadow-1); border-color: var(--color-primary); }
+.compliance__card--text:focus-within { box-shadow: var(--shadow-2); border-color: var(--color-primary); }
+
+.cred__icon {
+  align-self: flex-start; flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; margin-inline: var(--s3);
+  border-radius: 13px; border: 1px solid var(--border);
+  background: var(--surface-alt); color: var(--color-primary);
+}
+.cred__icon i { width: 22px; height: 22px; }
+
+.cred__issuer {
+  margin: 0; font-family: var(--font-display); font-weight: 600;
+  font-size: .75rem; line-height: 1.45; color: var(--text-muted);
+}
+.cred__id {
+  margin: 4px 0 2px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+}
+.cred__id-label {
+  font-family: var(--font-display); font-size: .6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--text-muted);
+}
+.cred__id-num {
+  font-family: var(--font-mono); font-size: .8125rem; font-weight: 600;
+  color: var(--color-primary-dark);
+  background: var(--surface-alt); border: 1px solid var(--border);
+  border-radius: 6px; padding: 3px 8px;
+  overflow-wrap: anywhere;
+}
+.compliance__card--text .compliance__title { line-height: 1.35; }
+.compliance__card--text .compliance__link { text-decoration: none; }
+.compliance__card--text .compliance__link:hover { text-decoration: underline; }
+
+/* ------------------------------- National Water Mission empanelment --- */
+.nwm {
+  display: grid; gap: var(--s3);
+  padding: clamp(20px, 3.2vw, 38px);
+  background: var(--surface);
+  border: 1px solid var(--border); border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-frame); box-shadow: var(--shadow-1);
+}
+@media (min-width: 900px) {
+  .nwm {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 52px); align-items: start;
+  }
+}
+.nwm__main { min-width: 0; }
+.nwm__crest {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 14px;
+  background: var(--color-primary); color: #fff;
+}
+.nwm__crest i { width: 26px; height: 26px; }
+.nwm__issuer {
+  margin: 16px 0 0; font-family: var(--font-display); font-weight: 600;
+  font-size: .8125rem; line-height: 1.5; color: var(--text-muted);
+}
+.nwm__lead {
+  margin: 12px 0 0; color: var(--text-strong);
+  font-size: clamp(1.02rem, .97rem + .35vw, 1.22rem); line-height: 1.6;
+}
+.nwm__note { margin: 14px 0 0; font-size: .875rem; line-height: 1.6; color: var(--text-body); }
+.nwm__cta { margin-top: var(--s3); }
+.nwm__cta span { text-align: left; }
+
+.nwm__facts {
+  margin: 0; padding: var(--s3); min-width: 0;
+  display: grid; gap: 14px;
+  background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px;
+}
+.nwm__fact dt {
+  font-family: var(--font-display); font-size: .6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--text-muted);
+}
+.nwm__fact dd { margin: 3px 0 0; font-size: .9375rem; font-weight: 600; color: var(--text-strong); }
+.nwm__fact dd .cred__id-num { font-weight: 600; background: var(--surface); }
+@media (min-width: 600px) and (max-width: 899.98px) {
+  .nwm__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px var(--s3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compliance__card, .docs-jump__link { transition: none; }
 }
