@@ -363,6 +363,18 @@ mark.pd-num {
   text-align: center;
 }
 
+/* Project summary sheet: portrait/odd-ratio artwork that has to be read, not
+   cropped. Same figure markup as a field photo, but the frame follows the
+   image instead of forcing 16/9, and the sheet sits on a mat. */
+.pd-field--poster { max-width: 820px; margin-inline: auto; }
+.pd-field--poster .pd-field__frame {
+  aspect-ratio: auto;
+  max-height: none;
+  background: var(--surface);
+  padding: clamp(8px, 1.6vw, 16px);
+}
+.pd-field--poster .pd-field__frame img { height: auto; object-fit: contain; }
+
 /* ---- Fact file (executive at-a-glance grid) -------------------------------- */
 .pd-facts__grid {
   display: grid;

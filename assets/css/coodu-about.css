@@ -319,8 +319,28 @@
 }
 
 /* ==========================================================================
-   4. VISION & MISSION — 2-up split
+   4. VISION & MISSION — banner + 2-up split
    ========================================================================== */
+
+/* Banner sits above the two cards. The source art is 2:1; the shipped crop is
+   ~3.1:1, so object-fit only has to absorb the difference on narrow screens. */
+.vm-banner {
+  margin: 0 0 clamp(20px, 3vw, 34px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-1);
+  line-height: 0;
+}
+
+.vm-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(140px, 26vw, 300px);
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
 .vm-grid {
   display: grid;
   grid-template-columns: 1fr;
