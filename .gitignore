@@ -62,3 +62,9 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 /.mcp.json
 /.ignore
 /graft/
+
+# Source delivery folder from the trust (3.2 GB of photos and documents).
+# Same rule as photos/: this repo is the deployed web root, so nothing here
+# may be served. Publishable documents are copied into assets/Credentials/
+# after verification; photographs go to Cloudinary.
+/COODU TRUST - PHOTOS FOR WEBSITE/
