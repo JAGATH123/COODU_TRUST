@@ -899,6 +899,13 @@
   border-bottom: 1px solid var(--border-soft);
 }
 
+/* A tile only carries location and date when the artefact itself states them,
+   so several legitimately have neither. Without this the lightbox prints a bare
+   LOCATION / DATE label over nothing. Collapse the empty ones, and let the row
+   reflow rather than leaving a gap where a stat would have been. */
+.media-lightbox__stat:has(dd:empty) { display: none; }
+.media-lightbox__stats { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
 .media-lightbox__stat dt {
   font-family: var(--font-body);
   font-weight: 600;
