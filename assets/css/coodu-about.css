@@ -957,17 +957,25 @@
 /* ---- Recognition photographs (About > Partners & recognition) -------------
    Archive frames that each authenticate themselves from within the frame.
    Sits above the logo marquee. Most sources are 800px scans, so the tiles are
-   deliberately small - never promote these to a banner. The grid is auto-fit
-   so the row takes a fourth (or later fifth) frame without a stranded tile. */
+   deliberately small - never promote these to a banner.
+   Five frames, which no auto-fit grid can lay out without stranding one: at
+   the 1140px container an auto-fit minmax(240px) row resolves to four columns
+   and leaves the fifth alone against three empty tracks. So this is a centred
+   flex row on a fixed three-up basis - 3 + 2, with the short last row centred
+   under the first rather than pinned left. Works for four frames too (2 + 2),
+   and for any future sixth. */
 .recognition-row {
   list-style: none;
   margin: 0 0 var(--s5);
   padding: 0;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--s3);
-  grid-template-columns: 1fr;
 }
 .recognition-row__item {
+  flex: 0 1 100%;
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -988,5 +996,5 @@
   color: var(--text-muted);
 }
 @media (min-width: 720px) {
-  .recognition-row { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .recognition-row__item { flex-basis: calc(33.3333% - var(--s3) * 2 / 3); }
 }
