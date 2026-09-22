@@ -11,7 +11,10 @@
 (function () {
   'use strict';
 
-  var API_BASE_URL = 'http://localhost:3000/api';   // <- point at the deployed backend
+  // Same-origin PHP endpoints (assets/php/). Root-absolute so the flow works
+  // from any page depth; requires config.php on the server to hold the keys.
+  var CREATE_ORDER_URL = '/assets/php/razorpay-create-order.php';
+  var VERIFY_URL       = '/assets/php/razorpay-verify-payment.php';
   var REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -188,7 +191,7 @@
 
     setLoading(true);
 
-    fetch(API_BASE_URL + '/donations/create-order', {
+    fetch(CREATE_ORDER_URL, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
     }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
       .then(function (res) {
@@ -211,7 +214,7 @@
   });
 
   function verify(resp, payload) {
-    fetch(API_BASE_URL + '/donations/verify-payment', {
+    fetch(VERIFY_URL, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         razorpay_order_id: resp.razorpay_order_id,

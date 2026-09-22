@@ -54,3 +54,24 @@ define('COODU_MAIL_TO_NAME',   'Coodu Trust');
    0 = silent (correct in production). Raise to 2 only while testing from the
    command line; the endpoint never prints debug output to the browser. */
 define('COODU_SMTP_DEBUG', 0);
+
+/* ======================================================================
+   RAZORPAY  (donate.html -> razorpay-create-order.php / -verify-payment.php)
+   ----------------------------------------------------------------------
+   Dashboard > Account & Settings > API Keys.
+
+   COODU_RZP_KEY_ID is public — it is handed to the browser so the checkout
+   modal can open, and it appears in page source. That is by design.
+
+   COODU_RZP_KEY_SECRET must NEVER leave this file. It authenticates order
+   creation and signs the payment verification HMAC. If it is ever exposed,
+   regenerate the pair in the dashboard immediately; the old pair keeps
+   working until you do.
+
+   Test keys start rzp_test_ and move no real money. Live keys start
+   rzp_live_ and require the completed KYC plus the published Privacy,
+   Terms and Refund policies. Swap both values together — a live id with a
+   test secret fails authentication with a 401.
+   ====================================================================== */
+define('COODU_RZP_KEY_ID',     'rzp_test_REPLACE-WITH-THE-KEY-ID');
+define('COODU_RZP_KEY_SECRET', 'REPLACE-WITH-THE-KEY-SECRET');

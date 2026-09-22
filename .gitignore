@@ -73,5 +73,10 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 # assets/php/config.sample.php on the server and filled in there; the repo is
 # the public web root, so this must never be committed.
 /assets/php/config.php
-/assets/php/data/submissions.log
-/assets/php/data/ratelimit/
+
+# Runtime state written by the PHP endpoints: contact submissions, donation
+# records and receipt counters. Personal data under the DPDP Act 2023, and the
+# repo is the public document root — none of it may be committed. The
+# .htaccess files that deny HTTP access to this folder ARE tracked.
+/assets/php/data/*
+!/assets/php/data/.htaccess
