@@ -237,6 +237,12 @@
 /* the office column is now taller than the map — keep the map in view */
 @media (min-width: 920px) { .find__map { position: sticky; top: 92px; } }
 
+/* honeypot spam trap — kept out of sight and out of the tab order. Hidden with
+   CSS rather than type="hidden" because bots fill hidden inputs; anything that
+   arrives with this field completed is rejected server-side. */
+.msg__trap { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.msg__trap input { position: absolute; left: -9999px; }
+
 /* inline form message */
 .msg__feedback { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-radius: var(--radius-btn); font-size: var(--fs-small); margin-bottom: 16px; }
 .msg__feedback--ok { background: #e7f4ea; color: var(--color-success); }

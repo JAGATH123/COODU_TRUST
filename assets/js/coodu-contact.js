@@ -1,6 +1,9 @@
 /* ==========================================================================
    COODU Trust — CONTACT page behaviour ("Rooted in Dindigul")
-   1) Contact form -> POST /api/contact/submit (validate, loading, success/error)
+   1) Contact form -> POST assets/php/contact-submit.php (validate, loading,
+      success/error). The endpoint is self-hosted PHP + SMTP; no third-party form
+      service, so no undisclosed data processor. The form also works with this
+      script disabled — the <form> has a real action and method="post".
    2) Tamil Nadu locator map (d3): faint TN + 3 office pins, hover-linked to the
       office cards (hover a card -> its pin lights up, and vice-versa).
    Shared coodu.js handles drawer, .reveal, .counter, year. Reduced-motion safe.
@@ -8,7 +11,10 @@
 (function () {
   'use strict';
 
-  var API_BASE_URL = 'http://localhost:3000/api';   // <- deployed backend URL
+  /* Same-origin PHP endpoint. Read from the form's own action so the markup
+     stays the single source of truth (and the no-JS path uses the same URL). */
+  var ENDPOINT_FALLBACK = 'assets/php/contact-submit.php';
+  var MIN_MESSAGE = 10;                              // must match the PHP check
   var REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var SVGNS = 'http://www.w3.org/2000/svg';
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -24,6 +30,13 @@
   var form = $('#contact-form');
   if (form) {
     var cta = $('#contact-cta');
+    var endpoint = form.getAttribute('action') || ENDPOINT_FALLBACK;
+    var inFlight = false;
+
+    /* Timing trap: plant the moment the page became usable. The server rejects
+       anything sent in under three seconds, which no human types. */
+    var stampEl = $('#c-form-ts', form);
+    if (stampEl) stampEl.value = String(Date.now());
     var TYPE_LABEL = {
       general: 'General enquiry', volunteer: 'Volunteering enquiry',
       partnership: 'Partnership enquiry', donation: 'Donation enquiry', support: 'Website enquiry'
@@ -41,34 +54,59 @@
       div.scrollIntoView({ behavior: REDUCE ? 'auto' : 'smooth', block: 'center' });
     }
     function loading(on) {
+      inFlight = on;
+      /* Disabled for the whole round trip so a double-click cannot double-send. */
       cta.disabled = on; cta.classList.toggle('is-loading', on);
+      cta.setAttribute('aria-busy', on ? 'true' : 'false');
       var l = $('.msg__cta-load', cta); if (l) l.hidden = !on;
     }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (inFlight) return;                            // guard against a double submit
       var name = $('#c-name').value.trim();
       var email = $('#c-email').value.trim();
       var phone = $('#c-phone').value.trim();
       var type = $('#c-type').value;
       var message = $('#c-message').value.trim();
+      var trap = $('#c-website', form);
+      var stamp = stampEl ? stampEl.value : '';
 
       if (name.length < 2) { feedback('Please enter your name.', 'error'); $('#c-name').focus(); return; }
       if (email.indexOf('@') < 1) { feedback('Please enter a valid email address.', 'error'); $('#c-email').focus(); return; }
-      if (message.length < 5) { feedback('Please add a short message (at least 5 characters).', 'error'); $('#c-message').focus(); return; }
+      if (message.length < MIN_MESSAGE) { feedback('Please add a short message (at least ' + MIN_MESSAGE + ' characters).', 'error'); $('#c-message').focus(); return; }
 
       var subject = (TYPE_LABEL[type] || 'Website enquiry') + ' from ' + name;
       if (subject.length < 5) subject = 'Website enquiry';
 
-      var payload = { name: name, email: email, phone: phone, subject: subject, message: message, inquiryType: type };
+      var payload = {
+        name: name, email: email, phone: phone, subject: subject, message: message,
+        inquiryType: type,
+        website: trap ? trap.value : '',               // honeypot, must stay empty
+        form_ts: stamp                                 // timing trap
+      };
       loading(true);
 
-      fetch(API_BASE_URL + '/contact/submit', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
-      }).then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        /* Read as text first: a mis-deployment (PHP not executed, an error page
+           from a proxy) answers 200 with something that is not JSON, and that
+           must not be mistaken for a delivered message. */
+        return r.text().then(function (txt) {
+          var d = null;
+          try { d = txt ? JSON.parse(txt) : null; } catch (parseErr) { d = null; }
+          return { ok: r.ok, data: d };
+        });
+      })
         .then(function (res) {
           loading(false);
           if (!res.ok) throw new Error((res.data && res.data.message) || 'Could not send your message.');
+          if (!res.data || res.data.status !== 'success') {
+            throw new Error('We could not confirm your message was sent. Please email director@coodutrust.org or call +91-451-2461362.');
+          }
           success(name);
         })
         .catch(function (err) {

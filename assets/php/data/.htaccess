@@ -1,0 +1,37 @@
+# ==========================================================================
+# COODU Trust — submission log + rate-limit counters. NOT web-accessible.
+# This repo is the document root, so anything not explicitly denied here would
+# be downloadable. submissions.log holds names, email addresses, phone numbers
+# and message bodies: personal data under the DPDP Act 2023.
+# ==========================================================================
+
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
+
+# Belt and braces: if a future server ignores the directives above, at least
+# never hand over the log or the counter files, and never run PHP from here.
+<FilesMatch "\.(log|json|php|txt)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+Options -Indexes -ExecCGI
+
+# Only meaningful under mod_php. Guarded, because an unguarded php_flag is a
+# 500 error on the PHP-FPM / LSAPI setups cPanel normally uses.
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>

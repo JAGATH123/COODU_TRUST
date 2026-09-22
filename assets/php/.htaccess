@@ -1,0 +1,17 @@
+# ==========================================================================
+# COODU Trust — server-side contact endpoint.
+# contact-submit.php is deliberately public (the form posts to it).
+# The SMTP credentials and the sample config must never be served.
+# ==========================================================================
+
+Options -Indexes
+
+<FilesMatch "^config(\.sample)?\.php$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

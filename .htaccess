@@ -19,7 +19,7 @@ Options -Indexes
 </IfModule>
 
 # Block sensitive dotfiles, env, and config/doc files from being served.
-<FilesMatch "(^\.env|^\.git|\.(env|gitignore|md|yml|example)$)">
+<FilesMatch "(^\.env|^\.git|\.(env|gitignore|md|yml|example|log)$)">
   Require all denied
 </FilesMatch>
 

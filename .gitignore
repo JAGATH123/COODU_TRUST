@@ -68,3 +68,10 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 # may be served. Publishable documents are copied into assets/Credentials/
 # after verification; photographs go to Cloudinary.
 /COODU TRUST - PHOTOS FOR WEBSITE/
+
+# Real SMTP credentials for the contact endpoint. Copied from
+# assets/php/config.sample.php on the server and filled in there; the repo is
+# the public web root, so this must never be committed.
+/assets/php/config.php
+/assets/php/data/submissions.log
+/assets/php/data/ratelimit/
