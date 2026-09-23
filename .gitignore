@@ -74,6 +74,12 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 # the public web root, so this must never be committed.
 /assets/php/config.php
 
+# Diagnostics are created directly on the server and never committed. The repo
+# is PUBLIC, so a token hardcoded in a committed file protects nothing — it is
+# published alongside the check it guards. (GitGuardian flagged exactly this on
+# 23 Sep 2026.)
+/assets/php/diagnose*.php
+
 # Runtime state written by the PHP endpoints: contact submissions, donation
 # records and receipt counters. Personal data under the DPDP Act 2023, and the
 # repo is the public document root — none of it may be committed. The
