@@ -22,7 +22,7 @@ require_once __DIR__ . '/lib/coodu-json-endpoint.php';
 /* ------------------------------------------------------------------ tuning */
 define('COODU_MIN_PAISE',    100);        /* Razorpay's own floor: ₹1         */
 define('COODU_MAX_PAISE',    50000000);   /* ₹5,00,000 — a sanity ceiling     */
-define('COODU_ORDER_RATE_MAX',    12);    /* orders per IP ...                */
+define('COODU_ORDER_RATE_MAX',    30);    /* orders per IP ...                */
 define('COODU_ORDER_RATE_WINDOW', 3600);  /* ... per hour                     */
 
 coodu_require_post();
@@ -124,8 +124,10 @@ if ($status < 200 || $status >= 300 || empty($response['id'])) {
    rather than believing the amount or the donor details the browser returns. */
 $orderId = (string) $response['id'];
 
+$orderWritten = false;
+
 if (coodu_ensure_dir(COODU_ORDER_DIR)) {
-    @file_put_contents(
+    $orderWritten = @file_put_contents(
         COODU_ORDER_DIR . '/' . preg_replace('/[^A-Za-z0-9_]/', '', $orderId) . '.json',
         json_encode(array(
             'orderId'          => $orderId,
@@ -148,7 +150,17 @@ if (coodu_ensure_dir(COODU_ORDER_DIR)) {
             'createdAt' => gmdate('c'),
         ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
         LOCK_EX
-    );
+    ) !== false;
+}
+
+/* Loud, because the consequence is silent: with no order file, verify-payment
+   cannot recover the amount or the donor, and the trust gets a Rs 0.00
+   notification for a real payment with no way to reconcile it. Usually a
+   permissions problem on data/ or an exhausted disk quota. */
+if (!$orderWritten) {
+    error_log('COODU CRITICAL: could not write the order file for ' . $orderId
+        . ' — check that ' . COODU_ORDER_DIR . ' exists and is writable. '
+        . 'This donation will not be reconcilable.');
 }
 
 coodu_ok('Order created.', array(

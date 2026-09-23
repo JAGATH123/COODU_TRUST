@@ -16,6 +16,33 @@ if (!defined('COODU_ENDPOINT')) {
     exit;
 }
 
+/* A stray notice or warning printed before the JSON makes the body unparseable
+   for the client, and once output has started headers_sent() is true, so
+   coodu_json() can no longer set the status code or the content type. Many
+   cPanel hosts ship display_errors=On. Errors go to the log, never the body. */
+@ini_set('display_errors', '0');
+@ini_set('log_errors', '1');
+
+/* Receipt numbers carry the Indian financial year and the donor email prints a
+   date. On a UTC host both are a day behind between 00:00 and 05:30 IST, which
+   on 1 April would file a receipt under the wrong FY. contact-submit.php:26
+   already does this; the Razorpay endpoints must too. */
+date_default_timezone_set('Asia/Kolkata');
+
+/* mbstring is normally present on cPanel but is not guaranteed, and an
+   undefined mb_strlen() is a blank 500 with display_errors off. Mirrors the
+   polyfill in contact-submit.php:62. */
+if (!function_exists('mb_strlen')) {
+    function mb_strlen($string, $encoding = null)
+    {
+        return strlen((string) $string);
+    }
+    function mb_substr($string, $start, $length = null, $encoding = null)
+    {
+        return $length === null ? substr((string) $string, $start) : substr((string) $string, $start, $length);
+    }
+}
+
 define('COODU_DATA_DIR',  dirname(__DIR__) . '/data');
 define('COODU_ORDER_DIR', COODU_DATA_DIR . '/orders');
 define('COODU_RATE_DIR',  COODU_DATA_DIR . '/ratelimit');
@@ -34,7 +61,48 @@ function coodu_json($httpCode, array $body)
         header('Cache-Control: no-store');
         header('X-Content-Type-Options: nosniff');
     }
-    echo json_encode($body);
+    $encoded = json_encode($body);
+    echo ($encoded === false)
+        ? '{"status":"error","message":"Server error."}'
+        : $encoded;
+    exit;
+}
+
+/**
+ * Emit the response, hand it to the client, THEN run $after.
+ * Slow best-effort work (sending mail) must not hold the donor's browser open
+ * or risk max_execution_time killing the script before the JSON is delivered.
+ */
+function coodu_json_then($httpCode, array $body, $after)
+{
+    if (!headers_sent()) {
+        http_response_code($httpCode);
+        header('Content-Type: application/json; charset=utf-8');
+        header('Cache-Control: no-store');
+        header('X-Content-Type-Options: nosniff');
+    }
+    $encoded = json_encode($body);
+    $encoded = ($encoded === false) ? '{"status":"error","message":"Server error."}' : $encoded;
+
+    if (!headers_sent()) {
+        header('Content-Length: ' . strlen($encoded));
+    }
+    echo $encoded;
+
+    /* Under PHP-FPM / LSAPI this returns the response and lets the script run
+       on. Elsewhere, flush as best we can and accept that the client may wait. */
+    if (function_exists('fastcgi_finish_request')) {
+        fastcgi_finish_request();
+    } else {
+        @ob_end_flush();
+        @flush();
+    }
+
+    try {
+        call_user_func($after);
+    } catch (Throwable $e) {
+        error_log('COODU post-response task failed: ' . $e->getMessage());
+    }
     exit;
 }
 
@@ -197,7 +265,7 @@ function coodu_load_config(array $required)
     require_once $configFile;
 
     foreach ($required as $name) {
-        if (!defined($name) || constant($name) === '' || strpos((string) constant($name), 'REPLACE-WITH') === 0) {
+        if (!defined($name) || constant($name) === '' || strpos((string) constant($name), 'REPLACE-WITH') !== false) {
             error_log('COODU: config.php is missing a value for ' . $name . '.');
             coodu_fail(503, 'Online giving is temporarily unavailable. Please email director@coodutrust.org.');
         }
@@ -213,7 +281,7 @@ function coodu_load_config(array $required)
  *
  * Returns array(httpStatus, decodedBody|null, curlError|null).
  */
-function coodu_razorpay_request($method, $path, array $payload = null)
+function coodu_razorpay_request($method, $path, $payload = null)
 {
     $ch = curl_init('https://api.razorpay.com/v1' . $path);
     if ($ch === false) {

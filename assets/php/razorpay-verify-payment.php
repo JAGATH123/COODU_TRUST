@@ -72,6 +72,7 @@ if ($order === null) {
     ));
     error_log('COODU razorpay verified payment with no local order file: ' . $orderId);
     $order = array(
+        'unreconciled' => true,
         'orderId'     => $orderId,
         'amountPaise' => 0,
         'cause'       => 'general',
@@ -149,24 +150,30 @@ coodu_log_line(COODU_DONATION_LOG, array(
     'orderId'       => $orderId,
     'paymentId'     => $paymentId,
     'amountINR'     => $amountRupees,
-    'cause'         => $order['cause'],
+    'cause'         => isset($order['cause']) ? $order['cause'] : 'general',
     'donationType'  => isset($order['donationType']) ? $order['donationType'] : 'one-time',
     'isAnonymous'   => !empty($order['isAnonymous']),
     'donor'         => $order['donor'],
 ));
 
 /* --------------------------------------------------------------- email ----
-   Best effort, and deliberately after everything above. A mail failure must
-   not turn a completed, verified payment into an error for the donor. */
-coodu_send_donation_mail($order, $receiptNumber, $amountRupees, $paymentId);
-
-coodu_ok('Payment verified.', array(
-    'receiptNumber' => $receiptNumber,
-    'donorName'     => $order['donor']['name'],
-    'amount'        => $amountRupees,
-    'paymentId'     => $paymentId,
-    'orderId'       => $orderId,
-));
+   The donor's JSON goes out FIRST, then the mail runs. Two PHPMailer sends can
+   take longer than max_execution_time, and a script killed mid-send would
+   leave the payment logged and the receipt minted but the browser showing
+   "verification failed" on money that has already moved. */
+coodu_json_then(200, array(
+    'status'  => 'success',
+    'message' => 'Payment verified.',
+    'data'    => array(
+        'receiptNumber' => $receiptNumber,
+        'donorName'     => $order['donor']['name'],
+        'amount'        => $amountRupees,
+        'paymentId'     => $paymentId,
+        'orderId'       => $orderId,
+    ),
+), function () use ($order, $receiptNumber, $amountRupees, $paymentId) {
+    coodu_send_donation_mail($order, $receiptNumber, $amountRupees, $paymentId);
+});
 
 /* ========================================================================== */
 
@@ -203,6 +210,8 @@ function coodu_send_donation_mail(array $order, $receiptNumber, $amountRupees, $
         $m->SMTPSecure = defined('COODU_SMTP_SECURE') ? COODU_SMTP_SECURE : 'tls';
         $m->CharSet    = 'UTF-8';
         $m->SMTPDebug  = 0;
+        $m->Timeout    = 15;
+        $m->Encoding   = 'base64';
 
         $m->setFrom(COODU_MAIL_FROM, defined('COODU_MAIL_FROM_NAME') ? COODU_MAIL_FROM_NAME : 'Coodu Trust website');
         $m->addAddress($to);
@@ -222,7 +231,7 @@ function coodu_send_donation_mail(array $order, $receiptNumber, $amountRupees, $
             '<tr><td><b>Razorpay order</b></td><td>' . $esc($order['orderId']) . '</td></tr>' .
             '</table>';
         $m->send();
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         error_log('COODU donation notification failed: ' . $e->getMessage());
     }
 
@@ -241,6 +250,8 @@ function coodu_send_donation_mail(array $order, $receiptNumber, $amountRupees, $
         $m->SMTPSecure = defined('COODU_SMTP_SECURE') ? COODU_SMTP_SECURE : 'tls';
         $m->CharSet    = 'UTF-8';
         $m->SMTPDebug  = 0;
+        $m->Timeout    = 15;
+        $m->Encoding   = 'base64';
 
         $m->setFrom(COODU_MAIL_FROM, defined('COODU_MAIL_FROM_NAME') ? COODU_MAIL_FROM_NAME : 'Coodu Trust');
         $m->addAddress($donor['email'], $donor['name']);
@@ -264,7 +275,7 @@ function coodu_send_donation_mail(array $order, $receiptNumber, $amountRupees, $
             '<p>If anything above is wrong, reply to this email and we will correct it.</p>' .
             '<p>With gratitude,<br>Coodu Trust<br>Dindigul, Tamil Nadu</p>';
         $m->send();
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         error_log('COODU donor acknowledgement failed: ' . $e->getMessage());
     }
 }
