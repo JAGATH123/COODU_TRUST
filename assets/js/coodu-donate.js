@@ -11,10 +11,12 @@
 (function () {
   'use strict';
 
-  // Same-origin PHP endpoints (assets/php/). Root-absolute so the flow works
-  // from any page depth; requires config.php on the server to hold the keys.
-  var CREATE_ORDER_URL = '/assets/php/razorpay-create-order.php';
-  var VERIFY_URL       = '/assets/php/razorpay-verify-payment.php';
+  // Same-origin PHP endpoints, relative like coodu-contact.js — donate.html
+  // sits at the web root, and a leading slash would break both a file://
+  // preview and any deploy that is not the account's document root.
+  // Requires config.php on the SERVER to hold the Razorpay keys.
+  var CREATE_ORDER_URL = 'assets/php/razorpay-create-order.php';
+  var VERIFY_URL       = 'assets/php/razorpay-verify-payment.php';
   var REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -189,6 +191,11 @@
       notes: ''
     };
 
+    if (typeof window.Razorpay !== 'function') {
+      showMsg('The payment window could not load. Disable any ad blocker for this page and try again.', 'error');
+      return;
+    }
+
     setLoading(true);
 
     fetch(CREATE_ORDER_URL, {
@@ -210,7 +217,7 @@
         });
         rzp.open();
       })
-      .catch(function (err) { setLoading(false); showMsg(err.message || 'Something went wrong. Please try again.', 'error'); });
+      .catch(function (err) { console.error('[coodu-donate] create-order failed:', err); setLoading(false); showMsg(err.message || 'Something went wrong. Please try again.', 'error'); });
   });
 
   function verify(resp, payload) {
@@ -227,7 +234,7 @@
         if (!res.ok) throw new Error((res.data && res.data.message) || 'Payment verification failed.');
         showSuccess(res.data.data, payload);
       })
-      .catch(function (err) { setLoading(false); showMsg(err.message || 'Payment verification failed. Please contact us.', 'error'); });
+      .catch(function (err) { console.error('[coodu-donate] verify-payment failed:', err); setLoading(false); showMsg(err.message || 'Payment verification failed. Please contact us.', 'error'); });
   }
 
   function showSuccess(data, payload) {
