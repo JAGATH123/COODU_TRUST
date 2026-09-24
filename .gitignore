@@ -72,7 +72,8 @@ assets/images/programs/education/sid-banner-school-facade.jpg
 # Real SMTP credentials for the contact endpoint. Copied from
 # assets/php/config.sample.php on the server and filled in there; the repo is
 # the public web root, so this must never be committed.
-/assets/php/config.php
+/assets/php/config*.php
+!/assets/php/config.sample.php
 
 # Diagnostics are created directly on the server and never committed. The repo
 # is PUBLIC, so a token hardcoded in a committed file protects nothing — it is
