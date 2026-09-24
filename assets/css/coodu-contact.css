@@ -268,3 +268,13 @@
   .msg__cta-load i { animation: none; }
   .find__maptip { transition: none; }
 }
+
+/* Character counter under the message box. Turns amber near the 5000 cap so a
+   long proposal is not lost to a server rejection the visitor never saw coming. */
+#c-message-count {
+  margin-top: var(--s1);
+  font-size: 0.82rem;
+  color: var(--muted, #6b7280);
+  text-align: right;
+}
+#c-message-count.is-warn { color: #b45309; font-weight: 600; }

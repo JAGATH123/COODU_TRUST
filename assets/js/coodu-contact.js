@@ -51,8 +51,28 @@
       div.querySelector('span').textContent = msg;
       form.insertBefore(div, form.firstChild);
       if (window.lucide) window.lucide.createIcons();
+      /* Screen readers only watch a live region that was already in the page, so
+         mirror the text into #contact-status rather than relying on this div. */
+      var status = document.getElementById('contact-status');
+      if (status) { status.textContent = msg; }
       div.scrollIntoView({ behavior: REDUCE ? 'auto' : 'smooth', block: 'center' });
     }
+    /* The server rejects anything over 5000 characters. Count down so nobody
+       writes a long proposal and only then finds out. */
+    (function () {
+      var box = document.getElementById('c-message');
+      var out = document.getElementById('c-message-count');
+      if (!box || !out) { return; }
+      var MAX = 5000;
+      var tick = function () {
+        var left = MAX - box.value.length;
+        out.textContent = left + ' characters remaining';
+        out.classList.toggle('is-warn', left < 250);
+      };
+      box.addEventListener('input', tick);
+      tick();
+    }());
+
     function loading(on) {
       inFlight = on;
       /* Disabled for the whole round trip so a double-click cannot double-send. */
@@ -126,6 +146,14 @@
         '</div>';
       if (window.lucide) window.lucide.createIcons();
       form.scrollIntoView({ behavior: REDUCE ? 'auto' : 'smooth', block: 'center' });
+      /* form.innerHTML has just destroyed the button that had focus. Without
+         this, a keyboard or screen-reader user is dumped at the top of the
+         document with no announcement that anything happened. */
+      var done = form.querySelector('.msg__done h3');
+      if (done) {
+        done.setAttribute('tabindex', '-1');
+        done.focus({ preventScroll: true });
+      }
     }
   }
 

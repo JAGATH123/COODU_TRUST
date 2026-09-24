@@ -34,7 +34,7 @@ define('COODU_MESSAGE_MIN',  10);
 define('COODU_MESSAGE_MAX',  5000);
 define('COODU_MIN_SECONDS',  3);      /* timing trap: faster than this = bot   */
 define('COODU_MAX_AGE',      86400);  /* a page left open for > 24h is stale   */
-define('COODU_RATE_MAX',     5);      /* submissions per IP ...                */
+define('COODU_RATE_MAX',     15);     /* DELIVERED submissions per IP ...      */
 define('COODU_RATE_WINDOW',  3600);   /* ... per hour                          */
 define('COODU_MAX_URLS',     2);      /* links allowed in the message body     */
 
@@ -258,7 +258,11 @@ function coodu_log_submission(array $record)
  * POST that reaches us, bots included, so a flood trips the limit too.
  * Returns true when this request is over the limit.
  */
-function coodu_rate_limited($ip)
+/**
+ * $record = false : only look at the counter (the pre-validation gate).
+ * $record = true  : count this one (called once the message is being delivered).
+ */
+function coodu_rate_limited($ip, $record = true)
 {
     if (!coodu_ensure_dir(COODU_RATE_DIR)) {
         return false; /* never lock the form out because of a filesystem problem */
@@ -285,6 +289,10 @@ function coodu_rate_limited($ip)
     if (count($stamps) >= COODU_RATE_MAX) {
         @file_put_contents($file, json_encode($stamps), LOCK_EX);
         return true;
+    }
+
+    if (!$record) {
+        return false;   /* under the limit; nothing spent */
     }
 
     $stamps[] = $now;
@@ -369,8 +377,11 @@ if (!isset($COODU_TYPE_LABELS[$type])) {
 
 /* ======================================================== 4. RATE LIMIT ==== */
 
+/* Counted AFTER validation, further down, so that a visitor who mistypes their
+   email twice has not spent half their quota without sending anything. This
+   call only reads the counter; coodu_rate_record() writes it. */
 $ip = coodu_client_ip();
-if (coodu_rate_limited($ip)) {
+if (coodu_rate_limited($ip, false)) {
     coodu_respond(
         429,
         'error',
@@ -383,21 +394,31 @@ if (coodu_rate_limited($ip)) {
    Everything here answers with the ordinary success message. Telling a spammer
    which trap caught them is free debugging for the spammer. */
 
-$botReason = '';
+$botReason = '';   /* discard silently — only for unambiguous bot signals   */
+$suspicion = '';   /* deliver, but flag the subject line for a human to judge */
 
 if ($honey !== '') {
     $botReason = 'honeypot';
 } elseif ($stamp !== '' && ctype_digit($stamp)) {
+    /* The timestamp comes from the VISITOR'S device, so it is compared against
+       our clock, not theirs. A phone running a few minutes fast produces a
+       negative elapsed time; one running a day slow looks like a stale form.
+       Neither is evidence of a bot, and binning a real enquiry over a wrong
+       wristwatch is far worse than letting spam through. */
     $elapsed = time() - (int) round(((float) $stamp) / 1000);
-    if ($elapsed < COODU_MIN_SECONDS) {
+    if ($elapsed < 0) {
+        $suspicion = 'clock-skew';
+    } elseif ($elapsed < COODU_MIN_SECONDS) {
         $botReason = 'too-fast';
     } elseif ($elapsed > COODU_MAX_AGE) {
-        $botReason = 'stale-form';
+        $suspicion = 'stale-form';
     }
 }
 
+/* Links are not proof of spam. A CSR manager citing their company site, a
+   LinkedIn profile and a brief has written three links. Flag and deliver. */
 if ($botReason === '' && coodu_count_urls($message) > COODU_MAX_URLS) {
-    $botReason = 'link-spam';
+    $suspicion = 'many-links';
 }
 if ($botReason === '' && (coodu_looks_like_injection($name) || coodu_looks_like_injection($email)
     || coodu_looks_like_injection($subject) || coodu_looks_like_injection($phone))) {
@@ -436,7 +457,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 if ($phone !== '') {
     $digits = preg_replace('/\D+/', '', $phone);
     if (strlen($digits) < 10 || strlen($digits) > 15) {
-        $errors[] = 'Please enter a 10-digit phone number, or leave the field blank.';
+        $errors[] = 'Please enter 10 to 15 digits, including the STD or country code, or leave this blank.';
     }
 }
 
@@ -464,6 +485,9 @@ if ($errors) {
 /* Header-bound values, scrubbed of CR/LF before they go anywhere near a header. */
 $safeName    = coodu_header_safe($name);
 $safeEmail   = coodu_header_safe($email);
+/* Validation passed and we are about to deliver — now it counts. */
+coodu_rate_limited($ip, true);
+
 $safeSubject = coodu_header_safe($subject);
 $safePhone   = coodu_header_safe($phone);
 $typeLabel   = $COODU_TYPE_LABELS[$type];
@@ -522,7 +546,7 @@ try {
     $mail = coodu_mailer();
     $mail->addAddress(COODU_MAIL_TO, COODU_MAIL_TO_NAME);
     $mail->addReplyTo($safeEmail, $safeName !== '' ? $safeName : $safeEmail);
-    $mail->Subject = '[Website] ' . $safeSubject;
+    $mail->Subject = ($suspicion !== '' ? '[Website][check: ' . $suspicion . '] ' : '[Website] ') . $safeSubject;
     $mail->isHTML(true);
     $mail->Body =
         '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#111">'
