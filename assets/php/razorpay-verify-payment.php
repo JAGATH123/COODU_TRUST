@@ -20,6 +20,39 @@
 define('COODU_ENDPOINT', 1);
 require_once __DIR__ . '/lib/coodu-json-endpoint.php';
 
+/* ------------------------------------------------- partial-deploy guard ----
+   coodu_json_then() lives in lib/coodu-json-endpoint.php and was added in the
+   same commit as the call below. If a deploy uploads this file but not the
+   library, the failure paths keep working (coodu_fail is old) while the
+   SUCCESS path hits an undefined function and fatals — turning a payment that
+   Razorpay has already captured into "verification failed" for the donor.
+   That is the worst possible failure mode, so it is guarded rather than
+   assumed away. */
+if (!function_exists('coodu_json_then')) {
+    function coodu_json_then($httpCode, array $body, $after)
+    {
+        if (!headers_sent()) {
+            http_response_code($httpCode);
+            header('Content-Type: application/json; charset=utf-8');
+            header('Cache-Control: no-store');
+        }
+        $encoded = json_encode($body);
+        echo ($encoded === false) ? '{"status":"error","message":"Server error."}' : $encoded;
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+        } else {
+            @ob_end_flush();
+            @flush();
+        }
+        try {
+            call_user_func($after);
+        } catch (Exception $e) {
+            error_log('COODU post-response task failed: ' . $e->getMessage());
+        }
+        exit;
+    }
+}
+
 define('COODU_DONATION_LOG',    COODU_DATA_DIR . '/donations.log');
 define('COODU_SUSPICIOUS_LOG',  COODU_DATA_DIR . '/donations-rejected.log');
 define('COODU_RECEIPT_COUNTER', COODU_DATA_DIR . '/receipt-counter.txt');
@@ -172,6 +205,8 @@ coodu_json_then(200, array(
         'orderId'       => $orderId,
     ),
 ), function () use ($order, $receiptNumber, $amountRupees, $paymentId) {
+    /* The donor already has their confirmation by this point. Nothing in here
+       can affect what they saw. */
     coodu_send_donation_mail($order, $receiptNumber, $amountRupees, $paymentId);
 });
 
