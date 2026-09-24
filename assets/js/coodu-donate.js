@@ -234,7 +234,20 @@
         if (!res.ok) throw new Error((res.data && res.data.message) || 'Payment verification failed.');
         showSuccess(res.data.data, payload);
       })
-      .catch(function (err) { console.error('[coodu-donate] verify-payment failed:', err); setLoading(false); showMsg(err.message || 'Payment verification failed. Please contact us.', 'error'); });
+      .catch(function (err) {
+        console.error('[coodu-donate] verify-payment failed:', err);
+        setLoading(false);
+        /* By this point Razorpay has taken the money. Whatever went wrong on our
+           side, the donor has paid, and the screen must never suggest otherwise
+           or show them a raw JavaScript exception. Give them the payment
+           reference so the receipt can be issued by hand. */
+        showMsg(
+          'Your payment went through \u2014 reference ' + (resp.razorpay_payment_id || 'unknown') + '. ' +
+          'We could not display your receipt just now. Please email director@coodutrust.org quoting that ' +
+          'reference and we will send it. Nothing further is needed from you, and please do not pay again.',
+          'error'
+        );
+      });
   }
 
   function showSuccess(data, payload) {

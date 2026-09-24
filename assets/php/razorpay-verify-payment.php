@@ -29,24 +29,49 @@ require_once __DIR__ . '/lib/coodu-json-endpoint.php';
    That is the worst possible failure mode, so it is guarded rather than
    assumed away. */
 if (!function_exists('coodu_json_then')) {
+
+    error_log('COODU WARNING: assets/php/lib/coodu-json-endpoint.php on this server '
+        . 'is an OLD copy — it does not define coodu_json_then(). Donations still '
+        . 'work through the fallback below, but upload the current library.');
+
+    /* The old library does not force these, and without them a stray notice
+       can still corrupt the JSON, and receipts minted between 00:00 and 05:30
+       IST carry the previous day — on 1 April, the previous financial year. */
+    @ini_set('display_errors', '0');
+    @ini_set('log_errors', '1');
+    date_default_timezone_set('Asia/Kolkata');
+
     function coodu_json_then($httpCode, array $body, $after)
     {
+        $encoded = json_encode($body);
+        $encoded = ($encoded === false) ? '{"status":"error","message":"Server error."}' : $encoded;
+
         if (!headers_sent()) {
             http_response_code($httpCode);
             header('Content-Type: application/json; charset=utf-8');
             header('Cache-Control: no-store');
+            header('X-Content-Type-Options: nosniff');
+            /* Without Content-Length a host that lacks fastcgi_finish_request
+               holds the donor's browser open until the connection closes —
+               measured at 15s against a slow mail server, and minutes against
+               an unreachable one. With it, the body is released immediately. */
+            header('Content-Length: ' . strlen($encoded));
         }
-        $encoded = json_encode($body);
-        echo ($encoded === false) ? '{"status":"error","message":"Server error."}' : $encoded;
+        echo $encoded;
+
         if (function_exists('fastcgi_finish_request')) {
             fastcgi_finish_request();
         } else {
             @ob_end_flush();
             @flush();
         }
+
+        /* Throwable, not Exception: a TypeError escaping PHPMailer would
+           otherwise append an HTML fatal to the body and re-break the JSON
+           parse this guard exists to prevent. */
         try {
             call_user_func($after);
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             error_log('COODU post-response task failed: ' . $e->getMessage());
         }
         exit;

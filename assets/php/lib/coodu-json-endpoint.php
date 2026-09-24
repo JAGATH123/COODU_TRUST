@@ -43,6 +43,10 @@ if (!function_exists('mb_strlen')) {
     }
 }
 
+/* Bumped whenever an endpoint starts depending on something new in here, so a
+   stale copy on the server can be identified rather than guessed at. */
+define('COODU_LIB_VERSION', 2);
+
 define('COODU_DATA_DIR',  dirname(__DIR__) . '/data');
 define('COODU_ORDER_DIR', COODU_DATA_DIR . '/orders');
 define('COODU_RATE_DIR',  COODU_DATA_DIR . '/ratelimit');
